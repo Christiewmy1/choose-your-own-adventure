@@ -44,3 +44,26 @@ ok yeah implement the code fully for this
 ## 2:04
 
 yeah polish the UI and let us test it I want to see it
+
+## 2:24
+
+the story map looks blurry, could you fix that. Also could you make it so that under the heading of "Story pieces" It would have its own scroller so that I when I scroll that piece tab would be the only one that is scrolling and also do the same thing for the "Checks". And make sure the grammar is correct. I found trailing "2" and "4" and "|" and incorrect wording that doesnot make senes why they are there, especially since it is not there in the book (i think it is formatting issues)  
+
+## 2:41
+
+on page 6 I only have the option to go to page 114 although it says If you accept the ride back to
+the castle, tun to page 22.
+
+If you decline the invitation and
+try to find your way back into the
+Cave of Time, turn to page 114.
+
+and also there are grammar issues like words connected together like "youas" on page 6. Look for others as well, but otherwise it is looking good
+
+## 2:53 
+
+There are still grammer issues check all of the pages and fix any grammar issues that you can find
+
+## 3:16
+
+ok write the  Codebase.md explaining the project architecture and approach taken and if you can extend and deploy your project on a public website, if not tell me how to 
