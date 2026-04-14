@@ -23,3 +23,11 @@ Approach: Start with "The Cave of Time" a classical CYOA story downloade from ht
 How can we provide a web based interface for authors? They should be able to upload the start of story. Choose multiple ways the story can be extended. Upload those parts. Easily move between different paths in the story graph. Easily see and visualize the unfirnished part, parts that have similar endings, etc.
 
 In addition to the authoring tool. The web site should also offer a way to "read" the story. That part is easy. It can even be static HTML once all the story parts are in place.
+
+# 12:04 PM
+
+Sure do that
+
+# 12:11 PM
+
+nice explanation, yeah ok do that lets continue
