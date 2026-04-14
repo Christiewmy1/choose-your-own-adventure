@@ -24,10 +24,19 @@ How can we provide a web based interface for authors? They should be able to upl
 
 In addition to the authoring tool. The web site should also offer a way to "read" the story. That part is easy. It can even be static HTML once all the story parts are in place.
 
-# 12:04 PM
+
+## 12:04 PM
 
 Sure do that
 
-# 12:11 PM
+## 12:11 PM
 
 nice explanation, yeah ok do that lets continue
+
+## 1:07 PM
+
+yeah ok lets go with your recommednation
+
+## 1:24 PM
+
+ok yeah implement the code fully for this
