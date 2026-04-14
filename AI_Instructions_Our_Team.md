@@ -59,3 +59,7 @@ try to find your way back into the
 Cave of Time, turn to page 114.
 
 and also there are grammar issues like words connected together like "youas" on page 6. Look for others as well, but otherwise it is looking good
+
+# 2:53 
+
+There are still grammer issues check all of the pages and fix any grammar issues that you can find
