@@ -40,3 +40,7 @@ yeah ok lets go with your recommednation
 ## 1:24 PM
 
 ok yeah implement the code fully for this
+
+## 2:04
+
+yeah polish the UI and let us test it I want to see it
