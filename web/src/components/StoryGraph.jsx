@@ -39,13 +39,16 @@ export default function StoryGraph({ allPages, currentPage, onNodeClick }) {
             'background-color': '#6b7280',
             'label': 'data(label)',
             'color': '#fff',
-            'font-size': '9px',
+            'font-size': '10px',
             'text-valign': 'center',
             'text-halign': 'center',
-            'width': '28px',
-            'height': '28px',
+            'text-margin-y': '-1px',
+            'width': '32px',
+            'height': '32px',
             'border-width': '2px',
-            'border-color': 'transparent'
+            'border-color': 'transparent',
+            'text-outline-width': 0,
+            'text-outline-color': '#111827'
           }
         },
         {
@@ -62,17 +65,25 @@ export default function StoryGraph({ allPages, currentPage, onNodeClick }) {
         },
         {
           selector: 'node.current',
-          style: { 'border-color': '#facc15', 'border-width': '3px', 'background-color': '#f59e0b' }
+          style: {
+            'border-color': '#facc15',
+            'border-width': '3px',
+            'background-color': '#f59e0b',
+            'width': '38px',
+            'height': '38px',
+            'font-size': '11px'
+          }
         },
         {
           selector: 'edge',
           style: {
-            'width': 1.5,
-            'line-color': '#4b5563',
-            'target-arrow-color': '#4b5563',
+            'width': 1.8,
+            'line-color': '#7c93b3',
+            'target-arrow-color': '#7c93b3',
             'target-arrow-shape': 'triangle',
             'curve-style': 'bezier',
-            'arrow-scale': 0.8
+            'arrow-scale': 0.9,
+            'opacity': 0.8
           }
         }
       ],
@@ -111,6 +122,7 @@ export default function StoryGraph({ allPages, currentPage, onNodeClick }) {
       <div className="graph-legend">
         <span className="legend-item"><span className="dot dot-start" />Start</span>
         <span className="legend-item"><span className="dot dot-normal" />Page</span>
+        <span className="legend-item"><span className="dot dot-continuation" />Continuation</span>
         <span className="legend-item"><span className="dot dot-terminal" />Ending</span>
         <span className="legend-item"><span className="dot dot-current" />You are here</span>
       </div>
