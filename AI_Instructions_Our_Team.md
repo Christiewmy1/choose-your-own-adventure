@@ -66,4 +66,8 @@ There are still grammer issues check all of the pages and fix any grammar issues
 
 ## 3:16
 
-ok write the  Codebase.md explaining the project architecture and approach taken and if you can extend and deploy your project on a public website, if not tell me how to 
+ok write the  Codebase.md explaining the project architecture and approach taken and if you can extend and deploy your project on a public website, if not tell me how to
+
+## 11:57 AM
+
+Committed and pushed the UI improvements with good git etiquette. Only the source files `web/src/App.css` and `web/src/components/StoryGraph.jsx` were changed, and build/dependency artifacts were kept out of the commit. The updated site was also deployed to GitHub Pages so the repo version now reflects the changes publicly. 
