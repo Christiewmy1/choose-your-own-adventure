@@ -1,0 +1,81 @@
+{
+  "courses": [
+    {
+      "code": "CSS 301",
+      "title": "Foundations of Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Survey of core ideas in computing: data representation, algorithms, abstraction, and software engineering practice. Prepares students for upper-division CSS coursework with collaborative projects and introductory programming exercises."
+    },
+    {
+      "code": "CSS 342",
+      "title": "Data Structures and Algorithms",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Design and analysis of fundamental data structures including lists, trees, heaps, hash tables, and graphs. Algorithmic techniques such as sorting, searching, recursion, and graph traversal. Emphasis on complexity analysis and implementation trade-offs."
+    },
+    {
+      "code": "CSS 360",
+      "title": "Software Engineering",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Principles of software development life cycle, requirements engineering, design modeling, testing strategies, version control, and team collaboration. Students apply agile methods to build a multi-component software system."
+    },
+    {
+      "code": "CSS 422",
+      "title": "Hardware and Computer Organization",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Explores lower-level machine organization, performance tradeoffs, and system interfaces relevant to hardware-software collaboration."
+    },
+    {
+      "code": "CSS 430",
+      "title": "Operating Systems",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Processes and threads, CPU scheduling, synchronization and deadlocks, memory management, virtual memory, file systems, and I/O subsystems. Hands-on labs reinforce concepts using a contemporary operating system."
+    },
+    {
+      "code": "CSS 432",
+      "title": "Networking and Distributed Systems",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Networking fundamentals and distributed-system design for mission-critical and connected software systems."
+    },
+    {
+      "code": "CSS 436",
+      "title": "Cloud Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Distributed services, cloud deployment, and scalable architectures useful for enterprise software environments."
+    },
+    {
+      "code": "CSS 458",
+      "title": "Software Testing and Quality Assurance",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Verification, validation, and dependable software development practices for production-grade systems."
+    },
+    {
+      "code": "EE 450",
+      "title": "Embedded Systems Design",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "description": "Microcontrollers, hardware-software integration, and real-world system constraints common in embedded engineering."
+    },
+    {
+      "code": "B BUS 300",
+      "title": "Business Communication",
+      "credits": 5,
+      "department": "Business",
+      "description": "Professional writing and presentation skills for business contexts, including collaboration and reporting."
+    },
+    {
+      "code": "STMATH 308",
+      "title": "Matrix Algebra with Applications",
+      "credits": 5,
+      "department": "STEM Mathematics",
+      "description": "Linear systems, matrices, eigenvalues, and applications in computing, graphics, and machine learning."
+    }
+  ]
+}

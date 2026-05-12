@@ -1,0 +1,17 @@
+{
+  "program": "Computer Science and Software Engineering",
+  "class_standing": "Junior",
+  "major": "CSSE",
+  "completed_course_codes": [
+    "CSS 142",
+    "CSS 143"
+  ],
+  "career_goals": [
+    "software engineering",
+    "aerospace systems"
+  ],
+  "target_companies": [
+    "Boeing"
+  ],
+  "notes": "Sample profile for HuskyAdvisor. This file can be edited to test how recommendations change for different students."
+}

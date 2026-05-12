@@ -1,0 +1,46 @@
+{
+  "courses": [
+    {
+      "code": "CSS 301",
+      "title": "Foundations of Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Survey of core ideas in computing: data representation, algorithms, abstraction, and software engineering practice. Prepares students for upper-division CSS coursework with collaborative projects and introductory programming exercises."
+    },
+    {
+      "code": "CSS 342",
+      "title": "Data Structures and Algorithms",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Design and analysis of fundamental data structures including lists, trees, heaps, hash tables, and graphs. Algorithmic techniques such as sorting, searching, recursion, and graph traversal. Emphasis on complexity analysis and implementation trade-offs."
+    },
+    {
+      "code": "CSS 360",
+      "title": "Software Engineering",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Principles of software development life cycle, requirements engineering, design modeling, testing strategies, version control, and team collaboration. Students apply agile methods to build a multi-component software system."
+    },
+    {
+      "code": "CSS 430",
+      "title": "Operating Systems",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "description": "Processes and threads, CPU scheduling, synchronization and deadlocks, memory management, virtual memory, file systems, and I/O subsystems. Hands-on labs reinforce concepts using a contemporary operating system."
+    },
+    {
+      "code": "B BUS 300",
+      "title": "Business Communication",
+      "credits": 5,
+      "department": "Business",
+      "description": "Professional writing and presentation skills for business contexts. Covers audience analysis, persuasive messaging, data visualization in reports, and collaborative communication norms expected in internships and early-career roles."
+    },
+    {
+      "code": "STMATH 308",
+      "title": "Matrix Algebra with Applications",
+      "credits": 5,
+      "department": "STEM Mathematics",
+      "description": "Linear systems, matrices, determinants, vector spaces, eigenvalues and eigenvectors, and orthogonalization. Applications include computer graphics transformations, Markov chains, and introductory machine learning geometry."
+    }
+  ]
+}
