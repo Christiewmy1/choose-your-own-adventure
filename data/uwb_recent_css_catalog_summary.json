@@ -1,0 +1,177 @@
+{
+  "source_name": "UWB CSS catalog summary derived from external catalog.json",
+  "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json",
+  "derived_on": "2026-05-14",
+  "source_generated_at": "2026-05-06T01:12:40Z",
+  "scope_note": "This file summarizes selected 300- and 400-level CSS offerings that appeared in AUT2025, WIN2026, and SPR2026. It is meant to support HuskyAdvisor data expansion and not act as an official advising record.",
+  "courses": [
+    {
+      "course": "CSS 301",
+      "title": "TECHNICAL WRITING",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Useful for communication-heavy project work and capstone preparation."
+    },
+    {
+      "course": "CSS 310",
+      "title": "IA & CYBERSECURITY",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Good security-aligned option for students interested in defensive computing and infrastructure risk."
+    },
+    {
+      "course": "CSS 337",
+      "title": "SECURE SYSTEMS",
+      "recent_terms": ["WIN2026", "SPR2026"],
+      "advising_note": "Supports security and systems preparation."
+    },
+    {
+      "course": "CSS 340",
+      "title": "APPL ALGORITHMICS",
+      "recent_terms": ["AUT2025", "WIN2026"],
+      "advising_note": "Relevant for algorithmic depth and technical interview preparation."
+    },
+    {
+      "course": "CSS 342",
+      "title": "DATA, ALG, MATH I",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Foundational course that feeds many upper-division recommendations."
+    },
+    {
+      "course": "CSS 343",
+      "title": "DATA, ALG, MATH II",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Extends algorithm and mathematical depth for advanced software paths."
+    },
+    {
+      "course": "CSS 360",
+      "title": "SOFTWARE ENGR",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Core project-oriented course used in many HuskyAdvisor recommendations."
+    },
+    {
+      "course": "CSS 370",
+      "title": "ANALYSIS AND DESIGN",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Relevant for systems thinking and structured planning."
+    },
+    {
+      "course": "CSS 382",
+      "title": "INTRO TO AI",
+      "recent_terms": ["WIN2026", "SPR2026"],
+      "advising_note": "Directly relevant to students interested in applied AI and intelligent systems."
+    },
+    {
+      "course": "CSS 385",
+      "title": "INTRO TO GAME DEV",
+      "recent_terms": ["AUT2025", "SPR2026"],
+      "advising_note": "Project-heavy elective with strong portfolio potential."
+    },
+    {
+      "course": "CSS 422",
+      "title": "HARDWARE & COMP ORG",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Important systems and hardware-adjacent elective for embedded or aerospace interests."
+    },
+    {
+      "course": "CSS 427",
+      "title": "EMBEDDED SYSTEMS",
+      "recent_terms": ["AUT2025", "SPR2026"],
+      "advising_note": "High-value elective for embedded, robotics, and hardware-software integration pathways."
+    },
+    {
+      "course": "CSS 430",
+      "title": "OPERATING SYSTEMS",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Strong systems course for reliability, infrastructure, and aerospace-style software roles."
+    },
+    {
+      "course": "CSS 431",
+      "title": "NETWORK ARCHT & MGMT",
+      "recent_terms": ["AUT2025", "SPR2026"],
+      "advising_note": "Useful for network and infrastructure-aligned roles."
+    },
+    {
+      "course": "CSS 432",
+      "title": "NTWRK DSGN & PRGRMNG",
+      "recent_terms": ["AUT2025", "WIN2026"],
+      "advising_note": "Supports distributed systems and networking recommendations."
+    },
+    {
+      "course": "CSS 436",
+      "title": "CLOUD COMPUTING",
+      "recent_terms": ["WIN2026"],
+      "advising_note": "Important cloud and distributed systems elective."
+    },
+    {
+      "course": "CSS 449",
+      "title": "DSGN & ANLYS ALGRTHM",
+      "recent_terms": ["SPR2026"],
+      "advising_note": "Advanced algorithmic elective for students seeking technical depth."
+    },
+    {
+      "course": "CSS 461",
+      "title": "SOFTWARE PROJ MGMT",
+      "recent_terms": ["SPR2026"],
+      "advising_note": "Useful for leadership, planning, and team coordination skills."
+    },
+    {
+      "course": "CSS 474",
+      "title": "PRODUCT DEVEL LAB",
+      "recent_terms": ["AUT2025", "SPR2026"],
+      "advising_note": "Good portfolio and applied product-building elective."
+    },
+    {
+      "course": "CSS 475",
+      "title": "DATABASE SYSTEMS",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Strong option for backend, data, and enterprise applications."
+    },
+    {
+      "course": "CSS 478",
+      "title": "USABILITY ENGR",
+      "recent_terms": ["AUT2025", "WIN2026"],
+      "advising_note": "Helpful for HCI, product, and user-centered design interests."
+    },
+    {
+      "course": "CSS 480",
+      "title": "HUMAN-COMP INTERACT",
+      "recent_terms": ["SPR2026"],
+      "advising_note": "Relevant for UX-minded computing pathways."
+    },
+    {
+      "course": "CSS 481",
+      "title": "WEB PROG & APPL",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Useful for full-stack and web application portfolios."
+    },
+    {
+      "course": "CSS 485",
+      "title": "ARTIF NEURAL NETS",
+      "recent_terms": ["WIN2026"],
+      "advising_note": "AI-focused elective for students wanting more model-specific depth."
+    },
+    {
+      "course": "CSS 486",
+      "title": "MACHINE INTELLIGENCE",
+      "recent_terms": ["AUT2025"],
+      "advising_note": "Supports machine learning and intelligent systems interests."
+    },
+    {
+      "course": "CSS 487",
+      "title": "COMPUTER VISION",
+      "recent_terms": ["SPR2026"],
+      "advising_note": "Specialized AI/computer vision elective."
+    },
+    {
+      "course": "CSS 496",
+      "title": "APPL CMPT CAPSTONE",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Capstone pathway for Applied Computing students."
+    },
+    {
+      "course": "CSS 497",
+      "title": "CS & SE CAPSTONE",
+      "recent_terms": ["AUT2025", "WIN2026", "SPR2026"],
+      "advising_note": "Capstone pathway for CSSE students."
+    }
+  ]
+}

@@ -19,10 +19,16 @@ class HuskyAdvisorEngine:
         majors: Iterable[MajorRecord],
         courses: Iterable[CourseRecord],
         companies: Iterable[CompanyRecord],
+        recent_offerings: dict[str, list[str]] | None = None,
+        company_course_mapping: dict[str, list[str]] | None = None,
+        internship_playbooks: list[dict] | None = None,
     ) -> None:
         self.majors = list(majors)
         self.courses = list(courses)
         self.companies = list(companies)
+        self.recent_offerings = recent_offerings or {}
+        self.company_course_mapping = company_course_mapping or {}
+        self.internship_playbooks = internship_playbooks or []
 
     def recommend_electives(self, profile: StudentProfile, target_company: str | None = None) -> AdvisingResult:
         company = self._find_company(target_company or self._first_or_none(profile.target_companies))
@@ -39,7 +45,19 @@ class HuskyAdvisorEngine:
                 score += 3
                 evidence.append(f"{course.course_code} is tagged for {profile.major}.")
 
+            recent_terms = self.recent_offerings.get(course.course_code, [])
+            if recent_terms:
+                score += 1
+                evidence.append(
+                    f"{course.course_code} appeared in recent terms: {', '.join(recent_terms)}."
+                )
+
             if company:
+                mapped_courses = self.company_course_mapping.get(company.name, [])
+                if course.course_code in mapped_courses:
+                    score += 2
+                    evidence.append(f"{course.course_code} is explicitly mapped to {company.name} in the career dataset.")
+
                 shared_skills = self._overlap(course.career_tags, company.target_skills)
                 if shared_skills:
                     score += 2 * len(shared_skills)
@@ -87,6 +105,96 @@ class HuskyAdvisorEngine:
         return AdvisingResult(
             title="Recommended 400-Level Electives",
             summary=summary,
+            recommendations=recommendations,
+            evidence=evidence,
+            cautions=cautions,
+        )
+
+    def recommend_companies(self, profile: StudentProfile) -> AdvisingResult:
+        ranked: list[tuple[int, CompanyRecord, list[str]]] = []
+        for company in self.companies:
+            score = 0
+            evidence: list[str] = []
+
+            goal_overlap = self._overlap(company.target_skills, profile.career_goals)
+            if goal_overlap:
+                score += 2 * len(goal_overlap)
+                evidence.append(
+                    f"{company.name} matches your goals through skills like {', '.join(goal_overlap)}."
+                )
+
+            relevant_courses = [
+                course.course_code
+                for course in self.courses
+                if profile.major in course.major_tags
+                and self._overlap(course.career_tags, company.target_skills)
+            ]
+            if relevant_courses:
+                score += min(3, len(relevant_courses))
+                evidence.append(
+                    f"Your program already connects to {company.name} through courses like {', '.join(relevant_courses[:3])}."
+                )
+
+            if company.name in profile.target_companies:
+                score += 2
+                evidence.append(f"{company.name} is already one of your stated target companies.")
+
+            ranked.append((score, company, evidence))
+
+        ranked.sort(key=lambda item: item[0], reverse=True)
+        top = ranked[:3]
+
+        recommendations = [
+            f"{company.name} ({company.city}): focus on {company.domain_focus}. Hiring often appears around {', '.join(company.hiring_seasons)}."
+            for _, company, _ in top
+        ]
+        evidence = [reason for _, _, reasons in top for reason in reasons[:2]]
+        cautions = [
+            "These are company-alignment suggestions, not live job postings.",
+            "Internship timing and openings can change each term, so live postings should still be checked separately.",
+        ]
+
+        return AdvisingResult(
+            title="Local Company Alignment",
+            summary="These companies best match your current academic path and stated goals.",
+            recommendations=recommendations,
+            evidence=evidence,
+            cautions=cautions,
+        )
+
+    def recommend_internship_prep(self, profile: StudentProfile) -> AdvisingResult:
+        lowered_goals = [goal.lower() for goal in profile.career_goals]
+        selected = None
+        for playbook in self.internship_playbooks:
+            track = playbook.get("track", "").lower()
+            if any(token in " ".join(lowered_goals) for token in track.split("_")):
+                selected = playbook
+                break
+
+        if selected is None and self.internship_playbooks:
+            selected = self.internship_playbooks[0]
+
+        if selected is None:
+            return AdvisingResult(
+                title="Internship Prep Plan",
+                summary="No internship prep playbooks are currently loaded.",
+            )
+
+        recommendations = [
+            f"Recommended courses: {', '.join(selected.get('recommended_courses', []))}",
+            *selected.get("recommended_projects", []),
+        ]
+        evidence = [
+            f"Target companies in this playbook: {', '.join(selected.get('target_companies', []))}.",
+            f"Suggested skills: {', '.join(selected.get('recommended_skills', []))}.",
+        ]
+        cautions = [
+            "This is a preparation guide, not a live internship feed.",
+            "Use this together with current job boards and official internship postings.",
+        ]
+        return AdvisingResult(
+            title="Internship Prep Plan",
+            summary="This plan suggests courses, project ideas, and skills that fit one likely internship pathway.",
             recommendations=recommendations,
             evidence=evidence,
             cautions=cautions,

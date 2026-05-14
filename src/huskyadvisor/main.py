@@ -5,7 +5,14 @@ import os
 
 from huskyadvisor.advisor import HuskyAdvisorEngine
 from huskyadvisor.formatter import format_result
-from huskyadvisor.json_data import load_course_records, load_student_profile
+from huskyadvisor.json_data import (
+    load_company_course_mapping,
+    load_company_records,
+    load_course_records,
+    load_internship_playbooks,
+    load_recent_offering_terms,
+    load_student_profile,
+)
 from huskyadvisor.sample_data import (
     SAMPLE_COMPANIES,
     SAMPLE_COURSES,
@@ -81,7 +88,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="HuskyAdvisor MVP demo.")
     parser.add_argument(
         "--mode",
-        choices=["electives", "major", "roadmap", "profile-demo", "llm-demo"],
+        choices=["electives", "major", "roadmap", "profile-demo", "company-demo", "internship-demo", "llm-demo"],
         default="electives",
         help="Which advising workflow to run.",
     )
@@ -115,11 +122,60 @@ def main() -> None:
     if args.mode == "profile-demo":
         profile = load_student_profile()
         json_courses = load_course_records()
-        json_advisor = HuskyAdvisorEngine(SAMPLE_MAJORS, json_courses, SAMPLE_COMPANIES)
+        json_companies = load_company_records()
+        recent_offerings = load_recent_offering_terms()
+        company_mapping = load_company_course_mapping()
+        internship_playbooks = load_internship_playbooks()
+        json_advisor = HuskyAdvisorEngine(
+            SAMPLE_MAJORS,
+            json_courses,
+            json_companies,
+            recent_offerings=recent_offerings,
+            company_course_mapping=company_mapping,
+            internship_playbooks=internship_playbooks,
+        )
         result = json_advisor.recommend_electives(
             profile,
             profile.target_companies[0] if profile.target_companies else None,
         )
+        print(format_result(result))
+        return
+
+    if args.mode == "company-demo":
+        profile = load_student_profile()
+        json_courses = load_course_records()
+        json_companies = load_company_records()
+        recent_offerings = load_recent_offering_terms()
+        company_mapping = load_company_course_mapping()
+        internship_playbooks = load_internship_playbooks()
+        json_advisor = HuskyAdvisorEngine(
+            SAMPLE_MAJORS,
+            json_courses,
+            json_companies,
+            recent_offerings=recent_offerings,
+            company_course_mapping=company_mapping,
+            internship_playbooks=internship_playbooks,
+        )
+        result = json_advisor.recommend_companies(profile)
+        print(format_result(result))
+        return
+
+    if args.mode == "internship-demo":
+        profile = load_student_profile()
+        json_courses = load_course_records()
+        json_companies = load_company_records()
+        recent_offerings = load_recent_offering_terms()
+        company_mapping = load_company_course_mapping()
+        internship_playbooks = load_internship_playbooks()
+        json_advisor = HuskyAdvisorEngine(
+            SAMPLE_MAJORS,
+            json_courses,
+            json_companies,
+            recent_offerings=recent_offerings,
+            company_course_mapping=company_mapping,
+            internship_playbooks=internship_playbooks,
+        )
+        result = json_advisor.recommend_internship_prep(profile)
         print(format_result(result))
         return
 

@@ -4,12 +4,16 @@ import json
 from pathlib import Path
 from typing import Any
 
-from huskyadvisor.models import CourseRecord, StudentProfile
+from huskyadvisor.models import CompanyRecord, CourseRecord, StudentProfile
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_COURSE_JSON = PROJECT_ROOT / "data" / "uwb_courses_sample.json"
 DEFAULT_PROFILE_JSON = PROJECT_ROOT / "data" / "student_profile.json"
+DEFAULT_COMPANY_JSON = PROJECT_ROOT / "data" / "local_tech_companies.json"
+DEFAULT_RECENT_CATALOG_JSON = PROJECT_ROOT / "data" / "uwb_recent_css_catalog_summary.json"
+DEFAULT_COMPANY_MAPPING_JSON = PROJECT_ROOT / "data" / "company_course_mapping.json"
+DEFAULT_INTERNSHIP_PLAYBOOK_JSON = PROJECT_ROOT / "data" / "internship_prep_playbooks.json"
 
 
 def load_course_records(path: Path | None = None) -> list[CourseRecord]:
@@ -20,10 +24,10 @@ def load_course_records(path: Path | None = None) -> list[CourseRecord]:
     records: list[CourseRecord] = []
     for item in payload.get("courses", []):
         code = _normalize_code(item.get("code", ""))
-        department = code.split()[0] if code else item.get("department", "Unknown")
-        level = _parse_level(code)
-        career_tags = _infer_career_tags(item.get("description", ""))
-        major_tags = _infer_major_tags(code, department)
+        department = item.get("department") or (code.split()[0] if code else "Unknown")
+        level = int(item.get("level") or _parse_level(code))
+        career_tags = item.get("career_tags") or _infer_career_tags(item.get("description", ""))
+        major_tags = item.get("majors") or _infer_major_tags(code, department)
         records.append(
             CourseRecord(
                 course_code=code,
@@ -34,7 +38,7 @@ def load_course_records(path: Path | None = None) -> list[CourseRecord]:
                 major_tags=major_tags,
                 career_tags=career_tags,
                 prerequisite_text=item.get("prerequisites", "See catalog"),
-                project_emphasis=_infer_project_emphasis(item.get("description", "")),
+                project_emphasis=item.get("project_emphasis") or _infer_project_emphasis(item.get("description", "")),
             )
         )
     return records
@@ -60,6 +64,56 @@ def load_student_profile(path: Path | None = None) -> StudentProfile:
         target_companies=payload.get("target_companies", []),
         internship_timeline=payload.get("internship_timeline", "next summer"),
     )
+
+
+def load_company_records(path: Path | None = None) -> list[CompanyRecord]:
+    source = path or DEFAULT_COMPANY_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+
+    records: list[CompanyRecord] = []
+    for item in payload.get("companies", []):
+        records.append(
+            CompanyRecord(
+                company_id=item["company_id"],
+                name=item["name"],
+                city=item["city"],
+                domain_focus=item["domain_focus"],
+                hiring_seasons=item.get("hiring_seasons", []),
+                target_skills=item.get("target_skills", []),
+                notes=item.get("notes", ""),
+            )
+        )
+    return records
+
+
+def load_recent_offering_terms(path: Path | None = None) -> dict[str, list[str]]:
+    source = path or DEFAULT_RECENT_CATALOG_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+
+    return {
+        _normalize_code(item["course"]): item.get("recent_terms", [])
+        for item in payload.get("courses", [])
+    }
+
+
+def load_company_course_mapping(path: Path | None = None) -> dict[str, list[str]]:
+    source = path or DEFAULT_COMPANY_MAPPING_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+
+    return {
+        item["company"]: [_normalize_code(code) for code in item.get("recommended_courses", [])]
+        for item in payload.get("mappings", [])
+    }
+
+
+def load_internship_playbooks(path: Path | None = None) -> list[dict[str, Any]]:
+    source = path or DEFAULT_INTERNSHIP_PLAYBOOK_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+    return payload.get("playbooks", [])
 
 
 def _normalize_code(value: str) -> str:

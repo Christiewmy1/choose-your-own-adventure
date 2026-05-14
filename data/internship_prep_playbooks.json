@@ -1,0 +1,50 @@
+{
+  "dataset_name": "HuskyAdvisor Internship Prep Playbooks",
+  "last_updated": "2026-05-14",
+  "playbooks": [
+    {
+      "track": "aerospace_systems",
+      "target_companies": ["Boeing", "SpaceX Starlink"],
+      "recommended_courses": ["CSS 430", "CSS 422", "CSS 427", "EE 450", "CSS 458"],
+      "recommended_projects": [
+        "Build a systems-oriented project with testing and documentation",
+        "Create a small embedded or hardware-adjacent prototype",
+        "Write a resume bullet that highlights reliability or low-level debugging work"
+      ],
+      "recommended_skills": ["systems", "embedded", "testing", "debugging", "documentation"]
+    },
+    {
+      "track": "cloud_backend",
+      "target_companies": ["Amazon Bellevue", "Google Kirkland", "Microsoft Redmond"],
+      "recommended_courses": ["CSS 436", "CSS 432", "CSS 475", "CSS 481"],
+      "recommended_projects": [
+        "Build and deploy a backend API with a database",
+        "Create a cloud-hosted web app with logging and monitoring",
+        "Document architecture tradeoffs and scalability decisions"
+      ],
+      "recommended_skills": ["backend", "cloud", "databases", "api design", "deployment"]
+    },
+    {
+      "track": "security_infrastructure",
+      "target_companies": ["AT&T Bothell", "T-Mobile", "Microsoft Redmond"],
+      "recommended_courses": ["CSS 310", "CSS 337", "CSS 431", "CSS 457"],
+      "recommended_projects": [
+        "Analyze a secure-systems case study",
+        "Build a small tool that demonstrates authentication or logging",
+        "Write about risk, privacy, or infrastructure reliability in a project README"
+      ],
+      "recommended_skills": ["security", "networking", "infrastructure", "risk awareness", "reliability"]
+    },
+    {
+      "track": "ai_product",
+      "target_companies": ["Microsoft Redmond", "Google Kirkland"],
+      "recommended_courses": ["CSS 382", "CSS 440", "CSS 486", "CSS 481"],
+      "recommended_projects": [
+        "Build a small AI application with a clear user-facing workflow",
+        "Compare at least two model or algorithm approaches",
+        "Document ethical or practical limits of the AI system"
+      ],
+      "recommended_skills": ["ai", "machine learning", "product thinking", "evaluation", "communication"]
+    }
+  ]
+}
