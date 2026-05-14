@@ -1,5 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { EndingToast } from '../components/EndingToast'
+import { KeyboardShortcuts } from '../components/KeyboardShortcuts'
+import { useBookProgress } from '../hooks/useBookProgress'
+import { useKeyboardNav } from '../hooks/useKeyboardNav'
 import {
   fetchBooks,
   fetchGraph,
@@ -7,6 +11,7 @@ import {
   nodeById,
   stripPageHeader,
   type BookSummary,
+  type Choice,
   type Graph,
   type Node,
 } from '../lib/data'
@@ -23,7 +28,8 @@ export default function BookReader() {
   const [error, setError] = useState<string | null>(null)
   const [history, setHistory] = useState<number[]>([])
 
-  // Load book + graph once
+  // ── Data loading ───────────────────────────────────────────────────────────
+
   useEffect(() => {
     if (!slug) return
     let cancelled = false
@@ -54,7 +60,6 @@ export default function BookReader() {
     [graph, currentPage],
   )
 
-  // Load current page text
   useEffect(() => {
     if (!slug || currentPage == null) return
     let cancelled = false
@@ -70,7 +75,6 @@ export default function BookReader() {
     }
   }, [slug, currentPage])
 
-  // Track history as we navigate
   useEffect(() => {
     if (currentPage == null) return
     setHistory((h) => {
@@ -78,6 +82,43 @@ export default function BookReader() {
       return [...h, currentPage]
     })
   }, [currentPage])
+
+  // ── Derived values ─────────────────────────────────────────────────────────
+
+  const hasGraph = (book?.branching_pages ?? 0) > 0
+
+  // Build the terminal ID set once the graph is loaded — used for
+  // reconciliation in useBookProgress and for ending detection below.
+  const terminalIds = useMemo((): ReadonlySet<number> | undefined => {
+    if (!graph) return undefined
+    const ids = new Set<number>()
+    for (const n of graph.nodes) {
+      if (n.is_terminal || n.choices.length === 0) ids.add(n.id)
+    }
+    return ids
+  }, [graph])
+
+  // ── Progress tracking ──────────────────────────────────────────────────────
+
+  const { foundCount, isNewEnding, recordEnding, clearNewEnding } =
+    useBookProgress({
+      slug: slug ?? '',
+      totalEndings: book?.terminals ?? 0,
+      terminalIds,
+    })
+
+  // Record an ending the moment the user lands on a terminal node.
+  // The effect re-runs when currentNode changes (i.e. page navigation).
+  // recordEnding is a no-op for already-discovered endings, so there's no
+  // redundant write on revisits.
+  useEffect(() => {
+    if (!currentNode) return
+    if (currentNode.is_terminal || currentNode.choices.length === 0) {
+      recordEnding(currentNode.id)
+    }
+  }, [currentNode, recordEnding])
+
+  // ── Navigation callbacks ───────────────────────────────────────────────────
 
   const goto = useCallback(
     (target: number) => {
@@ -99,6 +140,24 @@ export default function BookReader() {
     setHistory((h) => h.slice(0, -2))
     navigate(`/b/${slug}/read/${prev}`)
   }, [history, slug, navigate])
+
+  const goToGraph = useCallback(() => {
+    if (slug) navigate(`/b/${slug}/graph`)
+  }, [slug, navigate])
+
+  // ── Keyboard navigation ────────────────────────────────────────────────────
+
+  useKeyboardNav({
+    choices: currentNode?.choices ?? [],
+    canGoBack: history.length >= 2,
+    hasGraph,
+    onChoose: goto,
+    onBack: back,
+    onRestart: restart,
+    onGraph: goToGraph,
+  })
+
+  // ── Render ─────────────────────────────────────────────────────────────────
 
   if (error) return <div className="container error">{error}</div>
   if (!book || !graph) return <div className="container loading">Loading…</div>
@@ -152,11 +211,12 @@ export default function BookReader() {
             <button className="btn btn-ghost" onClick={restart}>
               Restart
             </button>
-            {book.branching_pages > 0 && (
+            {hasGraph && (
               <Link to={`/b/${slug}/graph`} className="btn btn-ghost">
                 See graph
               </Link>
             )}
+            <KeyboardShortcuts hasGraph={hasGraph} />
           </div>
         </article>
 
@@ -173,8 +233,26 @@ export default function BookReader() {
               ))}
             </ol>
           )}
+
+          {book.terminals > 0 && (
+            <div className="reader-side-progress">
+              <span className="reader-side-progress-label muted">
+                Endings found
+              </span>
+              <span className="reader-side-progress-count">
+                {foundCount} / {book.terminals}
+              </span>
+            </div>
+          )}
         </aside>
       </div>
+
+      <EndingToast
+        show={isNewEnding}
+        foundCount={foundCount}
+        totalEndings={book.terminals}
+        onDismiss={clearNewEnding}
+      />
     </div>
   )
 }
@@ -189,23 +267,46 @@ function ChoiceList({
   return (
     <div className="choice-list">
       {node.choices.map((c, i) => (
-        <button
+        <ChoiceButton
           key={`${c.target}-${i}`}
-          className="choice"
-          onClick={() => onChoose(c.target)}
-        >
-          <div className="choice-prompt">
-            {c.prompt && c.prompt !== '(continues)' ? (
-              <>{c.prompt}…</>
-            ) : (
-              <em className="muted">Continue</em>
-            )}
-          </div>
-          <div className="choice-arrow">
-            → Page {c.target}
-          </div>
-        </button>
+          choice={c}
+          index={i}
+          onChoose={onChoose}
+        />
       ))}
     </div>
+  )
+}
+
+function ChoiceButton({
+  choice,
+  index,
+  onChoose,
+}: {
+  choice: Choice
+  index: number
+  onChoose: (target: number) => void
+}) {
+  const shortcutKey = index < 9 ? index + 1 : null
+
+  return (
+    <button
+      className="choice"
+      onClick={() => onChoose(choice.target)}
+    >
+      {shortcutKey != null && (
+        <span className="choice-num" aria-hidden="true">
+          {shortcutKey}
+        </span>
+      )}
+      <div className="choice-prompt">
+        {choice.prompt && choice.prompt !== '(continues)' ? (
+          <>{choice.prompt}…</>
+        ) : (
+          <em className="muted">Continue</em>
+        )}
+      </div>
+      <div className="choice-arrow">→ Page {choice.target}</div>
+    </button>
   )
 }

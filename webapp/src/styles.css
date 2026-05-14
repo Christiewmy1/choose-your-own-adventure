@@ -280,3 +280,154 @@ code {
   border-radius: 4px; font-variant-numeric: tabular-nums;
 }
 .arrow { color: var(--ink-muted); margin: 0 2px; }
+
+/* ─── Progress bar ─────────────────────────────────────────────────────────── */
+.progress-wrap {
+  display: flex; align-items: center; gap: 10px;
+}
+.progress-track {
+  flex: 1; height: 6px; background: var(--paper-edge);
+  border-radius: 999px; overflow: hidden;
+  min-width: 0;
+}
+.progress-fill {
+  height: 100%; background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+.progress-label {
+  font-size: 12px; font-weight: 600; color: var(--ink-muted);
+  white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.progress-unstarted {
+  font-size: 12px; color: var(--ink-muted);
+}
+
+/* Book card progress row */
+.book-progress {
+  margin: 10px 0 4px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.book-progress .progress-track { height: 4px; }
+
+/* Overview progress section */
+.progress-section {
+  background: var(--paper); border: 1px solid var(--paper-edge);
+  border-radius: 10px; padding: 18px 20px; margin-bottom: 24px;
+}
+.progress-section-head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 12px;
+}
+.progress-section-head h3 { margin: 0; font-size: 16px; }
+.progress-overview .progress-track { height: 8px; }
+.progress-detail { margin: 10px 0 0; font-size: 14px; }
+
+/* Sidebar progress mini-block */
+.reader-side-progress {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 16px; padding-top: 12px;
+  border-top: 1px solid var(--paper-edge);
+  font-size: 13px;
+}
+.reader-side-progress-count { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ─── Choice keyboard hint ──────────────────────────────────────────────────── */
+.choice-num {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  background: #f1f5f9; border: 1px solid var(--paper-edge);
+  border-radius: 4px; font-size: 12px; font-weight: 700;
+  color: var(--ink-muted); transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+.choice:hover .choice-num {
+  background: var(--accent-soft); border-color: var(--accent); color: var(--accent);
+}
+
+/* ─── Keyboard shortcuts panel ─────────────────────────────────────────────── */
+.kb-shortcuts { position: relative; }
+.kb-panel {
+  position: absolute; bottom: calc(100% + 8px); left: 0;
+  background: var(--paper); border: 1px solid var(--paper-edge);
+  border-radius: 8px; padding: 10px 12px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+  min-width: 200px; z-index: 20;
+}
+.kb-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 4px 0; font-size: 13px;
+}
+.kb-row + .kb-row { border-top: 1px solid var(--paper-edge); }
+.kb-keys { display: flex; gap: 4px; flex-shrink: 0; }
+kbd {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1px 6px; min-width: 24px;
+  background: #f1f5f9; border: 1px solid #cbd5e1;
+  border-bottom-width: 2px; border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px; font-weight: 600; color: var(--ink);
+  line-height: 1.6;
+}
+.kb-desc { color: var(--ink-muted); }
+
+/* ─── Toast notification ────────────────────────────────────────────────────── */
+.toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 100;
+  display: flex; align-items: center; gap: 12px;
+  background: var(--ink); color: #fff;
+  padding: 14px 16px; border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+  max-width: 320px; pointer-events: none;
+  /* Start hidden below the viewport */
+  transform: translateY(calc(100% + 32px));
+  opacity: 0;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+              opacity 0.2s ease;
+}
+.toast-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.toast-icon { font-size: 20px; flex-shrink: 0; line-height: 1; }
+.toast-body { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.toast-title { font-size: 14px; font-weight: 600; }
+.toast-sub { font-size: 13px; opacity: 0.8; }
+.toast-close {
+  background: transparent; border: none; cursor: pointer;
+  color: rgba(255, 255, 255, 0.7); font-size: 20px; line-height: 1;
+  padding: 0 0 0 4px; flex-shrink: 0;
+  transition: color 0.1s;
+}
+.toast-close:hover { color: #fff; }
+
+/* ─── Confirmation modal ────────────────────────────────────────────────────── */
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  animation: fade-in 0.15s ease;
+}
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+.modal {
+  background: var(--paper); border-radius: 12px;
+  padding: 28px 28px 24px;
+  max-width: 400px; width: 100%;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+  animation: slide-up 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes slide-up { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.modal-title { margin: 0 0 10px; font-size: 18px; }
+.modal-desc { margin: 0 0 4px; font-size: 15px; }
+.modal-warn { margin: 0 0 20px; font-size: 13px; color: var(--ink-muted); }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+
+/* ─── Danger button ─────────────────────────────────────────────────────────── */
+.btn-danger {
+  background: var(--end); color: #fff; border-color: var(--end);
+}
+.btn-danger:hover { background: #991b1b; border-color: #991b1b; color: #fff; }

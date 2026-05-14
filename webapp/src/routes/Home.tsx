@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ProgressBar } from '../components/ProgressBar'
+import { useAllProgress } from '../hooks/useAllProgress'
 import { fetchBooks, type BookSummary } from '../lib/data'
 
 export default function Home() {
   const [books, setBooks] = useState<BookSummary[] | null>(null)
   const [error, setError] = useState<string | null>(null)
+
+  // One subscription at the list level — each card reads from the same map.
+  const allProgress = useAllProgress()
 
   useEffect(() => {
     fetchBooks().then(setBooks).catch((e) => setError(String(e)))
@@ -34,7 +39,11 @@ export default function Home() {
           <h2>Branching adventures</h2>
           <div className="book-grid">
             {branching.map((b) => (
-              <BookCard key={b.slug} book={b} />
+              <BookCard
+                key={b.slug}
+                book={b}
+                foundEndings={allProgress[b.slug] ?? 0}
+              />
             ))}
           </div>
         </section>
@@ -50,7 +59,7 @@ export default function Home() {
           </p>
           <div className="book-grid">
             {linear.map((b) => (
-              <BookCard key={b.slug} book={b} />
+              <BookCard key={b.slug} book={b} foundEndings={0} />
             ))}
           </div>
         </section>
@@ -59,7 +68,15 @@ export default function Home() {
   )
 }
 
-function BookCard({ book }: { book: BookSummary }) {
+function BookCard({
+  book,
+  foundEndings,
+}: {
+  book: BookSummary
+  foundEndings: number
+}) {
+  const hasBranching = book.branching_pages > 0
+
   return (
     <Link to={`/b/${book.slug}`} className="book-card">
       <h3>{book.title}</h3>
@@ -73,6 +90,20 @@ function BookCard({ book }: { book: BookSummary }) {
           <span className="muted">· {book.stories} endings</span>
         )}
       </div>
+
+      {hasBranching && (
+        <div className="book-progress">
+          <ProgressBar
+            found={foundEndings}
+            total={book.terminals}
+            showLabel={foundEndings > 0}
+          />
+          {foundEndings === 0 && (
+            <span className="progress-unstarted">Not started</span>
+          )}
+        </div>
+      )}
+
       <div className="book-source">{book.source_pdf}</div>
     </Link>
   )

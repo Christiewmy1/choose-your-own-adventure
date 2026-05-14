@@ -1,11 +1,15 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { ProgressBar } from '../components/ProgressBar'
+import { ResetModal } from '../components/ResetModal'
+import { useBookProgress } from '../hooks/useBookProgress'
 import { fetchBooks, type BookSummary } from '../lib/data'
 
 export default function BookOverview() {
   const { slug } = useParams<{ slug: string }>()
   const [book, setBook] = useState<BookSummary | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [showResetModal, setShowResetModal] = useState(false)
 
   useEffect(() => {
     fetchBooks()
@@ -17,12 +21,27 @@ export default function BookOverview() {
       .catch((e) => setError(String(e)))
   }, [slug])
 
+  const { foundCount, reset } = useBookProgress({
+    slug: slug ?? '',
+    totalEndings: book?.terminals ?? 0,
+    // terminalIds not provided here — reconciliation happens in the reader
+    // where the graph is already loaded. Avoids an extra network fetch.
+  })
+
+  const handleConfirmReset = (): void => {
+    reset()
+    setShowResetModal(false)
+  }
+
   if (error) return <div className="container error">{error}</div>
   if (!book) return <div className="container loading">Loading…</div>
+
+  const isBranching = book.branching_pages > 0
 
   return (
     <div className="container">
       <BookHeader book={book} active="overview" />
+
       <div className="overview-grid">
         <Stat label="Pages extracted" value={book.pages} />
         <Stat label="Graph edges" value={book.edges} />
@@ -50,6 +69,34 @@ export default function BookOverview() {
         />
       </div>
 
+      {isBranching && (
+        <section className="progress-section">
+          <div className="progress-section-head">
+            <h3>Your progress</h3>
+            {foundCount > 0 && (
+              <button
+                className="btn btn-ghost btn-small"
+                onClick={() => setShowResetModal(true)}
+              >
+                Reset
+              </button>
+            )}
+          </div>
+          <ProgressBar
+            found={foundCount}
+            total={book.terminals}
+            className="progress-overview"
+          />
+          <p className="progress-detail muted">
+            {foundCount === 0
+              ? `No endings found yet. There are ${book.terminals} to discover.`
+              : foundCount === book.terminals
+                ? `All ${book.terminals} endings found!`
+                : `${foundCount} of ${book.terminals} endings discovered — ${book.terminals - foundCount} remaining.`}
+          </p>
+        </section>
+      )}
+
       <section className="overview-actions">
         <Link
           to={`/b/${book.slug}/read${
@@ -57,7 +104,7 @@ export default function BookOverview() {
           }`}
           className="btn btn-primary"
         >
-          Start reading
+          {foundCount > 0 ? 'Keep reading' : 'Start reading'}
         </Link>
         {book.branching_pages > 0 && (
           <>
@@ -79,6 +126,14 @@ export default function BookOverview() {
           <code>{book.reference_style}</code>.
         </p>
       </section>
+
+      {showResetModal && (
+        <ResetModal
+          bookTitle={book.title}
+          onConfirm={handleConfirmReset}
+          onCancel={() => setShowResetModal(false)}
+        />
+      )}
     </div>
   )
 }
