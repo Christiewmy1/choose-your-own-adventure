@@ -30,7 +30,8 @@
       "project_emphasis": "medium",
       "description": "Design and analysis of fundamental data structures including lists, trees, heaps, hash tables, and graphs. Algorithmic techniques such as sorting, searching, recursion, and graph traversal. Emphasis on complexity analysis and implementation trade-offs.",
       "source_type": "curated_uwb_snapshot",
-      "source_confidence": "high"
+      "source_confidence": "high",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 360",
@@ -44,7 +45,8 @@
       "project_emphasis": "high",
       "description": "Principles of software development life cycle, requirements engineering, design modeling, testing strategies, version control, and team collaboration. Students apply agile methods to build a multi-component software system.",
       "source_type": "curated_uwb_snapshot",
-      "source_confidence": "high"
+      "source_confidence": "high",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 370",
@@ -72,7 +74,8 @@
       "project_emphasis": "medium-high",
       "description": "Introduces foundational AI topics such as search, reasoning, and intelligent behavior in software systems.",
       "source_type": "catalog_derived_plus_curated",
-      "source_confidence": "medium"
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 310",
@@ -114,7 +117,8 @@
       "project_emphasis": "medium",
       "description": "Explores lower-level machine organization, performance tradeoffs, and system interfaces relevant to hardware-software collaboration.",
       "source_type": "curated_uwb_snapshot",
-      "source_confidence": "medium-high"
+      "source_confidence": "medium-high",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 430",
@@ -128,7 +132,8 @@
       "project_emphasis": "high",
       "description": "Processes and threads, CPU scheduling, synchronization and deadlocks, memory management, virtual memory, file systems, and I/O subsystems. Hands-on labs reinforce concepts using a contemporary operating system.",
       "source_type": "curated_uwb_snapshot",
-      "source_confidence": "high"
+      "source_confidence": "high",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 432",
@@ -142,7 +147,8 @@
       "project_emphasis": "medium-high",
       "description": "Networking fundamentals and distributed-system design for mission-critical and connected software systems.",
       "source_type": "curated_uwb_snapshot",
-      "source_confidence": "medium-high"
+      "source_confidence": "medium-high",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 436",
@@ -170,7 +176,8 @@
       "project_emphasis": "medium-high",
       "description": "Introduces search, knowledge representation, reasoning, and core AI methods for intelligent software systems.",
       "source_type": "curated_uwb_snapshot",
-      "source_confidence": "medium"
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 427",
@@ -184,7 +191,8 @@
       "project_emphasis": "high",
       "description": "Explores embedded computing and hardware-software interaction in constrained real-world systems.",
       "source_type": "catalog_derived_plus_curated",
-      "source_confidence": "medium"
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 457",
@@ -212,7 +220,8 @@
       "project_emphasis": "medium",
       "description": "Verification, validation, and dependable software development practices for production-grade systems.",
       "source_type": "curated_uwb_snapshot",
-      "source_confidence": "high"
+      "source_confidence": "high",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     },
     {
       "code": "CSS 475",

@@ -1,0 +1,81 @@
+{
+  "dataset_name": "HuskyAdvisor Quarter Plan Templates",
+  "last_updated": "2026-05-16",
+  "templates": [
+    {
+      "track": "systems_software",
+      "goal_keywords": ["systems", "backend", "operating systems", "reliability", "software engineering"],
+      "recommended_companies": ["Boeing", "Amazon Bellevue", "Microsoft Redmond"],
+      "quarters": [
+        {
+          "label": "Quarter 1",
+          "focus": "Strengthen core systems foundations",
+          "course_suggestions": ["CSS 430", "CSS 458"],
+          "project_goal": "Build a small systems-oriented project with automated tests and clear documentation."
+        },
+        {
+          "label": "Quarter 2",
+          "focus": "Expand distributed and production-ready thinking",
+          "course_suggestions": ["CSS 432", "CSS 436"],
+          "project_goal": "Create a multi-component service or networking project that demonstrates reliability and debugging skills."
+        },
+        {
+          "label": "Quarter 3",
+          "focus": "Prepare internship-ready artifacts",
+          "course_suggestions": ["CSS 481", "CSS 497"],
+          "project_goal": "Polish one larger portfolio project, improve resume bullets, and tailor materials to systems-focused internships."
+        }
+      ]
+    },
+    {
+      "track": "cloud_platforms",
+      "goal_keywords": ["cloud", "distributed systems", "web development", "platform engineering", "backend"],
+      "recommended_companies": ["Microsoft Redmond", "Amazon Bellevue", "Google Kirkland"],
+      "quarters": [
+        {
+          "label": "Quarter 1",
+          "focus": "Build backend and database depth",
+          "course_suggestions": ["CSS 370", "CSS 475"],
+          "project_goal": "Develop a database-backed service with clean schema design and API basics."
+        },
+        {
+          "label": "Quarter 2",
+          "focus": "Move into scalable services and cloud tooling",
+          "course_suggestions": ["CSS 436", "CSS 432"],
+          "project_goal": "Deploy a small web service or cloud-hosted app and document its architecture."
+        },
+        {
+          "label": "Quarter 3",
+          "focus": "Show practical product and platform readiness",
+          "course_suggestions": ["CSS 481", "CSS 458"],
+          "project_goal": "Ship a polished full-stack or service project with testing, deployment notes, and portfolio screenshots."
+        }
+      ]
+    },
+    {
+      "track": "embedded_hardware",
+      "goal_keywords": ["embedded", "hardware", "robotics", "firmware", "aerospace"],
+      "recommended_companies": ["Boeing", "SpaceX Starlink", "T-Mobile"],
+      "quarters": [
+        {
+          "label": "Quarter 1",
+          "focus": "Deepen hardware-aware computing fundamentals",
+          "course_suggestions": ["CSS 422", "EE 450"],
+          "project_goal": "Build a small hardware/software integration demo and explain the technical tradeoffs."
+        },
+        {
+          "label": "Quarter 2",
+          "focus": "Practice embedded implementation",
+          "course_suggestions": ["CSS 427", "EE 455"],
+          "project_goal": "Create an embedded or device-oriented project with low-level debugging evidence."
+        },
+        {
+          "label": "Quarter 3",
+          "focus": "Translate technical work into internship readiness",
+          "course_suggestions": ["CSS 458", "CSS 497"],
+          "project_goal": "Package one embedded or systems project into a resume-ready portfolio story with testing notes."
+        }
+      ]
+    }
+  ]
+}

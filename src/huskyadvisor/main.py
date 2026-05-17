@@ -10,6 +10,7 @@ from huskyadvisor.json_data import (
     load_company_records,
     load_course_records,
     load_internship_playbooks,
+    load_quarter_plan_templates,
     load_recent_offering_terms,
     load_student_profile,
 )
@@ -88,7 +89,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="HuskyAdvisor MVP demo.")
     parser.add_argument(
         "--mode",
-        choices=["electives", "major", "roadmap", "profile-demo", "company-demo", "internship-demo", "llm-demo"],
+        choices=["electives", "major", "roadmap", "profile-demo", "company-demo", "internship-demo", "roadmap-demo", "llm-demo"],
         default="electives",
         help="Which advising workflow to run.",
     )
@@ -126,6 +127,7 @@ def main() -> None:
         recent_offerings = load_recent_offering_terms()
         company_mapping = load_company_course_mapping()
         internship_playbooks = load_internship_playbooks()
+        quarter_plan_templates = load_quarter_plan_templates()
         json_advisor = HuskyAdvisorEngine(
             SAMPLE_MAJORS,
             json_courses,
@@ -133,6 +135,7 @@ def main() -> None:
             recent_offerings=recent_offerings,
             company_course_mapping=company_mapping,
             internship_playbooks=internship_playbooks,
+            quarter_plan_templates=quarter_plan_templates,
         )
         result = json_advisor.recommend_electives(
             profile,
@@ -148,6 +151,7 @@ def main() -> None:
         recent_offerings = load_recent_offering_terms()
         company_mapping = load_company_course_mapping()
         internship_playbooks = load_internship_playbooks()
+        quarter_plan_templates = load_quarter_plan_templates()
         json_advisor = HuskyAdvisorEngine(
             SAMPLE_MAJORS,
             json_courses,
@@ -155,6 +159,7 @@ def main() -> None:
             recent_offerings=recent_offerings,
             company_course_mapping=company_mapping,
             internship_playbooks=internship_playbooks,
+            quarter_plan_templates=quarter_plan_templates,
         )
         result = json_advisor.recommend_companies(profile)
         print(format_result(result))
@@ -167,6 +172,7 @@ def main() -> None:
         recent_offerings = load_recent_offering_terms()
         company_mapping = load_company_course_mapping()
         internship_playbooks = load_internship_playbooks()
+        quarter_plan_templates = load_quarter_plan_templates()
         json_advisor = HuskyAdvisorEngine(
             SAMPLE_MAJORS,
             json_courses,
@@ -174,8 +180,30 @@ def main() -> None:
             recent_offerings=recent_offerings,
             company_course_mapping=company_mapping,
             internship_playbooks=internship_playbooks,
+            quarter_plan_templates=quarter_plan_templates,
         )
         result = json_advisor.recommend_internship_prep(profile)
+        print(format_result(result))
+        return
+
+    if args.mode == "roadmap-demo":
+        profile = load_student_profile()
+        json_courses = load_course_records()
+        json_companies = load_company_records()
+        recent_offerings = load_recent_offering_terms()
+        company_mapping = load_company_course_mapping()
+        internship_playbooks = load_internship_playbooks()
+        quarter_plan_templates = load_quarter_plan_templates()
+        json_advisor = HuskyAdvisorEngine(
+            SAMPLE_MAJORS,
+            json_courses,
+            json_companies,
+            recent_offerings=recent_offerings,
+            company_course_mapping=company_mapping,
+            internship_playbooks=internship_playbooks,
+            quarter_plan_templates=quarter_plan_templates,
+        )
+        result = json_advisor.build_quarter_plan(profile)
         print(format_result(result))
         return
 

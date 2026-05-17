@@ -22,6 +22,7 @@ class HuskyAdvisorEngine:
         recent_offerings: dict[str, list[str]] | None = None,
         company_course_mapping: dict[str, list[str]] | None = None,
         internship_playbooks: list[dict] | None = None,
+        quarter_plan_templates: list[dict] | None = None,
     ) -> None:
         self.majors = list(majors)
         self.courses = list(courses)
@@ -29,6 +30,7 @@ class HuskyAdvisorEngine:
         self.recent_offerings = recent_offerings or {}
         self.company_course_mapping = company_course_mapping or {}
         self.internship_playbooks = internship_playbooks or []
+        self.quarter_plan_templates = quarter_plan_templates or []
 
     def recommend_electives(self, profile: StudentProfile, target_company: str | None = None) -> AdvisingResult:
         company = self._find_company(target_company or self._first_or_none(profile.target_companies))
@@ -229,21 +231,39 @@ class HuskyAdvisorEngine:
         )
 
     def build_quarter_plan(self, profile: StudentProfile) -> AdvisingResult:
-        next_steps = [
-            "Quarter 1: Take one systems-oriented elective and build a small class-aligned project with tests.",
-            "Quarter 2: Strengthen teamwork experience through a larger software project and resume-ready documentation.",
-            "Quarter 3: Tailor a project toward your target industry, such as aerospace reliability or embedded software.",
-        ]
-        evidence = [
-            f"You already completed: {', '.join(profile.completed_courses)}.",
-            f"Your target companies include: {', '.join(profile.target_companies) or 'regional employers'}.",
-        ]
+        selected_template = self._select_quarter_template(profile)
+        if selected_template:
+            next_steps = [
+                (
+                    f"{quarter['label']}: {quarter['focus']}. "
+                    f"Suggested courses: {', '.join(quarter.get('course_suggestions', []))}. "
+                    f"Project goal: {quarter['project_goal']}"
+                )
+                for quarter in selected_template.get("quarters", [])
+            ]
+            evidence = [
+                f"This roadmap was selected because your goals overlap with the {selected_template.get('track', 'general')} track.",
+                f"Target companies in this track: {', '.join(selected_template.get('recommended_companies', []))}.",
+            ]
+            summary = "This roadmap matches one of HuskyAdvisor's structured preparation tracks."
+        else:
+            next_steps = [
+                "Quarter 1: Take one systems-oriented elective and build a small class-aligned project with tests.",
+                "Quarter 2: Strengthen teamwork experience through a larger software project and resume-ready documentation.",
+                "Quarter 3: Tailor a project toward your target industry, such as aerospace reliability or embedded software.",
+            ]
+            evidence = [
+                f"You already completed: {', '.join(profile.completed_courses)}.",
+                f"Your target companies include: {', '.join(profile.target_companies) or 'regional employers'}.",
+            ]
+            summary = "This roadmap focuses on building internship-ready systems experience without overloading the MVP."
+
         cautions = [
             "Confirm prerequisite sequencing with an advisor before treating this as an official degree plan.",
         ]
         return AdvisingResult(
             title="Quarter-by-Quarter Success Roadmap",
-            summary="This roadmap focuses on building internship-ready systems experience without overloading the MVP.",
+            summary=summary,
             recommendations=next_steps,
             evidence=evidence,
             cautions=cautions,
@@ -257,6 +277,22 @@ class HuskyAdvisorEngine:
             if company.name.lower() == lowered:
                 return company
         return None
+
+    def _select_quarter_template(self, profile: StudentProfile) -> dict | None:
+        if not self.quarter_plan_templates:
+            return None
+
+        lowered_goals = [goal.lower() for goal in profile.career_goals]
+        best_template: dict | None = None
+        best_score = -1
+        for template in self.quarter_plan_templates:
+            keywords = [keyword.lower() for keyword in template.get("goal_keywords", [])]
+            score = len(self._overlap(keywords, lowered_goals))
+            if score > best_score:
+                best_score = score
+                best_template = template
+
+        return best_template if best_score > 0 else self.quarter_plan_templates[0]
 
     @staticmethod
     def _overlap(left: Iterable[str], right: Iterable[str]) -> List[str]:

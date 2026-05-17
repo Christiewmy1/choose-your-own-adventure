@@ -14,6 +14,7 @@ DEFAULT_COMPANY_JSON = PROJECT_ROOT / "data" / "local_tech_companies.json"
 DEFAULT_RECENT_CATALOG_JSON = PROJECT_ROOT / "data" / "uwb_recent_css_catalog_summary.json"
 DEFAULT_COMPANY_MAPPING_JSON = PROJECT_ROOT / "data" / "company_course_mapping.json"
 DEFAULT_INTERNSHIP_PLAYBOOK_JSON = PROJECT_ROOT / "data" / "internship_prep_playbooks.json"
+DEFAULT_QUARTER_PLAN_JSON = PROJECT_ROOT / "data" / "quarter_plan_templates.json"
 
 
 def load_course_records(path: Path | None = None) -> list[CourseRecord]:
@@ -114,6 +115,13 @@ def load_internship_playbooks(path: Path | None = None) -> list[dict[str, Any]]:
     with source.open(encoding="utf-8") as handle:
         payload: dict[str, Any] = json.load(handle)
     return payload.get("playbooks", [])
+
+
+def load_quarter_plan_templates(path: Path | None = None) -> list[dict[str, Any]]:
+    source = path or DEFAULT_QUARTER_PLAN_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+    return payload.get("templates", [])
 
 
 def _normalize_code(value: str) -> str:

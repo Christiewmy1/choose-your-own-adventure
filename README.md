@@ -53,6 +53,7 @@ cd /Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project
 PYTHONPATH=src python3 -m huskyadvisor.main --mode profile-demo
 PYTHONPATH=src python3 -m huskyadvisor.main --mode company-demo
 PYTHONPATH=src python3 -m huskyadvisor.main --mode internship-demo
+PYTHONPATH=src python3 -m huskyadvisor.main --mode roadmap-demo
 ```
 
 What each mode does:
@@ -60,6 +61,7 @@ What each mode does:
 - `profile-demo`: recommends courses based on a student profile
 - `company-demo`: suggests local companies that align with a student's path
 - `internship-demo`: gives a preparation plan with courses, project ideas, and skill focus
+- `roadmap-demo`: gives a structured quarter-by-quarter plan using curated roadmap templates
 
 ## Project Structure
 
@@ -90,6 +92,8 @@ What each mode does:
   - internship-prep tracks
 - `data/uwb_recent_css_catalog_summary.json`
   - summary derived from a larger UWB course catalog source
+- `data/quarter_plan_templates.json`
+  - structured roadmap templates for quarter-by-quarter planning
 
 ### Key Documentation
 
@@ -97,14 +101,39 @@ What each mode does:
   - system and architecture design
 - `docs/system_overview.md`
   - execution flow and file-level overview
+- `docs/frontend_handoff.md`
+  - page-by-page guidance for the website team
+- `docs/website_testing_checklist.md`
+  - practical checklist for testing the website MVP
+- `docs/website_copy_blocks.md`
+  - ready-to-use page copy for the frontend MVP
+- `docs/persona_test_matrix.md`
+  - expected behavior for sample student scenarios
+- `docs/data_coverage_audit.md`
+  - honest summary of where the current dataset is strong and weak
+- `docs/team_dependency_tracker.md`
+  - clear handoff and ownership notes across data, frontend, and backend work
+- `docs/matiyas_role_summary.md`
+  - concise explanation of the data/documentation contribution lane
+- `docs/api_contract.md`
+  - proposed JSON response contract for the eventual website/backend connection
 - `docs/project_website_content.md`
   - content draft for the public project website
 - `docs/data_and_metadata_plan.md`
   - metadata and dataset strategy
 - `docs/evaluation_question_bank.md`
   - test prompts for recommendation quality
+- `docs/manual_evaluation_report.md`
+  - first-pass manual review of current demo quality
+- `docs/source_reference_index.md`
+  - transparency notes about where project data came from
 - `docs/catalog_integration_notes.md`
   - external catalog integration notes
+
+### Sample Personas For Testing
+
+- `data/sample_student_personas.json`
+  - reusable student cases for demo and website testing
 
 ## Optional LLM / RAG Path
 
@@ -138,6 +167,16 @@ The data/documentation contribution area is most visible in:
 - `docs/project_website_content.md`
 - `docs/system_overview.md`
 - `docs/evaluation_question_bank.md`
+- `docs/manual_evaluation_report.md`
+- `docs/source_reference_index.md`
+- `docs/frontend_handoff.md`
+- `docs/website_testing_checklist.md`
+- `docs/website_copy_blocks.md`
+- `docs/persona_test_matrix.md`
+- `docs/data_coverage_audit.md`
+- `docs/team_dependency_tracker.md`
+- `docs/matiyas_role_summary.md`
+- `docs/api_contract.md`
 
 ## Next Major Step
 

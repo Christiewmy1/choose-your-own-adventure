@@ -1,0 +1,99 @@
+[
+  {
+    "persona_id": "junior_csse_boeing",
+    "name": "Avery",
+    "major": "CSSE",
+    "class_standing": "Junior",
+    "completed_courses": [
+      "CSS 142",
+      "CSS 143",
+      "CSS 301",
+      "CSS 342",
+      "CSS 360"
+    ],
+    "career_goals": [
+      "embedded systems",
+      "software engineering",
+      "aerospace"
+    ],
+    "target_company": "Boeing",
+    "target_field": "systems software",
+    "expected_focus": [
+      "hardware-aware software",
+      "testing",
+      "operating systems"
+    ]
+  },
+  {
+    "persona_id": "sophomore_app_cloud",
+    "name": "Jordan",
+    "major": "Applied Computing",
+    "class_standing": "Sophomore",
+    "completed_courses": [
+      "BIS 200",
+      "CSS 142",
+      "CSS 143"
+    ],
+    "career_goals": [
+      "cloud computing",
+      "web development",
+      "data systems"
+    ],
+    "target_company": "Microsoft",
+    "target_field": "cloud platform engineering",
+    "expected_focus": [
+      "web systems",
+      "databases",
+      "cloud services"
+    ]
+  },
+  {
+    "persona_id": "junior_ee_embedded",
+    "name": "Sam",
+    "major": "Electrical Engineering",
+    "class_standing": "Junior",
+    "completed_courses": [
+      "MATH 124",
+      "MATH 125",
+      "PHYS 121",
+      "EE 271"
+    ],
+    "career_goals": [
+      "embedded systems",
+      "firmware",
+      "robotics"
+    ],
+    "target_company": "T-Mobile",
+    "target_field": "embedded and hardware systems",
+    "expected_focus": [
+      "embedded design",
+      "hardware/software integration",
+      "low-level systems"
+    ]
+  },
+  {
+    "persona_id": "senior_csse_quality",
+    "name": "Taylor",
+    "major": "CSSE",
+    "class_standing": "Senior",
+    "completed_courses": [
+      "CSS 301",
+      "CSS 342",
+      "CSS 360",
+      "CSS 430",
+      "CSS 432"
+    ],
+    "career_goals": [
+      "quality assurance",
+      "backend engineering",
+      "reliable systems"
+    ],
+    "target_company": "Amazon",
+    "target_field": "software quality and backend systems",
+    "expected_focus": [
+      "testing",
+      "distributed systems",
+      "production readiness"
+    ]
+  }
+]
