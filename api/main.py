@@ -20,7 +20,8 @@ app = FastAPI(title="HuskyAdvisor API", version="1.0.0", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",  # Vite (Christy's frontend)
+        "https://christiewmy1.github.io",  # Christy's deployed site
+        "http://localhost:5173",
         "http://localhost:3000",
         "http://localhost:8080",
     ],
