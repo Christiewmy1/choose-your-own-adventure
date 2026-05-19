@@ -1,0 +1,517 @@
+{
+  "dataset_name": "HuskyAdvisor UWB Spring 2026 Official Schedule Snapshot",
+  "campus": "UW Bothell",
+  "term": "SPR2026",
+  "last_updated": "2026-05-19",
+  "notes": "This dataset summarizes selected official Spring 2026 schedule offerings from the public UW Time Schedule pages. Enrollment and availability may have changed after publication.",
+  "sources": [
+    "https://www.washington.edu/students/timeschd/pub/B/SPR2026/css.html",
+    "https://www.washington.edu/students/timeschd/pub/B/SPR2026/bengr.html"
+  ],
+  "courses": [
+    {
+      "course_code": "CSS 310",
+      "title": "IA & Cybersecurity",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12901",
+          "credits": 5,
+          "meeting_times": "F 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "46/48",
+          "modality": "50% hybrid",
+          "notes": "Meets in-person Fridays; other interactions asynchronous online."
+        },
+        {
+          "section_id": "B",
+          "sln": "12902",
+          "credits": 5,
+          "meeting_times": "TTh 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "26/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 337",
+      "title": "Secure Systems",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12903",
+          "credits": 5,
+          "meeting_times": "MW 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "18/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 342",
+      "title": "Data, Alg, Math I",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12904",
+          "credits": 5,
+          "meeting_times": "MW 1:15 PM-3:15 PM",
+          "status": "Closed",
+          "enrollment": "41/40",
+          "modality": "In person",
+          "notes": "Optional CSSSKL 342 skills lab mentioned."
+        },
+        {
+          "section_id": "B",
+          "sln": "12905",
+          "credits": 5,
+          "meeting_times": "TTh 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "30/40",
+          "modality": "In person",
+          "notes": "Optional CSSSKL 342 skills lab mentioned."
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 343",
+      "title": "Data, Alg, Math II",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12906",
+          "credits": 5,
+          "meeting_times": "TTh 5:45 PM-7:45 PM",
+          "status": "Open",
+          "enrollment": "16/40",
+          "modality": "In person"
+        },
+        {
+          "section_id": "B",
+          "sln": "12907",
+          "credits": 5,
+          "meeting_times": "MW 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "35/40",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 360",
+      "title": "Software Engr",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12911",
+          "credits": 5,
+          "meeting_times": "MW 5:45 PM-7:45 PM",
+          "status": "Open",
+          "enrollment": "29/30",
+          "modality": "In person"
+        },
+        {
+          "section_id": "B",
+          "sln": "12912",
+          "credits": 5,
+          "meeting_times": "TTh 11:00 AM-1:00 PM",
+          "status": "Closed",
+          "enrollment": "30/30",
+          "modality": "In person"
+        },
+        {
+          "section_id": "C",
+          "sln": "12913",
+          "credits": 5,
+          "meeting_times": "MW 3:30 PM-5:30 PM",
+          "status": "Closed",
+          "enrollment": "31/30",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 370",
+      "title": "Analysis and Design",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12914",
+          "credits": 5,
+          "meeting_times": "MW 5:45 PM-7:45 PM",
+          "status": "Open",
+          "enrollment": "29/48",
+          "modality": "In person"
+        },
+        {
+          "section_id": "B",
+          "sln": "12915",
+          "credits": 5,
+          "meeting_times": "TTh 5:45 PM-7:45 PM",
+          "status": "Open",
+          "enrollment": "14/48",
+          "modality": "In person"
+        },
+        {
+          "section_id": "C",
+          "sln": "12916",
+          "credits": 5,
+          "meeting_times": "TTh 1:15 PM-3:15 PM",
+          "status": "Open",
+          "enrollment": "47/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 371",
+      "title": "Business of Tech",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12917",
+          "credits": 5,
+          "meeting_times": "MW 1:15 PM-3:15 PM",
+          "status": "Open",
+          "enrollment": "38/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 382",
+      "title": "Intro to AI",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12918",
+          "credits": 5,
+          "meeting_times": "TTh 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "46/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 421",
+      "title": "Cmpt HW & O/S",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12923",
+          "credits": 5,
+          "meeting_times": "TTh 3:30 PM-5:30 PM",
+          "status": "Open",
+          "enrollment": "7/48",
+          "modality": "In person",
+          "notes": "No CSSE or Comp E majors."
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 422",
+      "title": "Hardware & Comp Org",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12924",
+          "credits": 5,
+          "meeting_times": "TTh 8:00 PM-10:00 PM",
+          "status": "Open",
+          "enrollment": "20/48",
+          "modality": "In person"
+        },
+        {
+          "section_id": "B",
+          "sln": "12925",
+          "credits": 5,
+          "meeting_times": "TTh 3:30 PM-5:30 PM",
+          "status": "Open",
+          "enrollment": "47/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 427",
+      "title": "Embedded Systems",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12927",
+          "credits": 5,
+          "meeting_times": "TTh 8:45 AM-10:45 AM",
+          "status": "Open",
+          "enrollment": "21/24",
+          "modality": "In person"
+        },
+        {
+          "section_id": "AA",
+          "sln": "12928",
+          "credits": 0,
+          "meeting_times": "F 9:00 AM-12:30 PM",
+          "status": "Open",
+          "enrollment": "21/24",
+          "modality": "Lab"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 430",
+      "title": "Operating Systems",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12929",
+          "credits": 5,
+          "meeting_times": "T 3:30 PM-5:30 PM",
+          "status": "Open",
+          "enrollment": "44/48",
+          "modality": "50% hybrid",
+          "notes": "Tuesday in person; Thursday synchronous online."
+        },
+        {
+          "section_id": "B",
+          "sln": "12930",
+          "credits": 5,
+          "meeting_times": "M 8:00 PM-10:00 PM",
+          "status": "Open",
+          "enrollment": "11/48",
+          "modality": "50% hybrid",
+          "notes": "Monday in person; Wednesday synchronous online."
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 431",
+      "title": "Network Archt & Mgmt",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12931",
+          "credits": 5,
+          "meeting_times": "T 5:45 PM-7:45 PM",
+          "status": "Closed",
+          "enrollment": "48/48",
+          "modality": "50% hybrid",
+          "notes": "Tuesday in person; Thursday synchronous online."
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 449",
+      "title": "Dsgn & Anlys Algrthm",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12932",
+          "credits": 5,
+          "meeting_times": "MW 5:45 PM-7:45 PM",
+          "status": "Open",
+          "enrollment": "26/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 461",
+      "title": "Software Proj Mgmt",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12933",
+          "credits": 5,
+          "meeting_times": "MW 1:15 PM-3:15 PM",
+          "status": "Open",
+          "enrollment": "29/40",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 475",
+      "title": "Database Systems",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12935",
+          "credits": 5,
+          "meeting_times": "M 3:30 PM-5:30 PM",
+          "status": "Open",
+          "enrollment": "46/48",
+          "modality": "50% hybrid",
+          "notes": "Monday in person; Wednesday synchronous online."
+        },
+        {
+          "section_id": "B",
+          "sln": "12936",
+          "credits": 5,
+          "meeting_times": "TTh 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "27/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 480",
+      "title": "Human-Comp Interact",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12938",
+          "credits": 5,
+          "meeting_times": "TTh 3:30 PM-5:30 PM",
+          "status": "Open",
+          "enrollment": "28/40",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 481",
+      "title": "Web Prog & Appl",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12939",
+          "credits": 5,
+          "meeting_times": "MW 3:30 PM-5:30 PM",
+          "status": "Open",
+          "enrollment": "14/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 487",
+      "title": "Computer Vision",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12940",
+          "credits": 5,
+          "meeting_times": "MW 1:15 PM-3:15 PM",
+          "status": "Open",
+          "enrollment": "42/48",
+          "modality": "In person"
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 490",
+      "title": "Special Topics",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12941",
+          "credits": 5,
+          "meeting_times": "TTh 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "17/48",
+          "modality": "In person",
+          "notes": "Topic: Multithreading in GUI Applications."
+        },
+        {
+          "section_id": "B",
+          "sln": "12942",
+          "credits": 5,
+          "meeting_times": "MW 1:15 PM-3:15 PM",
+          "status": "Open",
+          "enrollment": "23/48",
+          "modality": "In person",
+          "notes": "Topic: Open Source Studio."
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 496",
+      "title": "Appl Cmpt Capstone",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "12943",
+          "credits": 5,
+          "meeting_times": "TTh 3:30 PM-5:30 PM",
+          "status": "Open",
+          "enrollment": "19/20",
+          "modality": "In person",
+          "notes": "Applied Computing students only."
+        },
+        {
+          "section_id": "B",
+          "sln": "12944",
+          "credits": 5,
+          "meeting_times": "TTh 5:45 PM-7:45 PM",
+          "status": "Open",
+          "enrollment": "4/20",
+          "modality": "In person",
+          "notes": "Applied Computing students only."
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 497",
+      "title": "CS & SE Capstone",
+      "sections": [
+        {
+          "section_id": "E",
+          "sln": "12949",
+          "credits": 5,
+          "meeting_times": "MW 3:30 PM-5:30 PM",
+          "status": "Open",
+          "enrollment": "22/20",
+          "modality": "Project",
+          "notes": "Individual and group projects."
+        },
+        {
+          "section_id": "F",
+          "sln": "12950",
+          "credits": 5,
+          "meeting_times": "MW 8:00 PM-10:00 PM",
+          "status": "Open",
+          "enrollment": "10/20",
+          "modality": "Project",
+          "notes": "Individual and group projects."
+        },
+        {
+          "section_id": "G",
+          "sln": "12951",
+          "credits": 5,
+          "meeting_times": "TTh 5:45 PM-7:45 PM",
+          "status": "Open",
+          "enrollment": "19/20",
+          "modality": "Project",
+          "notes": "Individual and group projects."
+        }
+      ]
+    },
+    {
+      "course_code": "B ENGR 310",
+      "title": "Comp Phys Modeling",
+      "sections": [
+        {
+          "section_id": "A",
+          "sln": "10922",
+          "credits": 4,
+          "meeting_times": "TTh 11:00 AM-1:00 PM",
+          "status": "Open",
+          "enrollment": "32/36",
+          "modality": "In person"
+        },
+        {
+          "section_id": "B",
+          "sln": "10923",
+          "credits": 4,
+          "meeting_times": "TTh 1:15 PM-3:15 PM",
+          "status": "Open",
+          "enrollment": "20/36",
+          "modality": "In person"
+        }
+      ]
+    }
+  ]
+}

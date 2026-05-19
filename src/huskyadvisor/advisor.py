@@ -35,9 +35,12 @@ class HuskyAdvisorEngine:
     def recommend_electives(self, profile: StudentProfile, target_company: str | None = None) -> AdvisingResult:
         company = self._find_company(target_company or self._first_or_none(profile.target_companies))
         scored: List[ScoredCourse] = []
+        completed = {self._normalize_code(code) for code in profile.completed_courses}
 
         for course in self.courses:
             if course.level < 400:
+                continue
+            if self._normalize_code(course.course_code) in completed:
                 continue
 
             score = 0
@@ -76,7 +79,6 @@ class HuskyAdvisorEngine:
                 score += len(goal_overlap)
                 evidence.append(f"It supports your stated goals: {', '.join(goal_overlap)}.")
 
-            completed = set(profile.completed_courses)
             prereq_ready = all(token in completed for token in self._extract_prereq_courses(course.prerequisite_text))
             if prereq_ready:
                 score += 1
@@ -182,13 +184,32 @@ class HuskyAdvisorEngine:
                 summary="No internship prep playbooks are currently loaded.",
             )
 
+        completed = {self._normalize_code(code) for code in profile.completed_courses}
+        remaining_courses = [
+            code
+            for code in selected.get("recommended_courses", [])
+            if self._normalize_code(code) not in completed
+        ]
+        if not remaining_courses:
+            remaining_courses = ["You have already completed the main recommended courses for this track."]
+
+        next_project = selected.get("recommended_projects", [])
+        next_skills = selected.get("recommended_skills", [])
+        target_companies = selected.get("target_companies", [])
+        target_hint = (
+            f" aligned with {profile.target_companies[0]}"
+            if profile.target_companies
+            else ""
+        )
+
         recommendations = [
-            f"Recommended courses: {', '.join(selected.get('recommended_courses', []))}",
-            *selected.get("recommended_projects", []),
+            f"Recommended next courses{target_hint}: {', '.join(remaining_courses)}",
+            *next_project,
         ]
         evidence = [
-            f"Target companies in this playbook: {', '.join(selected.get('target_companies', []))}.",
-            f"Suggested skills: {', '.join(selected.get('recommended_skills', []))}.",
+            f"Target companies in this playbook: {', '.join(target_companies)}.",
+            f"Suggested skills to strengthen: {', '.join(next_skills)}.",
+            f"Completed courses already considered: {', '.join(profile.completed_courses) or 'none listed'}.",
         ]
         cautions = [
             "This is a preparation guide, not a live internship feed.",
@@ -196,7 +217,7 @@ class HuskyAdvisorEngine:
         ]
         return AdvisingResult(
             title="Internship Prep Plan",
-            summary="This plan suggests courses, project ideas, and skills that fit one likely internship pathway.",
+            summary="This plan highlights the remaining courses, projects, and skills that best fit one likely internship pathway for your profile.",
             recommendations=recommendations,
             evidence=evidence,
             cautions=cautions,
@@ -293,6 +314,9 @@ class HuskyAdvisorEngine:
                 best_template = template
 
         return best_template if best_score > 0 else self.quarter_plan_templates[0]
+
+    def _normalize_code(self, value: str) -> str:
+        return " ".join(value.strip().upper().split())
 
     @staticmethod
     def _overlap(left: Iterable[str], right: Iterable[str]) -> List[str]:

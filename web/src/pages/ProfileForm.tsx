@@ -55,7 +55,7 @@ const ProfileForm = ({ profile, error, onSubmit, onBack }: ProfileFormProps) => 
             id="major"
             value={localProfile.major}
             onChange={e => updateField('major', e.target.value)}
-            placeholder="e.g. Informatics, Business, Psychology"
+            placeholder="e.g. CSSE, Applied Computing, Electrical Engineering"
             required
           />
         </div>
@@ -89,8 +89,18 @@ const ProfileForm = ({ profile, error, onSubmit, onBack }: ProfileFormProps) => 
             id="careerGoals"
             value={localProfile.careerGoals}
             onChange={e => updateField('careerGoals', e.target.value)}
-            placeholder="Share the roles or industries you’re aiming for."
+            placeholder="Use commas to list goals like systems, embedded, software engineering, cloud."
             required
+          />
+        </div>
+
+        <div className="input-group full-width">
+          <label htmlFor="targetCompanies">Target companies or field</label>
+          <textarea
+            id="targetCompanies"
+            value={localProfile.targetCompanies}
+            onChange={e => updateField('targetCompanies', e.target.value)}
+            placeholder="Optional: Boeing, Microsoft Redmond, T-Mobile, cloud platforms"
           />
         </div>
 

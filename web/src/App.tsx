@@ -1,42 +1,41 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { fetchDashboardResults } from './api';
 import LandingPage from './pages/LandingPage';
 import ProfileForm from './pages/ProfileForm';
 import Recommendations from './pages/Recommendations';
 import TopNav from './components/TopNav';
 import LoadingSpinner from './components/LoadingSpinner';
-import type { StudentProfile } from './types';
+import type { DashboardResults, StudentProfile } from './types';
 
 const defaultProfile: StudentProfile = {
   major: '',
   standing: 'Freshman',
   completedCourses: '',
   careerGoals: '',
+  targetCompanies: '',
 };
 
 function App() {
   const [page, setPage] = useState<'landing' | 'profile' | 'results'>('landing');
   const [profile, setProfile] = useState<StudentProfile>(defaultProfile);
+  const [results, setResults] = useState<DashboardResults | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-
-  useEffect(() => {
-    if (page === 'results' && isLoading) {
-      const timer = window.setTimeout(() => setIsLoading(false), 900);
-      return () => window.clearTimeout(timer);
-    }
-  }, [page, isLoading]);
+  const [resultError, setResultError] = useState('');
 
   const goToLanding = () => {
     setPage('landing');
     setError('');
+    setResultError('');
   };
 
   const goToProfile = () => {
     setPage('profile');
     setError('');
+    setResultError('');
   };
 
-  const handleProfileSubmit = (nextProfile: StudentProfile) => {
+  const handleProfileSubmit = async (nextProfile: StudentProfile) => {
     if (!nextProfile.major.trim() || !nextProfile.careerGoals.trim()) {
       setError('Please share your major and your main career goal.');
       return;
@@ -44,8 +43,22 @@ function App() {
 
     setProfile(nextProfile);
     setError('');
+    setResultError('');
     setPage('results');
     setIsLoading(true);
+    setResults(null);
+
+    try {
+      const nextResults = await fetchDashboardResults(nextProfile);
+      setResults(nextResults);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Could not load HuskyAdvisor results.';
+      setResultError(
+        `${message} Make sure the HuskyAdvisor API is running locally on port 8010.`
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleEditProfile = () => {
@@ -81,7 +94,12 @@ function App() {
                 <p>Crunching your plan with UWB-focused recommendations...</p>
               </div>
             ) : (
-              <Recommendations profile={profile} onEditProfile={handleEditProfile} />
+              <Recommendations
+                profile={profile}
+                results={results}
+                error={resultError}
+                onEditProfile={handleEditProfile}
+              />
             )}
           </section>
         )}
