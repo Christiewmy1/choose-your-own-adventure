@@ -7,3 +7,5 @@ __pycache__/
 .chroma/
 data/chroma_db/
 external_huskyadvisor/
+web/node_modules/
+web/dist/

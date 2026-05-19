@@ -2,6 +2,22 @@
 
 HuskyAdvisor is an AI-powered academic and career guidance prototype for **University of Washington Bothell** students. Its current MVP helps students compare majors, choose useful electives, connect coursework to local company pathways, and generate internship-preparation next steps using UWB-specific data.
 
+## Live website
+
+**Public demo:** [https://christiewmy1.github.io/choose-your-own-adventure/](https://christiewmy1.github.io/choose-your-own-adventure/)
+
+The student-facing UI lives in `web/` (React + Vite). Pushes to the `HuskyAdvisor` branch rebuild and publish to the **`gh-pages`** branch via [GitHub Actions](.github/workflows/deploy-web.yml) (this repo’s Pages source). If you still see the old “Cave of Time” demo, hard-refresh the page or wait a minute for GitHub’s CDN cache to update.
+
+### Run the website locally
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Then open **http://localhost:4173** (profile form → course recommendations → company alignment).
+
 ## What This Repository Is
 
 This repository is being used for the **HuskyAdvisor** branch of the team project. The most important project code and data for the current MVP live in:
@@ -40,7 +56,7 @@ The current MVP does **not** yet provide:
 - live internship postings
 - real-time job scraping
 - official advisor-approved degree planning
-- a fully polished public website
+- a fully polished public website (a working MVP is at the [live demo](https://christiewmy1.github.io/choose-your-own-adventure/); backend integration is still in progress)
 
 ## Demo Modes
 
@@ -193,7 +209,7 @@ The data/documentation contribution area is most visible in:
 
 ## Next Major Step
 
-The next major milestone is turning the current recommendation engine into a **student-facing website**. The backend and data layers are now strong enough that frontend work should begin in parallel with continued data cleanup and evaluation.
+The next major milestone is turning the current recommendation engine into a fully connected **student-facing website**. The backend and data layers are now strong enough that frontend work should continue using the live API instead of placeholder rules, while the team keeps improving data quality and evaluation coverage.
 
 ## Prototype API
 
