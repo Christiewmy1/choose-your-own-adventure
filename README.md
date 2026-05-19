@@ -6,7 +6,7 @@ HuskyAdvisor is an AI-powered academic and career guidance prototype for **Unive
 
 **Public demo:** [https://christiewmy1.github.io/choose-your-own-adventure/](https://christiewmy1.github.io/choose-your-own-adventure/)
 
-The student-facing UI lives in `web/` (React + Vite). Pushes to the `HuskyAdvisor` branch deploy it via [GitHub Actions](.github/workflows/deploy-web.yml). If the link 404s, open the repo **Settings → Pages** and set **Source** to **GitHub Actions**.
+The student-facing UI lives in `web/` (React + Vite). Pushes to the `HuskyAdvisor` branch rebuild and publish to the **`gh-pages`** branch via [GitHub Actions](.github/workflows/deploy-web.yml) (this repo’s Pages source). If you still see the old “Cave of Time” demo, hard-refresh the page or wait a minute for GitHub’s CDN cache to update.
 
 ### Run the website locally
 
