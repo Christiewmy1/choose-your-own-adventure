@@ -2,6 +2,22 @@
 
 HuskyAdvisor is an AI-powered academic and career guidance prototype for **University of Washington Bothell** students. Its current MVP helps students compare majors, choose useful electives, connect coursework to local company pathways, and generate internship-preparation next steps using UWB-specific data.
 
+## Live website
+
+**Public demo:** [https://christiewmy1.github.io/choose-your-own-adventure/](https://christiewmy1.github.io/choose-your-own-adventure/)
+
+The student-facing UI lives in `web/` (React + Vite). Pushes to the `HuskyAdvisor` branch deploy it via [GitHub Actions](.github/workflows/deploy-web.yml). If the link 404s, open the repo **Settings → Pages** and set **Source** to **GitHub Actions**.
+
+### Run the website locally
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Then open **http://localhost:4173** (profile form → course recommendations → company alignment).
+
 ## What This Repository Is
 
 This repository is being used for the **HuskyAdvisor** branch of the team project. The most important project code and data for the current MVP live in:
@@ -40,7 +56,7 @@ The current MVP does **not** yet provide:
 - live internship postings
 - real-time job scraping
 - official advisor-approved degree planning
-- a fully polished public website
+- a fully polished public website (a working MVP is at the [live demo](https://christiewmy1.github.io/choose-your-own-adventure/); backend integration is still in progress)
 
 ## Demo Modes
 
@@ -180,4 +196,4 @@ The data/documentation contribution area is most visible in:
 
 ## Next Major Step
 
-The next major milestone is turning the current recommendation engine into a **student-facing website**. The backend and data layers are now strong enough that frontend work should begin in parallel with continued data cleanup and evaluation.
+Connect the `web/` frontend to the Python recommendation engine (`src/huskyadvisor/`) via a small API, replace client-side demo rules with live UWB data, and continue data cleanup and evaluation.
