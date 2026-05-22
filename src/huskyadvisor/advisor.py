@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import re
 from typing import Iterable, List
 
 from huskyadvisor.models import AdvisingResult, CompanyRecord, CourseRecord, MajorRecord, StudentProfile
@@ -34,61 +35,7 @@ class HuskyAdvisorEngine:
 
     def recommend_electives(self, profile: StudentProfile, target_company: str | None = None) -> AdvisingResult:
         company = self._find_company(target_company or self._first_or_none(profile.target_companies))
-        scored: List[ScoredCourse] = []
-        completed = {self._normalize_code(code) for code in profile.completed_courses}
-
-        for course in self.courses:
-            if course.level < 400:
-                continue
-            if self._normalize_code(course.course_code) in completed:
-                continue
-
-            score = 0
-            evidence: List[str] = []
-
-            if profile.major in course.major_tags:
-                score += 3
-                evidence.append(f"{course.course_code} is tagged for {profile.major}.")
-
-            recent_terms = self.recent_offerings.get(course.course_code, [])
-            if recent_terms:
-                score += 1
-                evidence.append(
-                    f"{course.course_code} appeared in recent terms: {', '.join(recent_terms)}."
-                )
-
-            if company:
-                mapped_courses = self.company_course_mapping.get(company.name, [])
-                if course.course_code in mapped_courses:
-                    score += 2
-                    evidence.append(f"{course.course_code} is explicitly mapped to {company.name} in the career dataset.")
-
-                shared_skills = self._overlap(course.career_tags, company.target_skills)
-                if shared_skills:
-                    score += 2 * len(shared_skills)
-                    evidence.append(
-                        f"{course.course_code} overlaps with {company.name} skills: {', '.join(shared_skills)}."
-                    )
-
-                if "aerospace" in course.career_tags and "aerospace" in company.domain_focus.lower():
-                    score += 2
-                    evidence.append(f"{course.course_code} directly aligns with aerospace-oriented work.")
-
-            goal_overlap = self._overlap(course.career_tags, profile.career_goals)
-            if goal_overlap:
-                score += len(goal_overlap)
-                evidence.append(f"It supports your stated goals: {', '.join(goal_overlap)}.")
-
-            prereq_ready = all(token in completed for token in self._extract_prereq_courses(course.prerequisite_text))
-            if prereq_ready:
-                score += 1
-                evidence.append("Your completed courses suggest you are reasonably prepared.")
-            else:
-                evidence.append("You may need to verify prerequisites before enrolling.")
-
-            scored.append(ScoredCourse(course=course, score=score, evidence=evidence))
-
-        scored.sort(key=lambda item: item.score, reverse=True)
+        scored = self._score_elective_courses(profile, company)
         top_courses = scored[:3]
 
         recommendations = [
@@ -102,8 +49,8 @@ class HuskyAdvisorEngine:
 
         summary = (
             f"For a {profile.class_standing} {profile.major} student targeting "
-            f"{company.name if company else 'local technical roles'}, these courses best match systems,"
-            " aerospace, and reliable software preparation."
+            f"{company.name if company else 'local technical roles'}, these next-step electives best balance fit,"
+            " realism, and preparation value."
         )
 
         return AdvisingResult(
@@ -184,7 +131,7 @@ class HuskyAdvisorEngine:
                 summary="No internship prep playbooks are currently loaded.",
             )
 
-        completed = {self._normalize_code(code) for code in profile.completed_courses}
+        completed = self._completed_course_set(profile)
         remaining_courses = [
             code
             for code in selected.get("recommended_courses", [])
@@ -253,19 +200,60 @@ class HuskyAdvisorEngine:
 
     def build_quarter_plan(self, profile: StudentProfile) -> AdvisingResult:
         selected_template = self._select_quarter_template(profile)
+        completed = self._completed_course_set(profile)
+        used_codes: set[str] = set()
         if selected_template:
-            next_steps = [
-                (
-                    f"{quarter['label']}: {quarter['focus']}. "
-                    f"Suggested courses: {', '.join(quarter.get('course_suggestions', []))}. "
-                    f"Project goal: {quarter['project_goal']}"
+            replacement_pool = [
+                item.course.course_code
+                for item in self._score_elective_courses(
+                    profile,
+                    self._find_company(self._first_or_none(profile.target_companies)),
                 )
-                for quarter in selected_template.get("quarters", [])
+            ]
+            next_steps: list[str] = []
+            filtered_any_completed = False
+
+            for quarter in selected_template.get("quarters", []):
+                kept_codes: list[str] = []
+                for code in quarter.get("course_suggestions", []):
+                    normalized = self._normalize_code(code)
+                    if normalized in completed:
+                        filtered_any_completed = True
+                        continue
+                    if normalized not in used_codes:
+                        kept_codes.append(code)
+                        used_codes.add(normalized)
+
+                for code in replacement_pool:
+                    normalized = self._normalize_code(code)
+                    if normalized in completed or normalized in used_codes:
+                        continue
+                    if len(kept_codes) >= len(quarter.get("course_suggestions", [])):
+                        break
+                    kept_codes.append(code)
+                    used_codes.add(normalized)
+
+                if not kept_codes:
+                    kept_codes = ["Use this quarter for project depth, interview prep, and an approved advisor-reviewed elective."]
+
+                next_steps.append(
+                    (
+                        f"{quarter['label']}: {quarter['focus']}. "
+                        f"Suggested courses: {', '.join(kept_codes)}. "
+                        f"Project goal: {quarter['project_goal']}"
+                    )
+                )
+
+            next_steps = [
+                step
+                for step in next_steps
             ]
             evidence = [
                 f"This roadmap was selected because your goals overlap with the {selected_template.get('track', 'general')} track.",
                 f"Target companies in this track: {', '.join(selected_template.get('recommended_companies', []))}.",
             ]
+            if filtered_any_completed:
+                evidence.append("Completed courses were removed from the roadmap and replaced with remaining options when possible.")
             summary = "This roadmap matches one of HuskyAdvisor's structured preparation tracks."
         else:
             next_steps = [
@@ -289,6 +277,147 @@ class HuskyAdvisorEngine:
             evidence=evidence,
             cautions=cautions,
         )
+
+    def _score_elective_courses(
+        self,
+        profile: StudentProfile,
+        company: CompanyRecord | None = None,
+    ) -> List[ScoredCourse]:
+        scored: List[ScoredCourse] = []
+        completed = self._completed_course_set(profile)
+
+        for course in self.courses:
+            if course.level < 400 or course.level >= 500:
+                continue
+            if self._normalize_code(course.course_code) in completed:
+                continue
+
+            score = 0
+            evidence: List[str] = []
+
+            if profile.major in course.major_tags:
+                score += 3
+                evidence.append(f"{course.course_code} is tagged for {profile.major}.")
+
+            score += self._quality_score_adjustment(course, evidence)
+
+            recent_terms = self.recent_offerings.get(course.course_code, [])
+            if recent_terms:
+                score += 1
+                evidence.append(
+                    f"{course.course_code} appeared in recent terms: {', '.join(recent_terms)}."
+                )
+
+            if company:
+                mapped_courses = self.company_course_mapping.get(company.name, [])
+                if course.course_code in mapped_courses:
+                    score += 2
+                    evidence.append(f"{course.course_code} is explicitly mapped to {company.name} in the career dataset.")
+
+                shared_skills = self._overlap(course.career_tags, company.target_skills)
+                if shared_skills:
+                    score += 2 * len(shared_skills)
+                    evidence.append(
+                        f"{course.course_code} overlaps with {company.name} skills: {', '.join(shared_skills)}."
+                    )
+
+                if "aerospace" in course.career_tags and "aerospace" in company.domain_focus.lower():
+                    score += 2
+                    evidence.append(f"{course.course_code} directly aligns with aerospace-oriented work.")
+
+            goal_overlap = self._overlap(course.career_tags, profile.career_goals)
+            if goal_overlap:
+                score += len(goal_overlap)
+                evidence.append(f"It supports your stated goals: {', '.join(goal_overlap)}.")
+
+            if profile.preferred_learning_style.lower().startswith("project") and course.project_emphasis == "high":
+                score += 1
+                evidence.append("This course has strong project emphasis, which matches your learning style.")
+
+            score += self._readiness_adjustment(profile, course, completed, evidence)
+
+            scored.append(ScoredCourse(course=course, score=score, evidence=evidence))
+
+        scored.sort(
+            key=lambda item: (
+                item.score,
+                self._quality_rank(item.course),
+                len(self.recent_offerings.get(item.course.course_code, [])),
+                item.course.course_code,
+            ),
+            reverse=True,
+        )
+        return scored
+
+    def _quality_score_adjustment(self, course: CourseRecord, evidence: List[str]) -> int:
+        bonus = 0
+        source_type = course.source_type.lower()
+        confidence = course.source_confidence.lower()
+        description = course.description.lower()
+
+        if source_type == "curated_uwb_snapshot":
+            bonus += 3
+            evidence.append("This course comes from a richer curated HuskyAdvisor dataset entry.")
+        elif source_type == "catalog_derived_plus_curated":
+            bonus += 2
+        elif source_type == "catalog_schedule_derived":
+            bonus -= 1
+
+        if confidence == "high":
+            bonus += 2
+        elif confidence == "medium-high":
+            bonus += 1
+
+        if "catalog-derived placeholder" in description:
+            bonus -= 3
+            evidence.append("This course is still using placeholder catalog metadata, so it is ranked more cautiously.")
+
+        return bonus
+
+    def _quality_rank(self, course: CourseRecord) -> int:
+        rank = 0
+        if course.source_type == "curated_uwb_snapshot":
+            rank += 3
+        elif course.source_type == "catalog_derived_plus_curated":
+            rank += 2
+        elif course.source_type == "catalog_schedule_derived":
+            rank += 1
+
+        if course.source_confidence == "high":
+            rank += 2
+        elif course.source_confidence == "medium-high":
+            rank += 1
+
+        if "catalog-derived placeholder" in course.description.lower():
+            rank -= 2
+
+        return rank
+
+    def _readiness_adjustment(
+        self,
+        profile: StudentProfile,
+        course: CourseRecord,
+        completed: set[str],
+        evidence: List[str],
+    ) -> int:
+        adjustment = 0
+        prereqs = self._extract_prereq_courses(course.prerequisite_text)
+        prereq_ready = all(token in completed for token in prereqs)
+        if prereq_ready:
+            adjustment += 1
+            evidence.append("Your completed courses suggest you are reasonably prepared.")
+        else:
+            adjustment -= 2
+            evidence.append("You may need to verify prerequisites before enrolling.")
+
+        if profile.completed_credits < 75:
+            adjustment -= 2
+            evidence.append("This looks more like a future-planning elective than an immediate next-quarter course at your current credit level.")
+        elif profile.completed_credits < 90 and course.level >= 480:
+            adjustment -= 1
+            evidence.append("This course may fit better after a bit more upper-division progress.")
+
+        return adjustment
 
     def _find_company(self, name: str | None) -> CompanyRecord | None:
         if not name:
@@ -317,6 +446,23 @@ class HuskyAdvisorEngine:
 
     def _normalize_code(self, value: str) -> str:
         return " ".join(value.strip().upper().split())
+
+    def _completed_course_set(self, profile: StudentProfile) -> set[str]:
+        completed: set[str] = set()
+        for value in profile.completed_courses:
+            normalized = self._normalize_code(value)
+            if normalized:
+                completed.add(normalized)
+            completed.update(self._extract_course_codes_from_text(value))
+        return completed
+
+    def _extract_course_codes_from_text(self, value: str) -> set[str]:
+        pattern = re.compile(r"\b([A-Z]{2,6}|[A-Z]\s+[A-Z]{2,6})\s*-?\s*(\d{3})\b")
+        matches = pattern.findall(value.upper())
+        return {
+            self._normalize_code(f"{department} {number}")
+            for department, number in matches
+        }
 
     @staticmethod
     def _overlap(left: Iterable[str], right: Iterable[str]) -> List[str]:

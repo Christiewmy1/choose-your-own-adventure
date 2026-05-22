@@ -40,6 +40,9 @@ def load_course_records(path: Path | None = None) -> list[CourseRecord]:
                 career_tags=career_tags,
                 prerequisite_text=item.get("prerequisites", "See catalog"),
                 project_emphasis=item.get("project_emphasis") or _infer_project_emphasis(item.get("description", "")),
+                source_type=item.get("source_type", "unknown"),
+                source_confidence=item.get("source_confidence", "medium"),
+                source_url=item.get("source_url"),
             )
         )
     return records

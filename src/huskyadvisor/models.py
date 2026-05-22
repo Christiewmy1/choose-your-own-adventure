@@ -30,6 +30,9 @@ class CourseRecord(BaseModel):
     career_tags: List[str] = Field(default_factory=list)
     prerequisite_text: str
     project_emphasis: str
+    source_type: str = "unknown"
+    source_confidence: str = "medium"
+    source_url: str | None = None
 
 
 class MajorRecord(BaseModel):
