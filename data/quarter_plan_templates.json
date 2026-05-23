@@ -55,7 +55,7 @@
     {
       "track": "embedded_hardware",
       "goal_keywords": ["embedded", "hardware", "robotics", "firmware", "aerospace"],
-      "recommended_companies": ["Boeing", "SpaceX Starlink", "T-Mobile"],
+      "recommended_companies": ["Boeing", "SpaceX Starlink"],
       "quarters": [
         {
           "label": "Quarter 1",
@@ -74,6 +74,56 @@
           "focus": "Translate technical work into internship readiness",
           "course_suggestions": ["CSS 458", "CSS 497"],
           "project_goal": "Package one embedded or systems project into a resume-ready portfolio story with testing notes."
+        }
+      ]
+    },
+    {
+      "track": "security_infrastructure",
+      "goal_keywords": ["security", "networking", "infrastructure", "reliability", "cloud"],
+      "recommended_companies": ["T-Mobile", "AT&T Bothell", "Microsoft Redmond"],
+      "quarters": [
+        {
+          "label": "Quarter 1",
+          "focus": "Build secure systems and networking foundations",
+          "course_suggestions": ["CSS 310", "CSS 337"],
+          "project_goal": "Create a small security-focused tool or case study writeup with clear technical tradeoffs."
+        },
+        {
+          "label": "Quarter 2",
+          "focus": "Grow infrastructure and platform awareness",
+          "course_suggestions": ["CSS 431", "CSS 432"],
+          "project_goal": "Build a networked or infrastructure-oriented project with logging, debugging, and resilience notes."
+        },
+        {
+          "label": "Quarter 3",
+          "focus": "Package security and platform readiness for internships",
+          "course_suggestions": ["CSS 457", "CSS 436"],
+          "project_goal": "Turn one security or infrastructure project into a resume-ready artifact with testing and reliability evidence."
+        }
+      ]
+    },
+    {
+      "track": "healthcare_data_platforms",
+      "goal_keywords": ["healthcare", "data", "privacy", "security", "cloud", "integration"],
+      "recommended_companies": ["UW Medicine", "Providence", "Fred Hutch"],
+      "quarters": [
+        {
+          "label": "Quarter 1",
+          "focus": "Build data and secure-platform foundations",
+          "course_suggestions": ["CSS 370", "CSS 457"],
+          "project_goal": "Design a small data-backed system that clearly explains privacy, access control, and reliability choices."
+        },
+        {
+          "label": "Quarter 2",
+          "focus": "Grow cloud and application integration skills",
+          "course_suggestions": ["CSS 436", "CSS 481"],
+          "project_goal": "Build a cloud-hosted service or application flow that could support a healthcare, research, or patient-facing use case."
+        },
+        {
+          "label": "Quarter 3",
+          "focus": "Translate technical work into healthcare-tech readiness",
+          "course_suggestions": ["CSS 458", "CSS 486"],
+          "project_goal": "Package one privacy-aware or data-intensive project into a portfolio story that highlights trust, usability, and responsible system design."
         }
       ]
     }

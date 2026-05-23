@@ -14,6 +14,15 @@ class ScoredCourse:
     evidence: List[str]
 
 
+@dataclass
+class TargetContext:
+    name: str
+    domain_focus: str
+    target_skills: List[str]
+    mapped_courses: List[str]
+    notes: str = ""
+
+
 class HuskyAdvisorEngine:
     def __init__(
         self,
@@ -22,6 +31,7 @@ class HuskyAdvisorEngine:
         companies: Iterable[CompanyRecord],
         recent_offerings: dict[str, list[str]] | None = None,
         company_course_mapping: dict[str, list[str]] | None = None,
+        company_intent_profiles: list[dict] | None = None,
         internship_playbooks: list[dict] | None = None,
         quarter_plan_templates: list[dict] | None = None,
     ) -> None:
@@ -30,13 +40,24 @@ class HuskyAdvisorEngine:
         self.companies = list(companies)
         self.recent_offerings = recent_offerings or {}
         self.company_course_mapping = company_course_mapping or {}
+        self.company_intent_profiles = company_intent_profiles or []
         self.internship_playbooks = internship_playbooks or []
         self.quarter_plan_templates = quarter_plan_templates or []
 
     def recommend_electives(self, profile: StudentProfile, target_company: str | None = None) -> AdvisingResult:
-        company = self._find_company(target_company or self._first_or_none(profile.target_companies))
-        scored = self._score_elective_courses(profile, company)
+        scope_result = self._scope_guard_result(
+            profile,
+            "Course Recommendation Scope Warning",
+            "HuskyAdvisor cannot give a trustworthy course recommendation for this exact profile yet.",
+        )
+        if scope_result:
+            return scope_result
+
+        canonical_major = self._canonical_major(profile.major)
+        target = self._resolve_target_context(target_company or self._first_or_none(profile.target_companies))
+        scored = self._score_elective_courses(profile, target)
         top_courses = scored[:3]
+        level_label = self._recommendation_level_label(profile)
 
         recommendations = [
             f"{item.course.course_code} {item.course.title}: {item.course.description}" for item in top_courses
@@ -48,13 +69,13 @@ class HuskyAdvisorEngine:
         ]
 
         summary = (
-            f"For a {profile.class_standing} {profile.major} student targeting "
-            f"{company.name if company else 'local technical roles'}, these next-step electives best balance fit,"
+            f"For a {profile.class_standing} {canonical_major} student targeting "
+            f"{target.name if target else 'local technical roles'}, these next-step electives best balance fit,"
             " realism, and preparation value."
         )
 
         return AdvisingResult(
-            title="Recommended 400-Level Electives",
+            title=f"Recommended {level_label} Courses",
             summary=summary,
             recommendations=recommendations,
             evidence=evidence,
@@ -62,7 +83,17 @@ class HuskyAdvisorEngine:
         )
 
     def recommend_companies(self, profile: StudentProfile) -> AdvisingResult:
+        scope_result = self._scope_guard_result(
+            profile,
+            "Company Alignment Scope Warning",
+            "HuskyAdvisor cannot give a trustworthy company-alignment result for this exact profile yet.",
+        )
+        if scope_result:
+            return scope_result
+
         ranked: list[tuple[int, CompanyRecord, list[str]]] = []
+        canonical_major = self._canonical_major(profile.major)
+        resolved_targets = self._resolved_target_names(profile)
         for company in self.companies:
             score = 0
             evidence: list[str] = []
@@ -77,7 +108,7 @@ class HuskyAdvisorEngine:
             relevant_courses = [
                 course.course_code
                 for course in self.courses
-                if profile.major in course.major_tags
+                if canonical_major in course.major_tags
                 and self._overlap(course.career_tags, company.target_skills)
             ]
             if relevant_courses:
@@ -86,9 +117,9 @@ class HuskyAdvisorEngine:
                     f"Your program already connects to {company.name} through courses like {', '.join(relevant_courses[:3])}."
                 )
 
-            if company.name in profile.target_companies:
+            if company.name in resolved_targets:
                 score += 2
-                evidence.append(f"{company.name} is already one of your stated target companies.")
+                evidence.append(f"{company.name} is already one of your stated or inferred target companies.")
 
             ranked.append((score, company, evidence))
 
@@ -114,16 +145,15 @@ class HuskyAdvisorEngine:
         )
 
     def recommend_internship_prep(self, profile: StudentProfile) -> AdvisingResult:
-        lowered_goals = [goal.lower() for goal in profile.career_goals]
-        selected = None
-        for playbook in self.internship_playbooks:
-            track = playbook.get("track", "").lower()
-            if any(token in " ".join(lowered_goals) for token in track.split("_")):
-                selected = playbook
-                break
+        scope_result = self._scope_guard_result(
+            profile,
+            "Internship Prep Scope Warning",
+            "HuskyAdvisor cannot give a trustworthy internship-prep plan for this exact profile yet.",
+        )
+        if scope_result:
+            return scope_result
 
-        if selected is None and self.internship_playbooks:
-            selected = self.internship_playbooks[0]
+        selected, selection_reasons = self._select_internship_playbook(profile)
 
         if selected is None:
             return AdvisingResult(
@@ -148,15 +178,20 @@ class HuskyAdvisorEngine:
             if profile.target_companies
             else ""
         )
+        selected_track = selected.get("track", "general").replace("_", " ")
+        next_actions = self._internship_next_actions(profile)
 
         recommendations = [
             f"Recommended next courses{target_hint}: {', '.join(remaining_courses)}",
             *next_project,
+            *next_actions,
         ]
         evidence = [
+            f"Chosen prep track: {selected_track}.",
             f"Target companies in this playbook: {', '.join(target_companies)}.",
             f"Suggested skills to strengthen: {', '.join(next_skills)}.",
             f"Completed courses already considered: {', '.join(profile.completed_courses) or 'none listed'}.",
+            *selection_reasons[:2],
         ]
         cautions = [
             "This is a preparation guide, not a live internship feed.",
@@ -164,7 +199,7 @@ class HuskyAdvisorEngine:
         ]
         return AdvisingResult(
             title="Internship Prep Plan",
-            summary="This plan highlights the remaining courses, projects, and skills that best fit one likely internship pathway for your profile.",
+            summary="This plan highlights the remaining courses, projects, and concrete next actions that best fit one likely internship pathway for your profile.",
             recommendations=recommendations,
             evidence=evidence,
             cautions=cautions,
@@ -199,6 +234,14 @@ class HuskyAdvisorEngine:
         )
 
     def build_quarter_plan(self, profile: StudentProfile) -> AdvisingResult:
+        scope_result = self._scope_guard_result(
+            profile,
+            "Roadmap Scope Warning",
+            "HuskyAdvisor cannot build a believable quarter-by-quarter roadmap for this exact profile yet.",
+        )
+        if scope_result:
+            return scope_result
+
         selected_template = self._select_quarter_template(profile)
         completed = self._completed_course_set(profile)
         used_codes: set[str] = set()
@@ -207,7 +250,7 @@ class HuskyAdvisorEngine:
                 item.course.course_code
                 for item in self._score_elective_courses(
                     profile,
-                    self._find_company(self._first_or_none(profile.target_companies)),
+                    self._resolve_target_context(self._first_or_none(profile.target_companies)),
                 )
             ]
             next_steps: list[str] = []
@@ -281,13 +324,15 @@ class HuskyAdvisorEngine:
     def _score_elective_courses(
         self,
         profile: StudentProfile,
-        company: CompanyRecord | None = None,
+        target: TargetContext | None = None,
     ) -> List[ScoredCourse]:
         scored: List[ScoredCourse] = []
         completed = self._completed_course_set(profile)
+        canonical_major = self._canonical_major(profile.major)
+        min_level, max_level = self._target_level_range(profile)
 
         for course in self.courses:
-            if course.level < 400 or course.level >= 500:
+            if course.level < min_level or course.level > max_level:
                 continue
             if self._normalize_code(course.course_code) in completed:
                 continue
@@ -295,9 +340,9 @@ class HuskyAdvisorEngine:
             score = 0
             evidence: List[str] = []
 
-            if profile.major in course.major_tags:
+            if canonical_major in course.major_tags:
                 score += 3
-                evidence.append(f"{course.course_code} is tagged for {profile.major}.")
+                evidence.append(f"{course.course_code} is tagged for {canonical_major}.")
 
             score += self._quality_score_adjustment(course, evidence)
 
@@ -308,27 +353,41 @@ class HuskyAdvisorEngine:
                     f"{course.course_code} appeared in recent terms: {', '.join(recent_terms)}."
                 )
 
-            if company:
-                mapped_courses = self.company_course_mapping.get(company.name, [])
+            if target:
+                mapped_courses = target.mapped_courses
                 if course.course_code in mapped_courses:
                     score += 2
-                    evidence.append(f"{course.course_code} is explicitly mapped to {company.name} in the career dataset.")
+                    evidence.append(f"{course.course_code} is explicitly mapped to {target.name} in the career dataset.")
 
-                shared_skills = self._overlap(course.career_tags, company.target_skills)
+                shared_skills = self._overlap(course.career_tags, target.target_skills)
                 if shared_skills:
                     score += 2 * len(shared_skills)
                     evidence.append(
-                        f"{course.course_code} overlaps with {company.name} skills: {', '.join(shared_skills)}."
+                        f"{course.course_code} overlaps with {target.name} skills: {', '.join(shared_skills)}."
                     )
 
-                if "aerospace" in course.career_tags and "aerospace" in company.domain_focus.lower():
+                if "aerospace" in course.career_tags and "aerospace" in target.domain_focus.lower():
                     score += 2
                     evidence.append(f"{course.course_code} directly aligns with aerospace-oriented work.")
+                if "privacy" in target.target_skills and "security" in course.career_tags:
+                    score += 1
+                    evidence.append(f"{course.course_code} supports privacy-aware and secure system work relevant to {target.name}.")
+                if "data" in target.target_skills and "data" in course.career_tags:
+                    score += 1
+                    evidence.append(f"{course.course_code} supports data-centric work relevant to {target.name}.")
 
             goal_overlap = self._overlap(course.career_tags, profile.career_goals)
             if goal_overlap:
                 score += len(goal_overlap)
                 evidence.append(f"It supports your stated goals: {', '.join(goal_overlap)}.")
+
+            if self._canonical_major(profile.major) == "EE":
+                ee_focus = {"embedded", "hardware", "aerospace", "robotics", "systems"}
+                if ee_focus.intersection({goal.lower() for goal in profile.career_goals}) and (
+                    course.department == "EE" or "embedded" in course.career_tags or "hardware" in course.career_tags
+                ):
+                    score += 2
+                    evidence.append("This course keeps your recommendations grounded in an EE-oriented pathway.")
 
             if profile.preferred_learning_style.lower().startswith("project") and course.project_emphasis == "high":
                 score += 1
@@ -410,14 +469,208 @@ class HuskyAdvisorEngine:
             adjustment -= 2
             evidence.append("You may need to verify prerequisites before enrolling.")
 
-        if profile.completed_credits < 75:
-            adjustment -= 2
-            evidence.append("This looks more like a future-planning elective than an immediate next-quarter course at your current credit level.")
-        elif profile.completed_credits < 90 and course.level >= 480:
+        standing_band = self._standing_band(profile)
+        if standing_band == "early" and course.level >= 400:
+            adjustment -= 4
+            evidence.append("At your current stage, this looks more like a future target than an immediate next course.")
+        elif standing_band == "mid" and course.level >= 480:
             adjustment -= 1
             evidence.append("This course may fit better after a bit more upper-division progress.")
+        elif standing_band == "late" and course.level < 400:
+            adjustment -= 1
+            evidence.append("You may be ready to prioritize more advanced courses than this one.")
+
+        if self._canonical_major(profile.major) == "EE" and course.department == "EE":
+            adjustment += 1
+            evidence.append("This EE course is especially relevant for your program background.")
 
         return adjustment
+
+    def _canonical_major(self, value: str) -> str:
+        lowered = value.strip().lower()
+        if lowered in {"csse", "computer science and software engineering", "computer science & software engineering"}:
+            return "CSSE"
+        if lowered in {"applied computing", "ac"}:
+            return "Applied Computing"
+        if lowered in {"ee", "electrical engineering"}:
+            return "EE"
+        return value.strip()
+
+    def _standing_band(self, profile: StudentProfile) -> str:
+        standing = profile.class_standing.strip().lower()
+        credits = profile.completed_credits
+        if standing == "freshman" or credits < 45:
+            return "early"
+        if standing == "sophomore" or credits < 90:
+            return "mid"
+        if standing in {"junior", "senior", "graduate"} or credits >= 90:
+            return "late"
+        return "mid"
+
+    def _target_level_range(self, profile: StudentProfile) -> tuple[int, int]:
+        band = self._standing_band(profile)
+        if band == "early":
+            return (200, 399)
+        if band == "mid":
+            return (300, 499)
+        if self._canonical_major(profile.major) == "EE":
+            return (300, 499)
+        return (400, 499)
+
+    def _recommendation_level_label(self, profile: StudentProfile) -> str:
+        band = self._standing_band(profile)
+        if band == "early":
+            return "Foundation and 300-Level Preparation"
+        if band == "mid":
+            return "300- and 400-Level Next-Step"
+        return "Upper-Level"
+
+    def _scope_guard_result(
+        self,
+        profile: StudentProfile,
+        title: str,
+        summary: str,
+    ) -> AdvisingResult | None:
+        issues = self._profile_scope_issues(profile)
+        if not issues:
+            return None
+
+        recommendations = [
+            "Use one of the currently supported majors: CSSE, Applied Computing, or Electrical Engineering.",
+            "Use UWB-style course history when possible, such as CSS or EE courses already completed.",
+            "Use one of the current company targets in the dataset, such as Boeing, Microsoft Redmond, T-Mobile, Amazon Bellevue, or Google Kirkland.",
+        ]
+        evidence = [
+            "HuskyAdvisor is currently built around UW Bothell course and career pathways, not all UW majors or all employers.",
+            *issues,
+        ]
+        cautions = [
+            "Showing a generic recommendation here would be misleading, so HuskyAdvisor is intentionally warning instead.",
+        ]
+        return AdvisingResult(
+            title=title,
+            summary=summary,
+            recommendations=recommendations,
+            evidence=evidence,
+            cautions=cautions,
+        )
+
+    def _profile_scope_issues(self, profile: StudentProfile) -> list[str]:
+        issues: list[str] = []
+        canonical_major = self._canonical_major(profile.major)
+        supported_majors = {"CSSE", "Applied Computing", "EE"}
+        if canonical_major not in supported_majors:
+            issues.append(
+                f"The major '{profile.major}' is outside the current supported UWB pathways in this prototype."
+            )
+
+        recognized_course_prefixes = {"CSS", "EE", "BIS", "STMATH", "MATH"}
+        recognized_completed = [
+            code
+            for code in self._completed_course_set(profile)
+            if code.split()[0] in recognized_course_prefixes
+        ]
+        if profile.completed_courses and not recognized_completed:
+            issues.append(
+                "The completed-course history does not match the UWB course families currently modeled in HuskyAdvisor."
+            )
+
+        if profile.target_companies:
+            matched_companies = [company for company in profile.target_companies if self._resolve_target_context(company)]
+            if not matched_companies:
+                issues.append(
+                    "The target company/field is not in the current local-company dataset, so company alignment would be guessy."
+                )
+
+        return issues
+
+    def _resolved_target_names(self, profile: StudentProfile) -> set[str]:
+        names: set[str] = set()
+        for company in profile.target_companies:
+            context = self._resolve_target_context(company)
+            if context:
+                names.add(context.name)
+        return names
+
+    def _resolve_target_context(self, name: str | None) -> TargetContext | None:
+        if not name:
+            return None
+
+        exact_company = self._find_company(name)
+        if exact_company:
+            return TargetContext(
+                name=exact_company.name,
+                domain_focus=exact_company.domain_focus,
+                target_skills=exact_company.target_skills,
+                mapped_courses=self.company_course_mapping.get(exact_company.name, []),
+                notes=exact_company.notes,
+            )
+
+        lowered = name.lower().strip()
+        for profile in self.company_intent_profiles:
+            aliases = [alias.lower() for alias in profile.get("aliases", [])]
+            canonical_name = profile.get("canonical_name", "")
+            if lowered == canonical_name.lower() or lowered in aliases:
+                return TargetContext(
+                    name=canonical_name,
+                    domain_focus=profile.get("domain_focus", ""),
+                    target_skills=profile.get("target_skills", []),
+                    mapped_courses=[self._normalize_code(code) for code in profile.get("recommended_courses", [])],
+                    notes="Resolved through company intent profile.",
+                )
+
+            alias_tokens = " ".join(aliases)
+            if lowered and lowered in alias_tokens:
+                return TargetContext(
+                    name=canonical_name,
+                    domain_focus=profile.get("domain_focus", ""),
+                    target_skills=profile.get("target_skills", []),
+                    mapped_courses=[self._normalize_code(code) for code in profile.get("recommended_courses", [])],
+                    notes="Resolved through company intent profile.",
+                )
+
+        return None
+
+    def _playbook_company_matches(self, playbook: dict, profile: StudentProfile) -> list[str]:
+        targets = {name.lower() for name in self._resolved_target_names(profile)}
+        return [
+            company
+            for company in playbook.get("target_companies", [])
+            if company.lower() in targets
+        ]
+
+    def _template_company_match_score(self, template: dict, profile: StudentProfile) -> int:
+        targets = {name.lower() for name in self._resolved_target_names(profile)}
+        return sum(
+            1
+            for company in template.get("recommended_companies", [])
+            if company.lower() in targets
+        )
+
+    def _template_major_bonus(self, template: dict, profile: StudentProfile) -> int:
+        track = template.get("track", "")
+        canonical_major = self._canonical_major(profile.major)
+        if canonical_major == "EE" and track == "embedded_hardware":
+            return 2
+        if canonical_major == "Applied Computing" and track in {"cloud_platforms", "security_infrastructure"}:
+            return 2
+        if canonical_major == "CSSE" and track == "systems_software":
+            return 1
+        return 0
+
+    def _internship_next_actions(self, profile: StudentProfile) -> list[str]:
+        standing = profile.class_standing.lower()
+        if standing == "freshman":
+            return [
+                "Immediate next action: choose one starter project and one target skill to build before your first internship cycle."
+            ]
+        if standing == "sophomore":
+            return [
+                "Immediate next action: turn one class project into a resume bullet and start collecting internship-ready artifacts."
+            ]
+        return [
+            "Immediate next action: tailor one portfolio project and one resume bullet directly to this pathway before applying."
+        ]
 
     def _find_company(self, name: str | None) -> CompanyRecord | None:
         if not name:
@@ -437,12 +690,59 @@ class HuskyAdvisorEngine:
         best_score = -1
         for template in self.quarter_plan_templates:
             keywords = [keyword.lower() for keyword in template.get("goal_keywords", [])]
-            score = len(self._overlap(keywords, lowered_goals))
+            score = 3 * len(self._overlap(keywords, lowered_goals))
+            score += 3 * self._template_company_match_score(template, profile)
+            score += self._template_major_bonus(template, profile)
             if score > best_score:
                 best_score = score
                 best_template = template
 
         return best_template if best_score > 0 else self.quarter_plan_templates[0]
+
+    def _select_internship_playbook(self, profile: StudentProfile) -> tuple[dict | None, list[str]]:
+        if not self.internship_playbooks:
+            return None, []
+
+        lowered_goals = [goal.lower() for goal in profile.career_goals]
+        completed = self._completed_course_set(profile)
+        best_playbook: dict | None = None
+        best_reasons: list[str] = []
+        best_score = -1
+
+        for playbook in self.internship_playbooks:
+            score = 0
+            reasons: list[str] = []
+            keywords = [keyword.lower() for keyword in playbook.get("goal_keywords", [])]
+            skills = [skill.lower() for skill in playbook.get("recommended_skills", [])]
+            company_matches = self._playbook_company_matches(playbook, profile)
+
+            goal_overlap = self._overlap(keywords or skills, lowered_goals)
+            if goal_overlap:
+                score += 3 * len(goal_overlap)
+                reasons.append(f"Your goals overlap with this track through {', '.join(goal_overlap)}.")
+
+            if company_matches:
+                score += 4 * len(company_matches)
+                reasons.append(f"This track directly matches your target companies through {', '.join(company_matches)}.")
+
+            canonical_major = self._canonical_major(profile.major)
+            if canonical_major in playbook.get("preferred_majors", []):
+                score += 2
+                reasons.append(f"This track is a natural fit for {canonical_major} students.")
+
+            remaining_course_count = sum(
+                1
+                for code in playbook.get("recommended_courses", [])
+                if self._normalize_code(code) not in completed
+            )
+            score += min(2, remaining_course_count)
+
+            if score > best_score:
+                best_score = score
+                best_playbook = playbook
+                best_reasons = reasons
+
+        return best_playbook, best_reasons
 
     def _normalize_code(self, value: str) -> str:
         return " ".join(value.strip().upper().split())

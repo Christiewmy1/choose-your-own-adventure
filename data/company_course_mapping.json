@@ -41,6 +41,21 @@
       "company": "Nintendo of America",
       "recommended_courses": ["CSS 385", "CSS 451", "CSS 474", "CSS 478"],
       "reason": "Interactive product roles can connect to graphics, user experience, and applied product-building coursework."
+    },
+    {
+      "company": "UW Medicine",
+      "recommended_courses": ["CSS 370", "CSS 436", "CSS 457", "CSS 458", "CSS 481"],
+      "reason": "Healthcare-technology roles often need secure data systems, cloud-backed platforms, privacy awareness, and reliable application development."
+    },
+    {
+      "company": "Providence",
+      "recommended_courses": ["CSS 370", "CSS 436", "CSS 481", "CSS 486", "CSS 457"],
+      "reason": "Digital-health and care-platform roles connect to product engineering, secure data flows, cloud systems, and user-facing applications."
+    },
+    {
+      "company": "Fred Hutch",
+      "recommended_courses": ["CSS 370", "CSS 382", "CSS 436", "CSS 457", "CSS 486"],
+      "reason": "Research-computing and health-data roles benefit from databases, AI/data literacy, cloud systems, and privacy-aware engineering."
     }
   ]
 }

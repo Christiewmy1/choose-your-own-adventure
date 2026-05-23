@@ -73,6 +73,33 @@
       "hiring_seasons": ["fall", "winter"],
       "target_skills": ["embedded", "systems", "networking", "reliability", "aerospace"],
       "notes": "Strong aspirational target for students interested in aerospace systems, networking, and mission-critical software."
+    },
+    {
+      "company_id": "company-009",
+      "name": "UW Medicine",
+      "city": "Seattle",
+      "domain_focus": "clinical systems, health data, privacy, and technology-enabled care",
+      "hiring_seasons": ["fall", "spring"],
+      "target_skills": ["data", "cloud", "security", "privacy", "integration", "reliability"],
+      "notes": "Good local target for students interested in healthcare technology, clinical systems, privacy, and data-informed care platforms."
+    },
+    {
+      "company_id": "company-010",
+      "name": "Providence",
+      "city": "Renton / Seattle area",
+      "domain_focus": "digital health, consumer-facing healthcare technology, and care-platform innovation",
+      "hiring_seasons": ["fall", "winter"],
+      "target_skills": ["product", "cloud", "data", "integration", "security", "software engineering"],
+      "notes": "Strong fit for students who want to build digital health products, platforms, and patient-facing software systems."
+    },
+    {
+      "company_id": "company-011",
+      "name": "Fred Hutch",
+      "city": "Seattle",
+      "domain_focus": "research computing, data-intensive science, privacy-first AI, and clinical data systems",
+      "hiring_seasons": ["fall", "spring"],
+      "target_skills": ["data", "ai", "privacy", "security", "cloud", "software engineering"],
+      "notes": "Good target for students interested in research software, data pipelines, privacy-aware AI, and healthcare-adjacent technical roles."
     }
   ]
 }

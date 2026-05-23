@@ -13,6 +13,7 @@ DEFAULT_PROFILE_JSON = PROJECT_ROOT / "data" / "student_profile.json"
 DEFAULT_COMPANY_JSON = PROJECT_ROOT / "data" / "local_tech_companies.json"
 DEFAULT_RECENT_CATALOG_JSON = PROJECT_ROOT / "data" / "uwb_recent_css_catalog_summary.json"
 DEFAULT_COMPANY_MAPPING_JSON = PROJECT_ROOT / "data" / "company_course_mapping.json"
+DEFAULT_COMPANY_INTENT_JSON = PROJECT_ROOT / "data" / "company_intent_profiles.json"
 DEFAULT_INTERNSHIP_PLAYBOOK_JSON = PROJECT_ROOT / "data" / "internship_prep_playbooks.json"
 DEFAULT_QUARTER_PLAN_JSON = PROJECT_ROOT / "data" / "quarter_plan_templates.json"
 
@@ -111,6 +112,13 @@ def load_company_course_mapping(path: Path | None = None) -> dict[str, list[str]
         item["company"]: [_normalize_code(code) for code in item.get("recommended_courses", [])]
         for item in payload.get("mappings", [])
     }
+
+
+def load_company_intent_profiles(path: Path | None = None) -> list[dict[str, Any]]:
+    source = path or DEFAULT_COMPANY_INTENT_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+    return payload.get("profiles", [])
 
 
 def load_internship_playbooks(path: Path | None = None) -> list[dict[str, Any]]:
