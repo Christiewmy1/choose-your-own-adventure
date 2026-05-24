@@ -150,9 +150,15 @@ def _parse_level(code: str) -> int:
 def _infer_major_tags(code: str, department: str) -> list[str]:
     normalized_department = department.upper()
     if code.startswith("EE ") or normalized_department == "EE":
-        return ["EE", "CSSE"]
+        return ["EE", "CSSE", "Computer Engineering"]
+    if code.startswith("ME ") or normalized_department == "ME":
+        return ["ME", "Mechanical Engineering"]
+    if code.startswith("BIS ") or normalized_department == "BUSINESS":
+        return ["Applied Computing", "Business Administration", "Information Technology"]
+    if code.startswith("B CHEM ") or code.startswith("B BIO "):
+        return ["Data Science", "ME", "EE"]
     if code.startswith("CSS "):
-        return ["CSSE", "Applied Computing"]
+        return ["CSSE", "Applied Computing", "Computer Engineering"]
     return ["Applied Computing"]
 
 

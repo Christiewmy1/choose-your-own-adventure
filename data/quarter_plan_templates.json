@@ -126,6 +126,56 @@
           "project_goal": "Package one privacy-aware or data-intensive project into a portfolio story that highlights trust, usability, and responsible system design."
         }
       ]
+    },
+    {
+      "track": "data_science_path",
+      "goal_keywords": ["data science", "machine learning", "analytics", "research", "bioinformatics"],
+      "recommended_companies": ["Fred Hutch", "UW Medicine", "Microsoft Redmond"],
+      "quarters": [
+        {
+          "label": "Quarter 1",
+          "focus": "Strengthen programming and math foundations for data work",
+          "course_suggestions": ["CSS 123", "STMATH 308"],
+          "project_goal": "Complete a reproducible data analysis project with clean documentation and visual summaries."
+        },
+        {
+          "label": "Quarter 2",
+          "focus": "Move into modeling and intelligent systems",
+          "course_suggestions": ["CSS 382", "CSS 486"],
+          "project_goal": "Build a small machine-learning or analytics project with evaluation metrics and limitations clearly explained."
+        },
+        {
+          "label": "Quarter 3",
+          "focus": "Prepare research or industry-facing data portfolio materials",
+          "course_suggestions": ["CSS 483", "CSS 499"],
+          "project_goal": "Polish one data-science portfolio artifact and resume bullets that show impact, methodology, and communication."
+        }
+      ]
+    },
+    {
+      "track": "it_platforms",
+      "goal_keywords": ["information technology", "infrastructure", "security", "networking", "support"],
+      "recommended_companies": ["AT&T Bothell", "T-Mobile", "Providence"],
+      "quarters": [
+        {
+          "label": "Quarter 1",
+          "focus": "Build business systems and security awareness",
+          "course_suggestions": ["BIS 221", "CSS 310"],
+          "project_goal": "Document an IT support or business-system workflow with clear troubleshooting steps."
+        },
+        {
+          "label": "Quarter 2",
+          "focus": "Grow networking and infrastructure depth",
+          "course_suggestions": ["CSS 431", "CSS 337"],
+          "project_goal": "Create an infrastructure or network-focused project with reliability and logging notes."
+        },
+        {
+          "label": "Quarter 3",
+          "focus": "Prepare for IT and security operations internships",
+          "course_suggestions": ["BIS 463", "CSS 457"],
+          "project_goal": "Package one IT or security project into resume-ready evidence of documentation, support, and risk awareness."
+        }
+      ]
     }
   ]
 }

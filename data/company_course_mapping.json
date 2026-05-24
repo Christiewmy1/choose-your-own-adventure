@@ -1,6 +1,6 @@
 {
   "dataset_name": "HuskyAdvisor Company to Course Mapping",
-  "last_updated": "2026-05-14",
+  "last_updated": "2026-05-24",
   "mappings": [
     {
       "company": "Boeing",
@@ -29,7 +29,7 @@
     },
     {
       "company": "AT&T Bothell",
-      "recommended_courses": ["CSS 431", "CSS 432", "CSS 310", "CSS 337"],
+      "recommended_courses": ["CSS 431", "CSS 432", "CSS 310", "CSS 337", "BIS 463"],
       "reason": "Network infrastructure and telecom-focused roles benefit from networking, cybersecurity, and systems awareness."
     },
     {
@@ -39,8 +39,8 @@
     },
     {
       "company": "Nintendo of America",
-      "recommended_courses": ["CSS 385", "CSS 451", "CSS 474", "CSS 478"],
-      "reason": "Interactive product roles can connect to graphics, user experience, and applied product-building coursework."
+      "recommended_courses": ["CSS 385", "CSS 451", "CSS 452", "CSS 474", "CSS 478", "CSS 484"],
+      "reason": "Interactive product roles can connect to graphics, game development, multimedia, user experience, and applied product-building coursework."
     },
     {
       "company": "UW Medicine",
@@ -54,7 +54,7 @@
     },
     {
       "company": "Fred Hutch",
-      "recommended_courses": ["CSS 370", "CSS 382", "CSS 436", "CSS 457", "CSS 486"],
+      "recommended_courses": ["CSS 370", "CSS 382", "CSS 436", "CSS 457", "CSS 486", "CSS 483", "CSS 123"],
       "reason": "Research-computing and health-data roles benefit from databases, AI/data literacy, cloud systems, and privacy-aware engineering."
     }
   ]

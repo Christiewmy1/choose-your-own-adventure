@@ -484,6 +484,29 @@ class HuskyAdvisorEngine:
             adjustment += 1
             evidence.append("This EE course is especially relevant for your program background.")
 
+        if self._canonical_major(profile.major) == "ME" and course.department == "Mechanical Engineering":
+            adjustment += 1
+            evidence.append("This ME course is especially relevant for your program background.")
+
+        if self._canonical_major(profile.major) == "Computer Engineering" and course.department in {
+            "Electrical Engineering",
+            "Computing & Software Systems",
+        }:
+            adjustment += 1
+            evidence.append("This course supports the hardware-software blend in computer engineering.")
+
+        if self._canonical_major(profile.major) == "Data Science" and (
+            "data" in course.career_tags or "ai" in course.career_tags or "machine learning" in course.career_tags
+        ):
+            adjustment += 1
+            evidence.append("This course aligns with data science and analytics preparation.")
+
+        if self._canonical_major(profile.major) == "Information Technology" and (
+            "security" in course.career_tags or "infrastructure" in course.career_tags or course.department == "Business"
+        ):
+            adjustment += 1
+            evidence.append("This course supports IT systems, infrastructure, or business technology paths.")
+
         return adjustment
 
     def _canonical_major(self, value: str) -> str:
@@ -494,6 +517,16 @@ class HuskyAdvisorEngine:
             return "Applied Computing"
         if lowered in {"ee", "electrical engineering"}:
             return "EE"
+        if lowered in {"me", "mechanical engineering", "mechanical eng"}:
+            return "ME"
+        if lowered in {"business administration", "business", "bis", "business admin"}:
+            return "Business Administration"
+        if lowered in {"computer engineering", "comp eng", "ce", "comp-e"}:
+            return "Computer Engineering"
+        if lowered in {"data science", "datascience", "ds"}:
+            return "Data Science"
+        if lowered in {"information technology", "it", "info tech"}:
+            return "Information Technology"
         return value.strip()
 
     def _standing_band(self, profile: StudentProfile) -> str:
@@ -536,8 +569,8 @@ class HuskyAdvisorEngine:
             return None
 
         recommendations = [
-            "Use one of the currently supported majors: CSSE, Applied Computing, or Electrical Engineering.",
-            "Use UWB-style course history when possible, such as CSS or EE courses already completed.",
+            "Use one of the currently supported majors: CSSE, Applied Computing, Electrical Engineering, Mechanical Engineering, Business Administration, Computer Engineering, Data Science, or Information Technology.",
+            "Use UWB-style course history when possible, such as CSS, EE, ME, BIS, B CHEM, B BIO, or STEM foundation courses already completed.",
             "Use one of the current company targets in the dataset, such as Boeing, Microsoft Redmond, T-Mobile, Amazon Bellevue, or Google Kirkland.",
         ]
         evidence = [
@@ -558,17 +591,28 @@ class HuskyAdvisorEngine:
     def _profile_scope_issues(self, profile: StudentProfile) -> list[str]:
         issues: list[str] = []
         canonical_major = self._canonical_major(profile.major)
-        supported_majors = {"CSSE", "Applied Computing", "EE"}
+        supported_majors = {
+            "CSSE",
+            "Applied Computing",
+            "EE",
+            "ME",
+            "Business Administration",
+            "Computer Engineering",
+            "Data Science",
+            "Information Technology",
+        }
         if canonical_major not in supported_majors:
             issues.append(
                 f"The major '{profile.major}' is outside the current supported UWB pathways in this prototype."
             )
 
-        recognized_course_prefixes = {"CSS", "EE", "BIS", "STMATH", "MATH"}
+        recognized_course_prefixes = {
+            "CSS", "EE", "ME", "BIS", "B BUS", "STMATH", "MATH", "PHYS", "B CHEM", "B BIO",
+        }
         recognized_completed = [
             code
             for code in self._completed_course_set(profile)
-            if code.split()[0] in recognized_course_prefixes
+            if any(code.startswith(f"{prefix} ") for prefix in recognized_course_prefixes)
         ]
         if profile.completed_courses and not recognized_completed:
             issues.append(
@@ -607,6 +651,17 @@ class HuskyAdvisorEngine:
             )
 
         lowered = name.lower().strip()
+        for company in self.companies:
+            company_name = company.name.lower()
+            if lowered == company_name or lowered in company_name or company_name.startswith(lowered):
+                return TargetContext(
+                    name=company.name,
+                    domain_focus=company.domain_focus,
+                    target_skills=company.target_skills,
+                    mapped_courses=self.company_course_mapping.get(company.name, []),
+                    notes=company.notes,
+                )
+
         for profile in self.company_intent_profiles:
             aliases = [alias.lower() for alias in profile.get("aliases", [])]
             canonical_name = profile.get("canonical_name", "")
@@ -656,6 +711,16 @@ class HuskyAdvisorEngine:
             return 2
         if canonical_major == "CSSE" and track == "systems_software":
             return 1
+        if canonical_major == "ME" and track == "embedded_hardware":
+            return 2
+        if canonical_major == "Business Administration" and track == "cloud_platforms":
+            return 1
+        if canonical_major == "Computer Engineering" and track == "embedded_hardware":
+            return 2
+        if canonical_major == "Data Science" and track in {"healthcare_data_platforms", "ai_product"}:
+            return 2
+        if canonical_major == "Information Technology" and track == "security_infrastructure":
+            return 2
         return 0
 
     def _internship_next_actions(self, profile: StudentProfile) -> list[str]:

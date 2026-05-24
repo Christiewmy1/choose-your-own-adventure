@@ -1,8 +1,27 @@
+import type { StudentProfile } from '../types';
+import { exampleProfiles } from '../utils/routing';
+
 interface LandingPageProps {
   onStart: () => void;
+  onTryExample: (profile: StudentProfile) => void;
 }
 
-const LandingPage = ({ onStart }: LandingPageProps) => (
+const howItWorks = [
+  {
+    title: 'Share your profile',
+    description: 'Add your major, completed courses, and career goals.',
+  },
+  {
+    title: 'Get tailored guidance',
+    description: 'See courses, company alignment, internship prep, and a roadmap.',
+  },
+  {
+    title: 'Plan next steps',
+    description: 'Use explainable recommendations to shape your UWB path.',
+  },
+];
+
+const LandingPage = ({ onStart, onTryExample }: LandingPageProps) => (
   <section className="section-hero">
     <div className="container-inner">
       <div className="section-row hero-grid">
@@ -10,12 +29,19 @@ const LandingPage = ({ onStart }: LandingPageProps) => (
           <span className="eyebrow">UW Bothell • Husky advising</span>
           <h1>Choose the right classes, build the right connections, and move toward your career.</h1>
           <p>
-            HuskyAdvisor is a UWB student-facing planning tool that turns your major, completed coursework,
-            and career goals into recommended classes and company alignment insights.
+            HuskyAdvisor turns your major, completed coursework, and career goals into recommended classes,
+            company alignment insights, and a quarter-by-quarter plan.
           </p>
           <div className="hero-actions">
             <button className="button-primary" onClick={onStart} type="button">
-              Start your plan
+              Start planning
+            </button>
+            <button
+              className="button-secondary"
+              type="button"
+              onClick={() => onTryExample(exampleProfiles[0].profile)}
+            >
+              Try Avery&apos;s demo
             </button>
           </div>
         </div>
@@ -24,25 +50,40 @@ const LandingPage = ({ onStart }: LandingPageProps) => (
           <h2>What you get</h2>
           <ul>
             <li>Personalized course recommendations for your UWB major.</li>
-            <li>Career goal alignment with real company paths.</li>
-            <li>Clear next steps for spring and summer planning.</li>
+            <li>Career goal alignment with regional company paths.</li>
+            <li>Internship prep and quarter roadmap in one dashboard.</li>
           </ul>
         </div>
       </div>
 
-      <div className="section-row feature-section">
-        <div className="feature-card card">
-          <h3>UWB-first advice</h3>
-          <p>Recommendations are shaped around the Husky experience, Bothell curriculum, and regional career options.</p>
+      <div className="section-row example-section">
+        <div className="card example-panel">
+          <h2>Try an example question</h2>
+          <p className="small-copy">Click to load a ready-made profile and jump straight into results.</p>
+          <div className="example-button-grid">
+            {exampleProfiles.map(example => (
+              <button
+                key={example.label}
+                type="button"
+                className="example-question-button"
+                onClick={() => onTryExample(example.profile)}
+              >
+                {example.label}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="feature-card card">
-          <h3>Career alignment</h3>
-          <p>See how recommended classes support career goals like software, data, design, and consulting.</p>
-        </div>
-        <div className="feature-card card">
-          <h3>Fast and clear</h3>
-          <p>Enter your major and courses once, then get a results dashboard that helps you plan next steps.</p>
-        </div>
+      </div>
+
+      <div className="section-row how-it-works">
+        <h2 className="section-title">How it works</h2>
+        {howItWorks.map((step, index) => (
+          <div key={step.title} className="feature-card card">
+            <span className="step-number">{index + 1}</span>
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
