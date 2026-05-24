@@ -1,0 +1,61 @@
+{
+  "dataset_name": "HuskyAdvisor Company to Course Mapping",
+  "last_updated": "2026-05-24",
+  "mappings": [
+    {
+      "company": "Boeing",
+      "recommended_courses": ["CSS 430", "CSS 422", "CSS 427", "CSS 458", "EE 450"],
+      "reason": "Boeing-aligned roles often value systems, embedded computing, hardware awareness, and reliable software practices."
+    },
+    {
+      "company": "Amazon Bellevue",
+      "recommended_courses": ["CSS 436", "CSS 475", "CSS 481", "CSS 430"],
+      "reason": "Amazon-style roles often emphasize backend systems, cloud platforms, scalable services, and production engineering."
+    },
+    {
+      "company": "Google Kirkland",
+      "recommended_courses": ["CSS 340", "CSS 432", "CSS 436", "CSS 449"],
+      "reason": "Google-aligned paths benefit from algorithms, distributed systems, networking, and cloud thinking."
+    },
+    {
+      "company": "Microsoft Redmond",
+      "recommended_courses": ["CSS 436", "CSS 481", "CSS 486", "CSS 458"],
+      "reason": "Microsoft-aligned preparation often combines software engineering, cloud systems, web/product development, and AI-adjacent work."
+    },
+    {
+      "company": "T-Mobile",
+      "recommended_courses": ["CSS 431", "CSS 432", "CSS 337", "CSS 436"],
+      "reason": "Telecom and platform roles connect strongly to networking, infrastructure, secure systems, and cloud services."
+    },
+    {
+      "company": "AT&T Bothell",
+      "recommended_courses": ["CSS 431", "CSS 432", "CSS 310", "CSS 337", "BIS 463"],
+      "reason": "Network infrastructure and telecom-focused roles benefit from networking, cybersecurity, and systems awareness."
+    },
+    {
+      "company": "SpaceX Starlink",
+      "recommended_courses": ["CSS 422", "CSS 427", "CSS 430", "EE 450"],
+      "reason": "Aerospace and satellite systems preparation benefits from embedded, hardware-software integration, and dependable systems work."
+    },
+    {
+      "company": "Nintendo of America",
+      "recommended_courses": ["CSS 385", "CSS 451", "CSS 452", "CSS 474", "CSS 478", "CSS 484"],
+      "reason": "Interactive product roles can connect to graphics, game development, multimedia, user experience, and applied product-building coursework."
+    },
+    {
+      "company": "UW Medicine",
+      "recommended_courses": ["CSS 370", "CSS 436", "CSS 457", "CSS 458", "CSS 481"],
+      "reason": "Healthcare-technology roles often need secure data systems, cloud-backed platforms, privacy awareness, and reliable application development."
+    },
+    {
+      "company": "Providence",
+      "recommended_courses": ["CSS 370", "CSS 436", "CSS 481", "CSS 486", "CSS 457"],
+      "reason": "Digital-health and care-platform roles connect to product engineering, secure data flows, cloud systems, and user-facing applications."
+    },
+    {
+      "company": "Fred Hutch",
+      "recommended_courses": ["CSS 370", "CSS 382", "CSS 436", "CSS 457", "CSS 486", "CSS 483", "CSS 123"],
+      "reason": "Research-computing and health-data roles benefit from databases, AI/data literacy, cloud systems, and privacy-aware engineering."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+[
+  {
+    "persona_id": "junior_csse_boeing",
+    "name": "Avery",
+    "major": "CSSE",
+    "class_standing": "Junior",
+    "completed_courses": [
+      "CSS 142",
+      "CSS 143",
+      "CSS 301",
+      "CSS 342",
+      "CSS 360"
+    ],
+    "career_goals": [
+      "embedded systems",
+      "software engineering",
+      "aerospace"
+    ],
+    "target_company": "Boeing",
+    "target_field": "systems software",
+    "expected_focus": [
+      "hardware-aware software",
+      "testing",
+      "operating systems"
+    ]
+  },
+  {
+    "persona_id": "sophomore_app_cloud",
+    "name": "Jordan",
+    "major": "Applied Computing",
+    "class_standing": "Sophomore",
+    "completed_courses": [
+      "BIS 200",
+      "CSS 142",
+      "CSS 143"
+    ],
+    "career_goals": [
+      "cloud computing",
+      "web development",
+      "data systems"
+    ],
+    "target_company": "Microsoft",
+    "target_field": "cloud platform engineering",
+    "expected_focus": [
+      "web systems",
+      "databases",
+      "cloud services"
+    ]
+  },
+  {
+    "persona_id": "junior_ee_embedded",
+    "name": "Sam",
+    "major": "Electrical Engineering",
+    "class_standing": "Junior",
+    "completed_courses": [
+      "MATH 124",
+      "MATH 125",
+      "PHYS 121",
+      "EE 271"
+    ],
+    "career_goals": [
+      "embedded systems",
+      "firmware",
+      "robotics"
+    ],
+    "target_company": "T-Mobile",
+    "target_field": "embedded and hardware systems",
+    "expected_focus": [
+      "embedded design",
+      "hardware/software integration",
+      "low-level systems"
+    ]
+  },
+  {
+    "persona_id": "senior_csse_quality",
+    "name": "Taylor",
+    "major": "CSSE",
+    "class_standing": "Senior",
+    "completed_courses": [
+      "CSS 301",
+      "CSS 342",
+      "CSS 360",
+      "CSS 430",
+      "CSS 432"
+    ],
+    "career_goals": [
+      "quality assurance",
+      "backend engineering",
+      "reliable systems"
+    ],
+    "target_company": "Amazon",
+    "target_field": "software quality and backend systems",
+    "expected_focus": [
+      "testing",
+      "distributed systems",
+      "production readiness"
+    ]
+  },
+  {
+    "persona_id": "junior_data_science_fred_hutch",
+    "name": "Quinn",
+    "major": "Data Science",
+    "class_standing": "Junior",
+    "completed_courses": ["CSS 123", "STMATH 124", "STMATH 125", "B BIO 180"],
+    "career_goals": ["machine learning", "research computing", "health data"],
+    "target_company": "Fred Hutch",
+    "target_field": "research data science",
+    "expected_focus": ["data pipelines", "modeling", "privacy-aware analysis"]
+  },
+  {
+    "persona_id": "sophomore_it_att",
+    "name": "Jamie",
+    "major": "Information Technology",
+    "class_standing": "Sophomore",
+    "completed_courses": ["BIS 111", "BIS 200", "BIS 221", "CSS 110"],
+    "career_goals": ["infrastructure", "security operations", "networking"],
+    "target_company": "AT&T Bothell",
+    "target_field": "IT and network operations",
+    "expected_focus": ["support workflows", "security awareness", "infrastructure reliability"]
+  }
+]

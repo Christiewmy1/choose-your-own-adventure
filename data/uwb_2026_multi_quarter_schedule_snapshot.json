@@ -1,0 +1,450 @@
+{
+  "dataset_name": "HuskyAdvisor UWB 2026 Multi-Quarter Schedule Snapshot",
+  "campus": "UW Bothell",
+  "year_scope": "2026",
+  "last_updated": "2026-05-19",
+  "notes": "This dataset combines selected official public schedule offerings across Winter, Spring, Summer, and Autumn 2026 for UW Bothell programs relevant to HuskyAdvisor. It is meant to show recurring course availability and sample section timing patterns rather than provide live registration status.",
+  "sources": [
+    "https://www.washington.edu/students/timeschd/pub/B/WIN2026/css.html",
+    "https://www.washington.edu/students/timeschd/pub/B/SPR2026/css.html",
+    "https://www.washington.edu/students/timeschd/pub/B/SUM2026/css.html",
+    "https://www.washington.edu/students/timeschd/pub/B/AUT2026/css.html",
+    "https://www.washington.edu/students/timeschd/pub/B/SPR2026/bengr.html"
+  ],
+  "courses": [
+    {
+      "course_code": "CSS 310",
+      "title": "IA & Cybersecurity",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 8:45 AM-10:45 AM", "status": "Open", "enrollment": "32/48"},
+            {"section_id": "B", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "24/48"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "F 11:00 AM-1:00 PM", "status": "Open", "enrollment": "46/48", "notes": "50% hybrid"},
+            {"section_id": "B", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "26/48"}
+          ]
+        },
+        {
+          "term": "SUM2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "W 6:00 PM-8:30 PM", "status": "Open", "enrollment": "22/48", "notes": "50% hybrid"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 3:30 PM-5:30 PM", "status": "Open", "enrollment": "16/48"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 337",
+      "title": "Secure Systems",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "13/48"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 11:00 AM-1:00 PM", "status": "Open", "enrollment": "18/48"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "4/48"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 342",
+      "title": "Data, Alg, Math I",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "30/40"},
+            {"section_id": "B", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "16/40"},
+            {"section_id": "C", "meeting_times": "TTh 3:30 PM-5:30 PM", "status": "Open", "enrollment": "39/40"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Closed", "enrollment": "41/40"},
+            {"section_id": "B", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "30/40"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 11:00 AM-1:00 PM", "status": "Open", "enrollment": "2/40"},
+            {"section_id": "B", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "5/40"},
+            {"section_id": "C", "meeting_times": "MW 3:30 PM-5:30 PM", "status": "Open", "enrollment": "2/40"},
+            {"section_id": "D", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "0/40"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 343",
+      "title": "Data, Alg, Math II",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 11:00 AM-1:00 PM", "status": "Open"},
+            {"section_id": "B", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "16/40"},
+            {"section_id": "B", "meeting_times": "MW 11:00 AM-1:00 PM", "status": "Open", "enrollment": "35/40"}
+          ]
+        },
+        {
+          "term": "SUM2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 6:00 PM-8:30 PM", "status": "Open", "enrollment": "17/40"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "29/40"},
+            {"section_id": "B", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "4/40"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 360",
+      "title": "Software Engr",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "B", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "29/30"},
+            {"section_id": "C", "meeting_times": "MW 3:30 PM-5:30 PM", "status": "Open", "enrollment": "19/30"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 5:45 PM-7:45 PM", "status": "Open", "enrollment": "29/30"},
+            {"section_id": "B", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Closed", "enrollment": "30/30"},
+            {"section_id": "C", "meeting_times": "MW 3:30 PM-5:30 PM", "status": "Closed", "enrollment": "31/30"}
+          ]
+        },
+        {
+          "term": "SUM2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 2:00 PM-4:30 PM", "status": "Open", "enrollment": "16/30"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "D", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "0/30"},
+            {"section_id": "F", "meeting_times": "MW 8:00 PM-10:00 PM", "status": "Reserved", "enrollment": "0/30"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 370",
+      "title": "Analysis and Design",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "25/48"},
+            {"section_id": "B", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Closed", "enrollment": "48/48"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 5:45 PM-7:45 PM", "status": "Open", "enrollment": "29/48"},
+            {"section_id": "B", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "14/48"},
+            {"section_id": "C", "meeting_times": "TTh 1:15 PM-3:15 PM", "status": "Open", "enrollment": "47/48"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 11:00 AM-1:00 PM", "status": "Open", "enrollment": "46/48"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 371",
+      "title": "Business of Tech",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 3:30 PM-5:30 PM", "status": "Open", "enrollment": "23/48"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "38/48"}
+          ]
+        },
+        {
+          "term": "SUM2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 2:00 PM-4:30 PM", "status": "Open", "enrollment": "18/40"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 382",
+      "title": "Intro to AI",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 8:45 AM-10:45 AM", "status": "Open", "enrollment": "44/48"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "46/48"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 422",
+      "title": "Hardware & Comp Org",
+      "terms": [
+        {
+          "term": "WIN2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "45/48"},
+            {"section_id": "B", "meeting_times": "F 11:00 AM-1:00 PM", "status": "Open", "enrollment": "23/48", "notes": "Rest asynchronous online"}
+          ]
+        },
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 8:00 PM-10:00 PM", "status": "Open", "enrollment": "20/48"},
+            {"section_id": "B", "meeting_times": "TTh 3:30 PM-5:30 PM", "status": "Open", "enrollment": "47/48"}
+          ]
+        },
+        {
+          "term": "SUM2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 2:30 PM-8:30 PM", "status": "Open", "enrollment": "16/48", "notes": "First two weeks in person, then synchronous online"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 8:00 PM-10:00 PM", "status": "Open", "enrollment": "5/48", "notes": "CSSE majors only"},
+            {"section_id": "B", "meeting_times": "MW 8:45 AM-10:45 AM", "status": "Open", "enrollment": "41/48", "notes": "CSSE majors only"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 427",
+      "title": "Embedded Systems",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 8:45 AM-10:45 AM", "status": "Open", "enrollment": "21/24"},
+            {"section_id": "AA", "meeting_times": "F 9:00 AM-12:30 PM", "status": "Open", "enrollment": "21/24", "notes": "Lab"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "11/24"},
+            {"section_id": "AA", "meeting_times": "F 9:30 AM-1:00 PM", "status": "Open", "enrollment": "11/24", "notes": "Lab"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 430",
+      "title": "Operating Systems",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "T 3:30 PM-5:30 PM", "status": "Open", "enrollment": "44/48", "notes": "50% hybrid"},
+            {"section_id": "B", "meeting_times": "M 8:00 PM-10:00 PM", "status": "Open", "enrollment": "11/48", "notes": "50% hybrid"}
+          ]
+        },
+        {
+          "term": "SUM2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 11:15 AM-1:45 PM", "status": "Open", "enrollment": "41/48"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 3:30 PM-5:30 PM", "status": "Closed", "enrollment": "48/48"},
+            {"section_id": "B", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "13/48"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 431",
+      "title": "Network Archt & Mgmt",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "T 5:45 PM-7:45 PM", "status": "Closed", "enrollment": "48/48", "notes": "50% hybrid"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "27/48"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 475",
+      "title": "Database Systems",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "M 3:30 PM-5:30 PM", "status": "Open", "enrollment": "46/48", "notes": "50% hybrid"},
+            {"section_id": "B", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "27/48"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "T 3:30 PM-5:30 PM / Th 3:30 PM-5:30 PM", "status": "Open", "enrollment": "19/48", "notes": "Hybrid; Tuesday in-person, Thursday synchronous online"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 481",
+      "title": "Web Prog & Appl",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 3:30 PM-5:30 PM", "status": "Open", "enrollment": "14/48"}
+          ]
+        },
+        {
+          "term": "AUT2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 3:30 PM-5:30 PM", "status": "Open", "enrollment": "11/48"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 487",
+      "title": "Computer Vision",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "42/48"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 490",
+      "title": "Special Topics",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "17/48", "notes": "Multithreading in GUI Applications"},
+            {"section_id": "B", "meeting_times": "MW 1:15 PM-3:15 PM", "status": "Open", "enrollment": "23/48", "notes": "Open Source Studio"}
+          ]
+        },
+        {
+          "term": "SUM2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "MW 2:00 PM-4:30 PM", "status": "Add code", "enrollment": "3/24E", "notes": "Interpretable Machine Learning in Bioinformatics"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 496",
+      "title": "Appl Cmpt Capstone",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 3:30 PM-5:30 PM", "status": "Open", "enrollment": "19/20", "notes": "Applied Computing students only"},
+            {"section_id": "B", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "4/20", "notes": "Applied Computing students only"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "CSS 497",
+      "title": "CS & SE Capstone",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "E", "meeting_times": "MW 3:30 PM-5:30 PM", "status": "Open", "enrollment": "22/20", "notes": "Individual and group projects"},
+            {"section_id": "F", "meeting_times": "MW 8:00 PM-10:00 PM", "status": "Open", "enrollment": "10/20", "notes": "Individual and group projects"},
+            {"section_id": "G", "meeting_times": "TTh 5:45 PM-7:45 PM", "status": "Open", "enrollment": "19/20", "notes": "Individual and group projects"}
+          ]
+        },
+        {
+          "term": "SUM2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "to be arranged", "status": "Open", "enrollment": "1/20E", "notes": "Internship and current employment"},
+            {"section_id": "B", "meeting_times": "to be arranged", "status": "Open", "enrollment": "15/20", "notes": "Internship and current employment"}
+          ]
+        }
+      ]
+    },
+    {
+      "course_code": "B ENGR 310",
+      "title": "Comp Phys Modeling",
+      "terms": [
+        {
+          "term": "SPR2026",
+          "sections": [
+            {"section_id": "A", "meeting_times": "TTh 11:00 AM-1:00 PM", "status": "Open", "enrollment": "32/36"},
+            {"section_id": "B", "meeting_times": "TTh 1:15 PM-3:15 PM", "status": "Open", "enrollment": "20/36"}
+          ]
+        }
+      ]
+    }
+  ]
+}

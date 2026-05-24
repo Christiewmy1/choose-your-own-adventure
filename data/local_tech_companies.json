@@ -1,0 +1,105 @@
+{
+  "dataset_name": "HuskyAdvisor Local Tech Company Seed Dataset",
+  "last_updated": "2026-05-14",
+  "companies": [
+    {
+      "company_id": "company-001",
+      "name": "Boeing",
+      "city": "Seattle area",
+      "domain_focus": "aerospace, embedded systems, large-scale engineering software",
+      "hiring_seasons": ["fall", "winter"],
+      "target_skills": ["systems", "embedded", "reliability", "testing", "hardware"],
+      "notes": "Strong target for students interested in aerospace software, embedded systems, and dependable engineering workflows."
+    },
+    {
+      "company_id": "company-002",
+      "name": "Google Kirkland",
+      "city": "Kirkland",
+      "domain_focus": "distributed systems, cloud infrastructure, software engineering",
+      "hiring_seasons": ["late summer", "fall"],
+      "target_skills": ["algorithms", "backend", "distributed systems", "cloud"],
+      "notes": "Good match for students building depth in distributed systems, cloud, and algorithmic problem solving."
+    },
+    {
+      "company_id": "company-003",
+      "name": "Amazon Bellevue",
+      "city": "Bellevue",
+      "domain_focus": "cloud services, backend systems, product engineering",
+      "hiring_seasons": ["fall", "winter"],
+      "target_skills": ["cloud", "backend", "software engineering", "scalability"],
+      "notes": "Relevant for students interested in high-scale backend systems and cloud platforms."
+    },
+    {
+      "company_id": "company-004",
+      "name": "T-Mobile",
+      "city": "Bellevue",
+      "domain_focus": "telecom platforms, network services, cloud systems",
+      "hiring_seasons": ["fall", "spring"],
+      "target_skills": ["networking", "backend", "cloud", "reliability"],
+      "notes": "Best fit for students interested in networked systems, production software, and platform reliability."
+    },
+    {
+      "company_id": "company-005",
+      "name": "Microsoft Redmond",
+      "city": "Redmond",
+      "domain_focus": "platform engineering, developer tools, cloud services, AI",
+      "hiring_seasons": ["fall", "winter"],
+      "target_skills": ["backend", "cloud", "ai", "software engineering", "testing"],
+      "notes": "Broad target company for students who want strong foundations in backend, tooling, cloud, or AI-related systems."
+    },
+    {
+      "company_id": "company-006",
+      "name": "AT&T Bothell",
+      "city": "Bothell",
+      "domain_focus": "network infrastructure, telecom systems, enterprise platforms",
+      "hiring_seasons": ["fall", "spring"],
+      "target_skills": ["networking", "systems", "reliability", "infrastructure"],
+      "notes": "Good local target for students interested in network systems, telecom platforms, and production reliability."
+    },
+    {
+      "company_id": "company-007",
+      "name": "Nintendo of America",
+      "city": "Redmond",
+      "domain_focus": "interactive software, product development, platform engineering",
+      "hiring_seasons": ["fall", "winter"],
+      "target_skills": ["software engineering", "product", "graphics", "testing"],
+      "notes": "Interesting target for students interested in product engineering, game systems, and polished user-facing software."
+    },
+    {
+      "company_id": "company-008",
+      "name": "SpaceX Starlink",
+      "city": "Redmond",
+      "domain_focus": "satellite systems, aerospace software, network infrastructure",
+      "hiring_seasons": ["fall", "winter"],
+      "target_skills": ["embedded", "systems", "networking", "reliability", "aerospace"],
+      "notes": "Strong aspirational target for students interested in aerospace systems, networking, and mission-critical software."
+    },
+    {
+      "company_id": "company-009",
+      "name": "UW Medicine",
+      "city": "Seattle",
+      "domain_focus": "clinical systems, health data, privacy, and technology-enabled care",
+      "hiring_seasons": ["fall", "spring"],
+      "target_skills": ["data", "cloud", "security", "privacy", "integration", "reliability"],
+      "notes": "Good local target for students interested in healthcare technology, clinical systems, privacy, and data-informed care platforms."
+    },
+    {
+      "company_id": "company-010",
+      "name": "Providence",
+      "city": "Renton / Seattle area",
+      "domain_focus": "digital health, consumer-facing healthcare technology, and care-platform innovation",
+      "hiring_seasons": ["fall", "winter"],
+      "target_skills": ["product", "cloud", "data", "integration", "security", "software engineering"],
+      "notes": "Strong fit for students who want to build digital health products, platforms, and patient-facing software systems."
+    },
+    {
+      "company_id": "company-011",
+      "name": "Fred Hutch",
+      "city": "Seattle",
+      "domain_focus": "research computing, data-intensive science, privacy-first AI, and clinical data systems",
+      "hiring_seasons": ["fall", "spring"],
+      "target_skills": ["data", "ai", "privacy", "security", "cloud", "software engineering"],
+      "notes": "Good target for students interested in research software, data pipelines, privacy-aware AI, and healthcare-adjacent technical roles."
+    }
+  ]
+}

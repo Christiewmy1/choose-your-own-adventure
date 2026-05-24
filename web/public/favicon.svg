@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="HuskyAdvisor">
+  <rect width="64" height="64" rx="16" fill="#4b2e83"/>
+  <path d="M18 42c0-10 7-18 16-18h8c5 0 8 3 8 8v10H18V42z" fill="#e8b84b"/>
+  <circle cx="28" cy="28" r="4" fill="#ffffff"/>
+  <circle cx="40" cy="28" r="4" fill="#ffffff"/>
+  <path d="M30 34c2 2 6 2 8 0" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>
