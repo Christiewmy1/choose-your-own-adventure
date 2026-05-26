@@ -13,6 +13,7 @@ DEFAULT_PROFILE_JSON = PROJECT_ROOT / "data" / "student_profile.json"
 DEFAULT_COMPANY_JSON = PROJECT_ROOT / "data" / "local_tech_companies.json"
 DEFAULT_RECENT_CATALOG_JSON = PROJECT_ROOT / "data" / "uwb_recent_css_catalog_summary.json"
 DEFAULT_COMPANY_MAPPING_JSON = PROJECT_ROOT / "data" / "company_course_mapping.json"
+DEFAULT_COMPANY_INTENT_JSON = PROJECT_ROOT / "data" / "company_intent_profiles.json"
 DEFAULT_INTERNSHIP_PLAYBOOK_JSON = PROJECT_ROOT / "data" / "internship_prep_playbooks.json"
 DEFAULT_QUARTER_PLAN_JSON = PROJECT_ROOT / "data" / "quarter_plan_templates.json"
 
@@ -40,6 +41,9 @@ def load_course_records(path: Path | None = None) -> list[CourseRecord]:
                 career_tags=career_tags,
                 prerequisite_text=item.get("prerequisites", "See catalog"),
                 project_emphasis=item.get("project_emphasis") or _infer_project_emphasis(item.get("description", "")),
+                source_type=item.get("source_type", "unknown"),
+                source_confidence=item.get("source_confidence", "medium"),
+                source_url=item.get("source_url"),
             )
         )
     return records
@@ -110,6 +114,13 @@ def load_company_course_mapping(path: Path | None = None) -> dict[str, list[str]
     }
 
 
+def load_company_intent_profiles(path: Path | None = None) -> list[dict[str, Any]]:
+    source = path or DEFAULT_COMPANY_INTENT_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+    return payload.get("profiles", [])
+
+
 def load_internship_playbooks(path: Path | None = None) -> list[dict[str, Any]]:
     source = path or DEFAULT_INTERNSHIP_PLAYBOOK_JSON
     with source.open(encoding="utf-8") as handle:
@@ -139,9 +150,15 @@ def _parse_level(code: str) -> int:
 def _infer_major_tags(code: str, department: str) -> list[str]:
     normalized_department = department.upper()
     if code.startswith("EE ") or normalized_department == "EE":
-        return ["EE", "CSSE"]
+        return ["EE", "CSSE", "Computer Engineering"]
+    if code.startswith("ME ") or normalized_department == "ME":
+        return ["ME", "Mechanical Engineering"]
+    if code.startswith("BIS ") or normalized_department == "BUSINESS":
+        return ["Applied Computing", "Business Administration", "Information Technology"]
+    if code.startswith("B CHEM ") or code.startswith("B BIO "):
+        return ["Data Science", "ME", "EE"]
     if code.startswith("CSS "):
-        return ["CSSE", "Applied Computing"]
+        return ["CSSE", "Applied Computing", "Computer Engineering"]
     return ["Applied Computing"]
 
 

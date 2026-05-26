@@ -137,6 +137,46 @@ SAMPLE_MAJORS = [
         typical_courses=["EE 271", "EE 331", "EE 450"],
         career_paths=["embedded engineer", "hardware engineer", "systems integration engineer"],
     ),
+    MajorRecord(
+        major_name="Mechanical Engineering",
+        degree_type="B.S.",
+        summary="Best fit for students who want design, mechanics, robotics, and physical systems engineering depth.",
+        best_for=["mechanical design", "robotics", "manufacturing", "aerospace hardware"],
+        typical_courses=["ME 230", "ME 331", "ME 450"],
+        career_paths=["mechanical engineer", "design engineer", "robotics engineer"],
+    ),
+    MajorRecord(
+        major_name="Business Administration",
+        degree_type="B.A.",
+        summary="Best fit for students who want to connect business strategy, information systems, and technology-enabled decision-making.",
+        best_for=["business systems", "analytics", "product operations", "technical consulting"],
+        typical_courses=["BIS 200", "BIS 310", "BIS 445"],
+        career_paths=["business analyst", "systems analyst", "technical program coordinator"],
+    ),
+    MajorRecord(
+        major_name="Computer Engineering",
+        degree_type="B.S.",
+        summary="Best fit for students who want a hardware-software blend across circuits, embedded systems, and computing.",
+        best_for=["embedded systems", "hardware-software integration", "robotics", "device engineering"],
+        typical_courses=["CSS 132", "EE 271", "CSS 427", "EE 450"],
+        career_paths=["computer engineer", "embedded engineer", "hardware-software engineer"],
+    ),
+    MajorRecord(
+        major_name="Data Science",
+        degree_type="B.S.",
+        summary="Best fit for students who want to combine statistics, programming, and domain data to solve real-world problems.",
+        best_for=["data analysis", "machine learning", "research computing", "health and science data"],
+        typical_courses=["CSS 123", "STMATH 308", "CSS 382", "CSS 486"],
+        career_paths=["data analyst", "data scientist", "research software analyst"],
+    ),
+    MajorRecord(
+        major_name="Information Technology",
+        degree_type="B.S.",
+        summary="Best fit for students who want to deploy, secure, and support technology systems in organizational environments.",
+        best_for=["IT support", "infrastructure", "cybersecurity operations", "business systems"],
+        typical_courses=["BIS 221", "CSS 310", "CSS 431", "BIS 463"],
+        career_paths=["IT analyst", "systems administrator", "security operations analyst"],
+    ),
 ]
 
 

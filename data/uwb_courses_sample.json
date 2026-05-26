@@ -1,8 +1,8 @@
 {
   "dataset_name": "HuskyAdvisor UWB Seed Dataset",
   "dataset_scope": "Spring 2026 curated snapshot for CSS 382 MVP",
-  "last_updated": "2026-05-13",
-  "notes": "This seed dataset is a manually curated academic snapshot for HuskyAdvisor. It is intentionally small, transparent, and designed for course recommendation demos rather than official advising use.",
+  "last_updated": "2026-05-24",
+  "notes": "Large expanded UWB snapshot spanning computing, engineering, business, STEM, and data-science pathways. Curated for HuskyAdvisor demos \u2014 not official advising.",
   "courses": [
     {
       "code": "CSS 301",
@@ -10,8 +10,15 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["software engineering", "problem solving", "teamwork"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "problem solving",
+        "teamwork"
+      ],
       "prerequisites": "Admission to upper-division CSS coursework or department guidance.",
       "project_emphasis": "high",
       "description": "Survey of core ideas in computing: data representation, algorithms, abstraction, and software engineering practice. Prepares students for upper-division CSS coursework with collaborative projects and introductory programming exercises.",
@@ -24,8 +31,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["algorithms", "software engineering", "backend", "technical interviews"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "algorithms",
+        "software engineering",
+        "backend",
+        "technical interviews"
+      ],
       "prerequisites": "CSS 143 or equivalent programming background.",
       "project_emphasis": "medium",
       "description": "Design and analysis of fundamental data structures including lists, trees, heaps, hash tables, and graphs. Algorithmic techniques such as sorting, searching, recursion, and graph traversal. Emphasis on complexity analysis and implementation trade-offs.",
@@ -39,8 +54,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["software engineering", "testing", "teamwork", "project management"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "testing",
+        "teamwork",
+        "project management"
+      ],
       "prerequisites": "CSS 342 recommended.",
       "project_emphasis": "high",
       "description": "Principles of software development life cycle, requirements engineering, design modeling, testing strategies, version control, and team collaboration. Students apply agile methods to build a multi-component software system.",
@@ -54,8 +77,15 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["backend", "data", "enterprise systems"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "backend",
+        "data",
+        "enterprise systems"
+      ],
       "prerequisites": "CSS 342 or permission of instructor.",
       "project_emphasis": "medium",
       "description": "Relational modeling, SQL, schema design, normalization, and transaction concepts for data-intensive applications.",
@@ -68,8 +98,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["ai", "intelligent systems", "problem solving", "software engineering"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ai",
+        "intelligent systems",
+        "problem solving",
+        "software engineering"
+      ],
       "prerequisites": "CSS 342 recommended.",
       "project_emphasis": "medium-high",
       "description": "Introduces foundational AI topics such as search, reasoning, and intelligent behavior in software systems.",
@@ -83,8 +121,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["security", "infrastructure", "risk", "defensive computing"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "infrastructure",
+        "risk",
+        "defensive computing"
+      ],
       "prerequisites": "Programming background and upper-division readiness recommended.",
       "project_emphasis": "medium",
       "description": "Introduces core cybersecurity and information assurance concepts for protecting computing systems and digital infrastructure.",
@@ -97,8 +143,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["security", "systems", "reliability", "infrastructure"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "systems",
+        "reliability",
+        "infrastructure"
+      ],
       "prerequisites": "CSS 342 or equivalent preparation.",
       "project_emphasis": "medium",
       "description": "Covers system security principles, secure design, and common ways computing systems can fail or be attacked.",
@@ -111,8 +165,18 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "EE"],
-      "career_tags": ["embedded", "systems", "performance", "aerospace"],
+      "majors": [
+        "CSSE",
+        "Computer Engineering",
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "embedded",
+        "systems",
+        "performance",
+        "aerospace"
+      ],
       "prerequisites": "CSS 342.",
       "project_emphasis": "medium",
       "description": "Explores lower-level machine organization, performance tradeoffs, and system interfaces relevant to hardware-software collaboration.",
@@ -126,8 +190,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE"],
-      "career_tags": ["systems", "backend", "aerospace", "embedded", "reliability"],
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "systems",
+        "backend",
+        "aerospace",
+        "embedded",
+        "reliability"
+      ],
       "prerequisites": "CSS 342 and CSS 360.",
       "project_emphasis": "high",
       "description": "Processes and threads, CPU scheduling, synchronization and deadlocks, memory management, virtual memory, file systems, and I/O subsystems. Hands-on labs reinforce concepts using a contemporary operating system.",
@@ -141,8 +213,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE"],
-      "career_tags": ["networking", "distributed systems", "backend", "cloud", "aerospace"],
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "networking",
+        "distributed systems",
+        "backend",
+        "cloud",
+        "aerospace"
+      ],
       "prerequisites": "CSS 342 and CSS 360 recommended.",
       "project_emphasis": "medium-high",
       "description": "Networking fundamentals and distributed-system design for mission-critical and connected software systems.",
@@ -156,8 +236,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["cloud", "backend", "devops", "distributed systems"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "cloud",
+        "backend",
+        "devops",
+        "distributed systems"
+      ],
       "prerequisites": "CSS 360.",
       "project_emphasis": "high",
       "description": "Distributed services, cloud deployment, and scalable architectures useful for enterprise software environments.",
@@ -170,8 +258,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["ai", "machine learning", "problem solving", "intelligent systems"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ai",
+        "machine learning",
+        "problem solving",
+        "intelligent systems"
+      ],
       "prerequisites": "CSS 342 and discrete math background recommended.",
       "project_emphasis": "medium-high",
       "description": "Introduces search, knowledge representation, reasoning, and core AI methods for intelligent software systems.",
@@ -185,8 +281,19 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "EE"],
-      "career_tags": ["embedded", "hardware", "systems", "aerospace", "robotics"],
+      "majors": [
+        "CSSE",
+        "Computer Engineering",
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "embedded",
+        "hardware",
+        "systems",
+        "aerospace",
+        "robotics"
+      ],
       "prerequisites": "CSS 422 or systems background recommended.",
       "project_emphasis": "high",
       "description": "Explores embedded computing and hardware-software interaction in constrained real-world systems.",
@@ -200,8 +307,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["security", "privacy", "reliability", "infrastructure"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "privacy",
+        "reliability",
+        "infrastructure"
+      ],
       "prerequisites": "CSS 360 recommended.",
       "project_emphasis": "medium",
       "description": "Core security principles, common vulnerabilities, secure design thinking, and privacy concerns in modern computing environments.",
@@ -214,8 +329,17 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["testing", "quality assurance", "reliability", "software engineering", "aerospace"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "testing",
+        "quality assurance",
+        "reliability",
+        "software engineering",
+        "aerospace"
+      ],
       "prerequisites": "CSS 360.",
       "project_emphasis": "medium",
       "description": "Verification, validation, and dependable software development practices for production-grade systems.",
@@ -229,8 +353,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["backend", "data", "enterprise systems", "software engineering"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "backend",
+        "data",
+        "enterprise systems",
+        "software engineering"
+      ],
       "prerequisites": "CSS 370 or comparable database preparation recommended.",
       "project_emphasis": "medium-high",
       "description": "Advanced database systems course for students interested in backend, data-intensive, and enterprise software applications.",
@@ -243,8 +375,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["web development", "full-stack", "product", "software engineering"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "web development",
+        "full-stack",
+        "product",
+        "software engineering"
+      ],
       "prerequisites": "Software development background recommended.",
       "project_emphasis": "high",
       "description": "Builds practical experience with modern web application development and interactive software systems.",
@@ -257,8 +397,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["ai", "machine learning", "intelligent systems", "data"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ai",
+        "machine learning",
+        "intelligent systems",
+        "data"
+      ],
       "prerequisites": "Algorithmic preparation and mathematical maturity recommended.",
       "project_emphasis": "medium-high",
       "description": "AI-oriented elective that supports machine intelligence and data-driven software pathways.",
@@ -271,8 +419,14 @@
       "credits": 5,
       "department": "Business",
       "level": 300,
-      "majors": ["Applied Computing"],
-      "career_tags": ["analytics", "data", "business intelligence"],
+      "majors": [
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "analytics",
+        "data",
+        "business intelligence"
+      ],
       "prerequisites": "Introductory statistics or instructor guidance.",
       "project_emphasis": "medium",
       "description": "Applies quantitative reasoning and data interpretation to practical decision-making in organizational settings.",
@@ -285,8 +439,14 @@
       "credits": 5,
       "department": "Business",
       "level": 300,
-      "majors": ["Applied Computing"],
-      "career_tags": ["systems analysis", "product thinking", "business systems"],
+      "majors": [
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "systems analysis",
+        "product thinking",
+        "business systems"
+      ],
       "prerequisites": "Upper-division standing recommended.",
       "project_emphasis": "medium",
       "description": "Covers information systems planning, stakeholder needs, and structured approaches to analyzing organizational technology problems.",
@@ -299,8 +459,15 @@
       "credits": 5,
       "department": "Business",
       "level": 300,
-      "majors": ["Applied Computing"],
-      "career_tags": ["business systems", "product", "applications", "technical analysis"],
+      "majors": [
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "business systems",
+        "product",
+        "applications",
+        "technical analysis"
+      ],
       "prerequisites": "Upper-division standing recommended.",
       "project_emphasis": "medium",
       "description": "Applies computing tools to practical business systems and organizational problem solving.",
@@ -313,8 +480,15 @@
       "credits": 5,
       "department": "Business",
       "level": 400,
-      "majors": ["Applied Computing"],
-      "career_tags": ["analytics", "dashboards", "data", "decision support"],
+      "majors": [
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "analytics",
+        "dashboards",
+        "data",
+        "decision support"
+      ],
       "prerequisites": "BIS 315 or equivalent analytical experience.",
       "project_emphasis": "high",
       "description": "Focuses on reporting, dashboards, and turning data into actionable information for organizational decision-making.",
@@ -327,8 +501,16 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 200,
-      "majors": ["EE"],
-      "career_tags": ["hardware", "digital systems", "embedded"],
+      "majors": [
+        "CSSE",
+        "Computer Engineering",
+        "EE"
+      ],
+      "career_tags": [
+        "hardware",
+        "digital systems",
+        "embedded"
+      ],
       "prerequisites": "Calculus and introductory physics or department guidance.",
       "project_emphasis": "medium",
       "description": "Introduces combinational and sequential logic, digital design, and system-level thinking for electronics.",
@@ -341,8 +523,15 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 300,
-      "majors": ["EE"],
-      "career_tags": ["signals", "systems", "hardware", "control"],
+      "majors": [
+        "EE"
+      ],
+      "career_tags": [
+        "signals",
+        "systems",
+        "hardware",
+        "control"
+      ],
       "prerequisites": "Calculus sequence and engineering preparation.",
       "project_emphasis": "medium",
       "description": "Models continuous and discrete signals, system response, and analysis tools used across electrical and embedded engineering contexts.",
@@ -355,8 +544,15 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 300,
-      "majors": ["EE"],
-      "career_tags": ["hardware", "electronics", "circuits", "embedded"],
+      "majors": [
+        "EE"
+      ],
+      "career_tags": [
+        "hardware",
+        "electronics",
+        "circuits",
+        "embedded"
+      ],
       "prerequisites": "Engineering math and circuit fundamentals recommended.",
       "project_emphasis": "medium",
       "description": "Focuses on electronic components and circuit behavior used in practical device and embedded-system contexts.",
@@ -369,8 +565,19 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 400,
-      "majors": ["EE", "CSSE"],
-      "career_tags": ["embedded", "hardware", "systems", "aerospace", "robotics"],
+      "majors": [
+        "CSSE",
+        "Computer Engineering",
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "embedded",
+        "hardware",
+        "systems",
+        "aerospace",
+        "robotics"
+      ],
       "prerequisites": "EE 271 and programming experience recommended.",
       "project_emphasis": "high",
       "description": "Microcontrollers, hardware-software integration, and real-world system constraints common in embedded engineering.",
@@ -383,8 +590,15 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 400,
-      "majors": ["EE"],
-      "career_tags": ["control", "systems", "robotics", "hardware"],
+      "majors": [
+        "EE"
+      ],
+      "career_tags": [
+        "control",
+        "systems",
+        "robotics",
+        "hardware"
+      ],
       "prerequisites": "Signals and systems preparation recommended.",
       "project_emphasis": "medium",
       "description": "Studies feedback, stability, and control concepts used in engineering systems and device-level automation.",
@@ -397,8 +611,15 @@
       "credits": 5,
       "department": "Business",
       "level": 300,
-      "majors": ["Applied Computing", "CSSE"],
-      "career_tags": ["communication", "teamwork", "professional skills"],
+      "majors": [
+        "Applied Computing",
+        "CSSE"
+      ],
+      "career_tags": [
+        "communication",
+        "teamwork",
+        "professional skills"
+      ],
       "prerequisites": "None listed for MVP dataset.",
       "project_emphasis": "medium",
       "description": "Professional writing and presentation skills for business contexts, including collaboration and reporting.",
@@ -411,13 +632,2152 @@
       "credits": 5,
       "department": "STEM Mathematics",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing", "EE"],
-      "career_tags": ["math foundations", "machine learning", "modeling"],
+      "majors": [
+        "Applied Computing",
+        "CSSE",
+        "Computer Engineering",
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "math foundations",
+        "machine learning",
+        "modeling"
+      ],
       "prerequisites": "Precalculus and introductory college math sequence.",
       "project_emphasis": "low",
       "description": "Linear systems, matrices, eigenvalues, and applications in computing, graphics, and machine learning.",
       "source_type": "curated_uwb_snapshot",
       "source_confidence": "medium-high"
+    },
+    {
+      "code": "CSS 142",
+      "title": "Programming Methodology I",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "Applied Computing",
+        "CSSE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "programming",
+        "problem solving",
+        "software engineering"
+      ],
+      "prerequisites": "Appropriate math placement or instructor guidance.",
+      "project_emphasis": "medium",
+      "description": "Introduces structured programming, problem decomposition, and foundational coding skills for computing majors.",
+      "source_type": "curated_uwb_snapshot",
+      "source_confidence": "high"
+    },
+    {
+      "code": "CSS 143",
+      "title": "Programming Methodology II",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "Applied Computing",
+        "CSSE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "programming",
+        "data structures",
+        "software engineering"
+      ],
+      "prerequisites": "CSS 142 or equivalent programming background.",
+      "project_emphasis": "medium",
+      "description": "Builds on introductory programming with object-oriented design, data abstraction, and preparation for upper-division CSS coursework.",
+      "source_type": "curated_uwb_snapshot",
+      "source_confidence": "high"
+    },
+    {
+      "code": "CSS 340",
+      "title": "Applied Algorithmics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "algorithms",
+        "technical interviews",
+        "problem solving"
+      ],
+      "prerequisites": "CSS 342 recommended.",
+      "project_emphasis": "medium",
+      "description": "Strengthens algorithmic reasoning and applied problem-solving for technical interviews and advanced software paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 343",
+      "title": "Data Structures and Algorithms II",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "algorithms",
+        "software engineering",
+        "technical interviews"
+      ],
+      "prerequisites": "CSS 342.",
+      "project_emphasis": "medium",
+      "description": "Extends data structures and algorithm analysis for students seeking deeper technical preparation.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 385",
+      "title": "Introduction to Game Development",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "game development",
+        "software engineering",
+        "portfolio",
+        "interactive systems"
+      ],
+      "prerequisites": "Programming background recommended.",
+      "project_emphasis": "high",
+      "description": "Project-heavy introduction to game design and development with strong portfolio potential.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 431",
+      "title": "Network Architecture and Management",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "networking",
+        "infrastructure",
+        "backend",
+        "cloud"
+      ],
+      "prerequisites": "CSS 360 and networking fundamentals recommended.",
+      "project_emphasis": "medium",
+      "description": "Covers network architecture, management, and infrastructure concepts for production software environments.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 449",
+      "title": "Design and Analysis of Algorithms",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "algorithms",
+        "technical interviews",
+        "theory",
+        "software engineering"
+      ],
+      "prerequisites": "CSS 342 and CSS 343 recommended.",
+      "project_emphasis": "low",
+      "description": "Advanced algorithm design and analysis for students pursuing deep technical software engineering paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 461",
+      "title": "Software Project Management",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "project management",
+        "teamwork",
+        "software engineering",
+        "leadership"
+      ],
+      "prerequisites": "CSS 360 recommended.",
+      "project_emphasis": "medium",
+      "description": "Covers planning, coordination, and leadership skills for software project teams.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 474",
+      "title": "Product Development Lab",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "product",
+        "portfolio",
+        "software engineering",
+        "teamwork"
+      ],
+      "prerequisites": "Upper-division CSS coursework recommended.",
+      "project_emphasis": "high",
+      "description": "Applied product-building lab with strong portfolio and demo potential.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 478",
+      "title": "Usability Engineering",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ux",
+        "product",
+        "human-computer interaction",
+        "design"
+      ],
+      "prerequisites": "Software development background recommended.",
+      "project_emphasis": "medium",
+      "description": "Focuses on usability evaluation and user-centered design for computing applications.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 480",
+      "title": "Human-Computer Interaction",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ux",
+        "product",
+        "human-computer interaction",
+        "design"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium-high",
+      "description": "Explores interaction design, usability, and user-centered software development.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 485",
+      "title": "Artificial Neural Networks",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ai",
+        "machine learning",
+        "data",
+        "intelligent systems"
+      ],
+      "prerequisites": "Algorithmic and mathematical preparation recommended.",
+      "project_emphasis": "medium-high",
+      "description": "Neural network models and training approaches for AI-oriented software pathways.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 487",
+      "title": "Computer Vision",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "ai",
+        "computer vision",
+        "machine learning",
+        "intelligent systems"
+      ],
+      "prerequisites": "AI or machine learning preparation recommended.",
+      "project_emphasis": "medium-high",
+      "description": "Specialized elective covering image processing and vision algorithms.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 496",
+      "title": "Applied Computing Capstone",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "capstone",
+        "portfolio",
+        "teamwork",
+        "software engineering"
+      ],
+      "prerequisites": "Near-completion of Applied Computing major requirements.",
+      "project_emphasis": "high",
+      "description": "Capstone project course for Applied Computing students integrating prior coursework.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 497",
+      "title": "Computer Science and Software Engineering Capstone",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "capstone",
+        "portfolio",
+        "teamwork",
+        "software engineering"
+      ],
+      "prerequisites": "Near-completion of CSSE major requirements.",
+      "project_emphasis": "high",
+      "description": "Capstone project course for CSSE students integrating prior coursework into a substantial team project.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 200",
+      "title": "Introduction to Information Systems",
+      "credits": 5,
+      "department": "Business",
+      "level": 200,
+      "majors": [
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "information systems",
+        "business systems",
+        "technical analysis"
+      ],
+      "prerequisites": "Introductory college standing.",
+      "project_emphasis": "medium",
+      "description": "Introduces information systems concepts and how technology supports organizational decision-making.",
+      "source_type": "curated_uwb_snapshot",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "MATH 124",
+      "title": "Calculus I",
+      "credits": 5,
+      "department": "Mathematics",
+      "level": 100,
+      "majors": [
+        "Applied Computing",
+        "Business Administration",
+        "CSSE",
+        "Computer Engineering",
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "math foundations",
+        "modeling",
+        "engineering preparation"
+      ],
+      "prerequisites": "Appropriate math placement.",
+      "project_emphasis": "low",
+      "description": "First course in differential and integral calculus for STEM majors.",
+      "source_type": "curated_uwb_snapshot",
+      "source_confidence": "medium-high"
+    },
+    {
+      "code": "MATH 125",
+      "title": "Calculus II",
+      "credits": 5,
+      "department": "Mathematics",
+      "level": 100,
+      "majors": [
+        "Applied Computing",
+        "CSSE",
+        "Computer Engineering",
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "math foundations",
+        "modeling",
+        "engineering preparation"
+      ],
+      "prerequisites": "MATH 124 or equivalent.",
+      "project_emphasis": "low",
+      "description": "Continuation of calculus including integration techniques and series.",
+      "source_type": "curated_uwb_snapshot",
+      "source_confidence": "medium-high"
+    },
+    {
+      "code": "PHYS 121",
+      "title": "Mechanics",
+      "credits": 5,
+      "department": "Physics",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Computer Engineering",
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "physics",
+        "engineering preparation",
+        "modeling"
+      ],
+      "prerequisites": "Calculus preparation recommended.",
+      "project_emphasis": "low",
+      "description": "Introductory physics covering mechanics for engineering and science majors.",
+      "source_type": "curated_uwb_snapshot",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 101",
+      "title": "Digital Thinking",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "Applied Computing",
+        "CSSE"
+      ],
+      "career_tags": [
+        "problem solving",
+        "computing literacy"
+      ],
+      "prerequisites": "None listed for MVP dataset.",
+      "project_emphasis": "medium",
+      "description": "Introduces digital literacy, computational thinking, and practical computing concepts for early undergraduates.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 107",
+      "title": "Programming for Animated Storytelling",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "programming",
+        "creative computing",
+        "portfolio"
+      ],
+      "prerequisites": "None listed for MVP dataset.",
+      "project_emphasis": "high",
+      "description": "Creative introduction to programming through animation and storytelling projects.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 110",
+      "title": "Introduction to Cybersecurity",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "defensive computing"
+      ],
+      "prerequisites": "None listed for MVP dataset.",
+      "project_emphasis": "medium",
+      "description": "Survey of cybersecurity concepts for students exploring security-aligned computing paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 112",
+      "title": "Introduction to Programming for Science Applications",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "Applied Computing",
+        "CSSE"
+      ],
+      "career_tags": [
+        "programming",
+        "data",
+        "science applications"
+      ],
+      "prerequisites": "None listed for MVP dataset.",
+      "project_emphasis": "medium",
+      "description": "Programming fundamentals oriented toward scientific and data-oriented applications.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 123",
+      "title": "Programming for Data Science",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "Applied Computing",
+        "CSSE",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "data",
+        "programming",
+        "analytics"
+      ],
+      "prerequisites": "Introductory programming recommended.",
+      "project_emphasis": "medium-high",
+      "description": "Introduces programming tools and workflows commonly used in data-focused computing paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 132",
+      "title": "Computer Programming for Engineers I",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "EE",
+        "Computer Engineering",
+        "ME"
+      ],
+      "career_tags": [
+        "programming",
+        "engineering",
+        "problem solving"
+      ],
+      "prerequisites": "Math placement or instructor guidance.",
+      "project_emphasis": "medium",
+      "description": "Engineering-oriented programming introduction for hardware and systems pathways.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 133",
+      "title": "Computer Programming for Engineers II",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "EE",
+        "Computer Engineering",
+        "ME"
+      ],
+      "career_tags": [
+        "programming",
+        "data structures",
+        "engineering"
+      ],
+      "prerequisites": "CSS 132 or equivalent.",
+      "project_emphasis": "medium",
+      "description": "Second engineering programming course building toward systems and embedded preparation.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 211",
+      "title": "Computers and Society",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 200,
+      "majors": [
+        "Applied Computing",
+        "CSSE",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "ethics",
+        "communication",
+        "product thinking"
+      ],
+      "prerequisites": "Introductory college standing.",
+      "project_emphasis": "medium",
+      "description": "Explores social, ethical, and policy implications of computing systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 315",
+      "title": "Cyber Ethics and Law",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "ethics",
+        "policy"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Examines legal and ethical issues in cybersecurity and digital systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 320",
+      "title": "Digital Forensics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "forensics",
+        "investigation"
+      ],
+      "prerequisites": "Security or systems background recommended.",
+      "project_emphasis": "medium",
+      "description": "Introduces digital investigation methods and forensic analysis workflows.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 350",
+      "title": "Management Principles for Technology",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "Applied Computing",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "management",
+        "teamwork",
+        "product"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Management and leadership concepts for technical teams and product environments.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 371",
+      "title": "Business of Technology",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "Applied Computing",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "product",
+        "business systems",
+        "entrepreneurship"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Connects technology development to business models, markets, and product strategy.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 383",
+      "title": "Bioinformatics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "data",
+        "ai",
+        "life sciences"
+      ],
+      "prerequisites": "Programming and statistics background recommended.",
+      "project_emphasis": "medium",
+      "description": "Applies computing to biological and health-related data problems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 411",
+      "title": "Computing and Public Policy",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "Applied Computing",
+        "CSSE",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "policy",
+        "ethics",
+        "communication"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Explores how computing intersects with public policy and societal impact.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 434",
+      "title": "Parallel and Distributed Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "distributed systems",
+        "performance",
+        "backend"
+      ],
+      "prerequisites": "CSS 342 and CSS 360 recommended.",
+      "project_emphasis": "medium",
+      "description": "Parallelism and distributed computation for scalable software systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 444",
+      "title": "Analyzing Biases in Computing Systems",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ai",
+        "ethics",
+        "data"
+      ],
+      "prerequisites": "Data or AI background recommended.",
+      "project_emphasis": "medium",
+      "description": "Examines bias, fairness, and evaluation in computing and intelligent systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 448",
+      "title": "Introduction to Compilers",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "systems",
+        "software engineering",
+        "performance"
+      ],
+      "prerequisites": "CSS 342 and CSS 343 recommended.",
+      "project_emphasis": "medium",
+      "description": "Compiler design and language implementation for advanced software engineering paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 451",
+      "title": "Three-Dimensional Computer Graphics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "graphics",
+        "game development",
+        "portfolio"
+      ],
+      "prerequisites": "Programming and math background recommended.",
+      "project_emphasis": "high",
+      "description": "3D graphics programming with strong portfolio potential.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 452",
+      "title": "Game Engine Development",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "game development",
+        "software engineering",
+        "portfolio"
+      ],
+      "prerequisites": "CSS 385 or equivalent recommended.",
+      "project_emphasis": "high",
+      "description": "Builds game engine components and interactive software systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 488",
+      "title": "Natural Language Processing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ai",
+        "machine learning",
+        "nlp"
+      ],
+      "prerequisites": "AI or machine learning preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Text and language modeling methods for intelligent application development.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 215",
+      "title": "Fundamentals of Electrical Engineering",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 200,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "hardware",
+        "circuits",
+        "engineering preparation"
+      ],
+      "prerequisites": "Calculus and physics preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Core EE foundations covering circuits, signals, and engineering analysis.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 233",
+      "title": "Applied Circuits and Electronics",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 200,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "hardware",
+        "electronics",
+        "circuits"
+      ],
+      "prerequisites": "EE 215 recommended.",
+      "project_emphasis": "medium",
+      "description": "Applied circuit analysis and electronics for device-level engineering work.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 341",
+      "title": "Discrete Time Linear Systems",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 300,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "signals",
+        "systems",
+        "control"
+      ],
+      "prerequisites": "EE 331 recommended.",
+      "project_emphasis": "medium",
+      "description": "Discrete-time systems analysis used in signal processing and control paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 351",
+      "title": "Energy Systems",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 300,
+      "majors": [
+        "EE"
+      ],
+      "career_tags": [
+        "energy",
+        "systems",
+        "hardware"
+      ],
+      "prerequisites": "Engineering math and physics preparation.",
+      "project_emphasis": "medium",
+      "description": "Energy conversion and power systems concepts for engineering applications.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 425",
+      "title": "Robotics and Automation",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 400,
+      "majors": [
+        "EE",
+        "Computer Engineering",
+        "ME"
+      ],
+      "career_tags": [
+        "robotics",
+        "embedded",
+        "control",
+        "systems"
+      ],
+      "prerequisites": "Control and embedded preparation recommended.",
+      "project_emphasis": "high",
+      "description": "Robotics systems integrating hardware, control, and software.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 442",
+      "title": "Digital Signal Processing",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 400,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "signals",
+        "embedded",
+        "hardware"
+      ],
+      "prerequisites": "EE 331 recommended.",
+      "project_emphasis": "medium",
+      "description": "Digital signal processing methods for embedded and communications systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 123",
+      "title": "Introduction to Engineering Graphics",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 100,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "design",
+        "engineering preparation",
+        "modeling"
+      ],
+      "prerequisites": "None listed for MVP dataset.",
+      "project_emphasis": "medium",
+      "description": "Engineering graphics and design communication for mechanical engineering students.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 230",
+      "title": "Statics and Mechanics of Materials",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 200,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "mechanics",
+        "design",
+        "engineering"
+      ],
+      "prerequisites": "Calculus and physics preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Statics and material mechanics foundations for mechanical design paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 331",
+      "title": "Mechanics of Materials",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 300,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "mechanics",
+        "design",
+        "manufacturing"
+      ],
+      "prerequisites": "ME 230 recommended.",
+      "project_emphasis": "medium",
+      "description": "Material behavior and structural analysis for mechanical systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 332",
+      "title": "Fluid Mechanics",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 300,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "fluids",
+        "systems",
+        "aerospace"
+      ],
+      "prerequisites": "Engineering math preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Fluid mechanics concepts used in thermal, energy, and aerospace-related design.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 450",
+      "title": "Mechanical Engineering Capstone Design",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 400,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "capstone",
+        "design",
+        "teamwork",
+        "portfolio"
+      ],
+      "prerequisites": "Near-completion of ME major requirements.",
+      "project_emphasis": "high",
+      "description": "Team-based capstone design project integrating mechanical engineering coursework.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 111",
+      "title": "Introduction to Business",
+      "credits": 5,
+      "department": "Business",
+      "level": 100,
+      "majors": [
+        "Business Administration",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "business systems",
+        "communication"
+      ],
+      "prerequisites": "None listed for MVP dataset.",
+      "project_emphasis": "medium",
+      "description": "Broad introduction to business concepts and organizational decision-making.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 300",
+      "title": "Information Systems Theory",
+      "credits": 5,
+      "department": "Business",
+      "level": 300,
+      "majors": [
+        "Business Administration",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "information systems",
+        "systems analysis"
+      ],
+      "prerequisites": "BIS 200 or equivalent recommended.",
+      "project_emphasis": "medium",
+      "description": "Theoretical foundations of information systems in organizations.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 310",
+      "title": "Management Information Systems",
+      "credits": 5,
+      "department": "Business",
+      "level": 300,
+      "majors": [
+        "Business Administration",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "business systems",
+        "management",
+        "data"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Management-oriented view of information systems and organizational technology.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 402",
+      "title": "Enterprise Information Systems",
+      "credits": 5,
+      "department": "Business",
+      "level": 400,
+      "majors": [
+        "Business Administration",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "enterprise systems",
+        "business intelligence",
+        "backend"
+      ],
+      "prerequisites": "BIS 300 or equivalent recommended.",
+      "project_emphasis": "medium",
+      "description": "Enterprise-scale systems and integration concepts for business technology roles.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "PHYS 122",
+      "title": "Electromagnetism and Oscillatory Motion",
+      "credits": 5,
+      "department": "Physics",
+      "level": 100,
+      "majors": [
+        "EE",
+        "Computer Engineering",
+        "ME"
+      ],
+      "career_tags": [
+        "physics",
+        "engineering preparation"
+      ],
+      "prerequisites": "PHYS 121 and calculus recommended.",
+      "project_emphasis": "medium",
+      "description": "Second-quarter physics covering electromagnetism and oscillations for STEM majors.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "PHYS 123",
+      "title": "Waves",
+      "credits": 5,
+      "department": "Physics",
+      "level": 100,
+      "majors": [
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "physics",
+        "signals",
+        "engineering preparation"
+      ],
+      "prerequisites": "PHYS 122 recommended.",
+      "project_emphasis": "medium",
+      "description": "Wave phenomena relevant to engineering and physical systems analysis.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "STMATH 124",
+      "title": "Calculus I",
+      "credits": 5,
+      "department": "STEM Mathematics",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "EE",
+        "ME",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "math foundations",
+        "modeling"
+      ],
+      "prerequisites": "Appropriate math placement.",
+      "project_emphasis": "medium",
+      "description": "Calculus I for STEM majors at UW Bothell.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "STMATH 125",
+      "title": "Calculus II",
+      "credits": 5,
+      "department": "STEM Mathematics",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "EE",
+        "ME",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "math foundations",
+        "modeling"
+      ],
+      "prerequisites": "STMATH 124 or MATH 124.",
+      "project_emphasis": "medium",
+      "description": "Calculus II for STEM majors at UW Bothell.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 173",
+      "title": "Programming Theory and Applications",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "programming",
+        "theory",
+        "problem solving"
+      ],
+      "prerequisites": "Introductory programming recommended.",
+      "project_emphasis": "medium",
+      "description": "Bridges practical programming with theoretical computing concepts.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 198",
+      "title": "Supervised Study in Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Data Science"
+      ],
+      "career_tags": [
+        "research",
+        "independent study"
+      ],
+      "prerequisites": "Instructor permission required.",
+      "project_emphasis": "medium",
+      "description": "Faculty-supervised computing study for early exploration and specialization.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 199",
+      "title": "Computing Research Seminar",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Data Science"
+      ],
+      "career_tags": [
+        "research",
+        "communication"
+      ],
+      "prerequisites": "Instructor permission recommended.",
+      "project_emphasis": "medium",
+      "description": "Introduces research methods and computing research opportunities.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 225",
+      "title": "Physics and Chemistry of Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 200,
+      "majors": [
+        "CSSE",
+        "Computer Engineering",
+        "EE"
+      ],
+      "career_tags": [
+        "physics",
+        "hardware",
+        "systems"
+      ],
+      "prerequisites": "Introductory physics and chemistry recommended.",
+      "project_emphasis": "medium",
+      "description": "Connects physical science concepts to computing hardware and systems behavior.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 290",
+      "title": "Topics in Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 200,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Information Technology"
+      ],
+      "career_tags": [
+        "special topics",
+        "software engineering"
+      ],
+      "prerequisites": "Varies by topic offering.",
+      "project_emphasis": "medium",
+      "description": "Special-topics computing course covering emerging tools, methods, or domains.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 295",
+      "title": "K-12 Computing Education",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 200,
+      "majors": [
+        "Applied Computing",
+        "Information Technology"
+      ],
+      "career_tags": [
+        "education",
+        "communication",
+        "computing literacy"
+      ],
+      "prerequisites": "Introductory computing background recommended.",
+      "project_emphasis": "medium",
+      "description": "Prepares students to teach and communicate computing concepts effectively.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 390",
+      "title": "Special Topics in Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Data Science"
+      ],
+      "career_tags": [
+        "special topics",
+        "ai",
+        "software engineering"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Advanced special-topics course for emerging computing areas.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 0 397",
+      "title": "placeholder",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [],
+      "prerequisites": "",
+      "project_emphasis": "medium",
+      "description": "",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 397",
+      "title": "Computing Internship",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Information Technology",
+        "Data Science"
+      ],
+      "career_tags": [
+        "internship",
+        "professional skills",
+        "portfolio"
+      ],
+      "prerequisites": "Department approval required.",
+      "project_emphasis": "high",
+      "description": "Structured internship experience connecting coursework to industry practice.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 415",
+      "title": "Topics in Cybersecurity",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Information Technology"
+      ],
+      "career_tags": [
+        "security",
+        "infrastructure",
+        "defensive computing"
+      ],
+      "prerequisites": "Security coursework recommended.",
+      "project_emphasis": "medium",
+      "description": "Advanced cybersecurity topics for students pursuing security-aligned roles.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 421",
+      "title": "Computer Hardware and Operating Systems",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "systems",
+        "hardware",
+        "operating systems"
+      ],
+      "prerequisites": "CSS 342 and systems background recommended.",
+      "project_emphasis": "medium",
+      "description": "Hardware and operating-system concepts for advanced systems engineers.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 473",
+      "title": "Entrepreneurship Seminar",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "Applied Computing",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "entrepreneurship",
+        "product",
+        "leadership"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Seminar on launching technology ventures and product ideas.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 483",
+      "title": "Bioinformatics Algorithms",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Data Science"
+      ],
+      "career_tags": [
+        "data",
+        "ai",
+        "life sciences",
+        "algorithms"
+      ],
+      "prerequisites": "CSS 383 or equivalent recommended.",
+      "project_emphasis": "medium",
+      "description": "Algorithmic methods for biological and health-related data analysis.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 484",
+      "title": "Multimedia Processing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "graphics",
+        "multimedia",
+        "software engineering"
+      ],
+      "prerequisites": "Programming and math background recommended.",
+      "project_emphasis": "high",
+      "description": "Processing pipelines for multimedia and interactive applications.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 490",
+      "title": "Special Topics in Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Data Science"
+      ],
+      "career_tags": [
+        "special topics",
+        "software engineering"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Upper-division special topics in computing.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 495",
+      "title": "Applied Computing Internship",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "Applied Computing",
+        "Information Technology"
+      ],
+      "career_tags": [
+        "internship",
+        "professional skills"
+      ],
+      "prerequisites": "Department approval required.",
+      "project_emphasis": "high",
+      "description": "Internship pathway for applied computing and IT-oriented students.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 498",
+      "title": "Independent Study in Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Data Science"
+      ],
+      "career_tags": [
+        "research",
+        "independent study"
+      ],
+      "prerequisites": "Faculty sponsor required.",
+      "project_emphasis": "medium",
+      "description": "Independent computing study with faculty guidance.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 499",
+      "title": "Undergraduate Research in Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Data Science"
+      ],
+      "career_tags": [
+        "research",
+        "ai",
+        "software engineering"
+      ],
+      "prerequisites": "Faculty sponsor required.",
+      "project_emphasis": "high",
+      "description": "Undergraduate research experience in computing.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 361",
+      "title": "Applied Electromagnetics",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 300,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "hardware",
+        "signals",
+        "electromagnetics"
+      ],
+      "prerequisites": "EE 233 and calculus recommended.",
+      "project_emphasis": "medium",
+      "description": "Electromagnetic principles for communications and hardware engineering.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 371",
+      "title": "Electric Machinery",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 300,
+      "majors": [
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "energy",
+        "hardware",
+        "systems"
+      ],
+      "prerequisites": "Circuits and mechanics preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Electric machines and energy conversion for power and device systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 447",
+      "title": "Control Systems Laboratory",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 400,
+      "majors": [
+        "EE",
+        "ME",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "control",
+        "robotics",
+        "systems"
+      ],
+      "prerequisites": "EE 454 recommended.",
+      "project_emphasis": "high",
+      "description": "Hands-on control systems laboratory work.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 453",
+      "title": "Power Electronics",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 400,
+      "majors": [
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "power",
+        "hardware",
+        "energy"
+      ],
+      "prerequisites": "EE 332 recommended.",
+      "project_emphasis": "medium",
+      "description": "Power electronics for energy and embedded hardware applications.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "EE 484",
+      "title": "Fiber Optics and Photonics",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 400,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "optics",
+        "networking",
+        "hardware"
+      ],
+      "prerequisites": "Signals and electronics background recommended.",
+      "project_emphasis": "medium",
+      "description": "Optical systems relevant to communications and sensing.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 215",
+      "title": "Introduction to Mechanical Engineering",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 200,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "engineering",
+        "design",
+        "mechanics"
+      ],
+      "prerequisites": "Calculus and physics recommended.",
+      "project_emphasis": "medium",
+      "description": "Overview of mechanical engineering practice and design thinking.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 220",
+      "title": "Materials Science for Mechanical Engineers",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 200,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "materials",
+        "design",
+        "manufacturing"
+      ],
+      "prerequisites": "Chemistry and calculus recommended.",
+      "project_emphasis": "medium",
+      "description": "Material properties and selection for mechanical design.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 333",
+      "title": "Heat Transfer",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 300,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "thermal",
+        "systems",
+        "energy"
+      ],
+      "prerequisites": "ME 230 and thermodynamics preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Heat transfer concepts for energy and mechanical systems.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 354",
+      "title": "Machine Design",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 300,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "design",
+        "manufacturing",
+        "mechanics"
+      ],
+      "prerequisites": "ME 331 recommended.",
+      "project_emphasis": "high",
+      "description": "Machine component design and mechanical system analysis.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 403",
+      "title": "Finite Element Analysis",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 400,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "simulation",
+        "design",
+        "modeling"
+      ],
+      "prerequisites": "Mechanics and math preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Computational modeling for mechanical and structural design.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "ME 435",
+      "title": "Computer-Aided Design and Manufacturing",
+      "credits": 5,
+      "department": "Mechanical Engineering",
+      "level": 400,
+      "majors": [
+        "ME"
+      ],
+      "career_tags": [
+        "cad",
+        "manufacturing",
+        "design"
+      ],
+      "prerequisites": "ME 123 and design coursework recommended.",
+      "project_emphasis": "high",
+      "description": "CAD/CAM tools for modern mechanical engineering workflows.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 219",
+      "title": "Spreadsheet Modeling for Business",
+      "credits": 5,
+      "department": "Business",
+      "level": 200,
+      "majors": [
+        "Business Administration",
+        "Information Technology",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "analytics",
+        "business systems",
+        "modeling"
+      ],
+      "prerequisites": "Introductory business coursework recommended.",
+      "project_emphasis": "medium",
+      "description": "Spreadsheet modeling for business analysis and decision support.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 221",
+      "title": "Business Information Systems Tools",
+      "credits": 5,
+      "department": "Business",
+      "level": 200,
+      "majors": [
+        "Business Administration",
+        "Information Technology"
+      ],
+      "career_tags": [
+        "information systems",
+        "business systems",
+        "technical analysis"
+      ],
+      "prerequisites": "BIS 111 or BIS 200 recommended.",
+      "project_emphasis": "medium",
+      "description": "Practical business information systems tools and workflows.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 352",
+      "title": "Database Management for Business",
+      "credits": 5,
+      "department": "Business",
+      "level": 300,
+      "majors": [
+        "Business Administration",
+        "Information Technology",
+        "Data Science"
+      ],
+      "career_tags": [
+        "data",
+        "backend",
+        "business systems"
+      ],
+      "prerequisites": "BIS 200 recommended.",
+      "project_emphasis": "medium",
+      "description": "Database concepts for business and IT applications.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "BIS 463",
+      "title": "Cybersecurity for Business",
+      "credits": 5,
+      "department": "Business",
+      "level": 400,
+      "majors": [
+        "Business Administration",
+        "Information Technology"
+      ],
+      "career_tags": [
+        "security",
+        "risk",
+        "infrastructure"
+      ],
+      "prerequisites": "Upper-division BIS coursework recommended.",
+      "project_emphasis": "medium",
+      "description": "Business-focused cybersecurity and risk management.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "B BUS 330",
+      "title": "Operations Management",
+      "credits": 5,
+      "department": "Business",
+      "level": 300,
+      "majors": [
+        "Business Administration"
+      ],
+      "career_tags": [
+        "operations",
+        "management",
+        "analytics"
+      ],
+      "prerequisites": "Upper-division standing recommended.",
+      "project_emphasis": "medium",
+      "description": "Operations and process management for business environments.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "B BUS 340",
+      "title": "Business Finance",
+      "credits": 5,
+      "department": "Business",
+      "level": 300,
+      "majors": [
+        "Business Administration"
+      ],
+      "career_tags": [
+        "finance",
+        "analytics",
+        "decision support"
+      ],
+      "prerequisites": "Business core preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Finance fundamentals for business decision-making.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "B BUS 460",
+      "title": "Business Strategy",
+      "credits": 5,
+      "department": "Business",
+      "level": 400,
+      "majors": [
+        "Business Administration"
+      ],
+      "career_tags": [
+        "strategy",
+        "management",
+        "leadership"
+      ],
+      "prerequisites": "Upper-division business coursework recommended.",
+      "project_emphasis": "medium",
+      "description": "Strategic planning and competitive analysis for organizations.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "STMATH 126",
+      "title": "Calculus III",
+      "credits": 5,
+      "department": "STEM Mathematics",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Data Science",
+        "EE",
+        "ME",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "math foundations",
+        "modeling"
+      ],
+      "prerequisites": "STMATH 125 or MATH 125.",
+      "project_emphasis": "medium",
+      "description": "Multivariable calculus for STEM majors.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "MATH 126",
+      "title": "Calculus III",
+      "credits": 5,
+      "department": "Mathematics",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Data Science",
+        "EE",
+        "ME"
+      ],
+      "career_tags": [
+        "math foundations",
+        "modeling"
+      ],
+      "prerequisites": "MATH 125.",
+      "project_emphasis": "medium",
+      "description": "Multivariable calculus for Seattle-campus aligned STEM paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "B CHEM 143",
+      "title": "General Chemistry I",
+      "credits": 5,
+      "department": "Chemistry",
+      "level": 100,
+      "majors": [
+        "Data Science",
+        "ME",
+        "EE"
+      ],
+      "career_tags": [
+        "chemistry",
+        "science foundations"
+      ],
+      "prerequisites": "Appropriate math placement.",
+      "project_emphasis": "medium",
+      "description": "General chemistry foundation for science and engineering majors.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "B CHEM 153",
+      "title": "General Chemistry II",
+      "credits": 5,
+      "department": "Chemistry",
+      "level": 100,
+      "majors": [
+        "Data Science",
+        "ME",
+        "EE"
+      ],
+      "career_tags": [
+        "chemistry",
+        "science foundations"
+      ],
+      "prerequisites": "B CHEM 143.",
+      "project_emphasis": "medium",
+      "description": "Second-quarter general chemistry for STEM pathways.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "B BIO 180",
+      "title": "Introductory Biology",
+      "credits": 5,
+      "department": "Biology",
+      "level": 100,
+      "majors": [
+        "Data Science"
+      ],
+      "career_tags": [
+        "life sciences",
+        "data",
+        "research"
+      ],
+      "prerequisites": "Introductory college standing.",
+      "project_emphasis": "medium",
+      "description": "Biology foundation for bioinformatics and health-data oriented paths.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "B BIO 200",
+      "title": "Introductory Biology II",
+      "credits": 5,
+      "department": "Biology",
+      "level": 200,
+      "majors": [
+        "Data Science"
+      ],
+      "career_tags": [
+        "life sciences",
+        "data",
+        "research"
+      ],
+      "prerequisites": "B BIO 180 recommended.",
+      "project_emphasis": "medium",
+      "description": "Second biology course supporting data-intensive life-science applications.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
+    },
+    {
+      "code": "CSS 162",
+      "title": "Programming Methodology for Engineers",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "Information Technology",
+        "Computer Engineering",
+        "ME"
+      ],
+      "career_tags": [
+        "programming",
+        "engineering"
+      ],
+      "prerequisites": "Math placement recommended.",
+      "project_emphasis": "medium",
+      "description": "Engineering-oriented programming for IT and hardware-adjacent students.",
+      "source_type": "catalog_derived_plus_curated",
+      "source_confidence": "medium"
     }
   ]
 }

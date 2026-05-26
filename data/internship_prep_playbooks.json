@@ -4,6 +4,8 @@
   "playbooks": [
     {
       "track": "aerospace_systems",
+      "goal_keywords": ["systems", "embedded", "hardware", "aerospace", "reliability"],
+      "preferred_majors": ["CSSE", "EE"],
       "target_companies": ["Boeing", "SpaceX Starlink"],
       "recommended_courses": ["CSS 430", "CSS 422", "CSS 427", "EE 450", "CSS 458"],
       "recommended_projects": [
@@ -15,6 +17,8 @@
     },
     {
       "track": "cloud_backend",
+      "goal_keywords": ["cloud", "backend", "web development", "platform engineering", "distributed systems"],
+      "preferred_majors": ["CSSE", "Applied Computing"],
       "target_companies": ["Amazon Bellevue", "Google Kirkland", "Microsoft Redmond"],
       "recommended_courses": ["CSS 436", "CSS 432", "CSS 475", "CSS 481"],
       "recommended_projects": [
@@ -26,6 +30,8 @@
     },
     {
       "track": "security_infrastructure",
+      "goal_keywords": ["security", "networking", "infrastructure", "reliability", "systems"],
+      "preferred_majors": ["CSSE", "Applied Computing"],
       "target_companies": ["AT&T Bothell", "T-Mobile", "Microsoft Redmond"],
       "recommended_courses": ["CSS 310", "CSS 337", "CSS 431", "CSS 457"],
       "recommended_projects": [
@@ -37,6 +43,8 @@
     },
     {
       "track": "ai_product",
+      "goal_keywords": ["ai", "machine learning", "product", "data", "intelligent systems"],
+      "preferred_majors": ["CSSE", "Applied Computing"],
       "target_companies": ["Microsoft Redmond", "Google Kirkland"],
       "recommended_courses": ["CSS 382", "CSS 440", "CSS 486", "CSS 481"],
       "recommended_projects": [
@@ -45,6 +53,71 @@
         "Document ethical or practical limits of the AI system"
       ],
       "recommended_skills": ["ai", "machine learning", "product thinking", "evaluation", "communication"]
+    },
+    {
+      "track": "healthcare_digital",
+      "goal_keywords": ["healthcare", "data", "privacy", "security", "cloud", "integration"],
+      "preferred_majors": ["CSSE", "Applied Computing"],
+      "target_companies": ["UW Medicine", "Providence", "Fred Hutch"],
+      "recommended_courses": ["CSS 370", "CSS 436", "CSS 457", "CSS 458", "CSS 481"],
+      "recommended_projects": [
+        "Build a privacy-aware healthcare or patient-facing app mockup with clear data-flow documentation",
+        "Create a small backend or data dashboard that emphasizes secure data handling",
+        "Write a resume bullet that highlights reliability, privacy, or data-integration work"
+      ],
+      "recommended_skills": ["data", "privacy", "security", "cloud", "integration", "reliability"]
+    },
+    {
+      "track": "mechanical_robotics",
+      "goal_keywords": ["robotics", "mechanical design", "aerospace", "manufacturing", "systems"],
+      "preferred_majors": ["ME", "Computer Engineering", "EE"],
+      "target_companies": ["Boeing", "SpaceX Starlink"],
+      "recommended_courses": ["ME 331", "ME 450", "EE 425", "CSS 427", "EE 450"],
+      "recommended_projects": [
+        "Design and document a small mechanical or robotics prototype",
+        "Create a portfolio piece that shows CAD, testing, or systems integration work",
+        "Highlight teamwork and design tradeoffs in a resume-ready project summary"
+      ],
+      "recommended_skills": ["design", "robotics", "mechanics", "systems", "documentation"]
+    },
+    {
+      "track": "business_analytics",
+      "goal_keywords": ["analytics", "business intelligence", "data systems", "decision support"],
+      "preferred_majors": ["Business Administration", "Applied Computing"],
+      "target_companies": ["Amazon Bellevue", "Microsoft Redmond", "T-Mobile"],
+      "recommended_courses": ["BIS 315", "BIS 445", "BIS 402", "CSS 123", "CSS 370"],
+      "recommended_projects": [
+        "Build a dashboard or reporting project tied to a real business question",
+        "Document how data supports a decision-making workflow",
+        "Create a resume bullet focused on analytics impact and stakeholder communication"
+      ],
+      "recommended_skills": ["analytics", "data", "communication", "business systems", "visualization"]
+    },
+    {
+      "track": "data_science_research",
+      "goal_keywords": ["data science", "machine learning", "research", "bioinformatics", "health data"],
+      "preferred_majors": ["Data Science", "CSSE", "Applied Computing"],
+      "target_companies": ["Fred Hutch", "UW Medicine", "Microsoft Redmond"],
+      "recommended_courses": ["CSS 123", "CSS 382", "CSS 486", "CSS 483", "STMATH 308"],
+      "recommended_projects": [
+        "Build a reproducible data analysis notebook with clear evaluation metrics",
+        "Compare two modeling or analysis approaches on a real dataset",
+        "Document data limitations, privacy, and ethical considerations in your writeup"
+      ],
+      "recommended_skills": ["data", "machine learning", "statistics", "evaluation", "communication"]
+    },
+    {
+      "track": "it_operations",
+      "goal_keywords": ["information technology", "infrastructure", "security operations", "support", "networking"],
+      "preferred_majors": ["Information Technology", "Applied Computing", "Business Administration"],
+      "target_companies": ["AT&T Bothell", "T-Mobile", "Providence"],
+      "recommended_courses": ["BIS 221", "CSS 310", "CSS 431", "BIS 463", "CSS 337"],
+      "recommended_projects": [
+        "Document a secure IT support workflow with logging and access-control notes",
+        "Build a small infrastructure monitoring or troubleshooting demo",
+        "Create a resume bullet focused on reliability, documentation, and user support"
+      ],
+      "recommended_skills": ["infrastructure", "security", "networking", "documentation", "reliability"]
     }
   ]
 }

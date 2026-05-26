@@ -1,0 +1,27 @@
+{
+  "dataset_name": "HuskyAdvisor Company Intent Profiles",
+  "last_updated": "2026-05-23",
+  "profiles": [
+    {
+      "canonical_name": "UW Medicine",
+      "aliases": ["UW Hospital", "UW Medicine", "University of Washington Medical Center", "Harborview", "healthcare technology", "hospital IT"],
+      "domain_focus": "clinical systems, health data, privacy, and technology-enabled care",
+      "target_skills": ["data", "cloud", "security", "privacy", "integration", "reliability"],
+      "recommended_courses": ["CSS 370", "CSS 436", "CSS 457", "CSS 458", "CSS 481"]
+    },
+    {
+      "canonical_name": "Providence",
+      "aliases": ["Providence", "Providence Health", "digital health", "health innovation", "healthcare apps"],
+      "domain_focus": "digital health, consumer-facing healthcare technology, and care-platform innovation",
+      "target_skills": ["product", "cloud", "data", "integration", "security", "software engineering"],
+      "recommended_courses": ["CSS 370", "CSS 436", "CSS 481", "CSS 486", "CSS 457"]
+    },
+    {
+      "canonical_name": "Fred Hutch",
+      "aliases": ["Fred Hutch", "Fred Hutch Cancer Center", "biomedical research", "research computing", "health data"],
+      "domain_focus": "research computing, data-intensive science, privacy-first AI, and clinical data systems",
+      "target_skills": ["data", "ai", "privacy", "security", "cloud", "software engineering"],
+      "recommended_courses": ["CSS 370", "CSS 382", "CSS 436", "CSS 457", "CSS 486"]
+    }
+  ]
+}

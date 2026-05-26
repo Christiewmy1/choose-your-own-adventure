@@ -1,0 +1,32 @@
+export const careerGoalSuggestions = [
+  'software engineering',
+  'embedded systems',
+  'aerospace',
+  'cloud computing',
+  'web development',
+  'data systems',
+  'machine learning',
+  'quality assurance',
+  'backend engineering',
+  'networking',
+  'security',
+  'robotics',
+  'product',
+  'analytics',
+  'infrastructure',
+  'firmware',
+  'game development',
+  'health data',
+  'research computing',
+] as const;
+
+export const commonCoursesByMajor: Record<string, string[]> = {
+  CSSE: ['CSS 142', 'CSS 143', 'CSS 342', 'CSS 360', 'CSS 430'],
+  'Applied Computing': ['CSS 142', 'CSS 143', 'BIS 200', 'CSS 436', 'CSS 481'],
+  'Electrical Engineering': ['MATH 124', 'MATH 125', 'PHYS 121', 'EE 271', 'EE 331'],
+  'Mechanical Engineering': ['MATH 124', 'MATH 125', 'PHYS 121', 'ME 123', 'ME 230'],
+  'Business Administration': ['BIS 111', 'BIS 200', 'BIS 315', 'BIS 445', 'B BUS 300'],
+  'Computer Engineering': ['CSS 132', 'CSS 133', 'EE 215', 'EE 271', 'CSS 427'],
+  'Data Science': ['CSS 123', 'STMATH 124', 'STMATH 125', 'B BIO 180', 'STMATH 308'],
+  'Information Technology': ['BIS 111', 'BIS 200', 'BIS 221', 'CSS 110', 'CSS 310'],
+};

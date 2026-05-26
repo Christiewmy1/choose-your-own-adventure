@@ -2,6 +2,22 @@
 
 HuskyAdvisor is an AI-powered academic and career guidance prototype for **University of Washington Bothell** students. Its current MVP helps students compare majors, choose useful electives, connect coursework to local company pathways, and generate internship-preparation next steps using UWB-specific data.
 
+## Live website
+
+**Public demo:** [https://christiewmy1.github.io/choose-your-own-adventure/](https://christiewmy1.github.io/choose-your-own-adventure/)
+
+The student-facing UI lives in `web/` (React + Vite). Pushes to the `HuskyAdvisor` branch rebuild and publish to the **`gh-pages`** branch via [GitHub Actions](.github/workflows/deploy-web.yml) (this repo’s Pages source). If you still see the old “Cave of Time” demo, hard-refresh the page or wait a minute for GitHub’s CDN cache to update.
+
+### Run the website locally
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
+Then open **http://localhost:4173** (profile form → course recommendations → company alignment).
+
 ## What This Repository Is
 
 This repository is being used for the **HuskyAdvisor** branch of the team project. The most important project code and data for the current MVP live in:
@@ -40,7 +56,7 @@ The current MVP does **not** yet provide:
 - live internship postings
 - real-time job scraping
 - official advisor-approved degree planning
-- a fully polished public website
+- a fully polished public website (a working MVP is at the [live demo](https://christiewmy1.github.io/choose-your-own-adventure/); backend integration is still in progress)
 
 ## Demo Modes
 
@@ -94,6 +110,10 @@ What each mode does:
   - summary derived from a larger UWB course catalog source
 - `data/quarter_plan_templates.json`
   - structured roadmap templates for quarter-by-quarter planning
+- `data/uwb_spring_2026_schedule_snapshot.json`
+  - official Spring 2026 schedule snapshot with real sections and meeting times
+- `data/uwb_2026_multi_quarter_schedule_snapshot.json`
+  - official multi-quarter 2026 schedule snapshot across winter, spring, summer, and autumn
 
 ### Key Documentation
 
@@ -117,6 +137,12 @@ What each mode does:
   - concise explanation of the data/documentation contribution lane
 - `docs/api_contract.md`
   - proposed JSON response contract for the eventual website/backend connection
+- `docs/frontend_gap_review.md`
+  - current review of what the website does and what is still missing
+- `docs/official_schedule_expansion_notes.md`
+  - notes on the new official UW Bothell schedule snapshot
+- `docs/multi_quarter_schedule_notes.md`
+  - notes on the broader 2026 multi-quarter schedule dataset
 - `docs/project_website_content.md`
   - content draft for the public project website
 - `docs/data_and_metadata_plan.md`
@@ -177,7 +203,25 @@ The data/documentation contribution area is most visible in:
 - `docs/team_dependency_tracker.md`
 - `docs/matiyas_role_summary.md`
 - `docs/api_contract.md`
+- `docs/frontend_gap_review.md`
+- `docs/official_schedule_expansion_notes.md`
+- `docs/multi_quarter_schedule_notes.md`
 
 ## Next Major Step
 
-The next major milestone is turning the current recommendation engine into a **student-facing website**. The backend and data layers are now strong enough that frontend work should begin in parallel with continued data cleanup and evaluation.
+The next major milestone is turning the current recommendation engine into a fully connected **student-facing website**. The backend and data layers are now strong enough that frontend work should continue using the live API instead of placeholder rules, while the team keeps improving data quality and evaluation coverage.
+
+## Prototype API
+
+The repository now includes a first-pass FastAPI layer for turning HuskyAdvisor into a website-backed product.
+
+- API app: `src/huskyadvisor/api_app.py`
+- Request models: `src/huskyadvisor/api_models.py`
+- Shared advisor builder: `src/huskyadvisor/service.py`
+- Quickstart: `docs/api_quickstart.md`
+
+Planned local run command:
+
+```bash
+PYTHONPATH=src uvicorn huskyadvisor.api_app:app --host 127.0.0.1 --port 8010
+```
