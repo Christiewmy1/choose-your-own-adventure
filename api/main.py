@@ -24,7 +24,9 @@ app.add_middleware(
         "http://localhost:5173",
         "http://localhost:3000",
         "http://localhost:8080",
+        "http://localhost:8000",
     ],
+    allow_origin_regex="https://.*\\.hf\\.space",  # any HuggingFace Space
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
