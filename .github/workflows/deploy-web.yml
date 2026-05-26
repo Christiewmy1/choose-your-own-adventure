@@ -2,7 +2,7 @@ name: Deploy HuskyAdvisor website
 
 on:
   push:
-    branches: [main]
+    branches: [HuskyAdvisor]
     paths:
       - 'web/**'
       - '.github/workflows/deploy-web.yml'
