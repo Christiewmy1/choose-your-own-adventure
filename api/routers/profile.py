@@ -39,36 +39,36 @@ def _to_profile(req: ProfileRequest) -> StudentProfile:
 
 
 @router.post("/recommendations", response_model=AdvisingResult)
-def course_recommendations(req: ProfileRequest) -> AdvisingResult:
+async def course_recommendations(req: ProfileRequest) -> AdvisingResult:
     profile = _to_profile(req)
     target = profile.target_companies[0] if profile.target_companies else None
     result = get_engine().recommend_electives(profile, target)
-    return enhance(profile, result, "course")
+    return await enhance(profile, result, "course")
 
 
 @router.post("/companies", response_model=AdvisingResult)
-def company_alignment(req: ProfileRequest) -> AdvisingResult:
+async def company_alignment(req: ProfileRequest) -> AdvisingResult:
     profile = _to_profile(req)
     result = get_engine().recommend_companies(profile)
-    return enhance(profile, result, "company alignment")
+    return await enhance(profile, result, "company alignment")
 
 
 @router.post("/internship-prep", response_model=AdvisingResult)
-def internship_prep(req: ProfileRequest) -> AdvisingResult:
+async def internship_prep(req: ProfileRequest) -> AdvisingResult:
     profile = _to_profile(req)
     result = get_engine().recommend_internship_prep(profile)
-    return enhance(profile, result, "internship preparation")
+    return await enhance(profile, result, "internship preparation")
 
 
 @router.post("/roadmap", response_model=AdvisingResult)
-def quarter_roadmap(req: ProfileRequest) -> AdvisingResult:
+async def quarter_roadmap(req: ProfileRequest) -> AdvisingResult:
     profile = _to_profile(req)
     result = get_engine().build_quarter_plan(profile)
-    return enhance(profile, result, "quarter roadmap")
+    return await enhance(profile, result, "quarter roadmap")
 
 
 @router.post("/major", response_model=AdvisingResult)
-def major_suggestion(req: ProfileRequest) -> AdvisingResult:
+async def major_suggestion(req: ProfileRequest) -> AdvisingResult:
     profile = _to_profile(req)
     result = get_engine().suggest_major(req.interests or req.career_goals)
-    return enhance(profile, result, "major suggestion")
+    return await enhance(profile, result, "major suggestion")
