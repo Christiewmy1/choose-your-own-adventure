@@ -28,7 +28,7 @@ app.add_middleware(
         "http://localhost:8080",
         "http://localhost:8000",
     ],
-    allow_origin_regex=r"^https://.*\.vercel\.app$",  # any Vercel preview/production domain
+    allow_origin_regex=r"^https://[a-zA-Z0-9-]+-[a-zA-Z0-9-]+\.hf\.space$",  # any HuggingFace Space
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
