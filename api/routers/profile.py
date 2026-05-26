@@ -7,6 +7,7 @@ import api  # noqa: F401 — ensures sys.path is set before huskyadvisor imports
 from huskyadvisor.models import AdvisingResult, StudentProfile
 
 from api.engine import get_engine
+from api.llm import enhance
 
 router = APIRouter(prefix="/api/profile", tags=["profile"])
 
@@ -21,7 +22,6 @@ class ProfileRequest(BaseModel):
 
 
 def _to_profile(req: ProfileRequest) -> StudentProfile:
-    """Map the simplified API request to the internal StudentProfile model."""
     return StudentProfile(
         student_id="api-user",
         name="API User",
@@ -39,28 +39,36 @@ def _to_profile(req: ProfileRequest) -> StudentProfile:
 
 
 @router.post("/recommendations", response_model=AdvisingResult)
-def course_recommendations(req: ProfileRequest) -> AdvisingResult:
+async def course_recommendations(req: ProfileRequest) -> AdvisingResult:
     profile = _to_profile(req)
     target = profile.target_companies[0] if profile.target_companies else None
-    return get_engine().recommend_electives(profile, target)
+    result = get_engine().recommend_electives(profile, target)
+    return await enhance(profile, result, "course")
 
 
 @router.post("/companies", response_model=AdvisingResult)
-def company_alignment(req: ProfileRequest) -> AdvisingResult:
-    return get_engine().recommend_companies(_to_profile(req))
+async def company_alignment(req: ProfileRequest) -> AdvisingResult:
+    profile = _to_profile(req)
+    result = get_engine().recommend_companies(profile)
+    return await enhance(profile, result, "company alignment")
 
 
 @router.post("/internship-prep", response_model=AdvisingResult)
-def internship_prep(req: ProfileRequest) -> AdvisingResult:
-    return get_engine().recommend_internship_prep(_to_profile(req))
+async def internship_prep(req: ProfileRequest) -> AdvisingResult:
+    profile = _to_profile(req)
+    result = get_engine().recommend_internship_prep(profile)
+    return await enhance(profile, result, "internship preparation")
 
 
 @router.post("/roadmap", response_model=AdvisingResult)
-def quarter_roadmap(req: ProfileRequest) -> AdvisingResult:
-    return get_engine().build_quarter_plan(_to_profile(req))
+async def quarter_roadmap(req: ProfileRequest) -> AdvisingResult:
+    profile = _to_profile(req)
+    result = get_engine().build_quarter_plan(profile)
+    return await enhance(profile, result, "quarter roadmap")
 
 
 @router.post("/major", response_model=AdvisingResult)
-def major_suggestion(req: ProfileRequest) -> AdvisingResult:
-    interests = req.interests or req.career_goals
-    return get_engine().suggest_major(interests)
+async def major_suggestion(req: ProfileRequest) -> AdvisingResult:
+    profile = _to_profile(req)
+    result = get_engine().suggest_major(req.interests or req.career_goals)
+    return await enhance(profile, result, "major suggestion")
