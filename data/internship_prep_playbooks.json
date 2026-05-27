@@ -5,7 +5,7 @@
     {
       "track": "aerospace_systems",
       "goal_keywords": ["systems", "embedded", "hardware", "aerospace", "reliability"],
-      "preferred_majors": ["CSSE", "EE"],
+      "preferred_majors": ["CSSE", "EE", "Computer Engineering"],
       "target_companies": ["Boeing", "SpaceX Starlink"],
       "recommended_courses": ["CSS 430", "CSS 422", "CSS 427", "EE 450", "CSS 458"],
       "recommended_projects": [
@@ -18,7 +18,7 @@
     {
       "track": "cloud_backend",
       "goal_keywords": ["cloud", "backend", "web development", "platform engineering", "distributed systems"],
-      "preferred_majors": ["CSSE", "Applied Computing"],
+      "preferred_majors": ["CSSE", "Applied Computing", "Business Administration"],
       "target_companies": ["Amazon Bellevue", "Google Kirkland", "Microsoft Redmond"],
       "recommended_courses": ["CSS 436", "CSS 432", "CSS 475", "CSS 481"],
       "recommended_projects": [
@@ -31,7 +31,7 @@
     {
       "track": "security_infrastructure",
       "goal_keywords": ["security", "networking", "infrastructure", "reliability", "systems"],
-      "preferred_majors": ["CSSE", "Applied Computing"],
+      "preferred_majors": ["CSSE", "Applied Computing", "Business Administration"],
       "target_companies": ["AT&T Bothell", "T-Mobile", "Microsoft Redmond"],
       "recommended_courses": ["CSS 310", "CSS 337", "CSS 431", "CSS 457"],
       "recommended_projects": [
@@ -44,7 +44,7 @@
     {
       "track": "ai_product",
       "goal_keywords": ["ai", "machine learning", "product", "data", "intelligent systems"],
-      "preferred_majors": ["CSSE", "Applied Computing"],
+      "preferred_majors": ["CSSE", "Applied Computing", "Data Visualization"],
       "target_companies": ["Microsoft Redmond", "Google Kirkland"],
       "recommended_courses": ["CSS 382", "CSS 440", "CSS 486", "CSS 481"],
       "recommended_projects": [
@@ -57,7 +57,7 @@
     {
       "track": "healthcare_digital",
       "goal_keywords": ["healthcare", "data", "privacy", "security", "cloud", "integration"],
-      "preferred_majors": ["CSSE", "Applied Computing"],
+      "preferred_majors": ["CSSE", "Applied Computing", "Data Visualization", "Business Administration"],
       "target_companies": ["UW Medicine", "Providence", "Fred Hutch"],
       "recommended_courses": ["CSS 370", "CSS 436", "CSS 457", "CSS 458", "CSS 481"],
       "recommended_projects": [

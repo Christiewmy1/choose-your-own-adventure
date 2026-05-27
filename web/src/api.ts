@@ -1,6 +1,14 @@
 import type { AdvisingResult, DashboardResults, StudentProfile } from './types';
 
-const API_BASE_URL = 'http://127.0.0.1:8010';
+const DEFAULT_LOCAL_API = 'http://127.0.0.1:8010';
+const DEFAULT_PUBLIC_API = 'https://huskyadvisor-api.onrender.com';
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  (typeof window !== 'undefined' &&
+  (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? DEFAULT_LOCAL_API
+    : DEFAULT_PUBLIC_API);
+const COURSE_CODE_PATTERN = /\b([A-Z]{2,6}|[A-Z]\s+[A-Z]{2,6})\s*-?\s*(\d{3})\b/g;
 
 interface ProfilePayload {
   major: string;
@@ -12,14 +20,24 @@ interface ProfilePayload {
 
 const normalizeList = (value: string) =>
   value
-    .split(',')
+    .split(/[\n,;]+/)
     .map(item => item.trim())
     .filter(Boolean);
+
+const extractCourseCodes = (value: string) => {
+  const normalizedValue = value.toUpperCase();
+  const matches = Array.from(normalizedValue.matchAll(COURSE_CODE_PATTERN));
+  if (matches.length > 0) {
+    return matches.map(([, dept, number]) => `${dept.toUpperCase().replace(/\s+/g, ' ').trim()} ${number}`);
+  }
+
+  return normalizeList(value);
+};
 
 const toPayload = (profile: StudentProfile): ProfilePayload => ({
   major: profile.major.trim(),
   class_standing: profile.standing,
-  completed_courses: normalizeList(profile.completedCourses),
+  completed_courses: extractCourseCodes(profile.completedCourses),
   career_goals: normalizeList(profile.careerGoals),
   target_companies: normalizeList(profile.targetCompanies),
 });

@@ -55,9 +55,10 @@ const ProfileForm = ({ profile, error, onSubmit, onBack }: ProfileFormProps) => 
             id="major"
             value={localProfile.major}
             onChange={e => updateField('major', e.target.value)}
-            placeholder="e.g. CSSE, Applied Computing, Electrical Engineering"
+            placeholder="e.g. CSSE, Applied Computing, Electrical Engineering, Computer Engineering"
             required
           />
+          <p className="small-copy">Current prototype scope: UW Bothell CSSE, Applied Computing, Electrical Engineering, Computer Engineering, Data Visualization, and the technology-facing side of Business Administration.</p>
         </div>
 
         <div className="input-group">
@@ -79,8 +80,9 @@ const ProfileForm = ({ profile, error, onSubmit, onBack }: ProfileFormProps) => 
             id="completedCourses"
             value={localProfile.completedCourses}
             onChange={e => updateField('completedCourses', e.target.value)}
-            placeholder="List the classes you’ve already taken (e.g. INFO 200, INFO 220, MATH 124)."
+            placeholder="List the classes you’ve already taken (e.g. CSS 142, CSS 143, CSS 301, MATH 124)."
           />
+          <p className="small-copy">Best results come from UWB-style course histories such as CSS, EE, BIS, and related math courses.</p>
         </div>
 
         <div className="input-group full-width">
@@ -100,8 +102,9 @@ const ProfileForm = ({ profile, error, onSubmit, onBack }: ProfileFormProps) => 
             id="targetCompanies"
             value={localProfile.targetCompanies}
             onChange={e => updateField('targetCompanies', e.target.value)}
-            placeholder="Optional: Boeing, Microsoft Redmond, T-Mobile, cloud platforms"
+            placeholder="Optional: Boeing, Snowflake, Deloitte, Nintendo of America, Seattle Children's"
           />
+          <p className="small-copy">Current dataset includes 100+ companies across aerospace, cloud, security, healthcare, gaming, AI/data, and business-tech pathways.</p>
         </div>
 
         <div className="form-actions">

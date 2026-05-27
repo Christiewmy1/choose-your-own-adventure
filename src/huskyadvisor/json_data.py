@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 import json
+from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from huskyadvisor.models import CompanyRecord, CourseRecord, StudentProfile
+from huskyadvisor.models import CompanyRecord, CourseRecord, MajorRecord, StudentProfile
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -16,6 +17,7 @@ DEFAULT_COMPANY_MAPPING_JSON = PROJECT_ROOT / "data" / "company_course_mapping.j
 DEFAULT_COMPANY_INTENT_JSON = PROJECT_ROOT / "data" / "company_intent_profiles.json"
 DEFAULT_INTERNSHIP_PLAYBOOK_JSON = PROJECT_ROOT / "data" / "internship_prep_playbooks.json"
 DEFAULT_QUARTER_PLAN_JSON = PROJECT_ROOT / "data" / "quarter_plan_templates.json"
+DEFAULT_MAJOR_PATHWAY_JSON = PROJECT_ROOT / "data" / "major_pathway_comparison.json"
 
 
 def load_course_records(path: Path | None = None) -> list[CourseRecord]:
@@ -23,6 +25,7 @@ def load_course_records(path: Path | None = None) -> list[CourseRecord]:
     with source.open(encoding="utf-8") as handle:
         payload = json.load(handle)
 
+    major_course_map = load_major_course_map()
     records: list[CourseRecord] = []
     for item in payload.get("courses", []):
         code = _normalize_code(item.get("code", ""))
@@ -30,6 +33,7 @@ def load_course_records(path: Path | None = None) -> list[CourseRecord]:
         level = int(item.get("level") or _parse_level(code))
         career_tags = item.get("career_tags") or _infer_career_tags(item.get("description", ""))
         major_tags = item.get("majors") or _infer_major_tags(code, department)
+        major_tags = sorted(set(major_tags).union(major_course_map.get(code, set())))
         records.append(
             CourseRecord(
                 course_code=code,
@@ -90,6 +94,52 @@ def load_company_records(path: Path | None = None) -> list[CompanyRecord]:
             )
         )
     return records
+
+
+def load_major_records(path: Path | None = None) -> list[MajorRecord]:
+    source = path or DEFAULT_MAJOR_PATHWAY_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+
+    records: list[MajorRecord] = []
+    for item in payload.get("majors", []):
+        typical_courses = [_normalize_code(code) for code in item.get("typical_course_signals", [])]
+        summary = item.get("summary") or item.get("support_scope_notes") or "UWB major pathway."
+        records.append(
+            MajorRecord(
+                major_name=item["major"],
+                degree_type=item.get("degree_type", ""),
+                summary=summary,
+                best_for=item.get("best_for", []),
+                typical_courses=typical_courses,
+                career_paths=item.get("career_paths", []),
+                aliases=item.get("aliases", []),
+                support_tier=item.get("support_tier", "partial"),
+                support_scope_notes=item.get("support_scope_notes", ""),
+                course_groups={
+                    group: [_normalize_code(code) for code in codes]
+                    for group, codes in item.get("course_groups", {}).items()
+                },
+                source_url=item.get("source_url"),
+            )
+        )
+    return records
+
+
+def load_major_course_map(path: Path | None = None) -> dict[str, set[str]]:
+    source = path or DEFAULT_MAJOR_PATHWAY_JSON
+    with source.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+
+    course_map: dict[str, set[str]] = defaultdict(set)
+    for item in payload.get("majors", []):
+        major = item["major"]
+        for code in item.get("typical_course_signals", []):
+            course_map[_normalize_code(code)].add(major)
+        for codes in item.get("course_groups", {}).values():
+            for code in codes:
+                course_map[_normalize_code(code)].add(major)
+    return dict(course_map)
 
 
 def load_recent_offering_terms(path: Path | None = None) -> dict[str, list[str]]:

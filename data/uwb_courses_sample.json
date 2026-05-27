@@ -1,8 +1,8 @@
 {
   "dataset_name": "HuskyAdvisor UWB Seed Dataset",
   "dataset_scope": "Spring 2026 curated snapshot for CSS 382 MVP",
-  "last_updated": "2026-05-13",
-  "notes": "This seed dataset is a manually curated academic snapshot for HuskyAdvisor. It is intentionally small, transparent, and designed for course recommendation demos rather than official advising use.",
+  "last_updated": "2026-05-22",
+  "notes": "This seed dataset combines a curated advising-focused subset with additional catalog-derived UW Bothell CSS records to broaden project coverage. Some added records use placeholder metadata and should be refined over time.",
   "courses": [
     {
       "code": "CSS 301",
@@ -10,8 +10,20 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["software engineering", "problem solving", "teamwork"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Computer Engineering",
+        "Data Visualization",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "software engineering",
+        "problem solving",
+        "teamwork",
+        "data foundations",
+        "technical communication"
+      ],
       "prerequisites": "Admission to upper-division CSS coursework or department guidance.",
       "project_emphasis": "high",
       "description": "Survey of core ideas in computing: data representation, algorithms, abstraction, and software engineering practice. Prepares students for upper-division CSS coursework with collaborative projects and introductory programming exercises.",
@@ -24,8 +36,17 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["algorithms", "software engineering", "backend", "technical interviews"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "algorithms",
+        "software engineering",
+        "backend",
+        "technical interviews"
+      ],
       "prerequisites": "CSS 143 or equivalent programming background.",
       "project_emphasis": "medium",
       "description": "Design and analysis of fundamental data structures including lists, trees, heaps, hash tables, and graphs. Algorithmic techniques such as sorting, searching, recursion, and graph traversal. Emphasis on complexity analysis and implementation trade-offs.",
@@ -39,8 +60,18 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["software engineering", "testing", "teamwork", "project management"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Computer Engineering",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "software engineering",
+        "testing",
+        "teamwork",
+        "project management"
+      ],
       "prerequisites": "CSS 342 recommended.",
       "project_emphasis": "high",
       "description": "Principles of software development life cycle, requirements engineering, design modeling, testing strategies, version control, and team collaboration. Students apply agile methods to build a multi-component software system.",
@@ -54,8 +85,20 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["backend", "data", "enterprise systems"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Computer Engineering",
+        "Data Visualization",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "backend",
+        "data",
+        "enterprise systems",
+        "analytics",
+        "data infrastructure"
+      ],
       "prerequisites": "CSS 342 or permission of instructor.",
       "project_emphasis": "medium",
       "description": "Relational modeling, SQL, schema design, normalization, and transaction concepts for data-intensive applications.",
@@ -68,8 +111,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["ai", "intelligent systems", "problem solving", "software engineering"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ai",
+        "intelligent systems",
+        "problem solving",
+        "software engineering"
+      ],
       "prerequisites": "CSS 342 recommended.",
       "project_emphasis": "medium-high",
       "description": "Introduces foundational AI topics such as search, reasoning, and intelligent behavior in software systems.",
@@ -83,8 +134,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["security", "infrastructure", "risk", "defensive computing"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "infrastructure",
+        "risk",
+        "defensive computing"
+      ],
       "prerequisites": "Programming background and upper-division readiness recommended.",
       "project_emphasis": "medium",
       "description": "Introduces core cybersecurity and information assurance concepts for protecting computing systems and digital infrastructure.",
@@ -97,8 +156,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["security", "systems", "reliability", "infrastructure"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "systems",
+        "reliability",
+        "infrastructure"
+      ],
       "prerequisites": "CSS 342 or equivalent preparation.",
       "project_emphasis": "medium",
       "description": "Covers system security principles, secure design, and common ways computing systems can fail or be attacked.",
@@ -111,8 +178,18 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "EE"],
-      "career_tags": ["embedded", "systems", "performance", "aerospace"],
+      "majors": [
+        "CSSE",
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "embedded",
+        "systems",
+        "performance",
+        "aerospace",
+        "computer architecture"
+      ],
       "prerequisites": "CSS 342.",
       "project_emphasis": "medium",
       "description": "Explores lower-level machine organization, performance tradeoffs, and system interfaces relevant to hardware-software collaboration.",
@@ -126,8 +203,17 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE"],
-      "career_tags": ["systems", "backend", "aerospace", "embedded", "reliability"],
+      "majors": [
+        "CSSE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "systems",
+        "backend",
+        "aerospace",
+        "embedded",
+        "reliability"
+      ],
       "prerequisites": "CSS 342 and CSS 360.",
       "project_emphasis": "high",
       "description": "Processes and threads, CPU scheduling, synchronization and deadlocks, memory management, virtual memory, file systems, and I/O subsystems. Hands-on labs reinforce concepts using a contemporary operating system.",
@@ -141,8 +227,18 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE"],
-      "career_tags": ["networking", "distributed systems", "backend", "cloud", "aerospace"],
+      "majors": [
+        "CSSE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "networking",
+        "distributed systems",
+        "backend",
+        "cloud",
+        "aerospace",
+        "infrastructure"
+      ],
       "prerequisites": "CSS 342 and CSS 360 recommended.",
       "project_emphasis": "medium-high",
       "description": "Networking fundamentals and distributed-system design for mission-critical and connected software systems.",
@@ -156,8 +252,19 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["cloud", "backend", "devops", "distributed systems"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "cloud",
+        "backend",
+        "devops",
+        "distributed systems",
+        "platform operations",
+        "digital transformation"
+      ],
       "prerequisites": "CSS 360.",
       "project_emphasis": "high",
       "description": "Distributed services, cloud deployment, and scalable architectures useful for enterprise software environments.",
@@ -170,8 +277,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["ai", "machine learning", "problem solving", "intelligent systems"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "ai",
+        "machine learning",
+        "problem solving",
+        "intelligent systems"
+      ],
       "prerequisites": "CSS 342 and discrete math background recommended.",
       "project_emphasis": "medium-high",
       "description": "Introduces search, knowledge representation, reasoning, and core AI methods for intelligent software systems.",
@@ -185,8 +300,19 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "EE"],
-      "career_tags": ["embedded", "hardware", "systems", "aerospace", "robotics"],
+      "majors": [
+        "CSSE",
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "embedded",
+        "hardware",
+        "systems",
+        "aerospace",
+        "robotics",
+        "firmware"
+      ],
       "prerequisites": "CSS 422 or systems background recommended.",
       "project_emphasis": "high",
       "description": "Explores embedded computing and hardware-software interaction in constrained real-world systems.",
@@ -200,8 +326,16 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["security", "privacy", "reliability", "infrastructure"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "security",
+        "privacy",
+        "reliability",
+        "infrastructure"
+      ],
       "prerequisites": "CSS 360 recommended.",
       "project_emphasis": "medium",
       "description": "Core security principles, common vulnerabilities, secure design thinking, and privacy concerns in modern computing environments.",
@@ -214,8 +348,17 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["testing", "quality assurance", "reliability", "software engineering", "aerospace"],
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "testing",
+        "quality assurance",
+        "reliability",
+        "software engineering",
+        "aerospace"
+      ],
       "prerequisites": "CSS 360.",
       "project_emphasis": "medium",
       "description": "Verification, validation, and dependable software development practices for production-grade systems.",
@@ -229,8 +372,20 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["backend", "data", "enterprise systems", "software engineering"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Data Visualization",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "backend",
+        "data",
+        "enterprise systems",
+        "software engineering",
+        "analytics",
+        "data platforms"
+      ],
       "prerequisites": "CSS 370 or comparable database preparation recommended.",
       "project_emphasis": "medium-high",
       "description": "Advanced database systems course for students interested in backend, data-intensive, and enterprise software applications.",
@@ -243,8 +398,17 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["web development", "full-stack", "product", "software engineering"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "web development",
+        "full-stack",
+        "product",
+        "software engineering"
+      ],
       "prerequisites": "Software development background recommended.",
       "project_emphasis": "high",
       "description": "Builds practical experience with modern web application development and interactive software systems.",
@@ -257,8 +421,18 @@
       "credits": 5,
       "department": "Computing & Software Systems",
       "level": 400,
-      "majors": ["CSSE", "Applied Computing"],
-      "career_tags": ["ai", "machine learning", "intelligent systems", "data"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Data Visualization"
+      ],
+      "career_tags": [
+        "ai",
+        "machine learning",
+        "intelligent systems",
+        "data",
+        "analytics"
+      ],
       "prerequisites": "Algorithmic preparation and mathematical maturity recommended.",
       "project_emphasis": "medium-high",
       "description": "AI-oriented elective that supports machine intelligence and data-driven software pathways.",
@@ -271,8 +445,16 @@
       "credits": 5,
       "department": "Business",
       "level": 300,
-      "majors": ["Applied Computing"],
-      "career_tags": ["analytics", "data", "business intelligence"],
+      "majors": [
+        "Applied Computing",
+        "Data Visualization",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "analytics",
+        "data",
+        "business intelligence"
+      ],
       "prerequisites": "Introductory statistics or instructor guidance.",
       "project_emphasis": "medium",
       "description": "Applies quantitative reasoning and data interpretation to practical decision-making in organizational settings.",
@@ -285,8 +467,16 @@
       "credits": 5,
       "department": "Business",
       "level": 300,
-      "majors": ["Applied Computing"],
-      "career_tags": ["systems analysis", "product thinking", "business systems"],
+      "majors": [
+        "Applied Computing",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "systems analysis",
+        "product thinking",
+        "business systems",
+        "digital transformation"
+      ],
       "prerequisites": "Upper-division standing recommended.",
       "project_emphasis": "medium",
       "description": "Covers information systems planning, stakeholder needs, and structured approaches to analyzing organizational technology problems.",
@@ -299,8 +489,16 @@
       "credits": 5,
       "department": "Business",
       "level": 300,
-      "majors": ["Applied Computing"],
-      "career_tags": ["business systems", "product", "applications", "technical analysis"],
+      "majors": [
+        "Applied Computing",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "business systems",
+        "product",
+        "applications",
+        "technical analysis"
+      ],
       "prerequisites": "Upper-division standing recommended.",
       "project_emphasis": "medium",
       "description": "Applies computing tools to practical business systems and organizational problem solving.",
@@ -313,8 +511,17 @@
       "credits": 5,
       "department": "Business",
       "level": 400,
-      "majors": ["Applied Computing"],
-      "career_tags": ["analytics", "dashboards", "data", "decision support"],
+      "majors": [
+        "Applied Computing",
+        "Data Visualization",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "analytics",
+        "dashboards",
+        "data",
+        "decision support"
+      ],
       "prerequisites": "BIS 315 or equivalent analytical experience.",
       "project_emphasis": "high",
       "description": "Focuses on reporting, dashboards, and turning data into actionable information for organizational decision-making.",
@@ -327,8 +534,15 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 200,
-      "majors": ["EE"],
-      "career_tags": ["hardware", "digital systems", "embedded"],
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "hardware",
+        "digital systems",
+        "embedded"
+      ],
       "prerequisites": "Calculus and introductory physics or department guidance.",
       "project_emphasis": "medium",
       "description": "Introduces combinational and sequential logic, digital design, and system-level thinking for electronics.",
@@ -341,8 +555,17 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 300,
-      "majors": ["EE"],
-      "career_tags": ["signals", "systems", "hardware", "control"],
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "signals",
+        "systems",
+        "hardware",
+        "control",
+        "signal processing"
+      ],
       "prerequisites": "Calculus sequence and engineering preparation.",
       "project_emphasis": "medium",
       "description": "Models continuous and discrete signals, system response, and analysis tools used across electrical and embedded engineering contexts.",
@@ -355,8 +578,16 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 300,
-      "majors": ["EE"],
-      "career_tags": ["hardware", "electronics", "circuits", "embedded"],
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "hardware",
+        "electronics",
+        "circuits",
+        "embedded"
+      ],
       "prerequisites": "Engineering math and circuit fundamentals recommended.",
       "project_emphasis": "medium",
       "description": "Focuses on electronic components and circuit behavior used in practical device and embedded-system contexts.",
@@ -369,8 +600,18 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 400,
-      "majors": ["EE", "CSSE"],
-      "career_tags": ["embedded", "hardware", "systems", "aerospace", "robotics"],
+      "majors": [
+        "EE",
+        "CSSE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "embedded",
+        "hardware",
+        "systems",
+        "aerospace",
+        "robotics"
+      ],
       "prerequisites": "EE 271 and programming experience recommended.",
       "project_emphasis": "high",
       "description": "Microcontrollers, hardware-software integration, and real-world system constraints common in embedded engineering.",
@@ -383,8 +624,16 @@
       "credits": 5,
       "department": "Electrical Engineering",
       "level": 400,
-      "majors": ["EE"],
-      "career_tags": ["control", "systems", "robotics", "hardware"],
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "control",
+        "systems",
+        "robotics",
+        "hardware"
+      ],
       "prerequisites": "Signals and systems preparation recommended.",
       "project_emphasis": "medium",
       "description": "Studies feedback, stability, and control concepts used in engineering systems and device-level automation.",
@@ -392,13 +641,160 @@
       "source_confidence": "medium"
     },
     {
+      "code": "B EE 215",
+      "title": "Fundamentals of Electrical Engineering",
+      "credits": 4,
+      "department": "Electrical Engineering",
+      "level": 200,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "circuits",
+        "hardware",
+        "electronics",
+        "engineering fundamentals"
+      ],
+      "prerequisites": "Calculus and introductory science preparation recommended by the program.",
+      "project_emphasis": "medium",
+      "description": "Foundation course in electrical engineering covering circuit concepts, analysis methods, and engineering problem solving used across later hardware and systems courses.",
+      "source_type": "official_curriculum_derived",
+      "source_confidence": "medium-high",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/electrical/curriculum"
+    },
+    {
+      "code": "B EE 233",
+      "title": "Circuit Theory",
+      "credits": 4,
+      "department": "Electrical Engineering",
+      "level": 200,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "circuits",
+        "analog systems",
+        "hardware",
+        "modeling"
+      ],
+      "prerequisites": "Fundamentals of electrical engineering or equivalent program preparation.",
+      "project_emphasis": "medium",
+      "description": "Develops core circuit-analysis techniques and hardware reasoning used in electrical and computer engineering pathways.",
+      "source_type": "official_curriculum_derived",
+      "source_confidence": "medium-high",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/electrical/curriculum"
+    },
+    {
+      "code": "B EE 235",
+      "title": "Continuous Time Linear Systems",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 200,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "signals",
+        "systems",
+        "control",
+        "modeling"
+      ],
+      "prerequisites": "Circuit theory and engineering math preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Introduces continuous-time system behavior, modeling, and analysis that support later work in controls, signals, and embedded engineering.",
+      "source_type": "official_curriculum_derived",
+      "source_confidence": "medium-high",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/electrical/curriculum"
+    },
+    {
+      "code": "B EE 361",
+      "title": "Applied Electrodynamics",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 300,
+      "majors": [
+        "EE"
+      ],
+      "career_tags": [
+        "electromagnetics",
+        "hardware",
+        "communications",
+        "physical systems"
+      ],
+      "prerequisites": "Signals, systems, and engineering physics preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Applies electromagnetic principles to practical engineering systems and supports advanced work in devices, communications, and hardware contexts.",
+      "source_type": "official_curriculum_derived",
+      "source_confidence": "medium",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/electrical/curriculum"
+    },
+    {
+      "code": "B EE 425",
+      "title": "Microprocessor System Design",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 400,
+      "majors": [
+        "EE",
+        "Computer Engineering"
+      ],
+      "career_tags": [
+        "embedded",
+        "microprocessors",
+        "firmware",
+        "hardware",
+        "systems"
+      ],
+      "prerequisites": "Digital systems and programming preparation recommended.",
+      "project_emphasis": "high",
+      "description": "Covers microprocessor architecture, low-level system integration, and hardware-software design tradeoffs relevant to embedded and computer engineering roles.",
+      "source_type": "official_curriculum_derived",
+      "source_confidence": "medium-high",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/electrical/curriculum"
+    },
+    {
+      "code": "B EE 457",
+      "title": "Electrical/Power Electronic System in Renewable Energy",
+      "credits": 5,
+      "department": "Electrical Engineering",
+      "level": 400,
+      "majors": [
+        "EE"
+      ],
+      "career_tags": [
+        "power systems",
+        "renewable energy",
+        "hardware",
+        "control",
+        "infrastructure"
+      ],
+      "prerequisites": "Upper-division electrical engineering preparation recommended.",
+      "project_emphasis": "medium",
+      "description": "Applies electrical and power-electronics concepts to renewable-energy systems and infrastructure-oriented engineering contexts.",
+      "source_type": "official_curriculum_derived",
+      "source_confidence": "medium",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/electrical/curriculum"
+    },
+    {
       "code": "B BUS 300",
       "title": "Business Communication",
       "credits": 5,
       "department": "Business",
       "level": 300,
-      "majors": ["Applied Computing", "CSSE"],
-      "career_tags": ["communication", "teamwork", "professional skills"],
+      "majors": [
+        "Applied Computing",
+        "CSSE",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "communication",
+        "teamwork",
+        "professional skills",
+        "business communication"
+      ],
       "prerequisites": "None listed for MVP dataset.",
       "project_emphasis": "medium",
       "description": "Professional writing and presentation skills for business contexts, including collaboration and reporting.",
@@ -411,13 +807,1914 @@
       "credits": 5,
       "department": "STEM Mathematics",
       "level": 300,
-      "majors": ["CSSE", "Applied Computing", "EE"],
-      "career_tags": ["math foundations", "machine learning", "modeling"],
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "EE",
+        "Data Visualization"
+      ],
+      "career_tags": [
+        "math foundations",
+        "machine learning",
+        "modeling",
+        "analytics"
+      ],
       "prerequisites": "Precalculus and introductory college math sequence.",
       "project_emphasis": "low",
       "description": "Linear systems, matrices, eigenvalues, and applications in computing, graphics, and machine learning.",
       "source_type": "curated_uwb_snapshot",
       "source_confidence": "medium-high"
+    },
+    {
+      "code": "CSS 101",
+      "title": "Digital Thinking",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Digital Thinking. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 107",
+      "title": "Prog-Animated Story",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Prog-Animated Story. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 110",
+      "title": "Intro Cybersecurity",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Intro Cybersecurity. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 112",
+      "title": "Intro Prog Sci App",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Intro Prog Sci App. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 123",
+      "title": "Prog Data Sci",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Prog Data Sci. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 132",
+      "title": "Compt Prog Engr I",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Compt Prog Engr I. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 133",
+      "title": "Compt Prog Engr Ii",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Compt Prog Engr Ii. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 142",
+      "title": "Cmpt Prog I",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Cmpt Prog I. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 143",
+      "title": "Cmpt Prog Ii",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Cmpt Prog Ii. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 173",
+      "title": "Program Theory/app",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Program Theory/app. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 198",
+      "title": "Supervised Study",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Supervised Study. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 199",
+      "title": "Computing Research",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 100,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Computing Research. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 211",
+      "title": "Computers & Society",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 200,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Computers & Society. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 225",
+      "title": "Phys/chem of Comp",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 200,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Phys/chem of Comp. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 290",
+      "title": "Topics in Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 200,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Topics in Computing. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 295",
+      "title": "K12 Computing Edu",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 200,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for K12 Computing Edu. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 315",
+      "title": "Cyber Ethics & Law",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Cyber Ethics & Law. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 320",
+      "title": "Digital Forensics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Digital Forensics. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 340",
+      "title": "Appl Algorithmics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Appl Algorithmics. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 343",
+      "title": "Data, Alg, Math Ii",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Data, Alg, Math Ii. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 350",
+      "title": "Mgt Principles",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Mgt Principles. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 371",
+      "title": "Business of Tech",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Business of Tech. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 383",
+      "title": "Bioinformatics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Bioinformatics. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 385",
+      "title": "Intro to Game Dev",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Intro to Game Dev. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 390",
+      "title": "Special Topics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Special Topics. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 397",
+      "title": "Computing Internship",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 300,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Computing Internship. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 411",
+      "title": "Cmpt & Pub Policy",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing",
+        "Data Visualization",
+        "Business Administration"
+      ],
+      "career_tags": [
+        "technology policy",
+        "data ethics",
+        "governance",
+        "privacy",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Computing and public policy topics relevant to technology governance, ethics, privacy, and the societal impact of digital systems.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 415",
+      "title": "Topics in Cyersec",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Topics in Cyersec. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 421",
+      "title": "Cmpt Hw & O/s",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Cmpt Hw & O/s. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 431",
+      "title": "Network Archt & Mgmt",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Network Archt & Mgmt. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 434",
+      "title": "Para Distr Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Para Distr Computing. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 444",
+      "title": "Analyzing Biases",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Analyzing Biases. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 448",
+      "title": "Intro to Compilers",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Intro to Compilers. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 449",
+      "title": "Dsgn & Anlys Algrthm",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Dsgn & Anlys Algrthm. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 451",
+      "title": "3-D Computer Graphic",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for 3-D Computer Graphic. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 452",
+      "title": "Game Engine Dev",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Game Engine Dev. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 461",
+      "title": "Software Proj Mgmt",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Software Proj Mgmt. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 473",
+      "title": "Entrepreneurshp Sem",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Entrepreneurshp Sem. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 474",
+      "title": "Product Devel Lab",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Product Devel Lab. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 478",
+      "title": "Usability Engr",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Usability Engr. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 480",
+      "title": "Human-Comp Interact",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Human-Comp Interact. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 483",
+      "title": "Bioinformatics Alg",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Bioinformatics Alg. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 484",
+      "title": "Multimedia Process",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Multimedia Process. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 485",
+      "title": "Artif Neural Nets",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Artif Neural Nets. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 487",
+      "title": "Computer Vision",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Computer Vision. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 488",
+      "title": "Nat Lang Processing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Nat Lang Processing. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 490",
+      "title": "Special Topics",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Special Topics. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 495",
+      "title": "A Cmpt Internship",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for A Cmpt Internship. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 496",
+      "title": "Appl Cmpt Capstone",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Appl Cmpt Capstone. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 497",
+      "title": "Cs & Se Capstone",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Cs & Se Capstone. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 498",
+      "title": "Independent Study",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Independent Study. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 499",
+      "title": "Undergrad Research",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 400,
+      "majors": [
+        "CSSE",
+        "Applied Computing"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Undergrad Research. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 501",
+      "title": "Data Struct & Oop I",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Data Struct & Oop I. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 502",
+      "title": "Data Struc & Oop Ii",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Data Struc & Oop Ii. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 503",
+      "title": "Systems Programming",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Systems Programming. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 506",
+      "title": "Soft Devl Processes",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Soft Devl Processes. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 507",
+      "title": "Software Modeling",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Software Modeling. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 508",
+      "title": "Sftwre Test & Qual",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Sftwre Test & Qual. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 517",
+      "title": "Info Assrnce & Cyber",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Info Assrnce & Cyber. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 518",
+      "title": "Human Factors Cyber",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Human Factors Cyber. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 519",
+      "title": "Incidt Resp&risk Mgt",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Incidt Resp&risk Mgt. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 527",
+      "title": "Cryptography",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Cryptography. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 532",
+      "title": "Internet of Things",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Internet of Things. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 533",
+      "title": "Distributed Comp",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Distributed Comp. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 534",
+      "title": "Par Prog Grid Cloud",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Par Prog Grid Cloud. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 535",
+      "title": "High Perf Comp",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for High Perf Comp. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 537",
+      "title": "Network Systems Sec",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Network Systems Sec. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 538",
+      "title": "Wireless Security",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Wireless Security. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 539",
+      "title": "Sec in Emerging Env",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Sec in Emerging Env. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 545",
+      "title": "Mobile Computing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Mobile Computing. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 549",
+      "title": "Algrtm Desn&anlsys",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Algrtm Desn&anlsys. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 551",
+      "title": "Adv 3d Comp Graph",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Adv 3d Comp Graph. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 552",
+      "title": "Topics in Rendering",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Topics in Rendering. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 553",
+      "title": "Software Arch",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Software Arch. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 555",
+      "title": "Eval Software Desgn",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Eval Software Desgn. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 565",
+      "title": "Rsrch Meth Sw Dev",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Rsrch Meth Sw Dev. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 566",
+      "title": "Software Management",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Software Management. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 572",
+      "title": "Evid-Based Design",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Evid-Based Design. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 576",
+      "title": "Cybersecurity and AI",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Cybersecurity and AI. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 577",
+      "title": "Secure Software Dev",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Secure Software Dev. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 578",
+      "title": "Ethical Pen Testing",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Ethical Pen Testing. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 579",
+      "title": "Malware Reverse Eng",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Malware Reverse Eng. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 581",
+      "title": "Machine Learning",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Machine Learning. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 583",
+      "title": "Knowledge Mgt Sys",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Knowledge Mgt Sys. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 584",
+      "title": "Multimedia Db Sys",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Multimedia Db Sys. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 586",
+      "title": "Deep Learning & AI",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Deep Learning & AI. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 587",
+      "title": "Adv Computer Vision",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Adv Computer Vision. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 590",
+      "title": "Special Topic Cmptg",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Special Topic Cmptg. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 595",
+      "title": "Masters Project",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Masters Project. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 599",
+      "title": "Faculty Res Seminar",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 500,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Faculty Res Seminar. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 600",
+      "title": "Indepdnt Stdy/rsch",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 600,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Indepdnt Stdy/rsch. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 601",
+      "title": "Internship",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 600,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Internship. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
+    },
+    {
+      "code": "CSS 700",
+      "title": "Masters Thesis",
+      "credits": 5,
+      "department": "Computing & Software Systems",
+      "level": 700,
+      "majors": [
+        "CSSE"
+      ],
+      "career_tags": [
+        "software engineering",
+        "advanced computing"
+      ],
+      "prerequisites": "See official catalog or department guidance.",
+      "project_emphasis": "medium",
+      "description": "Catalog-derived placeholder for Masters Thesis. This course appears in official UW Bothell schedule history and should receive richer metadata in future dataset cleanup.",
+      "source_type": "catalog_schedule_derived",
+      "source_confidence": "medium",
+      "source_url": "https://github.com/pisanuw/01shortAIproject/blob/main/data/catalog.json"
     }
   ]
 }

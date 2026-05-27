@@ -54,7 +54,7 @@ function App() {
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Could not load HuskyAdvisor results.';
       setResultError(
-        `${message} Make sure the HuskyAdvisor API is running locally on port 8010.`
+        `${message} If you are testing locally, make sure the HuskyAdvisor API is running on port 8010. If you are using the public site, the deployed backend may be unavailable.`
       );
     } finally {
       setIsLoading(false);
