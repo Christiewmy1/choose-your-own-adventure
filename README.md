@@ -1,227 +1,165 @@
 # HuskyAdvisor
 
-HuskyAdvisor is an AI-powered academic and career guidance prototype for **University of Washington Bothell** students. Its current MVP helps students compare majors, choose useful electives, connect coursework to local company pathways, and generate internship-preparation next steps using UWB-specific data.
+HuskyAdvisor is a UW Bothell-focused advising web application that helps students compare majors, discover career-aligned courses, connect coursework to regional employers, and generate internship-prep and roadmap guidance.
 
-## Live website
+## Public deliverables
 
-**Public demo:** [https://christiewmy1.github.io/choose-your-own-adventure/](https://christiewmy1.github.io/choose-your-own-adventure/)
+- Public website: [https://christiewmy1.github.io/choose-your-own-adventure/](https://christiewmy1.github.io/choose-your-own-adventure/)
+- Deployed API target: `https://huskyadvisor-api.onrender.com`
+- Local frontend: `web/`
+- Local/deployed backend: `api/`
+- Core recommendation engine: `src/huskyadvisor/`
 
-The student-facing UI lives in `web/` (React + Vite). Pushes to the `HuskyAdvisor` branch rebuild and publish to the **`gh-pages`** branch via [GitHub Actions](.github/workflows/deploy-web.yml) (this repo’s Pages source). If you still see the old “Cave of Time” demo, hard-refresh the page or wait a minute for GitHub’s CDN cache to update.
+If the public site appears stale, GitHub Pages caching may be the cause. The current website is built from `web/` and published by `.github/workflows/deploy-web.yml`.
 
-### Run the website locally
+## Why this project matters to UW
+
+UW Bothell students often gather planning advice from scattered places: catalog pages, degree sheets, internship listings, faculty suggestions, and career fair notes. HuskyAdvisor packages that information into one UWB-specific experience so students can get more actionable guidance about:
+
+- which major pathway fits their interests
+- which courses match their goals
+- which local employers align with those courses
+- what they should do next for internship readiness
+
+## AI integration
+
+HuskyAdvisor is not a chat box bolted onto a website. AI is embedded in the recommendation logic in two ways:
+
+1. A structured advising engine scores majors, courses, company pathways, and roadmap tracks using student profile features, prerequisite readiness, company intent, and career-tag alignment.
+2. An optional retrieval-augmented path uses LangChain, Chroma, and OpenAI-backed retrieval modules for a richer LLM-grounded demo flow.
+
+The current deployed MVP primarily uses the structured advising engine because it is more stable for a class demo, but the repository also includes the retrieval modules that support the broader AI strategy.
+
+The repo now also includes a Crawl4AI-based ingestion pipeline for gathering fresh public UWB and employer source pages before they are normalized into retrieval documents or manually refreshed into the core advising datasets.
+
+## Current shipped architecture
+
+The current student-facing flow is:
+
+`React website -> FastAPI API -> HuskyAdvisorEngine -> JSON datasets -> recommendation results`
+
+Main production-oriented entry points:
+
+- Website entry: `web/src/App.tsx`
+- API entry: `api/main.py`
+- Recommendation engine: `src/huskyadvisor/advisor.py`
+- Data loading: `src/huskyadvisor/json_data.py`
+
+The older CLI prototype still exists for direct testing, but it is no longer the main user-facing flow.
+
+## What currently works
+
+- public website shell hosted on GitHub Pages
+- FastAPI backend for profile recommendations, companies, internship prep, roadmap, and major suggestion
+- 6 supported major pathways:
+  - CSSE
+  - Applied Computing
+  - EE
+  - Computer Engineering
+  - Data Visualization
+  - technology-facing Business Administration
+- 122 course records in the main advising dataset
+- 120 company targets in the company dataset
+- completed-course filtering so already taken courses are not recommended again
+- company-aware internship-prep and roadmap matching
+- stress-test coverage across 58 simulated student profiles
+- regression coverage for core advising flows
+
+## Current limitations
+
+HuskyAdvisor is still an MVP, not an official UW advising system.
+
+It does not currently provide:
+
+- official advisor-approved degree clearance
+- live internship scraping
+- real-time schedule integration in the public app
+- full major coverage for every UW Bothell department
+
+The strongest support is still in computing and engineering-oriented pathways.
+
+## Local development
+
+### Backend
 
 ```bash
-cd web
+cd /Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project
+PYTHONPATH=src uvicorn api.main:app --host 127.0.0.1 --port 8010
+```
+
+Health check:
+
+```bash
+curl http://127.0.0.1:8010/health
+```
+
+### Frontend
+
+```bash
+cd /Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/web
 npm install
 npm run dev
 ```
 
-Then open **http://localhost:4173** (profile form → course recommendations → company alignment).
+The frontend uses:
 
-## What This Repository Is
+- `http://127.0.0.1:8010` when running locally
+- `https://huskyadvisor-api.onrender.com` as the default deployed API target
 
-This repository is being used for the **HuskyAdvisor** branch of the team project. The most important project code and data for the current MVP live in:
+## Repository structure
 
+### Main application code
+
+- `api/`
+  - deployed FastAPI service used by the website
 - `src/huskyadvisor/`
-- `data/`
-- `docs/`
+  - recommendation logic, models, loaders, optional retrieval path
+- `web/`
+  - React/Vite student-facing interface
 
-If you are trying to understand the current project, start there.
+### Main data
 
-## What This Repository Is Not
-
-This repository was originally forked from another project and still contains some older or inherited files. Those legacy or reference materials are **not** the main HuskyAdvisor MVP. In particular:
-
-- `external_huskyadvisor/` is a copied reference import used during project integration
-- some older scripts in `scripts/` came from an earlier prototype path
-- the current HuskyAdvisor logic does **not** depend on the old choose-your-own-adventure/book-processing history
-
-For a clearer explanation, see:
-
-- [docs/legacy_and_scope_note.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/legacy_and_scope_note.md)
-- [docs/system_overview.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/system_overview.md)
-
-## Current MVP Scope
-
-The current HuskyAdvisor MVP focuses on:
-
-- major guidance for UWB students
-- elective recommendations
-- local company alignment
-- internship-preparation guidance
-- explainable recommendations based on structured UWB-style data
-
-The current MVP does **not** yet provide:
-
-- live internship postings
-- real-time job scraping
-- official advisor-approved degree planning
-- a fully polished public website (a working MVP is at the [live demo](https://christiewmy1.github.io/choose-your-own-adventure/); backend integration is still in progress)
-
-## Demo Modes
-
-The current working demo is a CLI prototype.
-
-Run from the project root:
-
-```bash
-cd /Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project
-PYTHONPATH=src python3 -m huskyadvisor.main --mode profile-demo
-PYTHONPATH=src python3 -m huskyadvisor.main --mode company-demo
-PYTHONPATH=src python3 -m huskyadvisor.main --mode internship-demo
-PYTHONPATH=src python3 -m huskyadvisor.main --mode roadmap-demo
-```
-
-What each mode does:
-
-- `profile-demo`: recommends courses based on a student profile
-- `company-demo`: suggests local companies that align with a student's path
-- `internship-demo`: gives a preparation plan with courses, project ideas, and skill focus
-- `roadmap-demo`: gives a structured quarter-by-quarter plan using curated roadmap templates
-
-## Project Structure
-
-### Main HuskyAdvisor Code
-
-- `src/huskyadvisor/main.py`
-  - entrypoint for the CLI demo
-- `src/huskyadvisor/advisor.py`
-  - main recommendation logic
-- `src/huskyadvisor/json_data.py`
-  - loads structured JSON datasets
-- `src/huskyadvisor/models.py`
-  - data models
-- `src/huskyadvisor/formatter.py`
-  - output formatting
-
-### Main HuskyAdvisor Data
-
-- `data/student_profile.json`
-  - sample student profile
 - `data/uwb_courses_sample.json`
-  - curated UWB course dataset
 - `data/local_tech_companies.json`
-  - local company dataset
 - `data/company_course_mapping.json`
-  - explicit company-to-course recommendations
+- `data/company_intent_profiles.json`
 - `data/internship_prep_playbooks.json`
-  - internship-prep tracks
-- `data/uwb_recent_css_catalog_summary.json`
-  - summary derived from a larger UWB course catalog source
 - `data/quarter_plan_templates.json`
-  - structured roadmap templates for quarter-by-quarter planning
-- `data/uwb_spring_2026_schedule_snapshot.json`
-  - official Spring 2026 schedule snapshot with real sections and meeting times
-- `data/uwb_2026_multi_quarter_schedule_snapshot.json`
-  - official multi-quarter 2026 schedule snapshot across winter, spring, summer, and autumn
+- `data/major_pathway_comparison.json`
+- `data/crawl4ai/`
+  - raw crawl exports
+  - normalized Crawl4AI summaries
+  - target manifests
 
-### Key Documentation
+### Key project docs
 
-- `docs/technical_design_document.md`
-  - system and architecture design
-- `docs/system_overview.md`
-  - execution flow and file-level overview
-- `docs/frontend_handoff.md`
-  - page-by-page guidance for the website team
-- `docs/website_testing_checklist.md`
-  - practical checklist for testing the website MVP
-- `docs/website_copy_blocks.md`
-  - ready-to-use page copy for the frontend MVP
-- `docs/persona_test_matrix.md`
-  - expected behavior for sample student scenarios
-- `docs/data_coverage_audit.md`
-  - honest summary of where the current dataset is strong and weak
-- `docs/team_dependency_tracker.md`
-  - clear handoff and ownership notes across data, frontend, and backend work
-- `docs/matiyas_role_summary.md`
-  - concise explanation of the data/documentation contribution lane
-- `docs/api_contract.md`
-  - proposed JSON response contract for the eventual website/backend connection
-- `docs/frontend_gap_review.md`
-  - current review of what the website does and what is still missing
-- `docs/official_schedule_expansion_notes.md`
-  - notes on the new official UW Bothell schedule snapshot
-- `docs/multi_quarter_schedule_notes.md`
-  - notes on the broader 2026 multi-quarter schedule dataset
-- `docs/project_website_content.md`
-  - content draft for the public project website
-- `docs/data_and_metadata_plan.md`
-  - metadata and dataset strategy
-- `docs/evaluation_question_bank.md`
-  - test prompts for recommendation quality
-- `docs/manual_evaluation_report.md`
-  - first-pass manual review of current demo quality
-- `docs/source_reference_index.md`
-  - transparency notes about where project data came from
-- `docs/catalog_integration_notes.md`
-  - external catalog integration notes
+- [docs/final_project_spec.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/final_project_spec.md)
+- [docs/ai_integration_strategy.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/ai_integration_strategy.md)
+- [docs/deployment_and_public_access.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/deployment_and_public_access.md)
+- [docs/milestone_roadmap.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/milestone_roadmap.md)
+- [docs/rubric_alignment_audit.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/rubric_alignment_audit.md)
+- [docs/system_overview.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/system_overview.md)
+- [docs/technical_design_document.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/technical_design_document.md)
+- [docs/crawl4ai_integration.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/crawl4ai_integration.md)
 
-### Sample Personas For Testing
+## Deployment notes
 
-- `data/sample_student_personas.json`
-  - reusable student cases for demo and website testing
+- GitHub Pages deployment for the website is defined in `.github/workflows/deploy-web.yml`
+- Render deployment for the API is defined in `render.yaml`
+- No password-protected flow is currently required for the public demo
 
-## Optional LLM / RAG Path
+## Testing
 
-There is also an optional LangChain/OpenAI path for a retrieval-based demo. That path uses:
+Core backend regression tests live in:
 
-- `src/huskyadvisor/vector_store.py`
-- `src/huskyadvisor/retrieval.py`
+- `tests/test_advisor_regression.py`
 
-It is secondary to the local CLI MVP and requires extra dependencies and an API key.
+Stress-test reporting lives in:
 
-## Quick Start
+- `scripts/generate_simulation_report.py`
+- `docs/simulation_test_matrix.md`
+- `docs/simulation_coverage_report.md`
 
-1. Install dependencies.
-2. Run one of the local demo modes.
+## Important repository hygiene note
 
-Example:
-
-```bash
-PYTHONPATH=src python3 -m huskyadvisor.main --mode profile-demo
-```
-
-## Team Contribution Notes
-
-The data/documentation contribution area is most visible in:
-
-- `data/uwb_courses_sample.json`
-- `data/local_tech_companies.json`
-- `data/company_course_mapping.json`
-- `data/internship_prep_playbooks.json`
-- `docs/data_and_metadata_plan.md`
-- `docs/project_website_content.md`
-- `docs/system_overview.md`
-- `docs/evaluation_question_bank.md`
-- `docs/manual_evaluation_report.md`
-- `docs/source_reference_index.md`
-- `docs/frontend_handoff.md`
-- `docs/website_testing_checklist.md`
-- `docs/website_copy_blocks.md`
-- `docs/persona_test_matrix.md`
-- `docs/data_coverage_audit.md`
-- `docs/team_dependency_tracker.md`
-- `docs/matiyas_role_summary.md`
-- `docs/api_contract.md`
-- `docs/frontend_gap_review.md`
-- `docs/official_schedule_expansion_notes.md`
-- `docs/multi_quarter_schedule_notes.md`
-
-## Next Major Step
-
-The next major milestone is turning the current recommendation engine into a fully connected **student-facing website**. The backend and data layers are now strong enough that frontend work should continue using the live API instead of placeholder rules, while the team keeps improving data quality and evaluation coverage.
-
-## Prototype API
-
-The repository now includes a first-pass FastAPI layer for turning HuskyAdvisor into a website-backed product.
-
-- API app: `src/huskyadvisor/api_app.py`
-- Request models: `src/huskyadvisor/api_models.py`
-- Shared advisor builder: `src/huskyadvisor/service.py`
-- Quickstart: `docs/api_quickstart.md`
-
-Planned local run command:
-
-```bash
-PYTHONPATH=src uvicorn huskyadvisor.api_app:app --host 127.0.0.1 --port 8010
-```
+Generated frontend artifacts such as `web/node_modules/` and `web/dist/` should not be committed as source. They are ignored in `.gitignore` and have been removed from version control tracking.

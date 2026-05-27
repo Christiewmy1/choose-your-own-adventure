@@ -2,131 +2,100 @@
 
 ## What HuskyAdvisor Is
 
-HuskyAdvisor is an AI-assisted advising prototype for UW Bothell students. It uses a student profile, a curated course dataset, and a company/career dataset to recommend majors, electives, company-aligned paths, and internship-prep next steps.
+HuskyAdvisor is a UWB-focused advising web application. It uses a student profile, structured academic data, company-pathway mappings, and recommendation logic to produce:
 
-## Where Execution Starts
+- major guidance
+- course recommendations
+- company alignment
+- internship-prep suggestions
+- roadmap guidance
 
-The easiest entry point is:
+## Main entry points
+
+### Public website flow
+
+The primary user-facing entry points are:
+
+- `web/src/App.tsx`
+- `api/main.py`
+
+That is the real web-application path used by the public site and deployed API.
+
+### Secondary CLI flow
+
+The older local demo entry point is:
 
 - `src/huskyadvisor/main.py`
 
-That file is the CLI entrypoint. When you run:
+That path still works for direct testing, but it is no longer the main product story.
 
-```bash
-PYTHONPATH=src python3 -m huskyadvisor.main --mode profile-demo
-```
+## Current execution flow
 
-Python starts in `main.py`, reads the selected mode, loads the right data files, builds a `HuskyAdvisorEngine`, and prints a formatted advising result.
+### Website-backed flow
 
-## File Responsibilities
+1. The user fills out the profile form in `web/src/pages/ProfileForm.tsx`.
+2. `web/src/App.tsx` validates the form and sends the request through `web/src/api.ts`.
+3. `api/main.py` receives the HTTP request and routes it through `api/routers/profile.py`.
+4. `api/engine.py` loads the shared `HuskyAdvisorEngine` using `src/huskyadvisor/service.py`.
+5. `src/huskyadvisor/json_data.py` loads the course, company, major, roadmap, and playbook datasets.
+6. `src/huskyadvisor/advisor.py` scores recommendations and builds the result.
+7. The API returns a structured `AdvisingResult`.
+8. The React frontend renders the result cards in `web/src/pages/Recommendations.tsx`.
 
-### Execution / Control
+### Source-ingestion support flow
 
-- `src/huskyadvisor/main.py`
-  - starts the program
-  - chooses which demo mode to run
-  - loads JSON data
-  - creates the advising engine
+The project now also has a separate Crawl4AI ingestion path:
 
-### Recommendation Logic
+1. `scripts/crawl_with_crawl4ai.py` crawls selected public UWB and employer pages.
+2. Raw markdown and crawl metadata are saved in `data/crawl4ai/raw/`.
+3. `scripts/normalize_crawl4ai_exports.py` converts those exports into summaries and retrieval-ready documents.
+4. Those normalized artifacts can then support manual dataset refreshes or future vector-store ingestion.
 
-- `src/huskyadvisor/advisor.py`
-  - scores and recommends courses
-  - suggests local companies
-  - creates internship-prep plans
-  - builds quarter-by-quarter advice
-
-### Data Loading
-
-- `src/huskyadvisor/json_data.py`
-  - loads student, course, company, catalog-summary, and playbook JSON files
-  - normalizes course codes and prepares records for the engine
-
-### Data Models
-
-- `src/huskyadvisor/models.py`
-  - defines the structured shapes for students, courses, companies, and results
-
-### Output Formatting
-
-- `src/huskyadvisor/formatter.py`
-  - turns results into clean terminal output
-
-### Optional RAG / Vector Path
-
-- `src/huskyadvisor/vector_store.py`
-  - turns records into LangChain documents and builds a Chroma vector store
-- `src/huskyadvisor/retrieval.py`
-  - configures the metadata-aware retriever
-
-### Core Data Files
-
-- `data/student_profile.json`
-  - sample student information
-- `data/uwb_courses_sample.json`
-  - main curated course dataset
-- `data/local_tech_companies.json`
-  - local company alignment dataset
-- `data/company_course_mapping.json`
-  - explicit company-to-course recommendation map
-- `data/internship_prep_playbooks.json`
-  - structured prep tracks for internship-oriented guidance
-- `data/uwb_recent_css_catalog_summary.json`
-  - recent-offering summary derived from an external UWB catalog source
-
-## Flow Diagram
+### Simple diagram
 
 ```mermaid
-flowchart TD
-    A["User runs main.py with a mode"] --> B["main.py parses mode"]
-    B --> C["json_data.py loads student/profile/course/company JSON"]
-    C --> D["HuskyAdvisorEngine in advisor.py is created"]
-    D --> E["Recommendation logic scores courses or companies"]
-    E --> F["formatter.py formats the result"]
-    F --> G["Terminal shows advising output"]
-
-    B --> H["Optional llm-demo path"]
-    H --> I["vector_store.py builds documents / Chroma store"]
-    I --> J["retrieval.py runs retriever"]
-    J --> K["LLM produces grounded answer"]
-    K --> G
+flowchart LR
+    A["Student profile form"] --> B["React frontend"]
+    B --> C["FastAPI API"]
+    C --> D["HuskyAdvisorEngine"]
+    D --> E["JSON data loaders"]
+    E --> F["Course / major / company / roadmap datasets"]
+    D --> G["AdvisingResult"]
+    G --> H["Results page"]
 ```
 
-## Practical Demo Paths
+## Major folders
 
-### Profile-based course advice
+### `web/`
 
-```bash
-PYTHONPATH=src python3 -m huskyadvisor.main --mode profile-demo
-```
+Student-facing React application.
 
-Uses:
+### `api/`
 
-- `data/student_profile.json`
-- `data/uwb_courses_sample.json`
-- `data/local_tech_companies.json`
-- `data/company_course_mapping.json`
-- `data/uwb_recent_css_catalog_summary.json`
+Website-facing FastAPI backend intended for deployment.
 
-### Company alignment
+### `src/huskyadvisor/`
 
-```bash
-PYTHONPATH=src python3 -m huskyadvisor.main --mode company-demo
-```
+Core recommendation logic, models, data loaders, and optional retrieval modules.
 
-### Internship prep
+### `data/`
 
-```bash
-PYTHONPATH=src python3 -m huskyadvisor.main --mode internship-demo
-```
+Structured UWB-focused datasets: courses, majors, companies, schedules, internship playbooks, and roadmap templates.
 
-## High-Level Thinking Behind The Design
+This folder now also contains `data/crawl4ai/` for raw and normalized web-source ingestion artifacts.
 
-The project is structured in layers:
+### `docs/`
 
-1. data files store the school- and career-specific knowledge
-2. loaders convert that data into Python structures
-3. the advising engine applies scoring and recommendation logic
-4. the formatter presents the result
+Proposal, architecture, evaluation, deployment, and rubric-facing documentation.
 
-That separation makes the project easier to debug, explain, and expand.
+## AI in the current architecture
+
+The current deployed MVP primarily uses a structured recommendation engine. That engine still counts as meaningful AI-style logic because it uses profile-based scoring, relevance matching, suppression of already-completed courses, company intent mapping, and explainable ranking.
+
+The repository also includes an optional retrieval-based path in:
+
+- `src/huskyadvisor/vector_store.py`
+- `src/huskyadvisor/retrieval.py`
+- `src/huskyadvisor/crawl4ai_pipeline.py`
+
+That path supports a stronger RAG-style AI story, and Crawl4AI now makes the source-gathering side of that path more realistic, but it is not the main deployed flow today.

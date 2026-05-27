@@ -1,0 +1,52 @@
+{
+  "targets": [
+    {
+      "id": "uwb-csse-program",
+      "label": "UWB CSSE major page",
+      "url": "https://www.uwb.edu/stem/undergraduate/majors/csse",
+      "tags": ["uwb", "major", "program", "csse"]
+    },
+    {
+      "id": "uwb-applied-computing-program",
+      "label": "UWB Applied Computing page",
+      "url": "https://www.uwb.edu/stem/undergraduate/majors/applied-computing",
+      "tags": ["uwb", "major", "program", "applied-computing"]
+    },
+    {
+      "id": "uwb-ee-program",
+      "label": "UWB Electrical Engineering page",
+      "url": "https://www.uwb.edu/stem/undergraduate/majors/electrical-engineering",
+      "tags": ["uwb", "major", "program", "ee"]
+    },
+    {
+      "id": "uwb-css-spring-2026",
+      "label": "UWB CSS spring 2026 time schedule",
+      "url": "https://www.washington.edu/students/timeschd/pub/B/SPR2026/css.html",
+      "tags": ["uwb", "schedule", "css"]
+    },
+    {
+      "id": "uwb-bis-program",
+      "label": "UWB Business Information Systems page",
+      "url": "https://www.uwb.edu/business/undergraduate/programs/business-administration",
+      "tags": ["uwb", "major", "program", "business", "bis"]
+    },
+    {
+      "id": "microsoft-careers-about",
+      "label": "Microsoft careers overview",
+      "url": "https://careers.microsoft.com/v2/global/en/home.html",
+      "tags": ["company", "careers", "cloud", "platform"]
+    },
+    {
+      "id": "boeing-software-engineering",
+      "label": "Boeing careers overview",
+      "url": "https://jobs.boeing.com/",
+      "tags": ["company", "careers", "aerospace", "embedded"]
+    },
+    {
+      "id": "uw-medicine-about",
+      "label": "UW Medicine about page",
+      "url": "https://www.uwmedicine.org/about",
+      "tags": ["company", "healthcare", "careers", "data", "privacy"]
+    }
+  ]
+}
