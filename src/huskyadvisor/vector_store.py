@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Iterable, List
 
@@ -66,15 +67,43 @@ def _company_to_document(company: CompanyRecord) -> Document:
     )
 
 
+def load_crawl4ai_documents(path: Path) -> List[Document]:
+    if not path.is_file():
+        return []
+
+    with path.open(encoding="utf-8") as handle:
+        payload = json.load(handle)
+
+    documents: List[Document] = []
+    for item in payload.get("documents", []):
+        documents.append(
+            Document(
+                page_content=item.get("content", ""),
+                metadata={
+                    "entity_type": item.get("page_type", "reference"),
+                    "source": "crawl4ai",
+                    "title": item.get("title", ""),
+                    "url": item.get("url", ""),
+                    "tags": ", ".join(item.get("tags", [])),
+                    "course_codes": ", ".join(item.get("course_codes", [])),
+                },
+            )
+        )
+    return documents
+
+
 def build_documents(
     courses: Iterable[CourseRecord],
     professors: Iterable[ProfessorRecord],
     companies: Iterable[CompanyRecord],
+    extra_documents: Iterable[Document] | None = None,
 ) -> List[Document]:
     documents: List[Document] = []
     documents.extend(_course_to_document(course) for course in courses)
     documents.extend(_professor_to_document(professor) for professor in professors)
     documents.extend(_company_to_document(company) for company in companies)
+    if extra_documents:
+        documents.extend(extra_documents)
     return documents
 
 

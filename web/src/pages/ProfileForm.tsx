@@ -139,6 +139,7 @@ const ProfileForm = ({ profile, error, fieldErrors = {}, onSubmit, onBack }: Pro
             ))}
           </select>
           {fieldErrors.major && <p className="field-error">{fieldErrors.major}</p>}
+          <p className="small-copy">Current prototype scope: UW Bothell CSSE, Applied Computing, Electrical Engineering, Computer Engineering, Data Visualization, and the technology-facing side of Business Administration.</p>
         </div>
 
         <div className="input-group">
@@ -170,7 +171,9 @@ const ProfileForm = ({ profile, error, fieldErrors = {}, onSubmit, onBack }: Pro
                 ? `Add common ${localProfile.major} courses`
                 : undefined
             }
+            placeholder="List the classes you’ve already taken (e.g. CSS 142, CSS 143, CSS 301, MATH 124)."
           />
+          <p className="small-copy">Best results come from UWB-style course histories such as CSS, EE, BIS, and related math courses.</p>
         </div>
 
         <h3 className="form-section-title full-width">Career direction</h3>
@@ -204,6 +207,7 @@ const ProfileForm = ({ profile, error, fieldErrors = {}, onSubmit, onBack }: Pro
               </option>
             ))}
           </select>
+          <p className="small-copy">Current dataset includes 100+ companies across aerospace, cloud, security, healthcare, gaming, AI/data, and business-tech pathways.</p>
         </div>
 
         <div className="form-actions full-width">

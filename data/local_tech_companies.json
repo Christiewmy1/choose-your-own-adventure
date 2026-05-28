@@ -1,105 +1,2182 @@
 {
-  "dataset_name": "HuskyAdvisor Local Tech Company Seed Dataset",
-  "last_updated": "2026-05-14",
+  "dataset_name": "HuskyAdvisor Supported Company Dataset",
+  "last_updated": "2026-05-23",
+  "notes": "Expanded company dataset covering popular regional and national employers that align with HuskyAdvisor's supported UWB technical and business-technology pathways.",
   "companies": [
     {
       "company_id": "company-001",
       "name": "Boeing",
       "city": "Seattle area",
-      "domain_focus": "aerospace, embedded systems, large-scale engineering software",
-      "hiring_seasons": ["fall", "winter"],
-      "target_skills": ["systems", "embedded", "reliability", "testing", "hardware"],
-      "notes": "Strong target for students interested in aerospace software, embedded systems, and dependable engineering workflows."
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-002",
-      "name": "Google Kirkland",
-      "city": "Kirkland",
-      "domain_focus": "distributed systems, cloud infrastructure, software engineering",
-      "hiring_seasons": ["late summer", "fall"],
-      "target_skills": ["algorithms", "backend", "distributed systems", "cloud"],
-      "notes": "Good match for students building depth in distributed systems, cloud, and algorithmic problem solving."
+      "name": "SpaceX Starlink",
+      "city": "Redmond",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-003",
-      "name": "Amazon Bellevue",
-      "city": "Bellevue",
-      "domain_focus": "cloud services, backend systems, product engineering",
-      "hiring_seasons": ["fall", "winter"],
-      "target_skills": ["cloud", "backend", "software engineering", "scalability"],
-      "notes": "Relevant for students interested in high-scale backend systems and cloud platforms."
+      "name": "Blue Origin",
+      "city": "Kent",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-004",
-      "name": "T-Mobile",
-      "city": "Bellevue",
-      "domain_focus": "telecom platforms, network services, cloud systems",
-      "hiring_seasons": ["fall", "spring"],
-      "target_skills": ["networking", "backend", "cloud", "reliability"],
-      "notes": "Best fit for students interested in networked systems, production software, and platform reliability."
+      "name": "Lockheed Martin",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-005",
-      "name": "Microsoft Redmond",
-      "city": "Redmond",
-      "domain_focus": "platform engineering, developer tools, cloud services, AI",
-      "hiring_seasons": ["fall", "winter"],
-      "target_skills": ["backend", "cloud", "ai", "software engineering", "testing"],
-      "notes": "Broad target company for students who want strong foundations in backend, tooling, cloud, or AI-related systems."
+      "name": "Northrop Grumman",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-006",
-      "name": "AT&T Bothell",
-      "city": "Bothell",
-      "domain_focus": "network infrastructure, telecom systems, enterprise platforms",
-      "hiring_seasons": ["fall", "spring"],
-      "target_skills": ["networking", "systems", "reliability", "infrastructure"],
-      "notes": "Good local target for students interested in network systems, telecom platforms, and production reliability."
+      "name": "RTX",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-007",
-      "name": "Nintendo of America",
-      "city": "Redmond",
-      "domain_focus": "interactive software, product development, platform engineering",
-      "hiring_seasons": ["fall", "winter"],
-      "target_skills": ["software engineering", "product", "graphics", "testing"],
-      "notes": "Interesting target for students interested in product engineering, game systems, and polished user-facing software."
+      "name": "Honeywell Aerospace",
+      "city": "Phoenix / national",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-008",
-      "name": "SpaceX Starlink",
-      "city": "Redmond",
-      "domain_focus": "satellite systems, aerospace software, network infrastructure",
-      "hiring_seasons": ["fall", "winter"],
-      "target_skills": ["embedded", "systems", "networking", "reliability", "aerospace"],
-      "notes": "Strong aspirational target for students interested in aerospace systems, networking, and mission-critical software."
+      "name": "Anduril Industries",
+      "city": "Seattle / national",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-009",
-      "name": "UW Medicine",
-      "city": "Seattle",
-      "domain_focus": "clinical systems, health data, privacy, and technology-enabled care",
-      "hiring_seasons": ["fall", "spring"],
-      "target_skills": ["data", "cloud", "security", "privacy", "integration", "reliability"],
-      "notes": "Good local target for students interested in healthcare technology, clinical systems, privacy, and data-informed care platforms."
+      "name": "Planet Labs",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-010",
-      "name": "Providence",
-      "city": "Renton / Seattle area",
-      "domain_focus": "digital health, consumer-facing healthcare technology, and care-platform innovation",
-      "hiring_seasons": ["fall", "winter"],
-      "target_skills": ["product", "cloud", "data", "integration", "security", "software engineering"],
-      "notes": "Strong fit for students who want to build digital health products, platforms, and patient-facing software systems."
+      "name": "Astranis",
+      "city": "San Francisco",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
     },
     {
       "company_id": "company-011",
+      "name": "Sierra Space",
+      "city": "Louisville / national",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
+    },
+    {
+      "company_id": "company-012",
+      "name": "Relativity Space",
+      "city": "Long Beach",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
+    },
+    {
+      "company_id": "company-013",
+      "name": "Airbus U.S. Space & Defense",
+      "city": "Herndon / national",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
+    },
+    {
+      "company_id": "company-014",
+      "name": "Crane Aerospace & Electronics",
+      "city": "Lynnwood",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
+    },
+    {
+      "company_id": "company-015",
+      "name": "Eaton Aerospace",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "aerospace platforms, embedded systems, and dependable engineering software",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "systems",
+        "embedded",
+        "hardware",
+        "reliability",
+        "testing"
+      ],
+      "notes": "Strong fit for students interested in mission-critical systems, embedded platforms, and hardware-software integration."
+    },
+    {
+      "company_id": "company-016",
+      "name": "Microsoft Redmond",
+      "city": "Redmond",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-017",
+      "name": "Amazon Bellevue",
+      "city": "Bellevue",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-018",
+      "name": "Google Kirkland",
+      "city": "Kirkland",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-019",
+      "name": "Oracle Cloud",
+      "city": "Seattle / Austin",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-020",
+      "name": "Salesforce",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-021",
+      "name": "ServiceNow",
+      "city": "Seattle / Santa Clara",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-022",
+      "name": "Snowflake",
+      "city": "Seattle / remote",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-023",
+      "name": "Datadog",
+      "city": "Seattle / New York",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-024",
+      "name": "Workday",
+      "city": "Seattle / Pleasanton",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-025",
+      "name": "Adobe",
+      "city": "Seattle / San Jose",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-026",
+      "name": "GitHub",
+      "city": "Remote / San Francisco",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-027",
+      "name": "Atlassian",
+      "city": "Remote / Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-028",
+      "name": "Dropbox",
+      "city": "Remote / San Francisco",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-029",
+      "name": "Elastic",
+      "city": "Remote / Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-030",
+      "name": "MongoDB",
+      "city": "Seattle / New York",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-031",
+      "name": "Confluent",
+      "city": "Seattle / Mountain View",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-032",
+      "name": "Red Hat",
+      "city": "Remote / Raleigh",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-033",
+      "name": "VMware by Broadcom",
+      "city": "Seattle / Palo Alto",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-034",
+      "name": "Okta",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-035",
+      "name": "Stripe",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-036",
+      "name": "Twilio",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-037",
+      "name": "Zoom",
+      "city": "Seattle / San Jose",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-038",
+      "name": "Shopify",
+      "city": "Remote / Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-039",
+      "name": "Expedia Group",
+      "city": "Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-040",
+      "name": "Zillow",
+      "city": "Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-041",
+      "name": "Redfin",
+      "city": "Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-042",
+      "name": "Smartsheet",
+      "city": "Bellevue",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-043",
+      "name": "Highspot",
+      "city": "Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-044",
+      "name": "Outreach",
+      "city": "Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-045",
+      "name": "Remitly",
+      "city": "Seattle",
+      "domain_focus": "cloud services, platform engineering, scalable backend systems, and developer infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "cloud",
+        "backend",
+        "distributed systems",
+        "software engineering",
+        "scalability"
+      ],
+      "notes": "Good match for students building depth in cloud, platform services, APIs, and backend systems."
+    },
+    {
+      "company_id": "company-046",
+      "name": "T-Mobile",
+      "city": "Bellevue",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-047",
+      "name": "AT&T Bothell",
+      "city": "Bothell",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-048",
+      "name": "Cisco",
+      "city": "Seattle / San Jose",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-049",
+      "name": "Juniper Networks",
+      "city": "Seattle / Sunnyvale",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-050",
+      "name": "Palo Alto Networks",
+      "city": "Seattle / Santa Clara",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-051",
+      "name": "CrowdStrike",
+      "city": "Remote / Seattle",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-052",
+      "name": "Zscaler",
+      "city": "Seattle / San Jose",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-053",
+      "name": "F5",
+      "city": "Seattle",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-054",
+      "name": "Fortinet",
+      "city": "Seattle / Sunnyvale",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-055",
+      "name": "Cloudflare",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-056",
+      "name": "Rapid7",
+      "city": "Seattle / Boston",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-057",
+      "name": "Splunk",
+      "city": "Seattle / San Jose",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-058",
+      "name": "Verizon",
+      "city": "Seattle / national",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-059",
+      "name": "Comcast",
+      "city": "Seattle / Philadelphia",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-060",
+      "name": "Lumen Technologies",
+      "city": "Seattle / Denver",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-061",
+      "name": "Ericsson",
+      "city": "Seattle / national",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-062",
+      "name": "Nokia",
+      "city": "Seattle / national",
+      "domain_focus": "network infrastructure, cybersecurity, platform reliability, and secure systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "security",
+        "networking",
+        "infrastructure",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Best fit for students interested in security, platform reliability, telecom, or network architecture."
+    },
+    {
+      "company_id": "company-063",
+      "name": "NVIDIA",
+      "city": "Seattle / Santa Clara",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-064",
+      "name": "Anthropic",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-065",
+      "name": "OpenAI",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-066",
+      "name": "Meta",
+      "city": "Seattle / Menlo Park",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-067",
+      "name": "Apple",
+      "city": "Seattle / Cupertino",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-068",
+      "name": "Intel",
+      "city": "Hillsboro / Seattle",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-069",
+      "name": "AMD",
+      "city": "Bellevue / Austin",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-070",
+      "name": "Qualcomm",
+      "city": "Seattle / San Diego",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-071",
+      "name": "Arm",
+      "city": "Seattle / Cambridge",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-072",
+      "name": "Synopsys",
+      "city": "Bellevue / Sunnyvale",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-073",
+      "name": "Cadence",
+      "city": "Seattle / San Jose",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-074",
+      "name": "Databricks",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-075",
+      "name": "Palantir",
+      "city": "Seattle / Denver",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-076",
+      "name": "Tableau",
+      "city": "Seattle",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-077",
+      "name": "SAS",
+      "city": "Remote / Cary",
+      "domain_focus": "AI systems, machine learning, data platforms, and data-intensive product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "ai",
+        "data",
+        "machine learning",
+        "backend",
+        "cloud"
+      ],
+      "notes": "Useful for students interested in ML, data pipelines, analytics platforms, and research-computing style work."
+    },
+    {
+      "company_id": "company-078",
+      "name": "Nintendo of America",
+      "city": "Redmond",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-079",
+      "name": "Valve",
+      "city": "Bellevue",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-080",
+      "name": "Bungie",
+      "city": "Bellevue",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-081",
+      "name": "Riot Games",
+      "city": "Seattle / Los Angeles",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-082",
+      "name": "Epic Games",
+      "city": "Seattle / Cary",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-083",
+      "name": "Roblox",
+      "city": "Seattle / San Mateo",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-084",
+      "name": "Unity",
+      "city": "Bellevue / San Francisco",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-085",
+      "name": "Sony Interactive Entertainment",
+      "city": "Bellevue / San Mateo",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-086",
+      "name": "Electronic Arts",
+      "city": "Seattle / Redwood City",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-087",
+      "name": "Rec Room",
+      "city": "Seattle",
+      "domain_focus": "interactive software, product engineering, graphics, usability, and game systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "product",
+        "graphics",
+        "testing",
+        "usability",
+        "software engineering"
+      ],
+      "notes": "Strong fit for students interested in game development, interactive systems, graphics, and user-focused product work."
+    },
+    {
+      "company_id": "company-088",
+      "name": "UW Medicine",
+      "city": "Seattle",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-089",
+      "name": "Providence",
+      "city": "Renton / Seattle area",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-090",
       "name": "Fred Hutch",
       "city": "Seattle",
-      "domain_focus": "research computing, data-intensive science, privacy-first AI, and clinical data systems",
-      "hiring_seasons": ["fall", "spring"],
-      "target_skills": ["data", "ai", "privacy", "security", "cloud", "software engineering"],
-      "notes": "Good target for students interested in research software, data pipelines, privacy-aware AI, and healthcare-adjacent technical roles."
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-091",
+      "name": "Seattle Children's",
+      "city": "Seattle",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-092",
+      "name": "Kaiser Permanente Washington",
+      "city": "Seattle / Bellevue",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-093",
+      "name": "Philips",
+      "city": "Bothell / Cambridge",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-094",
+      "name": "GE HealthCare",
+      "city": "Seattle / Chicago",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-095",
+      "name": "Stryker",
+      "city": "Seattle / Kalamazoo",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-096",
+      "name": "Oracle Health",
+      "city": "Seattle / Kansas City",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-097",
+      "name": "Epic Systems",
+      "city": "Madison / Seattle",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-098",
+      "name": "Moderna",
+      "city": "Seattle / Cambridge",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-099",
+      "name": "Pfizer Digital",
+      "city": "Seattle / New York",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-100",
+      "name": "Illumina",
+      "city": "Seattle / San Diego",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-101",
+      "name": "Bristol Myers Squibb",
+      "city": "Seattle / Princeton",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-102",
+      "name": "Adaptive Biotechnologies",
+      "city": "Seattle",
+      "domain_focus": "digital health, clinical systems, privacy-aware data platforms, and technology-enabled care",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "cloud",
+        "privacy",
+        "security",
+        "integration",
+        "reliability"
+      ],
+      "notes": "Good fit for students interested in healthcare platforms, privacy, patient-facing systems, or research computing."
+    },
+    {
+      "company_id": "company-103",
+      "name": "Deloitte",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-104",
+      "name": "Accenture",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-105",
+      "name": "Slalom",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-106",
+      "name": "PwC",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-107",
+      "name": "EY",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-108",
+      "name": "KPMG",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-109",
+      "name": "McKinsey Digital",
+      "city": "Seattle / global",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-110",
+      "name": "BCG X",
+      "city": "Seattle / global",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-111",
+      "name": "Gartner",
+      "city": "Remote / Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-112",
+      "name": "SAP",
+      "city": "Seattle / global",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-113",
+      "name": "SAP Concur",
+      "city": "Bellevue",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-114",
+      "name": "Costco Technology",
+      "city": "Issaquah",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-115",
+      "name": "Starbucks Technology",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-116",
+      "name": "Nordstrom Technology",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-117",
+      "name": "Alaska Airlines Tech",
+      "city": "SeaTac",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-118",
+      "name": "DocuSign",
+      "city": "Seattle / San Francisco",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-119",
+      "name": "Avalara",
+      "city": "Seattle",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-120",
+      "name": "Qualtrics",
+      "city": "Seattle / Provo",
+      "domain_focus": "business systems, analytics, product operations, and digital transformation",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "analytics",
+        "business systems",
+        "product",
+        "data",
+        "communication"
+      ],
+      "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
     }
   ]
 }

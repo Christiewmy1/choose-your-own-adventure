@@ -42,6 +42,11 @@ class MajorRecord(BaseModel):
     best_for: List[str] = Field(default_factory=list)
     typical_courses: List[str] = Field(default_factory=list)
     career_paths: List[str] = Field(default_factory=list)
+    aliases: List[str] = Field(default_factory=list)
+    support_tier: str = "partial"
+    support_scope_notes: str = ""
+    course_groups: dict[str, List[str]] = Field(default_factory=dict)
+    source_url: str | None = None
 
 
 class ProfessorRecord(BaseModel):

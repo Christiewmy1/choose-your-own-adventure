@@ -6,7 +6,12 @@ This document explains the data work behind HuskyAdvisor's MVP. It is especially
 
 ## Current Dataset Scope
 
-The MVP dataset is a manually curated Spring 2026 snapshot that supports:
+The MVP dataset now combines:
+
+- a manually curated advising-focused subset
+- a broader catalog/schedule-derived CSS expansion layer
+
+Together, these support:
 
 - CSSE major exploration
 - Applied Computing major exploration
@@ -14,6 +19,8 @@ The MVP dataset is a manually curated Spring 2026 snapshot that supports:
 - 300-level preparation courses
 - 400-level elective recommendations
 - career alignment for systems, embedded, software, cloud, testing, and analytics pathways
+
+The project now also has a separate Crawl4AI ingestion layer for gathering fresh public source material before it is manually normalized into the core advising dataset.
 
 ## Current Record Fields
 
@@ -42,14 +49,18 @@ Each course record may include:
 
 ## Data Quality Strategy
 
-For the MVP, accuracy matters more than scale. The project uses a smaller dataset that is easier to inspect manually instead of pretending to cover the entire university catalog.
+For the MVP, accuracy still matters more than scale, but the project now balances:
+
+- a smaller set of higher-confidence curated records
+- a larger set of lower-confidence catalog-derived records used to broaden coverage
 
 Quality approach:
 
-- prefer fewer but better-tagged records
+- clearly distinguish curated records from broader derived records
 - include transparent notes about scope and confidence
 - keep the seed dataset editable in JSON
-- expand only after fields are consistent
+- refine high-value records first, then gradually improve the broader catalog layer
+- keep Crawl4AI raw exports separate from the cleaned advising JSON
 
 ## Planned Expansions
 
@@ -59,12 +70,14 @@ Quality approach:
 - add source URLs where appropriate
 - support data refresh workflows after the MVP
 - add recent-offering signals from imported catalog snapshots
+- use Crawl4AI to refresh selected UWB major, schedule, and employer pages
 
 ## Limitations
 
 - the current dataset is not a complete or official advising source
 - some tags are inferred from descriptions rather than copied from official metadata
 - prerequisites are simplified for demo purposes
+- many catalog-derived records use placeholder metadata and should not be treated as equally detailed as the curated subset
 
 ## Recommended Next Data Tasks
 

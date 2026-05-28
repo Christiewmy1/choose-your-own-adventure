@@ -16,7 +16,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:3000", "http://localhost:3000"],
+    allow_origins=[
+        "http://127.0.0.1:3000",
+        "http://localhost:3000",
+        "http://127.0.0.1:3001",
+        "http://localhost:3001",
+    ],
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -44,7 +50,7 @@ def _build_student_profile(request: ProfileRequest) -> StudentProfile:
 def health() -> dict[str, str]:
     return {"status": "ok"}
 
-
+# api requests
 @app.post("/api/profile/recommendations", response_model=AdvisingResult)
 def profile_recommendations(request: ProfileRequest) -> AdvisingResult:
     advisor = build_json_advisor()

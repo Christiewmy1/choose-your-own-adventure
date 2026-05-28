@@ -22,6 +22,10 @@ Data, documentation, and evaluation support lead for HuskyAdvisor.
 - added `data/company_course_mapping.json`
 - added `data/internship_prep_playbooks.json`
 - added `data/sample_student_personas.json`
+- added `data/uwb_spring_2026_schedule_snapshot.json`
+- added `data/uwb_2026_multi_quarter_schedule_snapshot.json`
+- added `data/recurring_course_patterns.json`
+- added `data/major_pathway_comparison.json`
 
 ### Documentation
 
@@ -34,6 +38,11 @@ Data, documentation, and evaluation support lead for HuskyAdvisor.
 - `docs/website_copy_blocks.md`
 - `docs/data_coverage_audit.md`
 - `docs/team_dependency_tracker.md`
+- `docs/official_schedule_expansion_notes.md`
+- `docs/multi_quarter_schedule_notes.md`
+- `docs/schedule_data_strategy.md`
+- `docs/major_comparison_guide.md`
+- `docs/matiyas_next_steps.md`
 
 ### Evaluation
 
@@ -41,6 +50,7 @@ Data, documentation, and evaluation support lead for HuskyAdvisor.
 - `docs/manual_evaluation_report.md`
 - `docs/persona_test_matrix.md`
 - `docs/website_testing_checklist.md`
+- `docs/demo_readiness_checklist.md`
 
 ## What This Enables For The Team
 

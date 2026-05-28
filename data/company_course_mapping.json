@@ -1,61 +1,1327 @@
 {
   "dataset_name": "HuskyAdvisor Company to Course Mapping",
-  "last_updated": "2026-05-24",
+  "last_updated": "2026-05-23",
+  "notes": "Course mappings are intentionally grouped by employer domain so the recommendation engine can scale beyond the original seed list while staying explainable.",
   "mappings": [
     {
       "company": "Boeing",
-      "recommended_courses": ["CSS 430", "CSS 422", "CSS 427", "CSS 458", "EE 450"],
-      "reason": "Boeing-aligned roles often value systems, embedded computing, hardware awareness, and reliable software practices."
-    },
-    {
-      "company": "Amazon Bellevue",
-      "recommended_courses": ["CSS 436", "CSS 475", "CSS 481", "CSS 430"],
-      "reason": "Amazon-style roles often emphasize backend systems, cloud platforms, scalable services, and production engineering."
-    },
-    {
-      "company": "Google Kirkland",
-      "recommended_courses": ["CSS 340", "CSS 432", "CSS 436", "CSS 449"],
-      "reason": "Google-aligned paths benefit from algorithms, distributed systems, networking, and cloud thinking."
-    },
-    {
-      "company": "Microsoft Redmond",
-      "recommended_courses": ["CSS 436", "CSS 481", "CSS 486", "CSS 458"],
-      "reason": "Microsoft-aligned preparation often combines software engineering, cloud systems, web/product development, and AI-adjacent work."
-    },
-    {
-      "company": "T-Mobile",
-      "recommended_courses": ["CSS 431", "CSS 432", "CSS 337", "CSS 436"],
-      "reason": "Telecom and platform roles connect strongly to networking, infrastructure, secure systems, and cloud services."
-    },
-    {
-      "company": "AT&T Bothell",
-      "recommended_courses": ["CSS 431", "CSS 432", "CSS 310", "CSS 337", "BIS 463"],
-      "reason": "Network infrastructure and telecom-focused roles benefit from networking, cybersecurity, and systems awareness."
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
     },
     {
       "company": "SpaceX Starlink",
-      "recommended_courses": ["CSS 422", "CSS 427", "CSS 430", "EE 450"],
-      "reason": "Aerospace and satellite systems preparation benefits from embedded, hardware-software integration, and dependable systems work."
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Blue Origin",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Lockheed Martin",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Northrop Grumman",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "RTX",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Honeywell Aerospace",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Anduril Industries",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Planet Labs",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Astranis",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Sierra Space",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Relativity Space",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Airbus U.S. Space & Defense",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Crane Aerospace & Electronics",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Eaton Aerospace",
+      "recommended_courses": [
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 450",
+        "B EE 425"
+      ],
+      "reason": "Aerospace and embedded roles usually value hardware awareness, systems thinking, and dependable software practices."
+    },
+    {
+      "company": "Microsoft Redmond",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Amazon Bellevue",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Google Kirkland",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Oracle Cloud",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Salesforce",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "ServiceNow",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Snowflake",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Datadog",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Workday",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Adobe",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "GitHub",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Atlassian",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Dropbox",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Elastic",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "MongoDB",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Confluent",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Red Hat",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "VMware by Broadcom",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Okta",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Stripe",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Twilio",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Zoom",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Shopify",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Expedia Group",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Zillow",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Redfin",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Smartsheet",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Highspot",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Outreach",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "Remitly",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 432",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ],
+      "reason": "Cloud and platform roles reward distributed systems, backend engineering, data systems, and production-minded software development."
+    },
+    {
+      "company": "T-Mobile",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "AT&T Bothell",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Cisco",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Juniper Networks",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Palo Alto Networks",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "CrowdStrike",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Zscaler",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "F5",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Fortinet",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Cloudflare",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Rapid7",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Splunk",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Verizon",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Comcast",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Lumen Technologies",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Ericsson",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "Nokia",
+      "recommended_courses": [
+        "CSS 310",
+        "CSS 337",
+        "CSS 431",
+        "CSS 457",
+        "CSS 436"
+      ],
+      "reason": "Security and infrastructure roles connect strongly to networking, secure systems, platform awareness, and privacy-minded engineering."
+    },
+    {
+      "company": "NVIDIA",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Anthropic",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "OpenAI",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Meta",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Apple",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Intel",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "AMD",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Qualcomm",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Arm",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Synopsys",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Cadence",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Databricks",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Palantir",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "Tableau",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
+    },
+    {
+      "company": "SAS",
+      "recommended_courses": [
+        "CSS 382",
+        "CSS 486",
+        "CSS 370",
+        "CSS 475",
+        "BIS 315"
+      ],
+      "reason": "AI and data roles benefit from databases, machine intelligence, cloud-backed systems, and analytics foundations."
     },
     {
       "company": "Nintendo of America",
-      "recommended_courses": ["CSS 385", "CSS 451", "CSS 452", "CSS 474", "CSS 478", "CSS 484"],
-      "reason": "Interactive product roles can connect to graphics, game development, multimedia, user experience, and applied product-building coursework."
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Valve",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Bungie",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Riot Games",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Epic Games",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Roblox",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Unity",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Sony Interactive Entertainment",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Electronic Arts",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
+    },
+    {
+      "company": "Rec Room",
+      "recommended_courses": [
+        "CSS 385",
+        "CSS 451",
+        "CSS 474",
+        "CSS 478",
+        "CSS 481"
+      ],
+      "reason": "Interactive product teams often value graphics, usability, testing, and polished user-facing engineering work."
     },
     {
       "company": "UW Medicine",
-      "recommended_courses": ["CSS 370", "CSS 436", "CSS 457", "CSS 458", "CSS 481"],
-      "reason": "Healthcare-technology roles often need secure data systems, cloud-backed platforms, privacy awareness, and reliable application development."
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
     },
     {
       "company": "Providence",
-      "recommended_courses": ["CSS 370", "CSS 436", "CSS 481", "CSS 486", "CSS 457"],
-      "reason": "Digital-health and care-platform roles connect to product engineering, secure data flows, cloud systems, and user-facing applications."
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
     },
     {
       "company": "Fred Hutch",
-      "recommended_courses": ["CSS 370", "CSS 382", "CSS 436", "CSS 457", "CSS 486", "CSS 483", "CSS 123"],
-      "reason": "Research-computing and health-data roles benefit from databases, AI/data literacy, cloud systems, and privacy-aware engineering."
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Seattle Children's",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Kaiser Permanente Washington",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Philips",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "GE HealthCare",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Stryker",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Oracle Health",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Epic Systems",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Moderna",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Pfizer Digital",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Illumina",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Bristol Myers Squibb",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Adaptive Biotechnologies",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ],
+      "reason": "Healthcare technology roles often need secure data systems, privacy awareness, cloud platforms, and reliable applications."
+    },
+    {
+      "company": "Deloitte",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Accenture",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Slalom",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "PwC",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "EY",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "KPMG",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "McKinsey Digital",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "BCG X",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Gartner",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "SAP",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "SAP Concur",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Costco Technology",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Starbucks Technology",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Nordstrom Technology",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Alaska Airlines Tech",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "DocuSign",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Avalara",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "Qualtrics",
+      "recommended_courses": [
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445",
+        "B BUS 300"
+      ],
+      "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
     }
   ]
 }

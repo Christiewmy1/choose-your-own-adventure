@@ -1,0 +1,103 @@
+{
+  "dataset_name": "HuskyAdvisor Recurring Course Patterns",
+  "last_updated": "2026-05-19",
+  "notes": "Derived from the official 2026 multi-quarter schedule snapshot. This file summarizes recurring availability patterns that can later be used for quarter-aware planning and recommendation scoring.",
+  "patterns": [
+    {
+      "course_code": "CSS 310",
+      "offered_terms": ["WIN2026", "SPR2026", "SUM2026", "AUT2026"],
+      "offered_term_count": 4,
+      "recurring_pattern": "year-round",
+      "typical_time_pattern": "morning, midday, and evening variants",
+      "delivery_notes": ["sometimes hybrid", "multiple scheduling patterns across quarters"]
+    },
+    {
+      "course_code": "CSS 342",
+      "offered_terms": ["WIN2026", "SPR2026", "AUT2026"],
+      "offered_term_count": 3,
+      "recurring_pattern": "regular core offering",
+      "typical_time_pattern": "midday and afternoon blocks",
+      "delivery_notes": ["multiple sections", "strong recurring availability"]
+    },
+    {
+      "course_code": "CSS 343",
+      "offered_terms": ["WIN2026", "SPR2026", "SUM2026", "AUT2026"],
+      "offered_term_count": 4,
+      "recurring_pattern": "year-round",
+      "typical_time_pattern": "midday, evening, and summer-intensive",
+      "delivery_notes": ["appears across all major 2026 quarters"]
+    },
+    {
+      "course_code": "CSS 360",
+      "offered_terms": ["WIN2026", "SPR2026", "SUM2026", "AUT2026"],
+      "offered_term_count": 4,
+      "recurring_pattern": "year-round",
+      "typical_time_pattern": "midday, afternoon, evening, and summer daytime",
+      "delivery_notes": ["multiple sections in major terms", "important planning anchor course"]
+    },
+    {
+      "course_code": "CSS 370",
+      "offered_terms": ["WIN2026", "SPR2026", "AUT2026"],
+      "offered_term_count": 3,
+      "recurring_pattern": "frequent",
+      "typical_time_pattern": "midday and evening",
+      "delivery_notes": ["multiple spring sections", "regular availability"]
+    },
+    {
+      "course_code": "CSS 382",
+      "offered_terms": ["WIN2026", "SPR2026"],
+      "offered_term_count": 2,
+      "recurring_pattern": "multi-term but not year-round",
+      "typical_time_pattern": "morning to midday",
+      "delivery_notes": ["AI offering appears in at least two quarters"]
+    },
+    {
+      "course_code": "CSS 422",
+      "offered_terms": ["WIN2026", "SPR2026", "SUM2026", "AUT2026"],
+      "offered_term_count": 4,
+      "recurring_pattern": "year-round",
+      "typical_time_pattern": "morning, afternoon, evening, and summer-intensive",
+      "delivery_notes": ["strong recurring systems/hardware availability"]
+    },
+    {
+      "course_code": "CSS 427",
+      "offered_terms": ["SPR2026", "AUT2026"],
+      "offered_term_count": 2,
+      "recurring_pattern": "specialized recurring elective",
+      "typical_time_pattern": "morning or midday lecture with Friday lab",
+      "delivery_notes": ["embedded course with lab structure"]
+    },
+    {
+      "course_code": "CSS 430",
+      "offered_terms": ["SPR2026", "SUM2026", "AUT2026"],
+      "offered_term_count": 3,
+      "recurring_pattern": "frequent advanced elective",
+      "typical_time_pattern": "afternoon, evening, and summer daytime",
+      "delivery_notes": ["sometimes hybrid", "strong systems planning signal"]
+    },
+    {
+      "course_code": "CSS 475",
+      "offered_terms": ["SPR2026", "AUT2026"],
+      "offered_term_count": 2,
+      "recurring_pattern": "recurring elective",
+      "typical_time_pattern": "midday or afternoon",
+      "delivery_notes": ["useful for backend/data planning"]
+    },
+    {
+      "course_code": "CSS 481",
+      "offered_terms": ["SPR2026", "AUT2026"],
+      "offered_term_count": 2,
+      "recurring_pattern": "recurring elective",
+      "typical_time_pattern": "afternoon",
+      "delivery_notes": ["web programming appears in multiple major quarters"]
+    },
+    {
+      "course_code": "CSS 497",
+      "offered_terms": ["SPR2026", "SUM2026"],
+      "offered_term_count": 2,
+      "recurring_pattern": "capstone seasonal offering",
+      "typical_time_pattern": "afternoon, evening, or arranged",
+      "delivery_notes": ["project-based", "summer arranged sections exist"]
+    }
+  ]
+}

@@ -10,3 +10,5 @@ external_huskyadvisor/
 .env
 web/node_modules/
 web/dist/
+deliverables/
+outputs/

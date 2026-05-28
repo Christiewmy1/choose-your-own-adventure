@@ -44,6 +44,22 @@ This file is kept as a raw reference import. It is not used directly by the main
 
 This dataset represents plausible regional employers and target skill areas. It is meant for guidance and demo use, not as live recruiting data.
 
+### `data/crawl4ai/raw/`
+
+**Type:** Raw crawl exports  
+**Role:** Source gathering for future refreshes and retrieval context  
+**Trust level:** Variable
+
+This folder stores raw Crawl4AI exports from selected UWB and employer pages. These exports are intentionally kept separate from the main recommendation dataset because they may include noise, formatting artifacts, or incomplete extractions that still require validation.
+
+### `data/crawl4ai/normalized/`
+
+**Type:** Normalized crawl summaries  
+**Role:** Bridge layer between raw crawled pages and HuskyAdvisor-ready data  
+**Trust level:** Medium
+
+These files summarize Crawl4AI outputs into page-level records and retrieval-ready text documents. They are useful for manual review, vector-store ingestion, and future dataset refresh work.
+
 ### `data/company_course_mapping.json`
 
 **Type:** Manually inferred mapping  
@@ -72,3 +88,4 @@ When presenting HuskyAdvisor, use wording like:
 2. Separate official facts from inferred tags more explicitly
 3. Add refresh dates to company and internship-prep datasets
 4. Expand Applied Computing and EE source notes further
+5. Use Crawl4AI exports to refresh public source material on a scheduled basis

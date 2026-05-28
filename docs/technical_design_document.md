@@ -1,5 +1,7 @@
 # HuskyAdvisor Technical Design Document
 
+> Note: this document captures the original design vision and proposal direction for HuskyAdvisor. For the current shipped architecture and deployment story, see [system_overview.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/system_overview.md) and [final_project_spec.md](/Users/matiyasdawit/Desktop/CSS_382_Sp_26/AI_Project/docs/final_project_spec.md).
+
 ## 1. Executive Summary
 
 HuskyAdvisor is a domain-specific academic and career advising assistant for University of Washington Bothell students. Its core value comes from combining UWB-focused academic data, local career signals, and student personalization into a single Retrieval-Augmented Generation workflow. Instead of acting like a generic chatbot, HuskyAdvisor narrows its responses to the realities of UWB programs, regional employers, and the student's current academic position.

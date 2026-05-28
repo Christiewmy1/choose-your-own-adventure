@@ -32,7 +32,7 @@ const loadStoredProfile = (): StudentProfile => {
 };
 
 const LOCAL_API_HINT =
-  ' Start the API locally with: .venv/bin/uvicorn api.main:app --host 127.0.0.1 --port 8000';
+  ' Start the API locally with: PYTHONPATH=src uvicorn api.main:app --host 127.0.0.1 --port 8010';
 
 function App() {
   const [page, setPage] = useState<AppPage>(() => hashToPage(window.location.hash));
@@ -94,7 +94,9 @@ function App() {
       setResults(nextResults);
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Could not load HuskyAdvisor results.';
-      setResultError(`${message}${LOCAL_API_HINT}`);
+      setResultError(
+        `${message} If you are testing locally, make sure the HuskyAdvisor API is running on port 8010. If you are using the public site, the deployed backend may be unavailable.${LOCAL_API_HINT}`
+      );
     } finally {
       setIsLoading(false);
     }
