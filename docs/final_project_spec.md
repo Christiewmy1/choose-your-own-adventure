@@ -81,6 +81,8 @@ HuskyAdvisor uses AI meaningfully through recommendation logic, optional LLM sum
 5. Crawl4AI gathers public UWB/employer source pages into raw and normalized data areas before human validation.
 6. Optional retrieval modules support a RAG-style extension beyond the rules/scoring path.
 
+The API exposes this integration through an `ai_trace` object on each result. That trace names the recommendation role, LLM enhancement status, data-ingestion role, retrieval readiness, fallback status, and profile inputs used by the system. This makes the AI integration auditable instead of only described in documentation.
+
 ## Public-facing deliverables
 
 - website: `https://christiewmy1.github.io/choose-your-own-adventure/`

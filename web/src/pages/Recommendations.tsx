@@ -210,6 +210,38 @@ const sectionDescriptions: Record<ResultTab, string> = {
   roadmap: 'A quarter-by-quarter planning view to help you sequence coursework and preparation over time.',
 };
 
+const renderAITrace = (result: AdvisingResult) => {
+  if (!result.ai_trace) {
+    return null;
+  }
+
+  const trace = result.ai_trace;
+  return (
+    <div className="result-section ai-trace-box">
+      <h4>AI integration trace</h4>
+      <p className="small-copy">
+        This makes the AI role auditable: the app shows whether the result came from the structured
+        recommendation engine, Groq/Llama enhancement, Crawl4AI-ready data pipeline, or demo fallback.
+      </p>
+      <div className="ai-trace-grid">
+        <span><strong>Recommendation role:</strong> {trace.recommendation_engine}</span>
+        <span><strong>LLM role:</strong> {trace.llm_enhancement}</span>
+        <span><strong>LLM model:</strong> {trace.llm_model ?? 'none for this response'}</span>
+        <span><strong>Data role:</strong> {trace.data_ingestion}</span>
+        <span><strong>Retrieval path:</strong> {trace.retrieval_readiness}</span>
+        <span><strong>Fallback mode:</strong> {trace.fallback_mode ? 'yes' : 'no'}</span>
+      </div>
+      {trace.decision_inputs.length > 0 && (
+        <ul className="result-list muted-list compact-list">
+          {trace.decision_inputs.map((item, index) => (
+            <li key={`ai-input-${index}`}>{item}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
 const Recommendations = ({ profile, results, error, notice = '', onEditProfile, onRetry }: RecommendationsProps) => {
   const [activeTab, setActiveTab] = useState<ResultTab>('courses');
   const [copyMessage, setCopyMessage] = useState('');
@@ -365,6 +397,8 @@ const Recommendations = ({ profile, results, error, notice = '', onEditProfile, 
             </ul>
           </div>
         )}
+
+        {renderAITrace(activeResult)}
 
         {activeTab !== 'courses' && activeResult.cautions.length > 0 && (
           <div className="result-section caution-box">

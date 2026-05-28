@@ -68,9 +68,20 @@ class CompanyRecord(BaseModel):
     notes: str
 
 
+class AITrace(BaseModel):
+    recommendation_engine: str = "profile-aware structured scoring"
+    llm_enhancement: str = "not attempted"
+    llm_model: str | None = None
+    data_ingestion: str = "curated JSON datasets with Crawl4AI-ready refresh pipeline"
+    retrieval_readiness: str = "normalized documents can feed optional retrieval/vector workflows"
+    fallback_mode: bool = False
+    decision_inputs: List[str] = Field(default_factory=list)
+
+
 class AdvisingResult(BaseModel):
     title: str
     summary: str
     recommendations: List[str] = Field(default_factory=list)
     evidence: List[str] = Field(default_factory=list)
     cautions: List[str] = Field(default_factory=list)
+    ai_trace: AITrace = Field(default_factory=AITrace)

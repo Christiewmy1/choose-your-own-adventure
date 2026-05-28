@@ -64,8 +64,31 @@ const result = (
   summary: string,
   recommendations: string[],
   evidence: string[],
-  cautions: string[]
-): AdvisingResult => ({ title, summary, recommendations, evidence, cautions });
+  cautions: string[],
+  profile: StudentProfile,
+  context: string
+): AdvisingResult => ({
+  title,
+  summary,
+  recommendations,
+  evidence,
+  cautions,
+  ai_trace: {
+    recommendation_engine: 'browser demo fallback using the same profile fields and pathway assumptions',
+    llm_enhancement: 'not used in fallback mode',
+    llm_model: null,
+    data_ingestion: 'fallback references the same curated UWB/company data story but does not fetch live data',
+    retrieval_readiness: 'fallback does not query retrieval documents',
+    fallback_mode: true,
+    decision_inputs: [
+      `context=${context}`,
+      `major=${profile.major || 'not specified'}`,
+      `standing=${profile.standing}`,
+      `career_goals=${profile.careerGoals || 'not specified'}`,
+      `target_companies=${profile.targetCompanies || 'none'}`,
+    ],
+  },
+});
 
 export const buildFallbackDashboardResults = (profile: StudentProfile): DashboardResults => {
   const completed = splitList(profile.completedCourses);
@@ -87,7 +110,9 @@ export const buildFallbackDashboardResults = (profile: StudentProfile): Dashboar
       [
         'Use the live API results for final advising-quality output when available.',
         'Confirm prerequisites and graduation requirements with official UW Bothell resources.',
-      ]
+      ],
+      profile,
+      'course fallback'
     ),
     companies: result(
       'Demo-Safe Company Alignment',
@@ -101,7 +126,9 @@ export const buildFallbackDashboardResults = (profile: StudentProfile): Dashboar
         'Company recommendations are based on pathway tags, not scraped live job openings.',
         'The full backend uses the 100+ company dataset for richer matching when reachable.',
       ],
-      ['This is not a live internship board; students should still verify current openings.']
+      ['This is not a live internship board; students should still verify current openings.'],
+      profile,
+      'company fallback'
     ),
     internshipPrep: result(
       'Demo-Safe Internship Prep',
@@ -115,7 +142,9 @@ export const buildFallbackDashboardResults = (profile: StudentProfile): Dashboar
         'Internship guidance is generated from the student profile rather than a generic chatbot prompt.',
         'The live backend adds company-specific playbooks and stronger roadmap matching.',
       ],
-      ['Students should validate deadlines through Handshake, company sites, and UWB career resources.']
+      ['Students should validate deadlines through Handshake, company sites, and UWB career resources.'],
+      profile,
+      'internship fallback'
     ),
     roadmap: result(
       'Demo-Safe Quarter Roadmap',
@@ -129,7 +158,9 @@ export const buildFallbackDashboardResults = (profile: StudentProfile): Dashboar
         'Roadmap sequencing is approximate and meant for planning conversation, not official degree clearance.',
         'The live backend replaces completed template courses and uses pathway-specific roadmap templates.',
       ],
-      ['Final course sequencing must be checked against official catalog, schedule, and advisor guidance.']
+      ['Final course sequencing must be checked against official catalog, schedule, and advisor guidance.'],
+      profile,
+      'roadmap fallback'
     ),
   };
 };

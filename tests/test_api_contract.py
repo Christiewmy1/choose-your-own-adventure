@@ -20,12 +20,18 @@ class ApiContractTests(unittest.TestCase):
         }
 
     def assert_valid_result(self, payload: dict) -> None:
-        for key in ["title", "summary", "recommendations", "evidence", "cautions"]:
+        for key in ["title", "summary", "recommendations", "evidence", "cautions", "ai_trace"]:
             self.assertIn(key, payload)
         self.assertIsInstance(payload["recommendations"], list)
         self.assertTrue(payload["recommendations"])
         self.assertIsInstance(payload["evidence"], list)
         self.assertIsInstance(payload["cautions"], list)
+        trace = payload["ai_trace"]
+        self.assertIn("structured scoring", trace["recommendation_engine"])
+        self.assertIn("Crawl4AI", trace["data_ingestion"])
+        self.assertIsInstance(trace["fallback_mode"], bool)
+        self.assertIsInstance(trace["decision_inputs"], list)
+        self.assertTrue(trace["decision_inputs"])
 
     def test_health_endpoint(self) -> None:
         response = self.client.get("/health")

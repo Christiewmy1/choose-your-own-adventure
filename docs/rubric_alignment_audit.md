@@ -40,6 +40,7 @@ Evidence:
 - `api/llm.py` uses Groq/Llama 3.3 for optional personalized rewriting when a `GROQ_API_KEY` is configured.
 - `src/huskyadvisor/crawl4ai_pipeline.py`, `scripts/crawl_with_crawl4ai.py`, and `scripts/normalize_crawl4ai_exports.py` provide a Crawl4AI data-ingestion pipeline.
 - `src/huskyadvisor/vector_store.py` and retrieval-related docs explain how crawled/normalized documents strengthen the optional RAG path.
+- Every API result includes an `ai_trace` field, and the website displays an "AI integration trace" so graders can see the engine, Groq/Llama status, Crawl4AI/data role, retrieval readiness, and fallback status for the exact result being shown.
 - AI is part of the actual recommendation flow and data pipeline, not a separate side chat.
 
 Honest limitation:

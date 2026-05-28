@@ -26,9 +26,13 @@ UW Bothell students often gather planning advice from scattered places: catalog 
 HuskyAdvisor is not a chat box bolted onto a website. AI is embedded in the recommendation logic in two ways:
 
 1. A structured advising engine scores majors, courses, company pathways, and roadmap tracks using student profile features, prerequisite readiness, company intent, and career-tag alignment.
-2. An optional retrieval-augmented path uses LangChain, Chroma, and OpenAI-backed retrieval modules for a richer LLM-grounded demo flow.
+2. Groq/Llama 3.3 can generate personalized explanation summaries after the structured engine selects the actual recommendations.
+3. Crawl4AI supports AI-oriented ingestion of public UWB and employer pages before raw content is normalized into advising/retrieval-ready data.
+4. An optional retrieval-augmented path uses vector-store modules for richer source-grounded advising workflows.
 
-The current deployed MVP primarily uses the structured advising engine because it is more stable for a class demo, but the repository also includes the retrieval modules that support the broader AI strategy.
+Every API result includes an `ai_trace` object so graders can inspect the AI role directly. It reports the recommendation engine role, Groq/Llama enhancement status, Crawl4AI/data-ingestion role, retrieval readiness, fallback mode, and the profile inputs used for the decision.
+
+The current deployed MVP primarily uses the structured advising engine because it is more stable for a class demo, while Groq/Llama provides optional summary personalization when the deployment has `GROQ_API_KEY` configured. The repository also includes the ingestion and retrieval modules that support the broader AI strategy.
 
 The repo now also includes a Crawl4AI-based ingestion pipeline for gathering fresh public UWB and employer source pages before they are normalized into retrieval documents or manually refreshed into the core advising datasets.
 

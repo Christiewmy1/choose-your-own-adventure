@@ -12,6 +12,15 @@ export interface AdvisingResult {
   recommendations: string[];
   evidence: string[];
   cautions: string[];
+  ai_trace?: {
+    recommendation_engine: string;
+    llm_enhancement: string;
+    llm_model: string | null;
+    data_ingestion: string;
+    retrieval_readiness: string;
+    fallback_mode: boolean;
+    decision_inputs: string[];
+  };
 }
 
 export interface DashboardResults {
