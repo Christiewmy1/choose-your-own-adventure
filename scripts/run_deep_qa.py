@@ -365,6 +365,7 @@ def write_report(
     api_failures: list[str],
     data_failures: list[str],
     public_failures: list[str],
+    public_checked: bool,
 ) -> None:
     failure_counter = Counter(failure.split(":", 1)[0] for result in scenario_results for failure in result.failures)
     major_counter = Counter(result.major for result in scenario_results)
@@ -384,7 +385,7 @@ def write_report(
         f"- Failed scenarios: {len(failed_scenarios)}",
         f"- API contract failures: {len(api_failures)}",
         f"- Data integrity failures: {len(data_failures)}",
-        f"- Public backend check failures: {len(public_failures)}",
+        f"- Public backend check failures: {len(public_failures) if public_checked else 'not run in this local-only report'}",
         "",
         "## Coverage",
         "",
@@ -408,7 +409,10 @@ def write_report(
     lines.extend(["", "## Data Integrity Check", ""])
     lines.extend([f"- {failure}" for failure in data_failures] or ["- Passed."])
     lines.extend(["", "## Public Backend Check", ""])
-    lines.extend([f"- {failure}" for failure in public_failures] or ["- Passed."])
+    if public_checked:
+        lines.extend([f"- {failure}" for failure in public_failures] or ["- Passed."])
+    else:
+        lines.append("- Skipped in this deterministic local run. Use `python3 scripts/run_deep_qa.py --scenarios 560 --public` after redeploying the backend.")
 
     lines.extend(["", "## First 25 Failed Scenarios", ""])
     if failed_scenarios:
@@ -448,7 +452,7 @@ def main() -> int:
     api_failures = evaluate_api_contract()
     data_failures = evaluate_data_integrity()
     public_failures = evaluate_public_backend() if args.public else []
-    write_report(scenario_results, api_failures, data_failures, public_failures)
+    write_report(scenario_results, api_failures, data_failures, public_failures, args.public)
 
     total_failures = (
         sum(len(result.failures) for result in scenario_results)

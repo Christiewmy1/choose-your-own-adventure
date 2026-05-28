@@ -1,3 +1,13 @@
+"""Profile-aware advising engine for HuskyAdvisor.
+
+This module is the project's core AI/recommendation layer. It does not use a
+generic side-chat pattern; instead it turns structured student profile signals
+into ranked courses, company matches, internship-prep tracks, and roadmaps.
+Each score combines major fit, completed-course filtering, course metadata
+quality, recent offerings, target-company mappings, career-goal overlap, and
+readiness/prerequisite signals.
+"""
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -339,14 +349,18 @@ class HuskyAdvisorEngine:
         min_level, max_level = self._target_level_range(profile)
 
         for course in self.courses:
+            # Step 1: keep recommendations realistic for the student's stage.
             if course.level < min_level or course.level > max_level:
                 continue
+            # Step 2: never recommend courses already completed, including
+            # messy inputs that were normalized earlier.
             if self._normalize_code(course.course_code) in completed:
                 continue
 
             score = 0
             evidence: List[str] = []
 
+            # Step 3: score academic pathway fit.
             if canonical_major in course.major_tags:
                 score += 3
                 evidence.append(f"{course.course_code} is tagged for {canonical_major}.")
@@ -356,8 +370,11 @@ class HuskyAdvisorEngine:
                 score += 2
                 evidence.append(f"{course.course_code} is one of HuskyAdvisor's anchor courses for {canonical_major}.")
 
+            # Step 4: score source/data quality so curated UWB records outrank
+            # thin placeholder metadata.
             score += self._quality_score_adjustment(course, evidence)
 
+            # Step 5: prefer courses that appeared in recent UWB schedules.
             recent_terms = self.recent_offerings.get(course.course_code, [])
             if recent_terms:
                 score += 1
@@ -366,6 +383,8 @@ class HuskyAdvisorEngine:
                 )
 
             if target:
+                # Step 6: connect the course to the selected company or
+                # company-intent profile.
                 mapped_courses = target.mapped_courses
                 if course.course_code in mapped_courses:
                     score += 2
@@ -388,11 +407,14 @@ class HuskyAdvisorEngine:
                     score += 1
                     evidence.append(f"{course.course_code} supports data-centric work relevant to {target.name}.")
 
+            # Step 7: connect course tags directly to the student's stated goals.
             goal_overlap = self._overlap(course.career_tags, profile.career_goals)
             if goal_overlap:
                 score += len(goal_overlap)
                 evidence.append(f"It supports your stated goals: {', '.join(goal_overlap)}.")
 
+            # Step 8: apply major-specific pathway nudges so newer pathways do
+            # not collapse into the same generic CSSE recommendations.
             if self._canonical_major(profile.major) == "EE":
                 ee_focus = {"embedded", "hardware", "aerospace", "robotics", "systems"}
                 if ee_focus.intersection({goal.lower() for goal in profile.career_goals}) and (
@@ -425,10 +447,12 @@ class HuskyAdvisorEngine:
                     score += 3
                     evidence.append("This course is part of the MIS, analytics, or communication backbone for supported business-tech pathways.")
 
+            # Step 9: account for project-based learning preference.
             if profile.preferred_learning_style.lower().startswith("project") and course.project_emphasis == "high":
                 score += 1
                 evidence.append("This course has strong project emphasis, which matches your learning style.")
 
+            # Step 10: check prerequisite/readiness signals.
             score += self._readiness_adjustment(profile, course, completed, evidence)
 
             scored.append(ScoredCourse(course=course, score=score, evidence=evidence))

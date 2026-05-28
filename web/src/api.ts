@@ -2,7 +2,7 @@ import type { AdvisingResult, DashboardResults, StudentProfile } from './types';
 
 const DEFAULT_LOCAL_API = 'http://127.0.0.1:8010';
 const DEFAULT_PUBLIC_API = 'https://choose-your-own-adventure-bay.vercel.app';
-const API_BASE_URL =
+export const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
   (typeof window !== 'undefined' &&
   (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
@@ -72,4 +72,13 @@ export async function fetchDashboardResults(profile: StudentProfile): Promise<Da
     internshipPrep,
     roadmap,
   };
+}
+
+export async function fetchApiHealth(): Promise<boolean> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/health`);
+    return response.ok;
+  } catch {
+    return false;
+  }
 }

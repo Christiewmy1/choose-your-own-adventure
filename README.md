@@ -1,5 +1,10 @@
 # HuskyAdvisor
 
+[Live Site](https://christiewmy1.github.io/choose-your-own-adventure/) |
+[API Health](https://choose-your-own-adventure-bay.vercel.app/health) |
+[Tests Passing](docs/deep_qa_500_scenario_report.md) |
+License: course project
+
 HuskyAdvisor is a UW Bothell-focused advising web application that helps students compare majors, discover career-aligned courses, connect coursework to regional employers, and generate internship-prep and roadmap guidance.
 
 ## Public deliverables
@@ -182,3 +187,7 @@ Stress-test reporting lives in:
 ## Important repository hygiene note
 
 Generated frontend artifacts such as `web/node_modules/` and `web/dist/` should not be committed as source. They are ignored in `.gitignore` and have been removed from version control tracking.
+
+## Commit message convention
+
+Use short imperative commit messages such as `Add deep QA stress test coverage`, `Expose auditable AI integration trace`, or `Expand software employer dataset`. This keeps the milestone history readable for graders and teammates.

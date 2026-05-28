@@ -132,3 +132,17 @@ The final presentation should focus on three claims:
 1. HuskyAdvisor helps UWB students connect majors, courses, careers, and internships.
 2. AI is embedded in scoring, LLM personalization, Crawl4AI ingestion, and retrieval readiness.
 3. The team validates the system with tests, simulation reports, and honest scope boundaries.
+
+## Criterion-to-File Map
+
+| Rubric criterion | Evidence a grader can inspect |
+| --- | --- |
+| UW community impact | `web/src/pages/LandingPage.tsx` hero/problem/help sections, `README.md`, `docs/final_project_spec.md` |
+| Public repository and deployment | `README.md` public links, `.github/workflows/deploy-web.yml`, `vercel.json`, `docs/deployment_and_public_access.md` |
+| AI embedded meaningfully | `src/huskyadvisor/advisor.py` scoring logic, `api/llm.py` Groq/Llama enhancement, `src/huskyadvisor/crawl4ai_pipeline.py`, `web/src/pages/Recommendations.tsx` AI summary and trace |
+| Not just a chat on the side | Profile submission calls `api/routers/profile.py`, which invokes `HuskyAdvisorEngine` and returns ranked results with `ai_trace` |
+| Technical execution | `web/`, `api/`, `src/huskyadvisor/`, `tests/`, `scripts/run_deep_qa.py` |
+| Stability and testing | `python3 -m unittest discover`, `npm run build`, `docs/deep_qa_500_scenario_report.md` |
+| Project web presence | `web/src/pages/LandingPage.tsx` problem, user guide, architecture flow, tech stack, and live stat block |
+| Milestones and planning | `docs/milestone_roadmap.md`, `CHANGELOG.md`, `docs/demo_readiness_checklist.md` |
+| Peer contribution evidence | `docs/matiyas_role_summary.md`, `docs/matiyas_weekly_contribution_log.md`, commit history |

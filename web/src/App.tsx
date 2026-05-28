@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchDashboardResults } from './api';
+import { fetchApiHealth, fetchDashboardResults } from './api';
 import LandingPage from './pages/LandingPage';
 import ProfileForm from './pages/ProfileForm';
 import Recommendations from './pages/Recommendations';
@@ -34,6 +34,7 @@ const loadStoredProfile = (): StudentProfile => {
 
 const LOCAL_API_HINT =
   ' Start the API locally with: PYTHONPATH=src uvicorn api.main:app --host 127.0.0.1 --port 8010';
+const BUILD_TIME = import.meta.env.VITE_BUILD_TIME || 'local development build';
 
 function App() {
   const [page, setPage] = useState<AppPage>(() => hashToPage(window.location.hash));
@@ -45,6 +46,19 @@ function App() {
   const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof StudentProfile, string>>>({});
   const [resultError, setResultError] = useState('');
   const [resultNotice, setResultNotice] = useState('');
+  const [apiOnline, setApiOnline] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    fetchApiHealth().then(isOnline => {
+      if (active) {
+        setApiOnline(isOnline);
+      }
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   useEffect(() => {
     const onHashChange = () => setPage(hashToPage(window.location.hash));
@@ -161,7 +175,7 @@ function App() {
 
   return (
     <div className="app-shell">
-      <TopNav currentPage={page} onHome={goToLanding} onStart={goToProfile} />
+      <TopNav currentPage={page} apiOnline={apiOnline} onHome={goToLanding} onStart={goToProfile} />
 
       <div className="page-content">
         <ProgressStepper currentStep={page} onStepChange={handleStepChange} canOpenResults={Boolean(results)} />
@@ -204,6 +218,7 @@ function App() {
 
       <footer className="site-footer">
         <DisclaimerBanner variant="footer" />
+        <p className="build-stamp">Last deployed: {BUILD_TIME}</p>
       </footer>
     </div>
   );

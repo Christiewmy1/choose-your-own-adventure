@@ -55,6 +55,11 @@ button {
   background: linear-gradient(180deg, rgba(75, 46, 131, 0.06), transparent);
 }
 
+.build-stamp {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+}
+
 .status-panel {
   display: grid;
   gap: 18px;
@@ -128,6 +133,32 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  align-items: center;
+}
+
+.api-status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  border: 1px solid rgba(75, 46, 131, 0.12);
+}
+
+.api-status-online {
+  color: #0d6b3f;
+  background: rgba(38, 166, 91, 0.14);
+}
+
+.api-status-offline {
+  color: #8b1e1e;
+  background: rgba(220, 80, 80, 0.14);
+}
+
+.api-status-checking {
+  color: var(--brand-purple);
+  background: rgba(75, 46, 131, 0.08);
 }
 
 .hero-grid {
@@ -140,6 +171,87 @@ button {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 28px;
+}
+
+.scope-stat-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 12px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.scope-stat-grid strong {
+  color: var(--brand-purple);
+  font-size: 1.4rem;
+}
+
+.grader-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 24px;
+}
+
+.info-card {
+  padding: 24px;
+}
+
+.clean-list {
+  margin: 14px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+  display: grid;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+.numbered-list {
+  list-style: decimal;
+}
+
+.architecture-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+  margin-bottom: 2px;
+}
+
+.architecture-flow span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 72px;
+  padding: 12px;
+  border-radius: 18px;
+  color: var(--brand-deep);
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(75, 46, 131, 0.11), rgba(232, 184, 75, 0.13));
+  border: 1px solid rgba(75, 46, 131, 0.12);
+}
+
+.architecture-flow span:not(:last-child)::after {
+  content: '>';
+  position: absolute;
+  right: -10px;
+  color: var(--brand-purple);
+  font-weight: 900;
+}
+
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.tech-stack-list span {
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--brand-purple);
+  background: rgba(75, 46, 131, 0.08);
+  font-weight: 700;
 }
 
 .feature-section {
@@ -347,7 +459,10 @@ button {
 
 @media (max-width: 900px) {
   .hero-grid,
-  .recommendation-header {
+  .recommendation-header,
+  .grader-grid,
+  .architecture-flow,
+  .ai-trace-grid {
     grid-template-columns: 1fr;
   }
 
@@ -371,6 +486,12 @@ button {
     border-radius: 20px;
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .architecture-flow span:not(:last-child)::after {
+    content: 'v';
+    right: auto;
+    bottom: -13px;
   }
 }
 
@@ -1013,6 +1134,60 @@ input:focus, textarea:focus, select:focus {
   background: linear-gradient(135deg, rgba(75, 46, 131, 0.07), rgba(0, 92, 95, 0.06));
   border-radius: 18px;
   padding: 18px;
+}
+
+.ai-summary-card {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(75, 46, 131, 0.14);
+}
+
+.ai-summary-card h4,
+.ai-summary-card p {
+  margin: 0;
+}
+
+.ai-summary-generated {
+  background: linear-gradient(135deg, rgba(75, 46, 131, 0.11), rgba(232, 184, 75, 0.18));
+}
+
+.ai-summary-structured {
+  background: rgba(75, 46, 131, 0.05);
+}
+
+.ai-label {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: white;
+  background: var(--brand-purple);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.how-ai-panel {
+  margin: 0 0 20px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  color: var(--text);
+  background: rgba(75, 46, 131, 0.06);
+  border: 1px solid rgba(75, 46, 131, 0.12);
+}
+
+.how-ai-panel summary {
+  color: var(--brand-purple);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.how-ai-panel ol {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .ai-trace-grid {

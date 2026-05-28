@@ -7,7 +7,7 @@
 - Failed scenarios: 0
 - API contract failures: 0
 - Data integrity failures: 0
-- Public backend check failures: 0 in local runner mode; separate curl check found the public deployment responds but is stale relative to the newest local dataset/code.
+- Public backend check failures: not run in this local-only report
 
 ## Coverage
 
@@ -32,10 +32,7 @@
 
 ## Public Backend Check
 
-- Health check passed with `200 OK` at `https://choose-your-own-adventure-bay.vercel.app/health`.
-- Recommendation POST passed with `200 OK`.
-- Deployment freshness issue: the public backend still treated `JPMorgan Chase Technology` as unsupported and did not include the newest `ai_trace` shape at the time of this QA pass.
-- Interpretation: the public backend is alive, but it has not redeployed the latest `HuskyAdvisor` branch changes yet. The GitHub Pages frontend has a demo-safe fallback, but the backend deployment should be refreshed before final grading.
+- Skipped in this deterministic local run. Use `python3 scripts/run_deep_qa.py --scenarios 560 --public` after redeploying the backend.
 
 ## First 25 Failed Scenarios
 
@@ -45,4 +42,5 @@
 
 - This stress test validates deterministic engine behavior and API shape; it does not prove official degree accuracy.
 - Public endpoint checks depend on current network availability and deployment state.
+- Earlier manual curl checks showed the public backend responding but stale relative to the newest branch; refresh/redeploy the backend before final grading and rerun with `--public`.
 - Crawl4AI is validated as a data-ingestion/normalization pipeline; crawled facts still require human review before becoming trusted advising data.

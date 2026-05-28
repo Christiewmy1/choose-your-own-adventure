@@ -218,7 +218,7 @@ const renderAITrace = (result: AdvisingResult) => {
   const trace = result.ai_trace;
   return (
     <div className="result-section ai-trace-box">
-      <h4>AI integration trace</h4>
+      <h4>AI Recommendation Engine</h4>
       <p className="small-copy">
         This makes the AI role auditable: the app shows whether the result came from the structured
         recommendation engine, Groq/Llama enhancement, Crawl4AI-ready data pipeline, or demo fallback.
@@ -241,6 +241,35 @@ const renderAITrace = (result: AdvisingResult) => {
     </div>
   );
 };
+
+const renderAISummary = (result: AdvisingResult) => {
+  const trace = result.ai_trace;
+  const isGenerated = Boolean(trace?.llm_model);
+  return (
+    <div className={`ai-summary-card ${isGenerated ? 'ai-summary-generated' : 'ai-summary-structured'}`}>
+      <span className="ai-label">{isGenerated ? 'AI-Generated' : 'Structured engine active'}</span>
+      <h4>AI Summary</h4>
+      <p>{result.summary}</p>
+      {!isGenerated && (
+        <p className="small-copy">
+          AI summary unavailable in this environment — structured engine active.
+        </p>
+      )}
+    </div>
+  );
+};
+
+const HowAIWorksPanel = () => (
+  <details className="how-ai-panel">
+    <summary>How AI works here</summary>
+    <ol>
+      <li><strong>Structured scoring engine:</strong> ranks courses, companies, internship prep, and roadmap tracks from the student profile.</li>
+      <li><strong>Groq/Llama summaries:</strong> optionally rewrites the structured result into a personalized explanation when `GROQ_API_KEY` is configured.</li>
+      <li><strong>Crawl4AI ingestion:</strong> gathers public UWB and employer pages into raw and normalized data areas for future refreshes.</li>
+      <li><strong>Optional RAG path:</strong> normalized documents can feed retrieval/vector workflows for source-grounded advising.</li>
+    </ol>
+  </details>
+);
 
 const Recommendations = ({ profile, results, error, notice = '', onEditProfile, onRetry }: RecommendationsProps) => {
   const [activeTab, setActiveTab] = useState<ResultTab>('courses');
@@ -341,6 +370,7 @@ const Recommendations = ({ profile, results, error, notice = '', onEditProfile, 
       </div>
 
       <DisclaimerBanner />
+      <HowAIWorksPanel />
 
       <div className="results-overview">
         {tabConfig.map(tab => {
@@ -379,7 +409,7 @@ const Recommendations = ({ profile, results, error, notice = '', onEditProfile, 
 
       <article className="card result-card result-primary tab-panel" role="tabpanel">
         <h3>{activeResult.title}</h3>
-        <p className="small-copy">{activeResult.summary}</p>
+        {renderAISummary(activeResult)}
         <p className="section-description">{sectionDescriptions[activeTab]}</p>
 
         <div className="result-section">
