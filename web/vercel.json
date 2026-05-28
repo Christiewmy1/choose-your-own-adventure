@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://choose-your-own-adventure-bay.vercel.app/api/:path*"
+    },
+    {
+      "source": "/health",
+      "destination": "https://choose-your-own-adventure-bay.vercel.app/health"
+    }
+  ]
+}
