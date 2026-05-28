@@ -7,6 +7,7 @@ interface CourseTagInputProps {
   help?: string;
   value: string;
   error?: string;
+  placeholder?: string;
   onChange: (value: string) => void;
   onAddCommon?: () => void;
   commonLabel?: string;
@@ -20,6 +21,7 @@ const CourseTagInput = ({
   help,
   value,
   error,
+  placeholder,
   onChange,
   onAddCommon,
   commonLabel,
@@ -41,7 +43,7 @@ const CourseTagInput = ({
         help={help}
         value={value}
         suggestions={courseSuggestions}
-        placeholder="Type a course code, e.g. CSS 342"
+        placeholder={placeholder ?? 'Type a course code, e.g. CSS 342'}
         error={error}
         onChange={onChange}
       />

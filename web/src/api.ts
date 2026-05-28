@@ -1,7 +1,7 @@
 import type { AdvisingResult, DashboardResults, StudentProfile } from './types';
 
 const DEFAULT_LOCAL_API = 'http://127.0.0.1:8010';
-const DEFAULT_PUBLIC_API = 'https://huskyadvisor-api.onrender.com';
+const DEFAULT_PUBLIC_API = 'https://choose-your-own-adventure-bay.vercel.app';
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
   (typeof window !== 'undefined' &&

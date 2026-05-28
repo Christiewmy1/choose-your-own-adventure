@@ -82,7 +82,7 @@ HuskyAdvisor uses AI meaningfully through recommendation logic and optional retr
 ## Public-facing deliverables
 
 - website: `https://christiewmy1.github.io/choose-your-own-adventure/`
-- API target: `https://huskyadvisor-api.onrender.com`
+- API target: `https://choose-your-own-adventure-bay.vercel.app`
 - repository: current project repository with instructor access
 
 ## Known current limitations

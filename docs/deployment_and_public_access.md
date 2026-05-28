@@ -9,9 +9,9 @@
 
 ## Public API
 
-- Target URL: `https://huskyadvisor-api.onrender.com`
-- Deployment mechanism: Render
-- Config file: `render.yaml`
+- Target URL: `https://choose-your-own-adventure-bay.vercel.app`
+- Deployment mechanism: Vercel
+- Config file: `vercel.json`
 - App entry: `api/main.py`
 
 ## Local development mirrors

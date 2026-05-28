@@ -5,7 +5,7 @@ HuskyAdvisor is a UW Bothell-focused advising web application that helps student
 ## Public deliverables
 
 - Public website: [https://christiewmy1.github.io/choose-your-own-adventure/](https://christiewmy1.github.io/choose-your-own-adventure/)
-- Deployed API target: `https://huskyadvisor-api.onrender.com`
+- Deployed API target: `https://choose-your-own-adventure-bay.vercel.app`
 - Local frontend: `web/`
 - Local/deployed backend: `api/`
 - Core recommendation engine: `src/huskyadvisor/`
@@ -104,7 +104,7 @@ npm run dev
 The frontend uses:
 
 - `http://127.0.0.1:8010` when running locally
-- `https://huskyadvisor-api.onrender.com` as the default deployed API target
+- `https://choose-your-own-adventure-bay.vercel.app` as the default deployed API target
 
 ## Repository structure
 
