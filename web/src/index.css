@@ -996,6 +996,18 @@ input:focus, textarea:focus, select:focus {
   font-weight: 600;
 }
 
+.result-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 16px;
+}
+
+.notice-action {
+  margin-left: auto;
+}
+
 .example-button-grid {
   display: grid;
   gap: 10px;

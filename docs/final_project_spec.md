@@ -61,7 +61,7 @@ Backend:
 
 - FastAPI
 - Pydantic
-- Render deployment target
+- Vercel deployment target
 
 Recommendation/data layer:
 
@@ -72,12 +72,14 @@ Recommendation/data layer:
 
 ## AI integration summary
 
-HuskyAdvisor uses AI meaningfully through recommendation logic and optional retrieval:
+HuskyAdvisor uses AI meaningfully through recommendation logic, optional LLM summarization, Crawl4AI ingestion, and optional retrieval:
 
 1. Student profile features shape ranking and filtering.
 2. The engine suppresses redundant recommendations and scores pathways by goal alignment.
 3. Company intent mappings connect employer domains to class and roadmap suggestions.
-4. Optional retrieval modules support a RAG-style extension beyond the rules/scoring path.
+4. Groq/Llama 3.3 can rewrite structured results into personalized summaries when `GROQ_API_KEY` is configured.
+5. Crawl4AI gathers public UWB/employer source pages into raw and normalized data areas before human validation.
+6. Optional retrieval modules support a RAG-style extension beyond the rules/scoring path.
 
 ## Public-facing deliverables
 
@@ -91,3 +93,4 @@ HuskyAdvisor uses AI meaningfully through recommendation logic and optional retr
 - strongest in UWB computing/engineering pathways
 - retrieval/LLM path is present but not the primary deployed flow
 - some newer pathways still have thinner metadata than CSSE
+- scraped data must still be validated before it becomes trusted advising data

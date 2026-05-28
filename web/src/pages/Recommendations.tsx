@@ -8,6 +8,7 @@ interface RecommendationsProps {
   profile: StudentProfile;
   results: DashboardResults | null;
   error: string;
+  notice?: string;
   onEditProfile: () => void;
   onRetry?: () => void;
 }
@@ -209,7 +210,7 @@ const sectionDescriptions: Record<ResultTab, string> = {
   roadmap: 'A quarter-by-quarter planning view to help you sequence coursework and preparation over time.',
 };
 
-const Recommendations = ({ profile, results, error, onEditProfile, onRetry }: RecommendationsProps) => {
+const Recommendations = ({ profile, results, error, notice = '', onEditProfile, onRetry }: RecommendationsProps) => {
   const [activeTab, setActiveTab] = useState<ResultTab>('courses');
   const [copyMessage, setCopyMessage] = useState('');
 
@@ -239,7 +240,7 @@ const Recommendations = ({ profile, results, error, onEditProfile, onRetry }: Re
               <p className="small-copy">
                 <strong>Running locally?</strong> Start the API in a separate terminal:
               </p>
-              <code>.venv/bin/uvicorn api.main:app --host 127.0.0.1 --port 8000</code>
+              <code>PYTHONPATH=src uvicorn api.main:app --host 127.0.0.1 --port 8010</code>
             </div>
           </div>
           <div className="header-actions">
@@ -286,6 +287,17 @@ const Recommendations = ({ profile, results, error, onEditProfile, onRetry }: Re
       </div>
 
       {copyMessage && <p className="copy-feedback">{copyMessage}</p>}
+
+      {notice && (
+        <div className="alert result-notice">
+          <strong>Demo fallback active.</strong> {notice}
+          {onRetry && (
+            <button className="button-secondary notice-action" type="button" onClick={onRetry}>
+              Retry live API
+            </button>
+          )}
+        </div>
+      )}
 
       <ProfileSummary profile={profile} />
 

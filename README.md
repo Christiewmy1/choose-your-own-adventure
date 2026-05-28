@@ -145,14 +145,29 @@ The frontend uses:
 ## Deployment notes
 
 - GitHub Pages deployment for the website is defined in `.github/workflows/deploy-web.yml`
-- Render deployment for the API is defined in `render.yaml`
+- Vercel deployment for the API is defined in `vercel.json`
+- `render.yaml` remains as an alternate deployment template, but the verified public API target is Vercel.
 - No password-protected flow is currently required for the public demo
 
 ## Testing
 
+Run the full automated Python test suite from the repository root:
+
+```bash
+python3 -m unittest discover
+```
+
+Build-check the public website:
+
+```bash
+cd web
+npm run build
+```
+
 Core backend regression tests live in:
 
 - `tests/test_advisor_regression.py`
+- `tests/test_api_contract.py`
 
 Stress-test reporting lives in:
 

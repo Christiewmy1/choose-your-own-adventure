@@ -2,100 +2,132 @@
 
 ## Purpose
 
-This document maps the current HuskyAdvisor repository to the DYOP project requirements and highlights what is strong, what is weak, and what still needs confirmation.
+This document maps HuskyAdvisor directly to the DYOP rubric from a strict-grader perspective. It is intentionally evidence-based: each category lists what is implemented, where to inspect it, and what the honest limitation is.
+
+## Scorecard Target
+
+| Rubric category | Points | Current evidence target |
+| --- | ---: | --- |
+| UW Community Impact | 10 | UWB-specific advising, major comparison, course planning, local employer alignment |
+| AI Integration | 15 | Embedded recommendation engine, Groq/Llama enhancement, Crawl4AI ingestion, optional retrieval path |
+| Technical Execution | 25 | React + FastAPI + tested recommendation engine + deployed API + demo fallback |
+| Project Web Presence | 15 | Public GitHub Pages site, professional UI, user guide, architecture and deployment docs |
+| Milestones & Planning | 20 | Proposal/spec docs, roadmap, audits, simulation reports, final readiness checklist |
+| Peer Review | 15 | Contribution docs and teammate-facing evidence, with final score dependent on Canvas survey |
 
 ## 1. UW Community Impact
+
+Status: **Excellent**
+
+Evidence:
+
+- The problem is specific to UW Bothell students who need course, major, roadmap, and internship-prep guidance.
+- The app supports UWB-oriented pathways instead of generic national degree advice.
+- The company layer focuses on regional employers and pathways students might realistically target.
+- Public-facing explanation appears in `README.md`, `docs/final_project_spec.md`, and the website UI.
+
+Honest limitation:
+
+- HuskyAdvisor is strongest for computing, engineering, data, and technology-facing business pathways. It does not claim full-campus advising coverage.
+
+## 2. AI Integration
+
+Status: **Excellent**
+
+Evidence:
+
+- `src/huskyadvisor/advisor.py` provides embedded recommendation logic for courses, majors, companies, internship prep, and roadmaps.
+- `api/llm.py` uses Groq/Llama 3.3 for optional personalized rewriting when a `GROQ_API_KEY` is configured.
+- `src/huskyadvisor/crawl4ai_pipeline.py`, `scripts/crawl_with_crawl4ai.py`, and `scripts/normalize_crawl4ai_exports.py` provide a Crawl4AI data-ingestion pipeline.
+- `src/huskyadvisor/vector_store.py` and retrieval-related docs explain how crawled/normalized documents strengthen the optional RAG path.
+- AI is part of the actual recommendation flow and data pipeline, not a separate side chat.
+
+Honest limitation:
+
+- Scraped content is treated as raw/normalized input that still needs validation before becoming trusted advising data.
+
+## 3. Technical Execution
 
 Status: **Strong**
 
 Evidence:
 
-- UWB-specific advising problem
-- UWB-focused course and pathway data
-- local company alignment for students
-- public-facing explanation in `README.md` and website content docs
+- React/Vite frontend in `web/`.
+- FastAPI backend in `api/`.
+- Core Python recommendation engine in `src/huskyadvisor/`.
+- JSON datasets are separated by courses, companies, company intent, internship playbooks, roadmap templates, major comparisons, schedule snapshots, and Crawl4AI data.
+- `tests/test_advisor_regression.py` covers recommendation quality, completed-course filtering, scope honesty, company alignment, and major differentiation.
+- `tests/test_crawl4ai_pipeline.py` covers Crawl4AI normalization edge cases.
+- `tests/test_api_contract.py` verifies the public API contract shape.
+- The frontend now has a clearly labeled demo-safe fallback if the deployed API is temporarily unavailable.
 
-Main risk:
+Honest limitation:
 
-- impact is strongest for computing/engineering students, not the full UWB population
-
-## 2. AI Integration
-
-Status: **Moderate to strong**
-
-Evidence:
-
-- embedded recommendation scoring logic
-- company-intent matching
-- roadmap and internship-playbook selection
-- optional retrieval modules using LangChain and Chroma
-
-Main risk:
-
-- the current deployed MVP uses the structured engine more than the retrieval/LLM path
-
-## 3. Technical Execution
-
-Status: **Moderate**
-
-Evidence:
-
-- React frontend
-- FastAPI API
-- structured datasets
-- regression tests
-- simulation coverage reports
-
-Main risk:
-
-- public deployment reliability must be verified end-to-end
-- some pathways still have thinner metadata
+- The public app is still an MVP. It should not be represented as an official UW advising system.
 
 ## 4. Project Web Presence
 
-Status: **Moderate to strong**
+Status: **Strong**
 
 Evidence:
 
-- public website exists
-- README now explains project purpose, architecture, and deployment
-- website copy blocks and testing docs exist
+- Public website: `https://christiewmy1.github.io/choose-your-own-adventure/`
+- API health check: `https://choose-your-own-adventure-bay.vercel.app/health`
+- The website explains the project, collects a student profile, and displays courses, companies, internship prep, and roadmap results.
+- `docs/deployment_and_public_access.md` gives the public URLs and deployment architecture.
+- `docs/demo_readiness_checklist.md` gives the exact demo profile and readiness checks.
 
-Main risk:
+Honest limitation:
 
-- the public website should still be manually checked after final deployment
+- GitHub Pages can cache stale static assets briefly after deployment, so the team should hard-refresh before presenting.
 
 ## 5. Milestones and Planning
 
-Status: **Moderate**
+Status: **Strong**
 
 Evidence:
 
-- technical design document
-- milestone roadmap
-- many iteration docs and evaluation docs
-- simulation reports and testing artifacts
+- `docs/milestone_roadmap.md`
+- `docs/final_project_spec.md`
+- `docs/technical_design_document.md`
+- `docs/manual_evaluation_report.md`
+- `docs/simulation_test_matrix.md`
+- `docs/simulation_coverage_report.md`
+- `docs/data_coverage_audit.md`
+- `docs/demo_readiness_checklist.md`
 
-Main risk:
+Honest limitation:
 
-- the timeline is reconstructed from delivered artifacts more than from a single polished proposal PDF
+- Some planning artifacts were refined late in the project, so the presentation should emphasize iteration and final stabilization rather than pretending the architecture was perfect from day one.
 
 ## 6. Peer Review
 
-Status: **Unverifiable from repo**
+Status: **Externally graded**
 
 Evidence:
 
-- cannot be confirmed from repository contents alone
+- `docs/matiyas_role_summary.md`
+- `docs/matiyas_weekly_contribution_log.md`
+- Commit history and merged code changes
+- AI pipeline, backend fixes, frontend deployment fixes, testing, and documentation updates
 
-Main risk:
+Honest limitation:
 
-- depends entirely on Canvas submission and teammate feedback
+- Final peer-review points depend on teammate Canvas submissions, not repository contents alone.
 
-## Final honest assessment
+## Strict-Grader Readiness Summary
 
-The repository now presents a much stronger and more coherent story than before, but the final grade still depends heavily on one external confirmation:
+HuskyAdvisor now has a defensible path to a very high score because the repository shows:
 
-- whether the public website and public API both work reliably during grading
+- a real UW community problem
+- AI embedded in recommendation and data-ingestion workflows
+- a deployed frontend and verified backend
+- automated regression, Crawl4AI, and API contract tests
+- honest limitations and clear scope warnings
+- public documentation and demo-readiness materials
 
-That is the most important final verification step.
+The final presentation should focus on three claims:
+
+1. HuskyAdvisor helps UWB students connect majors, courses, careers, and internships.
+2. AI is embedded in scoring, LLM personalization, Crawl4AI ingestion, and retrieval readiness.
+3. The team validates the system with tests, simulation reports, and honest scope boundaries.

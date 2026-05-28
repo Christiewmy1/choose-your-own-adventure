@@ -48,6 +48,7 @@ The public demo does not currently require password-protected access. No credent
 
 ## Deployment risks
 
-- the static frontend can appear updated before the backend is fully available
-- Render cold starts or API downtime can still affect the public experience
-- GitHub Pages caching can temporarily show stale website assets
+- The static frontend can appear updated before GitHub Pages finishes cache invalidation.
+- GitHub Pages caching can temporarily show stale website assets.
+- If the public API is temporarily unavailable, the frontend now shows a clearly labeled demo-safe fallback instead of a broken result page.
+- Browser-opened API POST routes can show 405 or 404 if visited directly; the public website calls them with POST requests.

@@ -10,6 +10,7 @@ import DisclaimerBanner from './components/DisclaimerBanner';
 import { loadingMessages, PROFILE_STORAGE_KEY } from './constants';
 import type { DashboardResults, StudentProfile } from './types';
 import { hashToPage, pageToHash, type AppPage } from './utils/routing';
+import { buildFallbackDashboardResults } from './utils/fallbackResults';
 
 const defaultProfile: StudentProfile = {
   major: '',
@@ -43,6 +44,7 @@ function App() {
   const [error, setError] = useState('');
   const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof StudentProfile, string>>>({});
   const [resultError, setResultError] = useState('');
+  const [resultNotice, setResultNotice] = useState('');
 
   useEffect(() => {
     const onHashChange = () => setPage(hashToPage(window.location.hash));
@@ -87,15 +89,21 @@ function App() {
     setIsLoading(true);
     setResults(null);
     setResultError('');
+    setResultNotice('');
     setLoadingMessageIndex(0);
 
     try {
       const nextResults = await fetchDashboardResults(nextProfile);
       setResults(nextResults);
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Could not load HuskyAdvisor results.';
-      setResultError(
-        `${message} If you are testing locally, make sure the HuskyAdvisor API is running on port 8010. If you are using the public site, the deployed backend may be unavailable.${LOCAL_API_HINT}`
+      const rawMessage = err instanceof Error ? err.message : 'Could not load HuskyAdvisor results.';
+      const message =
+        rawMessage === 'Failed to fetch'
+          ? 'The live API request did not complete.'
+          : rawMessage;
+      setResults(buildFallbackDashboardResults(nextProfile));
+      setResultNotice(
+        `${message} Showing a clearly labeled demo-safe fallback so the presentation can continue. Retry will attempt the live API again.${LOCAL_API_HINT}`
       );
     } finally {
       setIsLoading(false);
@@ -185,6 +193,7 @@ function App() {
                 profile={profile}
                 results={results}
                 error={resultError}
+                notice={resultNotice}
                 onEditProfile={handleEditProfile}
                 onRetry={handleRetry}
               />
