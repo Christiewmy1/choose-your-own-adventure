@@ -197,6 +197,97 @@ class AdvisorRegressionTests(unittest.TestCase):
         self.assertIn("healthcare digital", " ".join(internship.evidence).lower())
         self.assertIn("healthcare_data_platforms", " ".join(roadmap.evidence))
 
+    def test_computer_engineering_profile_is_supported_and_hardware_weighted(self) -> None:
+        profile = StudentProfile(
+            student_id="regression-10",
+            name="CompE Student",
+            major="Computer Engineering",
+            class_standing="Junior",
+            gpa=3.4,
+            completed_credits=95,
+            completed_courses=["CSS 142", "CSS 143", "CSS 301", "B EE 215", "EE 271"],
+            preferred_learning_style="project-based",
+            career_goals=["embedded", "firmware", "systems"],
+            target_companies=["Boeing"],
+            internship_timeline="next summer",
+        )
+
+        result = self.advisor.recommend_electives(profile, "Boeing")
+        joined = " ".join(result.recommendations)
+        self.assertNotIn("Scope Warning", result.title)
+        self.assertTrue(any(code in joined for code in ["CSS 422", "CSS 427", "EE 450", "EE 454"]))
+
+    def test_data_visualization_profile_prefers_data_and_analytics_courses(self) -> None:
+        profile = StudentProfile(
+            student_id="regression-11",
+            name="Data Viz Student",
+            major="Data Visualization",
+            class_standing="Junior",
+            gpa=3.5,
+            completed_credits=95,
+            completed_courses=["CSS 142", "CSS 301"],
+            preferred_learning_style="project-based",
+            career_goals=["analytics", "dashboards", "data"],
+            target_companies=["UW Medicine"],
+            internship_timeline="next summer",
+        )
+
+        result = self.advisor.recommend_electives(profile, "UW Medicine")
+        joined = " ".join(result.recommendations)
+        self.assertNotIn("Scope Warning", result.title)
+        self.assertTrue(any(code in joined for code in ["BIS 315", "BIS 445", "CSS 370", "CSS 475", "CSS 486"]))
+
+        internship = self.advisor.recommend_internship_prep(profile)
+        self.assertTrue(
+            any(keyword in " ".join(internship.evidence + internship.recommendations).lower() for keyword in ["healthcare", "data", "analytics"])
+        )
+
+    def test_business_administration_profile_prefers_mis_and_analytics_path(self) -> None:
+        profile = StudentProfile(
+            student_id="regression-12",
+            name="Business Student",
+            major="Business Administration",
+            class_standing="Junior",
+            gpa=3.3,
+            completed_credits=100,
+            completed_courses=["B BUS 300"],
+            preferred_learning_style="project-based",
+            career_goals=["analytics", "business systems", "digital transformation"],
+            target_companies=["Microsoft Redmond"],
+            internship_timeline="next summer",
+        )
+
+        result = self.advisor.recommend_electives(profile, "Microsoft Redmond")
+        joined = " ".join(result.recommendations)
+        self.assertNotIn("Scope Warning", result.title)
+        self.assertTrue(any(code in joined for code in ["BIS 315", "BIS 340", "BIS 360", "BIS 445", "CSS 370"]))
+
+        roadmap = self.advisor.build_quarter_plan(profile)
+        self.assertTrue(
+            any(keyword in " ".join(roadmap.evidence + roadmap.recommendations).lower() for keyword in ["cloud", "platform", "business", "systems"])
+        )
+
+    def test_expanded_company_dataset_supports_new_exact_target(self) -> None:
+        profile = StudentProfile(
+            student_id="regression-13",
+            name="Platform Student",
+            major="Applied Computing",
+            class_standing="Junior",
+            gpa=3.4,
+            completed_credits=95,
+            completed_courses=["CSS 142", "CSS 143", "CSS 301", "CSS 370"],
+            preferred_learning_style="project-based",
+            career_goals=["cloud", "backend", "software engineering"],
+            target_companies=["Snowflake"],
+            internship_timeline="next summer",
+        )
+
+        companies = self.advisor.recommend_companies(profile)
+        electives = self.advisor.recommend_electives(profile, "Snowflake")
+        self.assertIn("Snowflake", " ".join(companies.recommendations + companies.evidence))
+        self.assertNotIn("Scope Warning", electives.title)
+        self.assertTrue(any(code in " ".join(electives.recommendations) for code in ["CSS 436", "CSS 475", "CSS 481"]))
+
 
 if __name__ == "__main__":
     unittest.main()

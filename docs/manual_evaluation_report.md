@@ -97,12 +97,15 @@ This mode gives good preparation guidance, but it is based on manually designed 
 - Recommendations are tied to UWB-style structured data
 - Outputs are practical enough to be demoed
 - The project is fairly honest about its limits
+- The system now avoids recommending already completed courses in the main course recommendation flow
+- Official multi-quarter schedule data is now available to strengthen future planning realism
 
 ### Current Weaknesses
 
 - Some tags and mappings are still manually inferred
 - Applied Computing and EE coverage can still grow
-- The current experience is CLI-based rather than a polished website
+- The current website still needs full end-to-end polish and live testing
+- Schedule data exists, but recurring quarter availability is not fully used in scoring yet
 
 ## Next Evaluation Tasks
 

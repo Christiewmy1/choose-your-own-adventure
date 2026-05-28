@@ -22,6 +22,7 @@ UW Bothell students often have to piece together advice from course pages, degre
 
 - I am a junior CSSE student. Which 400-level electives should I take if I want to work at Boeing?
 - Should I choose CSSE, Applied Computing, or EE if I want to work in embedded systems?
+- I am a Data Visualization student interested in healthcare analytics. Which classes should I focus on next?
 - What should I focus on over the next few quarters to become internship-ready?
 
 ### Call to Action

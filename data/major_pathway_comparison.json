@@ -1,0 +1,404 @@
+{
+  "dataset_name": "HuskyAdvisor Supported UWB Major Pathways",
+  "last_updated": "2026-05-23",
+  "notes": "This file defines the UW Bothell majors HuskyAdvisor currently supports well enough to recommend courses for. Some majors are fully supported with rich curated data, while others are represented through official UWB program descriptions plus shared CSS, BIS, math, and EE pathways already present in the project dataset.",
+  "majors": [
+    {
+      "major": "CSSE",
+      "degree_type": "B.S.",
+      "school": "STEM",
+      "support_tier": "full",
+      "aliases": [
+        "Computer Science & Software Engineering",
+        "Computer Science and Software Engineering"
+      ],
+      "summary": "UW Bothell's CSSE major emphasizes programming, software design, and people-centered development processes for students who want deep software engineering preparation.",
+      "best_for": [
+        "software engineering",
+        "systems software",
+        "backend development",
+        "testing and reliability",
+        "project-heavy coding work"
+      ],
+      "core_strengths": [
+        "strong software engineering foundation",
+        "systems and operating systems depth",
+        "team-based project preparation",
+        "broad alignment with local tech companies"
+      ],
+      "typical_course_signals": [
+        "CSS 342",
+        "CSS 360",
+        "CSS 430",
+        "CSS 432",
+        "CSS 458"
+      ],
+      "career_paths": [
+        "software engineer",
+        "backend developer",
+        "systems engineer",
+        "cloud engineer"
+      ],
+      "good_fit_companies": [
+        "Boeing",
+        "Amazon Bellevue",
+        "Microsoft Redmond",
+        "Google Kirkland"
+      ],
+      "course_groups": {
+        "foundations": [
+          "CSS 301",
+          "CSS 342",
+          "CSS 360"
+        ],
+        "systems_and_backend": [
+          "CSS 430",
+          "CSS 432",
+          "CSS 436",
+          "CSS 458"
+        ],
+        "security_and_infrastructure": [
+          "CSS 310",
+          "CSS 337",
+          "CSS 431",
+          "CSS 457"
+        ],
+        "ai_and_data": [
+          "CSS 382",
+          "CSS 440",
+          "CSS 475",
+          "CSS 486"
+        ]
+      },
+      "support_scope_notes": "This is HuskyAdvisor's strongest major pathway and is backed by the richest curated course metadata.",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/bscsse"
+    },
+    {
+      "major": "Applied Computing",
+      "degree_type": "B.A.",
+      "school": "STEM",
+      "support_tier": "full",
+      "aliases": [
+        "AC"
+      ],
+      "summary": "UW Bothell's Applied Computing pathway supports students who want flexible, applied technology preparation across software, data, information systems, and business-facing roles.",
+      "best_for": [
+        "applied software work",
+        "business technology",
+        "data-informed applications",
+        "web development",
+        "cross-functional technology roles"
+      ],
+      "core_strengths": [
+        "flexible applied technology path",
+        "strong fit for business/technical bridge roles",
+        "good support for web, data, and systems applications"
+      ],
+      "typical_course_signals": [
+        "CSS 301",
+        "CSS 370",
+        "BIS 315",
+        "BIS 360",
+        "BIS 445"
+      ],
+      "career_paths": [
+        "application developer",
+        "technical analyst",
+        "business systems analyst",
+        "cloud or platform support engineer"
+      ],
+      "good_fit_companies": [
+        "Microsoft Redmond",
+        "Amazon Bellevue",
+        "T-Mobile",
+        "AT&T Bothell",
+        "UW Medicine"
+      ],
+      "course_groups": {
+        "foundations": [
+          "CSS 301",
+          "CSS 342",
+          "CSS 360"
+        ],
+        "data_and_platforms": [
+          "CSS 370",
+          "CSS 436",
+          "CSS 475",
+          "CSS 481",
+          "CSS 486"
+        ],
+        "business_systems": [
+          "BIS 315",
+          "BIS 340",
+          "BIS 360",
+          "BIS 445"
+        ],
+        "security_and_policy": [
+          "CSS 310",
+          "CSS 337",
+          "CSS 411",
+          "CSS 457"
+        ]
+      },
+      "support_scope_notes": "Applied Computing is fully supported in the prototype, but it still shares many CSS courses with CSSE and depends on BIS records for its distinct personality.",
+      "source_url": "https://www.uwb.edu/advising/majors-and-minors/declaring-your-major"
+    },
+    {
+      "major": "EE",
+      "degree_type": "B.S.",
+      "school": "STEM",
+      "support_tier": "strong",
+      "aliases": [
+        "Electrical Engineering"
+      ],
+      "summary": "Electrical Engineering at UW Bothell emphasizes electricity, electronics, embedded design, and hardware/software integration for students interested in physical systems.",
+      "best_for": [
+        "embedded systems",
+        "hardware/software integration",
+        "robotics",
+        "signals and control",
+        "device-level engineering"
+      ],
+      "core_strengths": [
+        "hardware and systems foundation",
+        "embedded and control-system relevance",
+        "good fit for device and infrastructure contexts"
+      ],
+      "typical_course_signals": [
+        "B EE 215",
+        "B EE 233",
+        "EE 271",
+        "EE 331",
+        "EE 332",
+        "EE 450",
+        "EE 454"
+      ],
+      "career_paths": [
+        "embedded engineer",
+        "hardware engineer",
+        "systems integration engineer",
+        "controls or device engineer"
+      ],
+      "good_fit_companies": [
+        "Boeing",
+        "SpaceX Starlink",
+        "T-Mobile"
+      ],
+      "course_groups": {
+        "math_and_circuits": [
+          "B EE 215",
+          "B EE 233",
+          "B EE 235",
+          "STMATH 308",
+          "EE 271",
+          "EE 331",
+          "EE 332"
+        ],
+        "embedded_and_systems": [
+          "CSS 422",
+          "CSS 427",
+          "B EE 425",
+          "EE 450",
+          "EE 454",
+          "B EE 457"
+        ]
+      },
+      "support_scope_notes": "EE support is real but thinner than CSSE because the current dataset still has fewer EE-specific records.",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/electrical"
+    },
+    {
+      "major": "Computer Engineering",
+      "degree_type": "B.S.",
+      "school": "STEM",
+      "support_tier": "strong",
+      "aliases": [
+        "CompE",
+        "Computer Engineering (CompE)"
+      ],
+      "summary": "Computer Engineering at UW Bothell combines hardware and software development, so HuskyAdvisor supports it through a hybrid of EE and CSS pathways already present in the dataset.",
+      "best_for": [
+        "hardware-software co-design",
+        "embedded systems",
+        "computer architecture",
+        "firmware and low-level systems",
+        "infrastructure-aware engineering"
+      ],
+      "core_strengths": [
+        "blend of software engineering and electronics",
+        "good fit for embedded and architecture-minded students",
+        "strong overlap with both EE and CSS upper-division work"
+      ],
+      "typical_course_signals": [
+        "B EE 215",
+        "B EE 233",
+        "CSS 422",
+        "CSS 427",
+        "CSS 430",
+        "EE 331",
+        "EE 450"
+      ],
+      "career_paths": [
+        "computer engineer",
+        "firmware engineer",
+        "embedded software engineer",
+        "systems hardware integration engineer"
+      ],
+      "good_fit_companies": [
+        "Boeing",
+        "SpaceX Starlink",
+        "T-Mobile"
+      ],
+      "course_groups": {
+        "foundations": [
+          "CSS 301",
+          "CSS 342",
+          "CSS 360",
+          "B EE 215",
+          "B EE 233",
+          "B EE 235",
+          "EE 271"
+        ],
+        "hardware_software_bridge": [
+          "CSS 422",
+          "CSS 427",
+          "EE 331",
+          "EE 332",
+          "B EE 425",
+          "EE 450",
+          "EE 454"
+        ],
+        "systems_support": [
+          "CSS 430",
+          "CSS 432",
+          "CSS 436"
+        ]
+      },
+      "support_scope_notes": "Computer Engineering is supported as a hybrid pathway. The major is official at UWB, but the current dataset models it through shared CSS and EE courses rather than a fully separate CompE catalog.",
+      "source_url": "https://www.uwb.edu/stem/undergraduate/majors/bscompe"
+    },
+    {
+      "major": "Data Visualization",
+      "degree_type": "B.A./B.S.",
+      "school": "IAS",
+      "support_tier": "moderate",
+      "aliases": [
+        "Data Viz"
+      ],
+      "summary": "Data Visualization at UW Bothell emphasizes statistics, programming, analytics, and visual communication. HuskyAdvisor supports it through shared CSS, BIS, and math courses already in the project.",
+      "best_for": [
+        "analytics",
+        "data communication",
+        "visual storytelling",
+        "dashboarding",
+        "applied data science"
+      ],
+      "core_strengths": [
+        "bridges data analysis and communication",
+        "good fit for reporting and insight-focused roles",
+        "connects computing and analytics foundations"
+      ],
+      "typical_course_signals": [
+        "STMATH 308",
+        "BIS 315",
+        "CSS 370",
+        "BIS 445",
+        "CSS 411"
+      ],
+      "career_paths": [
+        "data analyst",
+        "visualization specialist",
+        "business intelligence analyst",
+        "analytics product support"
+      ],
+      "good_fit_companies": [
+        "Microsoft Redmond",
+        "Amazon Bellevue",
+        "UW Medicine",
+        "Fred Hutch"
+      ],
+      "course_groups": {
+        "statistics_and_analysis": [
+          "STMATH 308",
+          "BIS 315",
+          "BIS 445"
+        ],
+        "data_and_computing": [
+          "CSS 301",
+          "CSS 370",
+          "CSS 475",
+          "CSS 486"
+        ],
+        "communication_and_context": [
+          "CSS 411",
+          "B BUS 300",
+          "BIS 340"
+        ]
+      },
+      "support_scope_notes": "Data Visualization is now strongly supported for analytics, dashboarding, data systems, and healthcare-data style planning. Wider IAS-only coursework is still not fully modeled.",
+      "source_url": "https://www.uwb.edu/ias/undergraduate/majors/data-visualization"
+    },
+    {
+      "major": "Business Administration",
+      "degree_type": "B.A.",
+      "school": "Business",
+      "support_tier": "strong-tech-pathway",
+      "aliases": [
+        "Business",
+        "BBA",
+        "Business Admin"
+      ],
+      "summary": "UW Bothell Business Administration includes analytics, MIS, and technology-focused concentrations. HuskyAdvisor supports the technology-facing side of this major rather than the entire business curriculum.",
+      "best_for": [
+        "management information systems",
+        "business analytics",
+        "technology and innovation management",
+        "digital transformation",
+        "cross-functional product and operations roles"
+      ],
+      "core_strengths": [
+        "strong business/technology bridge",
+        "good fit for analytics and information-systems roles",
+        "connects communication, strategy, and systems thinking"
+      ],
+      "typical_course_signals": [
+        "B BUS 300",
+        "BIS 315",
+        "BIS 340",
+        "BIS 360",
+        "BIS 445"
+      ],
+      "career_paths": [
+        "business analyst",
+        "MIS analyst",
+        "technology operations associate",
+        "digital transformation specialist"
+      ],
+      "good_fit_companies": [
+        "Microsoft Redmond",
+        "Amazon Bellevue",
+        "T-Mobile",
+        "UW Medicine"
+      ],
+      "course_groups": {
+        "communication_and_operations": [
+          "B BUS 300",
+          "BIS 340",
+          "BIS 360"
+        ],
+        "analytics_and_reporting": [
+          "BIS 315",
+          "BIS 445",
+          "CSS 370",
+          "CSS 475"
+        ],
+        "technology_bridge": [
+          "CSS 301",
+          "CSS 411",
+          "CSS 436"
+        ]
+      },
+      "support_scope_notes": "Business Administration support is now strong for MIS, analytics, and technology-facing concentrations. Finance, accounting, and marketing paths are still outside the deeper advising scope.",
+      "source_url": "https://www.uwb.edu/business/undergraduate/bachelor-of-business-administration"
+    }
+  ]
+}
