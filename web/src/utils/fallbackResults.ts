@@ -124,7 +124,7 @@ export const buildFallbackDashboardResults = (profile: StudentProfile): Dashboar
       ],
       [
         'Company recommendations are based on pathway tags, not scraped live job openings.',
-        'The full backend uses the 100+ company dataset for richer matching when reachable.',
+        'The full backend uses the 140-company dataset for richer matching when reachable.',
       ],
       ['This is not a live internship board; students should still verify current openings.'],
       profile,

@@ -1322,6 +1322,226 @@
         "B BUS 300"
       ],
       "reason": "Business-tech roles rely on analytics, systems analysis, product thinking, dashboards, and strong communication."
+    },
+    {
+      "company": "IBM",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 481",
+        "CSS 458",
+        "CSS 370",
+        "BIS 445"
+      ],
+      "reason": "Enterprise software roles value cloud platforms, production-quality engineering, data fluency, and business-systems understanding."
+    },
+    {
+      "company": "Netflix",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 430",
+        "CSS 458",
+        "CSS 481",
+        "CSS 475"
+      ],
+      "reason": "Large-scale software platform roles value distributed systems, cloud architecture, testing, databases, and web/backend engineering."
+    },
+    {
+      "company": "Uber",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 430",
+        "CSS 458",
+        "CSS 481",
+        "CSS 475"
+      ],
+      "reason": "Large-scale software platform roles value distributed systems, cloud architecture, testing, databases, and web/backend engineering."
+    },
+    {
+      "company": "Airbnb",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 430",
+        "CSS 458",
+        "CSS 481",
+        "CSS 475"
+      ],
+      "reason": "Large-scale software platform roles value distributed systems, cloud architecture, testing, databases, and web/backend engineering."
+    },
+    {
+      "company": "Walmart Global Tech",
+      "recommended_courses": [
+        "CSS 481",
+        "CSS 436",
+        "CSS 370",
+        "BIS 315",
+        "BIS 445"
+      ],
+      "reason": "Retail technology roles value e-commerce, analytics, cloud services, business systems, dashboards, and product-aware engineering."
+    },
+    {
+      "company": "JPMorgan Chase Technology",
+      "recommended_courses": [
+        "CSS 457",
+        "CSS 458",
+        "CSS 436",
+        "CSS 475",
+        "CSS 370"
+      ],
+      "reason": "Financial technology roles value secure systems, data platforms, reliability, cloud infrastructure, and software quality practices."
+    },
+    {
+      "company": "Capital One Technology",
+      "recommended_courses": [
+        "CSS 457",
+        "CSS 458",
+        "CSS 436",
+        "CSS 475",
+        "CSS 370"
+      ],
+      "reason": "Financial technology roles value secure systems, data platforms, reliability, cloud infrastructure, and software quality practices."
+    },
+    {
+      "company": "Visa Technology",
+      "recommended_courses": [
+        "CSS 457",
+        "CSS 458",
+        "CSS 436",
+        "CSS 475",
+        "CSS 370"
+      ],
+      "reason": "Financial technology roles value secure systems, data platforms, reliability, cloud infrastructure, and software quality practices."
+    },
+    {
+      "company": "Mastercard Technology",
+      "recommended_courses": [
+        "CSS 457",
+        "CSS 458",
+        "CSS 436",
+        "CSS 475",
+        "CSS 370"
+      ],
+      "reason": "Financial technology roles value secure systems, data platforms, reliability, cloud infrastructure, and software quality practices."
+    },
+    {
+      "company": "Target Tech",
+      "recommended_courses": [
+        "CSS 481",
+        "CSS 436",
+        "CSS 370",
+        "BIS 315",
+        "BIS 445"
+      ],
+      "reason": "Retail technology roles value e-commerce, analytics, cloud services, business systems, dashboards, and product-aware engineering."
+    },
+    {
+      "company": "Home Depot Technology",
+      "recommended_courses": [
+        "CSS 481",
+        "CSS 436",
+        "CSS 370",
+        "BIS 315",
+        "BIS 445"
+      ],
+      "reason": "Retail technology roles value e-commerce, analytics, cloud services, business systems, dashboards, and product-aware engineering."
+    },
+    {
+      "company": "Disney Streaming",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 430",
+        "CSS 458",
+        "CSS 481",
+        "CSS 475"
+      ],
+      "reason": "Large-scale software platform roles value distributed systems, cloud architecture, testing, databases, and web/backend engineering."
+    },
+    {
+      "company": "Intuit",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 481",
+        "CSS 458",
+        "CSS 370",
+        "BIS 445"
+      ],
+      "reason": "Enterprise software roles value cloud platforms, production-quality engineering, data fluency, and business-systems understanding."
+    },
+    {
+      "company": "Tesla Software",
+      "recommended_courses": [
+        "CSS 427",
+        "CSS 430",
+        "CSS 422",
+        "EE 450",
+        "CSS 458"
+      ],
+      "reason": "Automotive and hardware-adjacent software roles value embedded systems, operating systems, reliability, and hardware-software integration."
+    },
+    {
+      "company": "Ford Pro Software",
+      "recommended_courses": [
+        "CSS 427",
+        "CSS 430",
+        "CSS 422",
+        "EE 450",
+        "CSS 458"
+      ],
+      "reason": "Automotive and hardware-adjacent software roles value embedded systems, operating systems, reliability, and hardware-software integration."
+    },
+    {
+      "company": "General Motors Software",
+      "recommended_courses": [
+        "CSS 427",
+        "CSS 430",
+        "CSS 422",
+        "EE 450",
+        "CSS 458"
+      ],
+      "reason": "Automotive and hardware-adjacent software roles value embedded systems, operating systems, reliability, and hardware-software integration."
+    },
+    {
+      "company": "Nike Technology",
+      "recommended_courses": [
+        "CSS 481",
+        "CSS 436",
+        "CSS 370",
+        "BIS 315",
+        "BIS 445"
+      ],
+      "reason": "Retail technology roles value e-commerce, analytics, cloud services, business systems, dashboards, and product-aware engineering."
+    },
+    {
+      "company": "The Trade Desk",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 475",
+        "CSS 486",
+        "CSS 436",
+        "CSS 458"
+      ],
+      "reason": "Data-platform roles value databases, analytics, cloud infrastructure, visualization, and reliable software engineering."
+    },
+    {
+      "company": "DoorDash",
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 430",
+        "CSS 458",
+        "CSS 481",
+        "CSS 475"
+      ],
+      "reason": "Large-scale software platform roles value distributed systems, cloud architecture, testing, databases, and web/backend engineering."
+    },
+    {
+      "company": "Pinterest",
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 475",
+        "CSS 486",
+        "CSS 436",
+        "CSS 458"
+      ],
+      "reason": "Data-platform roles value databases, analytics, cloud infrastructure, visualization, and reliable software engineering."
     }
   ]
 }

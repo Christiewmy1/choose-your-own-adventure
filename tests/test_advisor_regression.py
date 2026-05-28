@@ -288,6 +288,29 @@ class AdvisorRegressionTests(unittest.TestCase):
         self.assertNotIn("Scope Warning", electives.title)
         self.assertTrue(any(code in " ".join(electives.recommendations) for code in ["CSS 436", "CSS 475", "CSS 481"]))
 
+    def test_fortune_500_software_employer_expansion_supports_exact_target(self) -> None:
+        profile = StudentProfile(
+            student_id="regression-14",
+            name="Fintech Student",
+            major="Computer Science and Software Engineering",
+            class_standing="Junior",
+            gpa=3.4,
+            completed_credits=95,
+            completed_courses=["CSS 142", "CSS 143", "CSS 301"],
+            preferred_learning_style="project-based",
+            career_goals=["software engineering", "security", "cloud", "financial technology"],
+            target_companies=["JPMorgan Chase Technology"],
+            internship_timeline="next summer",
+        )
+
+        companies = self.advisor.recommend_companies(profile)
+        electives = self.advisor.recommend_electives(profile, "JPMorgan Chase Technology")
+        joined = " ".join(companies.recommendations + companies.evidence + electives.recommendations + electives.evidence)
+
+        self.assertIn("JPMorgan Chase Technology", joined)
+        self.assertNotIn("Scope Warning", electives.title)
+        self.assertTrue(any(code in joined for code in ["CSS 436", "CSS 457", "CSS 458", "CSS 475"]))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -2177,6 +2177,366 @@
         "communication"
       ],
       "notes": "Best fit for students interested in MIS, analytics, digital transformation, and cross-functional product or operations work."
+    },
+    {
+      "company_id": "company-121",
+      "name": "IBM",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "enterprise software, hybrid cloud, consulting platforms, and AI-enabled business systems",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "software engineering",
+        "cloud",
+        "ai",
+        "data",
+        "business systems"
+      ],
+      "notes": "Fortune 500 technology employer with software engineering, cloud, AI, consulting, and enterprise platform roles."
+    },
+    {
+      "company_id": "company-122",
+      "name": "Netflix",
+      "city": "Los Gatos / Remote",
+      "domain_focus": "streaming platforms, personalization, distributed systems, and media infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "distributed systems",
+        "cloud",
+        "data",
+        "software engineering",
+        "testing"
+      ],
+      "notes": "Major software employer for students interested in scalable media systems, recommendation platforms, and production reliability."
+    },
+    {
+      "company_id": "company-123",
+      "name": "Uber",
+      "city": "San Francisco / Seattle",
+      "domain_focus": "marketplace platforms, maps, payments, data systems, and mobile infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "backend",
+        "mobile",
+        "data",
+        "distributed systems",
+        "product"
+      ],
+      "notes": "Software-heavy employer for students interested in consumer platforms, logistics, maps, payments, and large-scale backend systems."
+    },
+    {
+      "company_id": "company-124",
+      "name": "Airbnb",
+      "city": "San Francisco / Remote",
+      "domain_focus": "marketplace software, search, trust systems, payments, and user-facing product engineering",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "web development",
+        "backend",
+        "data",
+        "product",
+        "security"
+      ],
+      "notes": "Software-heavy employer for students interested in marketplace products, trust and safety systems, and polished user experiences."
+    },
+    {
+      "company_id": "company-125",
+      "name": "Walmart Global Tech",
+      "city": "Bentonville / Seattle / Remote",
+      "domain_focus": "retail platforms, supply-chain systems, e-commerce, data, and cloud infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "cloud",
+        "data",
+        "business systems",
+        "software engineering",
+        "analytics"
+      ],
+      "notes": "Fortune 500 technology organization hiring software engineers for retail, logistics, e-commerce, and data platforms."
+    },
+    {
+      "company_id": "company-126",
+      "name": "JPMorgan Chase Technology",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "financial platforms, risk systems, payments, cybersecurity, and cloud modernization",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "security",
+        "data",
+        "cloud",
+        "backend",
+        "reliability"
+      ],
+      "notes": "Fortune 500 financial technology employer with software engineering roles in payments, risk, infrastructure, and security."
+    },
+    {
+      "company_id": "company-127",
+      "name": "Capital One Technology",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "financial apps, cloud platforms, data engineering, machine learning, and cybersecurity",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "cloud",
+        "data",
+        "security",
+        "software engineering",
+        "product"
+      ],
+      "notes": "Financial technology employer known for cloud, data, cybersecurity, and customer-facing software engineering roles."
+    },
+    {
+      "company_id": "company-128",
+      "name": "Visa Technology",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "payment networks, fraud systems, data platforms, and secure transaction infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "security",
+        "data",
+        "backend",
+        "reliability",
+        "cloud"
+      ],
+      "notes": "Fortune 500 payments technology employer for students interested in secure, high-availability transaction systems."
+    },
+    {
+      "company_id": "company-129",
+      "name": "Mastercard Technology",
+      "city": "Multiple U.S. sites",
+      "domain_focus": "payments, cybersecurity, identity, analytics, and global transaction platforms",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "security",
+        "data",
+        "backend",
+        "analytics",
+        "reliability"
+      ],
+      "notes": "Payments technology employer for students interested in secure software, data products, identity, and global-scale platforms."
+    },
+    {
+      "company_id": "company-130",
+      "name": "Target Tech",
+      "city": "Minneapolis / Remote",
+      "domain_focus": "retail e-commerce, fulfillment systems, data platforms, and product engineering",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "web development",
+        "data",
+        "business systems",
+        "cloud",
+        "product"
+      ],
+      "notes": "Fortune 500 retailer with software engineering roles across e-commerce, fulfillment, analytics, and customer platforms."
+    },
+    {
+      "company_id": "company-131",
+      "name": "Home Depot Technology",
+      "city": "Atlanta / Remote",
+      "domain_focus": "retail platforms, supply-chain systems, mobile apps, and cloud services",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "cloud",
+        "web development",
+        "data",
+        "business systems",
+        "mobile"
+      ],
+      "notes": "Fortune 500 retailer hiring software engineers for digital commerce, mobile tools, logistics, and cloud platforms."
+    },
+    {
+      "company_id": "company-132",
+      "name": "Disney Streaming",
+      "city": "Seattle / New York / Los Angeles",
+      "domain_focus": "streaming platforms, media delivery, personalization, and consumer product engineering",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "distributed systems",
+        "web development",
+        "cloud",
+        "data",
+        "product"
+      ],
+      "notes": "Software-heavy media employer for students interested in streaming infrastructure, consumer apps, data, and reliability."
+    },
+    {
+      "company_id": "company-133",
+      "name": "Intuit",
+      "city": "Mountain View / Remote",
+      "domain_focus": "financial software, small-business platforms, tax products, data, and AI-assisted workflows",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "software engineering",
+        "data",
+        "cloud",
+        "product",
+        "ai"
+      ],
+      "notes": "Software company hiring engineers for financial products, data-driven customer experiences, and AI-assisted business tools."
+    },
+    {
+      "company_id": "company-134",
+      "name": "Tesla Software",
+      "city": "Austin / Fremont",
+      "domain_focus": "vehicle software, manufacturing systems, energy platforms, embedded systems, and data infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "embedded",
+        "systems",
+        "data",
+        "software engineering",
+        "reliability"
+      ],
+      "notes": "Software and systems employer for students interested in vehicle software, manufacturing automation, energy products, and embedded platforms."
+    },
+    {
+      "company_id": "company-135",
+      "name": "Ford Pro Software",
+      "city": "Dearborn / Palo Alto / Remote",
+      "domain_focus": "connected vehicle platforms, fleet software, telematics, and data products",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "embedded",
+        "cloud",
+        "data",
+        "mobile",
+        "systems"
+      ],
+      "notes": "Automotive software employer for students interested in connected vehicles, fleet platforms, telematics, and cloud-backed product engineering."
+    },
+    {
+      "company_id": "company-136",
+      "name": "General Motors Software",
+      "city": "Detroit / Austin / Remote",
+      "domain_focus": "vehicle software, autonomous systems, manufacturing platforms, and cloud-connected services",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "embedded",
+        "systems",
+        "cloud",
+        "data",
+        "testing"
+      ],
+      "notes": "Automotive technology employer for students interested in embedded software, connected services, and large-scale engineering systems."
+    },
+    {
+      "company_id": "company-137",
+      "name": "Nike Technology",
+      "city": "Beaverton / Remote",
+      "domain_focus": "commerce platforms, consumer apps, data products, supply-chain systems, and digital experiences",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "web development",
+        "mobile",
+        "data",
+        "product",
+        "business systems"
+      ],
+      "notes": "Fortune 500 consumer technology organization hiring software engineers across commerce, mobile apps, analytics, and platform teams."
+    },
+    {
+      "company_id": "company-138",
+      "name": "The Trade Desk",
+      "city": "Bellevue / Ventura",
+      "domain_focus": "advertising platforms, real-time bidding, data systems, and distributed infrastructure",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "distributed systems",
+        "data",
+        "backend",
+        "cloud",
+        "analytics"
+      ],
+      "notes": "Software-heavy employer with Bellevue presence for students interested in high-scale data systems and backend infrastructure."
+    },
+    {
+      "company_id": "company-139",
+      "name": "DoorDash",
+      "city": "San Francisco / Seattle / Remote",
+      "domain_focus": "logistics platforms, marketplaces, payments, mobile apps, and data systems",
+      "hiring_seasons": [
+        "fall",
+        "winter"
+      ],
+      "target_skills": [
+        "backend",
+        "mobile",
+        "data",
+        "distributed systems",
+        "product"
+      ],
+      "notes": "Software-heavy employer for students interested in delivery logistics, marketplace products, experimentation, and mobile/backend systems."
+    },
+    {
+      "company_id": "company-140",
+      "name": "Pinterest",
+      "city": "San Francisco / Seattle / Remote",
+      "domain_focus": "recommendation systems, visual discovery, ads platforms, data infrastructure, and product engineering",
+      "hiring_seasons": [
+        "fall",
+        "spring"
+      ],
+      "target_skills": [
+        "data",
+        "ai",
+        "web development",
+        "backend",
+        "product"
+      ],
+      "notes": "Software-heavy employer for students interested in recommendation systems, data platforms, ads engineering, and consumer products."
     }
   ]
 }

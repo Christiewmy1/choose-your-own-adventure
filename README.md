@@ -63,7 +63,7 @@ The older CLI prototype still exists for direct testing, but it is no longer the
   - Data Visualization
   - technology-facing Business Administration
 - 122 course records in the main advising dataset
-- 120 company targets in the company dataset
+- 140 company targets in the company dataset, including regional employers, Fortune 500 technology teams, financial technology, retail technology, automotive software, streaming/media platforms, and consumer software companies
 - completed-course filtering so already taken courses are not recommended again
 - company-aware internship-prep and roadmap matching
 - stress-test coverage across 58 simulated student profiles

@@ -42,7 +42,7 @@ This file is kept as a raw reference import. It is not used directly by the main
 **Role:** Local company alignment  
 **Trust level:** Medium
 
-This dataset represents plausible regional employers and target skill areas. It is meant for guidance and demo use, not as live recruiting data.
+This dataset represents 140 plausible regional, Fortune 500, and software-heavy employers with target skill areas. It is meant for guidance and demo use, not as live recruiting data.
 
 ### `data/crawl4ai/raw/`
 

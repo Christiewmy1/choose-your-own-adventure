@@ -34,12 +34,15 @@ Representative examples:
 
 ### Career Alignment Coverage
 
-The current project has enough data to support believable alignment for:
+The current project has enough data to support believable alignment for 140 company targets, including:
 - Boeing
 - Microsoft
 - Amazon
 - T-Mobile
 - Google
+- Fortune 500 software and platform teams such as Walmart Global Tech, JPMorgan Chase Technology, Capital One Technology, Visa Technology, Target Tech, and Nike Technology
+- software-heavy consumer/platform employers such as Netflix, Uber, Airbnb, DoorDash, Pinterest, Disney Streaming, and Intuit
+- automotive and connected-systems employers such as Tesla Software, Ford Pro Software, and General Motors Software
 
 These companies have matching:
 - target skills

@@ -207,7 +207,7 @@ const ProfileForm = ({ profile, error, fieldErrors = {}, onSubmit, onBack }: Pro
               </option>
             ))}
           </select>
-          <p className="small-copy">Current dataset includes 100+ companies across aerospace, cloud, security, healthcare, gaming, AI/data, and business-tech pathways.</p>
+          <p className="small-copy">Current dataset includes 140 companies across aerospace, cloud, security, healthcare, gaming, AI/data, Fortune 500 software teams, financial technology, retail technology, and business-tech pathways.</p>
         </div>
 
         <div className="form-actions full-width">

@@ -4,24 +4,197 @@
   "profiles": [
     {
       "canonical_name": "UW Medicine",
-      "aliases": ["UW Hospital", "UW Medicine", "University of Washington Medical Center", "Harborview", "healthcare technology", "hospital IT"],
+      "aliases": [
+        "UW Hospital",
+        "UW Medicine",
+        "University of Washington Medical Center",
+        "Harborview",
+        "healthcare technology",
+        "hospital IT"
+      ],
       "domain_focus": "clinical systems, health data, privacy, and technology-enabled care",
-      "target_skills": ["data", "cloud", "security", "privacy", "integration", "reliability"],
-      "recommended_courses": ["CSS 370", "CSS 436", "CSS 457", "CSS 458", "CSS 481"]
+      "target_skills": [
+        "data",
+        "cloud",
+        "security",
+        "privacy",
+        "integration",
+        "reliability"
+      ],
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 457",
+        "CSS 458",
+        "CSS 481"
+      ]
     },
     {
       "canonical_name": "Providence",
-      "aliases": ["Providence", "Providence Health", "digital health", "health innovation", "healthcare apps"],
+      "aliases": [
+        "Providence",
+        "Providence Health",
+        "digital health",
+        "health innovation",
+        "healthcare apps"
+      ],
       "domain_focus": "digital health, consumer-facing healthcare technology, and care-platform innovation",
-      "target_skills": ["product", "cloud", "data", "integration", "security", "software engineering"],
-      "recommended_courses": ["CSS 370", "CSS 436", "CSS 481", "CSS 486", "CSS 457"]
+      "target_skills": [
+        "product",
+        "cloud",
+        "data",
+        "integration",
+        "security",
+        "software engineering"
+      ],
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 436",
+        "CSS 481",
+        "CSS 486",
+        "CSS 457"
+      ]
     },
     {
       "canonical_name": "Fred Hutch",
-      "aliases": ["Fred Hutch", "Fred Hutch Cancer Center", "biomedical research", "research computing", "health data"],
+      "aliases": [
+        "Fred Hutch",
+        "Fred Hutch Cancer Center",
+        "biomedical research",
+        "research computing",
+        "health data"
+      ],
       "domain_focus": "research computing, data-intensive science, privacy-first AI, and clinical data systems",
-      "target_skills": ["data", "ai", "privacy", "security", "cloud", "software engineering"],
-      "recommended_courses": ["CSS 370", "CSS 382", "CSS 436", "CSS 457", "CSS 486"]
+      "target_skills": [
+        "data",
+        "ai",
+        "privacy",
+        "security",
+        "cloud",
+        "software engineering"
+      ],
+      "recommended_courses": [
+        "CSS 370",
+        "CSS 382",
+        "CSS 436",
+        "CSS 457",
+        "CSS 486"
+      ]
+    },
+    {
+      "canonical_name": "Financial Technology Employers",
+      "aliases": [
+        "JPMorgan Chase",
+        "Capital One",
+        "Visa",
+        "Mastercard",
+        "fintech",
+        "payments",
+        "banking technology"
+      ],
+      "domain_focus": "payments, risk systems, fraud detection, secure financial platforms, and cloud modernization",
+      "target_skills": [
+        "security",
+        "data",
+        "cloud",
+        "backend",
+        "reliability",
+        "software engineering"
+      ],
+      "recommended_courses": [
+        "CSS 457",
+        "CSS 458",
+        "CSS 436",
+        "CSS 475",
+        "CSS 370"
+      ]
+    },
+    {
+      "canonical_name": "Retail and Commerce Technology Employers",
+      "aliases": [
+        "Walmart Global Tech",
+        "Target Tech",
+        "Home Depot Technology",
+        "Nike Technology",
+        "retail tech",
+        "e-commerce",
+        "commerce platforms"
+      ],
+      "domain_focus": "e-commerce, supply-chain software, consumer apps, analytics, and business systems",
+      "target_skills": [
+        "web development",
+        "cloud",
+        "data",
+        "business systems",
+        "analytics",
+        "product"
+      ],
+      "recommended_courses": [
+        "CSS 481",
+        "CSS 436",
+        "CSS 370",
+        "BIS 315",
+        "BIS 445"
+      ]
+    },
+    {
+      "canonical_name": "Consumer Software Platform Employers",
+      "aliases": [
+        "Netflix",
+        "Uber",
+        "Airbnb",
+        "DoorDash",
+        "Pinterest",
+        "Disney Streaming",
+        "consumer software",
+        "marketplace platforms",
+        "streaming platforms"
+      ],
+      "domain_focus": "large-scale consumer products, recommendation systems, distributed infrastructure, payments, and experimentation platforms",
+      "target_skills": [
+        "distributed systems",
+        "backend",
+        "data",
+        "cloud",
+        "product",
+        "web development"
+      ],
+      "recommended_courses": [
+        "CSS 436",
+        "CSS 430",
+        "CSS 475",
+        "CSS 481",
+        "CSS 458"
+      ]
+    },
+    {
+      "canonical_name": "Automotive and Connected Systems Employers",
+      "aliases": [
+        "Tesla",
+        "Tesla Software",
+        "Ford Pro",
+        "Ford Pro Software",
+        "General Motors",
+        "GM Software",
+        "connected vehicles",
+        "automotive software"
+      ],
+      "domain_focus": "vehicle software, embedded platforms, telemetry, manufacturing systems, and connected cloud services",
+      "target_skills": [
+        "embedded",
+        "systems",
+        "cloud",
+        "data",
+        "testing",
+        "reliability"
+      ],
+      "recommended_courses": [
+        "CSS 427",
+        "CSS 430",
+        "CSS 422",
+        "EE 450",
+        "CSS 458"
+      ]
     }
   ]
 }
