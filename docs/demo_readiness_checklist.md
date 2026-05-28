@@ -50,6 +50,15 @@ This checklist is for the team to confirm the project is truly demo-ready before
 - API health check: `https://choose-your-own-adventure-bay.vercel.app/health`
 - API base URL: `https://choose-your-own-adventure-bay.vercel.app`
 
+## Final Deployment Freshness Check
+
+- [x] Local recommendation engine passes the 560-profile deep QA simulation.
+- [x] Local API contract includes `ai_trace`.
+- [x] Public backend health endpoint responds.
+- [ ] Public backend has redeployed the newest branch data/code.
+
+Current note: during the deep QA pass, the public backend was alive but stale. It still treated `JPMorgan Chase Technology` as unsupported and did not expose the newest `ai_trace` response shape. Redeploy the backend before final grading if you want the live public API to reflect the newest 140-company dataset and AI trace.
+
 ## Best Live Demo Profile
 
 - Major: `Computer Science and Software Engineering`

@@ -65,6 +65,11 @@ class HuskyAdvisorEngine:
             f"{item.course.course_code} {item.course.title}: {item.course.description}" for item in top_courses
         ]
         evidence = [reason for item in top_courses for reason in item.evidence[:2]]
+        if target:
+            evidence.insert(
+                0,
+                f"Target company/field resolved to {target.name}, with emphasis on {target.domain_focus}.",
+            )
         cautions = [
             f"Check prerequisites for {item.course.course_code}: {item.course.prerequisite_text}."
             for item in top_courses
@@ -120,7 +125,7 @@ class HuskyAdvisorEngine:
                 )
 
             if company.name in resolved_targets:
-                score += 2
+                score += 10
                 evidence.append(f"{company.name} is already one of your stated or inferred target companies.")
 
             ranked.append((score, company, evidence))
@@ -581,6 +586,7 @@ class HuskyAdvisorEngine:
         ]
         cautions = [
             "Showing a generic recommendation here would be misleading, so HuskyAdvisor is intentionally warning instead.",
+            "This is not a live job board or official advising result.",
         ]
         return AdvisingResult(
             title=title,

@@ -52,3 +52,8 @@ The public demo does not currently require password-protected access. No credent
 - GitHub Pages caching can temporarily show stale website assets.
 - If the public API is temporarily unavailable, the frontend now shows a clearly labeled demo-safe fallback instead of a broken result page.
 - Browser-opened API POST routes can show 405 or 404 if visited directly; the public website calls them with POST requests.
+- The public Vercel backend may lag behind the latest `HuskyAdvisor` branch changes unless the backend deployment is manually refreshed or configured to deploy that branch.
+
+## Latest QA finding
+
+The local code passed a 560-profile deep QA simulation and API contract tests. The public backend health check responded, but the deployed backend appeared stale relative to the newest local code/data because it did not yet recognize `JPMorgan Chase Technology` from the expanded company dataset and did not return the newest `ai_trace` response field. Before final grading, refresh the backend deployment and retest one expanded-company profile.
