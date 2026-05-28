@@ -1,9 +1,16 @@
 import { useEffect, useState } from 'react';
 import type { StudentProfile } from '../types';
+import { fieldHelp, majorOptions } from '../constants';
+import { samplePersonas } from '../data/personas';
+import { careerGoalSuggestions, commonCoursesByMajor } from '../data/careerGoalSuggestions';
+import { companyOptions } from '../data/companyOptions';
+import CourseTagInput from '../components/CourseTagInput';
+import TagInput from '../components/TagInput';
 
 interface ProfileFormProps {
   profile: StudentProfile;
   error: string;
+  fieldErrors?: Partial<Record<keyof StudentProfile, string>>;
   onSubmit: (profile: StudentProfile) => void;
   onBack: () => void;
 }
@@ -16,8 +23,26 @@ const standingOptions: StudentProfile['standing'][] = [
   'Graduate',
 ];
 
-const ProfileForm = ({ profile, error, onSubmit, onBack }: ProfileFormProps) => {
+const FEATURED_PERSONA_COUNT = 3;
+
+const mergeCourses = (existing: string, toAdd: string[]) => {
+  const current = existing
+    .split(',')
+    .map(item => item.trim())
+    .filter(Boolean);
+  const merged = [...current];
+  for (const code of toAdd) {
+    if (!merged.includes(code)) {
+      merged.push(code);
+    }
+  }
+  return merged.join(', ');
+};
+
+const ProfileForm = ({ profile, error, fieldErrors = {}, onSubmit, onBack }: ProfileFormProps) => {
   const [localProfile, setLocalProfile] = useState(profile);
+  const [selectedPersonaId, setSelectedPersonaId] = useState('');
+  const [showAllPersonas, setShowAllPersonas] = useState(false);
 
   useEffect(() => {
     setLocalProfile(profile);
@@ -30,13 +55,59 @@ const ProfileForm = ({ profile, error, onSubmit, onBack }: ProfileFormProps) => 
     }));
   };
 
+  const applyPersona = (personaId: string) => {
+    const persona = samplePersonas.find(item => item.id === personaId);
+    if (!persona) {
+      return;
+    }
+    setSelectedPersonaId(personaId);
+    setLocalProfile(persona.profile);
+  };
+
+  const addCommonCourses = () => {
+    const courses = commonCoursesByMajor[localProfile.major] ?? [];
+    if (courses.length === 0) {
+      return;
+    }
+    updateField('completedCourses', mergeCourses(localProfile.completedCourses, courses));
+  };
+
+  const visiblePersonas = showAllPersonas ? samplePersonas : samplePersonas.slice(0, FEATURED_PERSONA_COUNT);
+
   return (
     <section className="section-panel card profile-panel">
       <div className="profile-header">
         <div>
           <span className="eyebrow">Your Husky profile</span>
           <h2>Tell us about your major, progress, and career direction.</h2>
-          <p>We’ll use this information to generate course recommendations and company alignment insights.</p>
+          <p>We use this to generate course picks, company alignment, internship prep, and a quarter roadmap.</p>
+        </div>
+      </div>
+
+      <div className="persona-section">
+        <div className="persona-section-header">
+          <div>
+            <h3>Quick demos</h3>
+            <p className="small-copy">Load a sample student to explore HuskyAdvisor instantly.</p>
+          </div>
+          {samplePersonas.length > FEATURED_PERSONA_COUNT && (
+            <button type="button" className="button-ghost" onClick={() => setShowAllPersonas(prev => !prev)}>
+              {showAllPersonas ? 'Show fewer' : `Show all ${samplePersonas.length}`}
+            </button>
+          )}
+        </div>
+        <div className="persona-grid">
+          {visiblePersonas.map(persona => (
+            <button
+              key={persona.id}
+              type="button"
+              className={`persona-chip${selectedPersonaId === persona.id ? ' persona-chip-active' : ''}`}
+              onClick={() => applyPersona(persona.id)}
+            >
+              <span className="persona-label">{persona.label}</span>
+              <span className="persona-description">{persona.description}</span>
+            </button>
+          ))}
         </div>
       </div>
 
@@ -49,65 +120,97 @@ const ProfileForm = ({ profile, error, onSubmit, onBack }: ProfileFormProps) => 
         }}
         className="form-grid"
       >
-        <div className="input-group">
+        <h3 className="form-section-title full-width">Academics</h3>
+
+        <div className={`input-group${fieldErrors.major ? ' has-error' : ''}`}>
           <label htmlFor="major">Major</label>
-          <input
+          <p className="field-help">{fieldHelp.major}</p>
+          <select
             id="major"
             value={localProfile.major}
             onChange={e => updateField('major', e.target.value)}
-            placeholder="e.g. CSSE, Applied Computing, Electrical Engineering, Computer Engineering"
             required
-          />
+          >
+            <option value="">Select a major</option>
+            {majorOptions.map(option => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          {fieldErrors.major && <p className="field-error">{fieldErrors.major}</p>}
           <p className="small-copy">Current prototype scope: UW Bothell CSSE, Applied Computing, Electrical Engineering, Computer Engineering, Data Visualization, and the technology-facing side of Business Administration.</p>
         </div>
 
         <div className="input-group">
           <label htmlFor="standing">Current standing</label>
+          <p className="field-help">{fieldHelp.standing}</p>
           <select
             id="standing"
             value={localProfile.standing}
             onChange={e => updateField('standing', e.target.value)}
           >
             {standingOptions.map(option => (
-              <option key={option} value={option}>{option}</option>
+              <option key={option} value={option}>
+                {option}
+              </option>
             ))}
           </select>
         </div>
 
-        <div className="input-group full-width">
-          <label htmlFor="completedCourses">Completed courses</label>
-          <textarea
+        <div className="full-width">
+          <CourseTagInput
             id="completedCourses"
+            label="Completed courses"
+            help={fieldHelp.completedCourses}
             value={localProfile.completedCourses}
-            onChange={e => updateField('completedCourses', e.target.value)}
+            onChange={value => updateField('completedCourses', value)}
+            onAddCommon={localProfile.major ? addCommonCourses : undefined}
+            commonLabel={
+              localProfile.major
+                ? `Add common ${localProfile.major} courses`
+                : undefined
+            }
             placeholder="List the classes you’ve already taken (e.g. CSS 142, CSS 143, CSS 301, MATH 124)."
           />
           <p className="small-copy">Best results come from UWB-style course histories such as CSS, EE, BIS, and related math courses.</p>
         </div>
 
-        <div className="input-group full-width">
-          <label htmlFor="careerGoals">Career goals</label>
-          <textarea
+        <h3 className="form-section-title full-width">Career direction</h3>
+
+        <div className="full-width">
+          <TagInput
             id="careerGoals"
+            label="Career goals"
+            help={fieldHelp.careerGoals}
             value={localProfile.careerGoals}
-            onChange={e => updateField('careerGoals', e.target.value)}
-            placeholder="Use commas to list goals like systems, embedded, software engineering, cloud."
+            suggestions={[...careerGoalSuggestions]}
+            placeholder="Add goals like cloud, embedded, analytics"
             required
+            error={fieldErrors.careerGoals}
+            onChange={value => updateField('careerGoals', value)}
           />
         </div>
 
         <div className="input-group full-width">
-          <label htmlFor="targetCompanies">Target companies or field</label>
-          <textarea
+          <label htmlFor="targetCompanies">Target company</label>
+          <p className="field-help">{fieldHelp.targetCompanies}</p>
+          <select
             id="targetCompanies"
             value={localProfile.targetCompanies}
             onChange={e => updateField('targetCompanies', e.target.value)}
-            placeholder="Optional: Boeing, Snowflake, Deloitte, Nintendo of America, Seattle Children's"
-          />
+          >
+            <option value="">Optional — select a company</option>
+            {companyOptions.map(company => (
+              <option key={company} value={company}>
+                {company}
+              </option>
+            ))}
+          </select>
           <p className="small-copy">Current dataset includes 100+ companies across aerospace, cloud, security, healthcare, gaming, AI/data, and business-tech pathways.</p>
         </div>
 
-        <div className="form-actions">
+        <div className="form-actions full-width">
           <button className="button-secondary" onClick={onBack} type="button">
             Back to landing
           </button>

@@ -95,5 +95,27 @@
       "distributed systems",
       "production readiness"
     ]
+  },
+  {
+    "persona_id": "junior_data_science_fred_hutch",
+    "name": "Quinn",
+    "major": "Data Science",
+    "class_standing": "Junior",
+    "completed_courses": ["CSS 123", "STMATH 124", "STMATH 125", "B BIO 180"],
+    "career_goals": ["machine learning", "research computing", "health data"],
+    "target_company": "Fred Hutch",
+    "target_field": "research data science",
+    "expected_focus": ["data pipelines", "modeling", "privacy-aware analysis"]
+  },
+  {
+    "persona_id": "sophomore_it_att",
+    "name": "Jamie",
+    "major": "Information Technology",
+    "class_standing": "Sophomore",
+    "completed_courses": ["BIS 111", "BIS 200", "BIS 221", "CSS 110"],
+    "career_goals": ["infrastructure", "security operations", "networking"],
+    "target_company": "AT&T Bothell",
+    "target_field": "IT and network operations",
+    "expected_focus": ["support workflows", "security awareness", "infrastructure reliability"]
   }
 ]

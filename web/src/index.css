@@ -136,6 +136,9 @@ button {
 }
 
 .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 28px;
 }
 
@@ -353,12 +356,21 @@ button {
     align-items: stretch;
   }
 
-  .feature-section {
+  .feature-section,
+  .how-it-works,
+  .persona-grid,
+  .results-overview {
     grid-template-columns: 1fr;
   }
 
   .results-grid {
     grid-template-columns: 1fr;
+  }
+
+  .progress-stepper {
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
@@ -387,11 +399,36 @@ p {
 }
 
 .button-primary,
-.button-secondary {
+.button-secondary,
+.button-ghost {
   border: none;
   border-radius: 999px;
   padding: 14px 24px;
   font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.button-primary:hover,
+.button-secondary:hover,
+.button-ghost:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary:focus-visible,
+.button-secondary:focus-visible,
+.button-ghost:focus-visible,
+.tab-button:focus-visible,
+.persona-chip:focus-visible,
+.step-item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(75, 46, 131, 0.18);
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--brand-purple);
+  padding: 8px 14px;
+  font-size: 0.92rem;
 }
 
 .button-primary {
@@ -469,6 +506,517 @@ input:focus, textarea:focus, select:focus {
   gap: 24px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
+.progress-stepper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-align: left;
+}
+
+.step-item:not(:disabled):hover {
+  background: rgba(75, 46, 131, 0.06);
+}
+
+.step-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.step-dot {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(75, 46, 131, 0.08);
+  color: var(--brand-purple);
+  font-size: 0.82rem;
+}
+
+.step-active {
+  color: var(--brand-purple);
+}
+
+.step-active .step-dot {
+  background: var(--brand-purple);
+  color: white;
+}
+
+.step-complete .step-dot {
+  background: rgba(75, 46, 131, 0.18);
+}
+
+.disclaimer-banner {
+  margin: 20px 0;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(75, 46, 131, 0.06);
+  border: 1px solid rgba(75, 46, 131, 0.12);
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.disclaimer-footer {
+  max-width: 760px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.field-help {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.persona-section {
+  margin-bottom: 24px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(75, 46, 131, 0.04);
+  border: 1px solid rgba(75, 46, 131, 0.08);
+}
+
+.persona-section h3 {
+  margin-bottom: 6px;
+}
+
+.persona-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 14px;
+}
+
+@media (max-width: 1100px) {
+  .persona-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.persona-chip {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(75, 46, 131, 0.14);
+  background: white;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.persona-chip:hover,
+.persona-chip-active {
+  border-color: var(--brand-purple);
+  box-shadow: 0 0 0 4px rgba(75, 46, 131, 0.08);
+}
+
+.persona-label {
+  font-weight: 700;
+  color: var(--brand-purple);
+}
+
+.persona-description {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.profile-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.summary-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(75, 46, 131, 0.08);
+  color: var(--brand-purple);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.profile-detail-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.results-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab-button {
+  border: 1px solid rgba(75, 46, 131, 0.16);
+  background: white;
+  color: var(--brand-purple);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+}
+
+.tab-button-active {
+  background: var(--brand-purple);
+  color: white;
+  border-color: var(--brand-purple);
+}
+
+.tab-panel {
+  padding: 24px;
+}
+
+.section-description {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin: 0 0 8px;
+}
+
+.evidence-box {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(75, 46, 131, 0.06);
+  border: 1px solid rgba(75, 46, 131, 0.12);
+}
+
+.structured-list {
+  display: grid;
+  gap: 12px;
+}
+
+.structured-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.course-code-badge {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--brand-purple);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.grouped-results,
+.timeline-results {
+  display: grid;
+  gap: 16px;
+}
+
+.timeline-block {
+  padding-left: 14px;
+  border-left: 3px solid rgba(75, 46, 131, 0.22);
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.example-section,
+.how-it-works {
+  margin-top: 24px;
+}
+
+.example-panel {
+  padding: 24px;
+}
+
+.example-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.section-title {
+  grid-column: 1 / -1;
+  margin-bottom: 4px;
+}
+
+.step-number {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: rgba(75, 46, 131, 0.12);
+  color: var(--brand-purple);
+  font-weight: 700;
+}
+
+.how-it-works {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-section-title {
+  margin: 8px 0 0;
+  color: var(--brand-purple);
+  font-size: 1rem;
+}
+
+.field-error {
+  margin: 0;
+  color: #9b1c55;
+  font-size: 0.88rem;
+}
+
+.input-group.has-error select,
+.tag-input-group.has-error .tag-input-shell {
+  border-color: rgba(155, 28, 85, 0.55);
+  box-shadow: 0 0 0 4px rgba(155, 28, 85, 0.08);
+}
+
+.persona-section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.tag-input-shell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  min-height: 56px;
+  padding: 10px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(75, 46, 131, 0.16);
+  background: #fff;
+}
+
+.tag-input-field {
+  flex: 1;
+  min-width: 160px;
+  border: none;
+  padding: 6px 4px;
+  background: transparent;
+}
+
+.tag-input-field:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(75, 46, 131, 0.1);
+  color: var(--brand-purple);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.tag-remove {
+  border: none;
+  background: transparent;
+  color: var(--brand-purple);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+}
+
+.tag-suggestions {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 6px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: white;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 4px;
+}
+
+.tag-suggestions button {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--text);
+}
+
+.tag-suggestions button:hover {
+  background: rgba(75, 46, 131, 0.08);
+}
+
+.course-tag-input {
+  display: grid;
+  gap: 10px;
+}
+
+.selected-course-preview {
+  display: grid;
+  gap: 4px;
+}
+
+.results-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+
+.overview-card {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(75, 46, 131, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.overview-card:hover,
+.overview-card-active {
+  border-color: var(--brand-purple);
+  box-shadow: 0 0 0 4px rgba(75, 46, 131, 0.08);
+}
+
+.overview-icon {
+  font-size: 1.2rem;
+}
+
+.overview-label {
+  font-weight: 700;
+  color: var(--brand-purple);
+}
+
+.overview-count {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.overview-title {
+  margin: 0;
+}
+
+.tab-icon {
+  margin-right: 6px;
+}
+
+.course-card-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.course-card {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(75, 46, 131, 0.1);
+  background: rgba(75, 46, 131, 0.03);
+}
+
+.course-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.course-card-header h5 {
+  margin: 0;
+  color: var(--text);
+}
+
+.course-card-caution {
+  margin: 12px 0 0;
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(232, 184, 75, 0.14);
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.local-api-help {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(75, 46, 131, 0.06);
+}
+
+.local-api-help code {
+  display: block;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #1e1630;
+  color: #f6f2ff;
+  font-size: 0.84rem;
+  overflow-x: auto;
+}
+
+.copy-feedback {
+  margin: 0 0 12px;
+  color: var(--brand-purple);
+  font-weight: 600;
+}
+
+.example-button-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.example-question-button {
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(75, 46, 131, 0.14);
+  background: white;
+  color: var(--brand-purple);
+  font-weight: 600;
+}
+
+.example-question-button:hover {
+  border-color: var(--brand-purple);
+  box-shadow: 0 0 0 4px rgba(75, 46, 131, 0.08);
+}
+
 
 @media (max-width: 850px) {
   .grid-2 {
