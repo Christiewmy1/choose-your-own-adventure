@@ -1,13 +1,12 @@
 import type { AdvisingResult, DashboardResults, StudentProfile } from './types';
 
 const DEFAULT_LOCAL_API = 'http://127.0.0.1:8010';
-const DEFAULT_PUBLIC_API = 'https://choose-your-own-adventure-bay.vercel.app';
 export const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
   (typeof window !== 'undefined' &&
   (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ? DEFAULT_LOCAL_API
-    : DEFAULT_PUBLIC_API);
+    : '');
 const COURSE_CODE_PATTERN = /\b([A-Z]{2,6}|[A-Z]\s+[A-Z]{2,6})\s*-?\s*(\d{3})\b/g;
 
 interface ProfilePayload {
