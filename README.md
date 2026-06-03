@@ -71,7 +71,7 @@ The older CLI prototype still exists for direct testing, but it is no longer the
 - 140 company targets in the company dataset, including regional employers, Fortune 500 technology teams, financial technology, retail technology, automotive software, streaming/media platforms, and consumer software companies
 - completed-course filtering so already taken courses are not recommended again
 - company-aware internship-prep and roadmap matching
-- stress-test coverage across 58 simulated student profiles
+- stress-test coverage across 560 simulated student profiles
 - regression coverage for core advising flows
 
 ## Current limitations
@@ -113,7 +113,10 @@ npm run dev
 The frontend uses:
 
 - `http://127.0.0.1:8010` when running locally
-- `https://choose-your-own-adventure-bay.vercel.app` as the default deployed API target
+- `https://choose-your-own-adventure-bay.vercel.app` from GitHub Pages or when `VITE_API_BASE_URL` is configured
+- relative `/api` and `/health` calls when hosted on Vercel with `web/vercel.json` rewrites
+
+The `/health` response includes the current API contract marker, major count, course count, and company count. This lets the team verify that the public backend is running the latest AI trace contract and 140-company dataset before demoing.
 
 ## Repository structure
 

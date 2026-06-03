@@ -36,7 +36,12 @@ class ApiContractTests(unittest.TestCase):
     def test_health_endpoint(self) -> None:
         response = self.client.get("/health")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json(), {"status": "ok"})
+        payload = response.json()
+        self.assertEqual(payload["status"], "ok")
+        self.assertEqual(payload["api_contract"], "ai_trace_v1")
+        self.assertGreaterEqual(payload["supported_major_pathways"], 6)
+        self.assertGreaterEqual(payload["course_records"], 120)
+        self.assertGreaterEqual(payload["company_records"], 140)
 
     def test_profile_dashboard_endpoints_return_contract_shape(self) -> None:
         for path in [

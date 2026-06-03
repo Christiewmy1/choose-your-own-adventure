@@ -23,6 +23,7 @@ app.add_middleware(
         "https://christiewmy1.github.io",  # Christy's deployed site
         "https://christiewmy1.github.io/choose-your-own-adventure/",
         "https://huskyadvisor.vercel.app",  # Vercel frontend
+        "https://choose-your-own-adventure-bay.vercel.app",
         "http://127.0.0.1:4173",
         "http://localhost:4173",
         "http://localhost:5173",
@@ -33,7 +34,7 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "http://127.0.0.1:3001",
     ],
-    allow_origin_regex=r"(^https?://(localhost|127\.0\.0\.1)(:\d+)?$)|(^https://[a-zA-Z0-9-]+-[a-zA-Z0-9-]+\.hf\.space$)",
+    allow_origin_regex=r"(^https?://(localhost|127\.0\.0\.1)(:\d+)?$)|(^https://[a-zA-Z0-9-]+\.vercel\.app$)|(^https://[a-zA-Z0-9-]+-[a-zA-Z0-9-]+\.hf\.space$)",
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
@@ -42,5 +43,14 @@ app.include_router(profile_router)
 
 
 @app.get("/health")
-def health() -> dict[str, str]:
-    return {"status": "ok"}
+def health() -> dict[str, object]:
+    engine = get_engine()
+    return {
+        "status": "ok",
+        "app": "HuskyAdvisor API",
+        "api_contract": "ai_trace_v1",
+        "supported_major_pathways": len(engine.majors),
+        "course_records": len(engine.courses),
+        "company_records": len(engine.companies),
+        "crawl4ai_pipeline": "raw_and_normalized_data_separated",
+    }

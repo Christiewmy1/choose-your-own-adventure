@@ -42,5 +42,4 @@
 
 - This stress test validates deterministic engine behavior and API shape; it does not prove official degree accuracy.
 - Public endpoint checks depend on current network availability and deployment state.
-- Earlier manual curl checks showed the public backend responding but stale relative to the newest branch; refresh/redeploy the backend before final grading and rerun with `--public`.
 - Crawl4AI is validated as a data-ingestion/normalization pipeline; crawled facts still require human review before becoming trusted advising data.
