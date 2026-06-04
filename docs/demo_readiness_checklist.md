@@ -47,17 +47,17 @@ This checklist is for the team to confirm the project is truly demo-ready before
 ## Demo URLs
 
 - Public website: `https://christiewmy1.github.io/choose-your-own-adventure/`
-- API health check: `https://choose-your-own-adventure-bay.vercel.app/health`
-- API base URL: `https://choose-your-own-adventure-bay.vercel.app`
+- API health check: `https://huskyadvisor-api-matiyas.vercel.app/health`
+- API base URL: `https://huskyadvisor-api-matiyas.vercel.app`
 
 ## Final Deployment Freshness Check
 
 - [x] Local recommendation engine passes the 560-profile deep QA simulation.
 - [x] Local API contract includes `ai_trace`.
 - [x] Public backend health endpoint responds.
-- [ ] Public backend has redeployed the newest branch data/code.
+- [x] Public backend has redeployed the newest branch data/code.
 
-Current note: during the deep QA pass, the public backend was alive but stale. It still treated `JPMorgan Chase Technology` as unsupported and did not expose the newest `ai_trace` response shape. Redeploy the backend before final grading if you want the live public API to reflect the newest 140-company dataset and AI trace.
+Current note: the refreshed public backend at `https://huskyadvisor-api-matiyas.vercel.app` exposes the `ai_trace_v1` contract, reports 140 company records, and recognizes `JPMorgan Chase Technology` in profile recommendations.
 
 ## Best Live Demo Profile
 

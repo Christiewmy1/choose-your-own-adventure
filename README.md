@@ -1,7 +1,7 @@
 # HuskyAdvisor
 
 [Live Site](https://christiewmy1.github.io/choose-your-own-adventure/) |
-[API Health](https://choose-your-own-adventure-bay.vercel.app/health) |
+[API Health](https://huskyadvisor-api-matiyas.vercel.app/health) |
 [Tests Passing](docs/deep_qa_500_scenario_report.md) |
 License: course project
 
@@ -10,7 +10,7 @@ HuskyAdvisor is a UW Bothell-focused advising web application that helps student
 ## Public deliverables
 
 - Public website: [https://christiewmy1.github.io/choose-your-own-adventure/](https://christiewmy1.github.io/choose-your-own-adventure/)
-- Deployed API target: `https://choose-your-own-adventure-bay.vercel.app`
+- Deployed API target: `https://huskyadvisor-api-matiyas.vercel.app`
 - Local frontend: `web/`
 - Local/deployed backend: `api/`
 - Core recommendation engine: `src/huskyadvisor/`
@@ -113,7 +113,7 @@ npm run dev
 The frontend uses:
 
 - `http://127.0.0.1:8010` when running locally
-- `https://choose-your-own-adventure-bay.vercel.app` from GitHub Pages or when `VITE_API_BASE_URL` is configured
+- `https://huskyadvisor-api-matiyas.vercel.app` from GitHub Pages or when `VITE_API_BASE_URL` is configured
 - relative `/api` and `/health` calls when hosted on Vercel with `web/vercel.json` rewrites
 
 The `/health` response includes the current API contract marker, major count, course count, and company count. This lets the team verify that the public backend is running the latest AI trace contract and 140-company dataset before demoing.

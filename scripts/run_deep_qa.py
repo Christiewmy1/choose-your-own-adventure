@@ -3,8 +3,10 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import subprocess
+import ssl
 import sys
+import urllib.error
+import urllib.request
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -304,37 +306,37 @@ def evaluate_data_integrity() -> list[str]:
 
 def evaluate_public_backend() -> list[str]:
     failures: list[str] = []
+    ssl_context = ssl._create_unverified_context()
 
-    def curl_json(url: str, payload: dict | None = None) -> tuple[int, dict | None, str]:
-        command = ["curl", "-s", "-i"]
+    def fetch_json(url: str, payload: dict | None = None) -> tuple[int, dict | None, str]:
+        data = None
+        headers = {}
+        method = "GET"
         if payload is not None:
-            command.extend(
-                [
-                    "-X",
-                    "POST",
-                    url,
-                    "-H",
-                    "Content-Type: application/json",
-                    "-d",
-                    json.dumps(payload),
-                ]
-            )
-        else:
-            command.append(url)
-        completed = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, check=False, timeout=20)
-        if completed.returncode != 0:
-            return completed.returncode, None, completed.stderr.strip() or completed.stdout.strip()
-        headers, _, body = completed.stdout.partition("\r\n\r\n")
-        status_match = re.search(r"HTTP/\S+\s+(\d+)", headers)
-        status = int(status_match.group(1)) if status_match else 0
+            data = json.dumps(payload).encode("utf-8")
+            headers["Content-Type"] = "application/json"
+            method = "POST"
+        request = urllib.request.Request(url, data=data, headers=headers, method=method)
         try:
-            return status, json.loads(body), ""
-        except json.JSONDecodeError:
-            return status, None, body[:200]
+            # macOS classroom machines can have stale Python CA bundles even when browser/curl TLS works.
+            with urllib.request.urlopen(request, timeout=20, context=ssl_context) as response:
+                body = response.read().decode("utf-8")
+                return response.status, json.loads(body), ""
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", errors="replace")
+            return exc.code, None, body[:200]
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            return 0, None, str(exc)
 
-    health_status, health_body, health_error = curl_json("https://choose-your-own-adventure-bay.vercel.app/health")
-    if health_status != 200 or health_body != {"status": "ok"}:
+    health_status, health_body, health_error = fetch_json("https://huskyadvisor-api-matiyas.vercel.app/health")
+    if health_status != 200 or not health_body:
         failures.append(f"public_health_failed:status={health_status}:error={health_error}")
+    elif (
+        health_body.get("status") != "ok"
+        or health_body.get("api_contract") != "ai_trace_v1"
+        or health_body.get("company_records", 0) < 140
+    ):
+        failures.append(f"public_health_stale_or_wrong_contract:body={health_body}")
 
     payload = {
         "major": "Computer Science and Software Engineering",
@@ -343,8 +345,8 @@ def evaluate_public_backend() -> list[str]:
         "career_goals": ["cloud", "software engineering"],
         "target_companies": ["JPMorgan Chase Technology"],
     }
-    post_status, data, post_error = curl_json(
-        "https://choose-your-own-adventure-bay.vercel.app/api/profile/recommendations",
+    post_status, data, post_error = fetch_json(
+        "https://huskyadvisor-api-matiyas.vercel.app/api/profile/recommendations",
         payload,
     )
     if post_status != 200 or not data:

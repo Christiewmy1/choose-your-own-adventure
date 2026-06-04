@@ -73,7 +73,7 @@ Status: **Strong**
 Evidence:
 
 - Public website: `https://christiewmy1.github.io/choose-your-own-adventure/`
-- API health check: `https://choose-your-own-adventure-bay.vercel.app/health`
+- API health check: `https://huskyadvisor-api-matiyas.vercel.app/health`
 - The website explains the project, collects a student profile, and displays courses, companies, internship prep, and roadmap results.
 - `docs/deployment_and_public_access.md` gives the public URLs and deployment architecture.
 - `docs/demo_readiness_checklist.md` gives the exact demo profile and readiness checks.

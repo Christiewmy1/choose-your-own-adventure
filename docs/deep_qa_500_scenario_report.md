@@ -7,7 +7,7 @@
 - Failed scenarios: 0
 - API contract failures: 0
 - Data integrity failures: 0
-- Public backend check failures: not run in this local-only report
+- Public backend check failures: 0
 
 ## Coverage
 
@@ -32,7 +32,7 @@
 
 ## Public Backend Check
 
-- Skipped in this deterministic local run. Use `python3 scripts/run_deep_qa.py --scenarios 560 --public` after redeploying the backend.
+- Passed.
 
 ## First 25 Failed Scenarios
 

@@ -86,7 +86,7 @@ The API exposes this integration through an `ai_trace` object on each result. Th
 ## Public-facing deliverables
 
 - website: `https://christiewmy1.github.io/choose-your-own-adventure/`
-- API target: `https://choose-your-own-adventure-bay.vercel.app`
+- API target: `https://huskyadvisor-api-matiyas.vercel.app`
 - repository: current project repository with instructor access
 
 ## Known current limitations
