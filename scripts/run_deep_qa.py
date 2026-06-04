@@ -25,7 +25,6 @@ from huskyadvisor.models import StudentProfile
 from huskyadvisor.service import build_json_advisor
 
 
-REPORT_PATH = ROOT / "docs" / "deep_qa_500_scenario_report.md"
 CODE_PATTERN = re.compile(r"\b([A-Z]{2,6}|[A-Z]\s+[A-Z]{2,6})\s*-?\s*(\d{3})\b")
 
 SUPPORTED_MAJORS = [
@@ -159,17 +158,15 @@ def build_scenarios(limit: int) -> list[StudentProfile]:
     companies = CORE_EMPLOYERS + NEW_SOFTWARE_EMPLOYERS + INTENT_ALIASES + UNSUPPORTED_COMPANIES
     majors = SUPPORTED_MAJORS + UNSUPPORTED_MAJORS
     scenarios: list[StudentProfile] = []
-    index = 1
 
-    for major in majors:
-        for standing in STANDINGS:
-            for goals in GOAL_SETS:
-                company = companies[(index - 1) % len(companies)]
-                completed = COMPLETED_SETS[(index - 1) % len(COMPLETED_SETS)]
-                scenarios.append(build_profile(index, major, standing, goals, company, completed))
-                index += 1
-                if len(scenarios) >= limit:
-                    return scenarios
+    for index in range(1, limit + 1):
+        offset = index - 1
+        major = majors[offset % len(majors)]
+        standing = STANDINGS[(offset // len(majors)) % len(STANDINGS)]
+        goals = GOAL_SETS[offset % len(GOAL_SETS)]
+        company = companies[offset % len(companies)]
+        completed = COMPLETED_SETS[offset % len(COMPLETED_SETS)]
+        scenarios.append(build_profile(index, major, standing, goals, company, completed))
 
     return scenarios
 
@@ -368,6 +365,7 @@ def write_report(
     data_failures: list[str],
     public_failures: list[str],
     public_checked: bool,
+    report_path: Path,
 ) -> None:
     failure_counter = Counter(failure.split(":", 1)[0] for result in scenario_results for failure in result.failures)
     major_counter = Counter(result.major for result in scenario_results)
@@ -376,9 +374,10 @@ def write_report(
     goal_counter = Counter(goal for result in scenario_results for goal in result.goals)
     course_counter = Counter(code for result in scenario_results for code in result.recommendation_codes)
     failed_scenarios = [result for result in scenario_results if result.failures]
+    report_title = "Deep QA 500+ Scenario Report" if len(scenario_results) >= 500 else f"QA {len(scenario_results)} Scenario Report"
 
     lines = [
-        "# Deep QA 500+ Scenario Report",
+        f"# {report_title}",
         "",
         "## Summary",
         "",
@@ -439,7 +438,13 @@ def write_report(
         ]
     )
 
-    REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def report_path_for_scenario_count(scenarios: int) -> Path:
+    if scenarios >= 500:
+        return ROOT / "docs" / "deep_qa_500_scenario_report.md"
+    return ROOT / "docs" / f"qa_{scenarios}_scenario_report.md"
 
 
 def main() -> int:
@@ -454,7 +459,8 @@ def main() -> int:
     api_failures = evaluate_api_contract()
     data_failures = evaluate_data_integrity()
     public_failures = evaluate_public_backend() if args.public else []
-    write_report(scenario_results, api_failures, data_failures, public_failures, args.public)
+    report_path = report_path_for_scenario_count(args.scenarios)
+    write_report(scenario_results, api_failures, data_failures, public_failures, args.public, report_path)
 
     total_failures = (
         sum(len(result.failures) for result in scenario_results)
@@ -467,7 +473,7 @@ def main() -> int:
     print(f"API contract failures: {len(api_failures)}")
     print(f"Data integrity failures: {len(data_failures)}")
     print(f"Public backend failures: {len(public_failures)}")
-    print(f"Wrote {REPORT_PATH}")
+    print(f"Wrote {report_path}")
     return 1 if total_failures else 0
 
 
