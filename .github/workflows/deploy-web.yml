@@ -35,7 +35,7 @@ jobs:
         working-directory: web
         env:
           BASE_PATH: /choose-your-own-adventure/
-          VITE_API_BASE_URL: https://choose-your-own-adventure01-leslie291s-projects.vercel.app
+          VITE_API_BASE_URL: https://huskyadvisor-api-matiyas.vercel.app
         run: |
           export VITE_BUILD_TIME="$(date -u +"%Y-%m-%d %H:%M UTC")"
           npm run build
